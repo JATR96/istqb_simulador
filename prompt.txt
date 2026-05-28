@@ -38,6 +38,8 @@ El objetivo será crear una aplicación completa donde el usuario pueda:
 
 ✅ Reforzar preguntas incorrectas automáticamente
 
+✅ Validar inteligentemente disponibilidad de preguntas
+
 ---
 
 # 🎯 CERTIFICACIONES SOPORTADAS
@@ -220,6 +222,94 @@ Ejemplo:
 "FL-2.3.2"
 ]
 }
+
+---
+
+# 🎯 VALIDACIÓN INTELIGENTE DE DISPONIBILIDAD DE PREGUNTAS
+
+El sistema debe validar automáticamente si existen suficientes preguntas disponibles antes de generar un examen.
+
+---
+
+## 🎯 EJEMPLO
+
+El usuario solicita:
+
+{
+"capitulo": "1",
+"cantidad": 10
+}
+
+Pero el banco contiene:
+
+✅ solo 9 preguntas disponibles
+
+---
+
+## ⚠️ REGLAS IMPORTANTES
+
+El sistema NUNCA debe:
+
+❌ generar preguntas repetidas
+
+❌ fallar con error interno
+
+❌ romper la generación del examen
+
+---
+
+## ✅ COMPORTAMIENTO RECOMENDADO
+
+Si la cantidad solicitada es mayor que las preguntas disponibles:
+
+El sistema debe:
+
+1. detectar cuántas preguntas existen
+
+2. ajustar automáticamente la cantidad
+
+3. generar examen con las preguntas disponibles
+
+4. informar al usuario
+
+---
+
+## 🎯 EJEMPLO DE RESPUESTA
+
+{
+"mensaje": "Solo existen 9 preguntas disponibles para el capítulo 1.",
+"cantidad_generada": 9
+}
+
+---
+
+## 🚀 OBJETIVO
+
+Garantizar:
+
+✅ estabilidad del sistema
+
+✅ buena experiencia de usuario
+
+✅ cero preguntas duplicadas
+
+✅ generación inteligente
+
+---
+
+## 🎯 CONFIGURACIÓN FUTURA
+
+El sistema debe permitir configurar políticas futuras:
+
+✅ ajuste automático
+
+✅ bloquear generación
+
+✅ completar desde otras secciones
+
+Por defecto usar:
+
+✅ ajuste automático inteligente
 
 ---
 

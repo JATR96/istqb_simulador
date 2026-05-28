@@ -4,7 +4,7 @@ Ejecuta el siguiente prompt sin saltarte ninguna instrucción:
 
 # 🧠 PROYECTO REACT + FASTAPI – PLATAFORMA PROFESIONAL DE SIMULACIÓN ISTQB MULTI-CERTIFICACIÓN
 
-## (Backend REST con MySQL + Soporte de Imágenes + Aleatorización Dinámica + Distribución Inteligente por Syllabus ISTQB)
+## (Backend REST con MySQL + Soporte Multiidioma + Imágenes + Aleatorización Dinámica + Distribución Inteligente por Syllabus ISTQB)
 
 ====================================================================================
 
@@ -17,6 +17,8 @@ El objetivo será crear una aplicación completa donde el usuario pueda:
 ✅ Resolver exámenes ISTQB simulados
 
 ✅ Elegir diferentes certificaciones ISTQB
+
+✅ Cambiar idioma entre español e inglés
 
 ✅ Generar automáticamente exámenes realistas
 
@@ -39,6 +41,26 @@ El objetivo será crear una aplicación completa donde el usuario pueda:
 ✅ Reforzar preguntas incorrectas automáticamente
 
 ✅ Validar inteligentemente disponibilidad de preguntas
+
+---
+
+# 🌍 SOPORTE MULTIIDIOMA
+
+La plataforma debe soportar inicialmente:
+
+✅ Español (es)
+
+✅ Inglés (en)
+
+La arquitectura debe permitir agregar fácilmente:
+
+✅ Portugués
+
+✅ Francés
+
+✅ Alemán
+
+sin modificar la lógica principal.
 
 ---
 
@@ -106,12 +128,6 @@ Debe:
 
 ✅ mezclar respuestas
 
-Objetivo:
-
-✅ práctica rápida diaria
-
-✅ micro sesiones de estudio
-
 ---
 
 ## ✅ EXAMEN POR CAPÍTULO
@@ -135,13 +151,6 @@ El sistema debe:
 ✅ permitir elegir cantidad de preguntas
 
 ✅ mezclar preguntas y respuestas
-
-Ejemplo:
-
-{
-"capitulo": "1",
-"cantidad": 15
-}
 
 ---
 
@@ -181,16 +190,6 @@ Objetivo:
 
 ✅ mejorar aprendizaje
 
-El backend debe:
-
-1. leer historial del usuario
-
-2. detectar preguntas falladas
-
-3. generar examen basado en errores anteriores
-
-4. mezclar preguntas y respuestas
-
 ---
 
 ## ✅ EXAMEN PERSONALIZADO
@@ -211,38 +210,11 @@ Debe permitir elegir:
 
 ✅ temporizador opcional
 
-Ejemplo:
-
-{
-"certificacion": "Foundation",
-"capitulos": ["1", "2"],
-"cantidad": 25,
-"learning_objectives": [
-"FL-1.1.1",
-"FL-2.3.2"
-]
-}
-
 ---
 
 # 🎯 VALIDACIÓN INTELIGENTE DE DISPONIBILIDAD DE PREGUNTAS
 
 El sistema debe validar automáticamente si existen suficientes preguntas disponibles antes de generar un examen.
-
----
-
-## 🎯 EJEMPLO
-
-El usuario solicita:
-
-{
-"capitulo": "1",
-"cantidad": 10
-}
-
-Pero el banco contiene:
-
-✅ solo 9 preguntas disponibles
 
 ---
 
@@ -274,45 +246,6 @@ El sistema debe:
 
 ---
 
-## 🎯 EJEMPLO DE RESPUESTA
-
-{
-"mensaje": "Solo existen 9 preguntas disponibles para el capítulo 1.",
-"cantidad_generada": 9
-}
-
----
-
-## 🚀 OBJETIVO
-
-Garantizar:
-
-✅ estabilidad del sistema
-
-✅ buena experiencia de usuario
-
-✅ cero preguntas duplicadas
-
-✅ generación inteligente
-
----
-
-## 🎯 CONFIGURACIÓN FUTURA
-
-El sistema debe permitir configurar políticas futuras:
-
-✅ ajuste automático
-
-✅ bloquear generación
-
-✅ completar desde otras secciones
-
-Por defecto usar:
-
-✅ ajuste automático inteligente
-
----
-
 # 🛠️ TECNOLOGÍAS PRINCIPALES
 
 ## FRONTEND
@@ -322,6 +255,7 @@ Por defecto usar:
 * Axios
 * Bootstrap o Tailwind
 * Context API o Zustand
+* i18next (multiidioma)
 
 ## BACKEND
 
@@ -384,23 +318,13 @@ solo cuando aplique.
 
 12. Siempre generar archivos completos listos para copiar y pegar.
 
-13. Explicar claramente:
-
-✅ por qué se hace
-
-✅ qué problema resuelve
-
-✅ buenas prácticas
-
-✅ errores comunes
-
 ---
 
 # 🎯 OBJETIVO DEL SISTEMA
 
 La plataforma permitirá practicar diferentes certificaciones ISTQB.
 
-## Características principales
+Características principales:
 
 ✅ Banco de preguntas multi-certificación
 
@@ -426,8 +350,6 @@ La plataforma permitirá practicar diferentes certificaciones ISTQB.
 
 ✅ Soporte de imágenes y diagramas
 
-✅ Soporte de tablas y esquemas visuales
-
 ✅ Escalable para nuevas certificaciones
 
 ✅ Aleatorización dinámica de respuestas
@@ -436,7 +358,7 @@ La plataforma permitirá practicar diferentes certificaciones ISTQB.
 
 ✅ Learning Objectives oficiales
 
-✅ Engine profesional de certificaciones
+✅ Multiidioma
 
 ---
 
@@ -447,44 +369,188 @@ La plataforma permitirá practicar diferentes certificaciones ISTQB.
 Campos:
 
 * id
-* pregunta
-* imagen_url
-* imagen_descripcion
-* opciones (JSON)
-* respuesta_correcta_texto
-* explicacion
 * certificacion
 * capitulo
 * seccion
 * learning_objective
+* imagen_url
+* imagen_descripcion
+* translations (JSON)
 
 ---
 
-## Tabla: examenes
+# 🌍 ESTRUCTURA JSON MULTIIDIOMA PROFESIONAL
 
-Campos:
+El sistema NO debe usar:
 
-* id
-* fecha
-* puntaje
-* porcentaje
-* tiempo_empleado
-* tipo_examen
-* certificacion
+❌ pregunta_es
+
+❌ pregunta_en
+
+La estructura correcta debe usar:
+
+✅ translations
 
 ---
 
-## Tabla: respuestas_usuario
+# 🎯 FORMATO JSON OBLIGATORIO
 
-Campos:
+{
+"certificacion": "Foundation",
 
-* id
-* examen_id
-* pregunta_id
-* respuesta_usuario
-* respuesta_correcta
-* posicion_respuesta
-* es_correcta
+"capitulo": "1",
+
+"seccion": "1.1",
+
+"learning_objective": "FL-1.1.1",
+
+"imagen_url": null,
+
+"imagen_descripcion": null,
+
+"translations": {
+
+```
+"es": {
+  "pregunta": "¿Cuál es el objetivo principal del testing?",
+
+  "opciones": [
+    {
+      "id": 1,
+      "texto": "Encontrar defectos"
+    },
+    {
+      "id": 2,
+      "texto": "Corregir errores"
+    },
+    {
+      "id": 3,
+      "texto": "Crear software"
+    },
+    {
+      "id": 4,
+      "texto": "Diseñar arquitectura"
+    }
+  ],
+
+  "respuesta_correcta_id": 1,
+
+  "explicacion": "El testing ayuda a encontrar defectos y reducir riesgos."
+},
+
+"en": {
+  "pregunta": "What is the main objective of testing?",
+
+  "opciones": [
+    {
+      "id": 1,
+      "texto": "Find defects"
+    },
+    {
+      "id": 2,
+      "texto": "Fix bugs"
+    },
+    {
+      "id": 3,
+      "texto": "Create software"
+    },
+    {
+      "id": 4,
+      "texto": "Design architecture"
+    }
+  ],
+
+  "respuesta_correcta_id": 1,
+
+  "explicacion": "Testing helps identify defects and reduce risks."
+}
+```
+
+}
+}
+
+---
+
+# 🎯 REGLAS IMPORTANTES DEL JSON
+
+El sistema debe:
+
+✅ soportar múltiples idiomas
+
+✅ mantener la misma lógica de respuesta correcta entre idiomas
+
+✅ permitir agregar nuevos idiomas fácilmente
+
+✅ evitar duplicar preguntas en base de datos
+
+✅ permitir aleatorización dinámica
+
+✅ usar IDs internos para respuestas
+
+---
+
+# 🎯 RESPUESTAS DINÁMICAS
+
+El sistema NO debe usar:
+
+❌ respuesta_correcta = "A"
+
+❌ respuesta_correcta = "B"
+
+Porque las respuestas serán mezcladas dinámicamente.
+
+---
+
+# ✅ SISTEMA CORRECTO
+
+Cada opción debe tener:
+
+✅ id
+
+✅ texto
+
+Ejemplo:
+
+{
+"id": 1,
+"texto": "Find defects"
+}
+
+La respuesta correcta será:
+
+{
+"respuesta_correcta_id": 1
+}
+
+---
+
+# 🎯 ALEATORIZACIÓN DINÁMICA DE RESPUESTAS
+
+El sistema DEBE mezclar automáticamente el orden de las opciones en cada intento.
+
+---
+
+## 🎯 OBJETIVO
+
+Evitar que el usuario memorice:
+
+✅ la posición visual de la respuesta
+
+---
+
+# ⚠️ REGLAS IMPORTANTES
+
+El sistema DEBE:
+
+✅ mezclar dinámicamente las opciones
+
+✅ recalcular automáticamente la posición visual
+
+✅ mantener el mismo respuesta_correcta_id
+
+✅ hacerlo en CADA examen nuevo
+
+✅ evitar memorización visual
 
 ---
 
@@ -499,14 +565,6 @@ El sistema DEBE permitir:
 ✅ Guardar rutas o URLs de imágenes en MySQL
 
 ✅ Mostrar imágenes responsive en React
-
-✅ Soportar formatos:
-
-* PNG
-* JPG
-* JPEG
-* WEBP
-* SVG
 
 ---
 
@@ -526,58 +584,14 @@ El sistema debe funcionar tanto con:
 
 ---
 
-# 🎲 ALEATORIZACIÓN DINÁMICA DE RESPUESTAS
-
-El sistema DEBE mezclar automáticamente el orden de las opciones en cada intento.
-
----
-
-## 🎯 OBJETIVO
-
-Evitar que el usuario memorice:
-
-✅ la posición visual de la respuesta
-
-Ejemplo:
-
-Primer intento:
-
-A) Selenium
-B) Cypress ✅
-C) Playwright
-D) Appium
-
-Segundo intento:
-
-A) Playwright
-B) Appium
-C) Selenium
-D) Cypress ✅
-
----
-
-# ⚠️ REGLAS IMPORTANTES
-
-El sistema DEBE:
-
-✅ mezclar dinámicamente las opciones
-
-✅ recalcular automáticamente la respuesta correcta
-
-✅ hacerlo en CADA examen nuevo
-
-✅ mantener consistencia al guardar resultados
-
-✅ evitar memorización visual
-
----
-
 # 🎯 DISTRIBUCIÓN AUTOMÁTICA POR SYLLABUS ISTQB
 
 El sistema NO debe usar dificultad tipo:
 
 ❌ fácil
+
 ❌ media
+
 ❌ difícil
 
 Los exámenes reales ISTQB se construyen usando:
@@ -601,12 +615,6 @@ Cada pregunta debe pertenecer a:
 ✅ sección
 
 ✅ learning objective
-
-Ejemplo:
-
-| pregunta         | capitulo | seccion | learning_objective |
-| ---------------- | -------- | ------- | ------------------ |
-| ¿Qué es testing? | 1        | 1.1     | FL-1.1.1           |
 
 ---
 
@@ -634,12 +642,6 @@ La distribución NO debe ser visible para el usuario.
 
 Todo debe hacerse INTERNAMENTE en backend.
 
-El usuario solo selecciona:
-
-✅ certificación
-
-✅ modo de examen
-
 ---
 
 # 📦 CONFIGURACIÓN INTERNA
@@ -664,40 +666,6 @@ Contenido:
 
 ---
 
-# 📦 SOPORTE MULTI-CERTIFICACIÓN
-
-Cada certificación debe tener su propia distribución.
-
-Ejemplos:
-
-* foundation_distribution.json
-* automation_distribution.json
-* performance_distribution.json
-
----
-
-# 🎯 LEARNING OBJECTIVES
-
-Cada pregunta debe estar asociada a un Learning Objective oficial.
-
-Ejemplos:
-
-* FL-1.1.1
-* FL-2.3.2
-* ATM-3.2.1
-
-Esto permitirá:
-
-✅ estadísticas por objetivo
-
-✅ análisis de debilidades
-
-✅ dashboard inteligente
-
-✅ recomendaciones de estudio
-
----
-
 # 📦 SOPORTE BACKEND FASTAPI
 
 Agregar:
@@ -710,51 +678,43 @@ backend/uploads/
 
 ✅ Endpoint para servir imágenes estáticas
 
-Ejemplo:
-
-/uploads/diagramas/imagen1.png
-
-✅ Configuración StaticFiles de FastAPI
-
-✅ Validación de extensiones permitidas
-
 ✅ random.shuffle()
 
-✅ Lógica de aleatorización en:
+✅ lógica de traducciones
 
-services/generador_examen.py
+✅ lógica de selección de idioma
 
-✅ Lógica de distribución inteligente
-
-✅ Lectura de blueprints JSON
+✅ lógica de distribución inteligente
 
 ---
 
 # 📦 SOPORTE FRONTEND REACT
 
-Cuando una pregunta tenga imagen_url:
+El frontend debe permitir:
 
-✅ Mostrar imagen debajo de la pregunta
+✅ cambiar idioma dinámicamente
 
-Diseño:
+✅ renderizar preguntas según idioma seleccionado
 
-Pregunta
-↓
-Imagen
-↓
-Opciones dinámicas
+✅ renderizar opciones traducidas
 
-La imagen debe ser:
+✅ renderizar explicaciones traducidas
 
-✅ responsive
+---
 
-✅ centrada
+# 📦 SOPORTE MULTIIDIOMA REACT
 
-✅ con borde suave
+Implementar:
 
-✅ zoom opcional
+✅ i18next
 
-✅ compatible con dark mode
+✅ selector de idioma
+
+Idiomas iniciales:
+
+✅ Español
+
+✅ Inglés
 
 ---
 
@@ -763,6 +723,8 @@ La imagen debe ser:
 ✅ Generar preguntas automáticamente
 
 ✅ Permitir elegir certificación
+
+✅ Permitir elegir idioma
 
 ✅ Permitir elegir modo de examen
 
@@ -781,8 +743,6 @@ La imagen debe ser:
 * incorrectas
 * tiempo usado
 
-✅ Mostrar respuestas correctas al finalizar
-
 ---
 
 # 🧱 ESTRUCTURA DEL PROYECTO
@@ -790,6 +750,8 @@ La imagen debe ser:
 Ruta sugerida:
 
 C:\Cursos\ISTQB\istqb_simulador\
+
+---
 
 ## Estructura
 
@@ -800,9 +762,6 @@ istqb_simulador/
 │   │   └── diagramas/
 │   │
 │   ├── exam_blueprints/
-│   │   ├── foundation_distribution.json
-│   │   ├── automation_distribution.json
-│   │   └── performance_distribution.json
 │   │
 │   ├── main.py
 │   ├── database.py
@@ -816,46 +775,11 @@ istqb_simulador/
 │   ├── src/
 │   ├── components/
 │   ├── pages/
+│   ├── locales/
+│   │   ├── es/
+│   │   └── en/
 │   ├── services/
 │   └── App.jsx
-
----
-
-# 📦 NUEVOS ENDPOINTS
-
-## Generar examen oficial
-
-POST /api/examenes/oficial
-
----
-
-## Generar examen rápido
-
-POST /api/examenes/rapido
-
----
-
-## Generar examen por capítulo
-
-POST /api/examenes/capitulo
-
----
-
-## Generar examen por learning objective
-
-POST /api/examenes/objetivos
-
----
-
-## Generar examen de repaso
-
-POST /api/examenes/repaso
-
----
-
-## Generar examen personalizado
-
-POST /api/examenes/personalizado
 
 ---
 
@@ -867,21 +791,11 @@ POST /api/examenes/personalizado
 
 CREACIÓN DEL PROYECTO Y ENTORNO
 
-* Crear backend FastAPI
-* Crear frontend React + Vite
-* Configurar entorno virtual
-* Instalar dependencias
-
 ---
 
 ## 🎯 FASE 2
 
 CONFIGURACIÓN BASE FASTAPI
-
-* main.py
-* endpoint prueba
-* uvicorn
-* StaticFiles para imágenes
 
 ---
 
@@ -889,367 +803,105 @@ CONFIGURACIÓN BASE FASTAPI
 
 CONFIGURACIÓN REACT + VITE
 
-* Crear layout base
-* React Router
-* Navbar
-
 ---
 
 ## 🎯 FASE 4
 
-BASE DE DATOS MYSQL
+CONFIGURACIÓN MULTIIDIOMA REACT
 
-* Crear BD:
-  istqb_db
-
-* Configurar .env
-
-* SQLAlchemy
-
-* conexión MySQL
+* instalar i18next
+* configurar traducciones
+* selector de idioma
 
 ---
 
 ## 🎯 FASE 5
 
-MODELO PREGUNTA
-
-* Tabla preguntas
-* Explicación
-* imagen_url
-* imagen_descripcion
-* opciones JSON
-* respuesta_correcta_texto
-* certificacion
-* capitulo
-* seccion
-* learning_objective
+BASE DE DATOS MYSQL
 
 ---
 
 ## 🎯 FASE 6
 
-MIGRACIONES ALEMBIC
+MODELO PREGUNTA MULTIIDIOMA
 
-* Configurar Alembic
-* Crear tablas
+* translations JSON
+* imagen_url
+* learning objectives
 
 ---
 
 ## 🎯 FASE 7
 
-IMPORTADOR DE PREGUNTAS
-
-* Leer JSON/CSV
-* Insertar preguntas automáticamente
-* Validar duplicados
-* Importar imágenes asociadas
-* Importar preguntas por certificación
-* Importar capítulos y learning objectives
+MIGRACIONES ALEMBIC
 
 ---
 
 ## 🎯 FASE 8
 
-ENDPOINT LISTAR PREGUNTAS
+IMPORTADOR DE PREGUNTAS
 
-GET /api/preguntas
-
-Debe devolver:
-
-* texto
-* opciones dinámicas
-* imagen_url
-* imagen_descripcion
-* certificacion
-* capitulo
-* seccion
-* learning_objective
+* importar JSON multiidioma
+* validar estructura
+* importar imágenes
 
 ---
 
 ## 🎯 FASE 9
 
-ENDPOINT CERTIFICACIONES
+GENERADOR DE EXÁMENES
 
-GET /api/certificaciones
+* randomización dinámica
+* distribución syllabus
+* idioma dinámico
 
 ---
 
 ## 🎯 FASE 10
 
-GENERADOR DE EXAMEN OFICIAL
+PANTALLA EXAMEN
 
-POST /api/examenes/oficial
-
-Debe:
-
-✅ seleccionar preguntas aleatorias
-
-✅ evitar repetidas
-
-✅ generar preguntas SOLO de la certificación elegida
-
-✅ respetar distribución interna del syllabus
-
-✅ mezclar respuestas automáticamente
-
-✅ devolver JSON listo para frontend
+* render multiidioma
+* imágenes
+* respuestas dinámicas
 
 ---
 
 ## 🎯 FASE 11
 
-GENERADOR DE EXAMEN RÁPIDO
-
-POST /api/examenes/rapido
+RESULTADOS
 
 ---
 
 ## 🎯 FASE 12
 
-GENERADOR POR CAPÍTULO
-
-POST /api/examenes/capitulo
+ESTADÍSTICAS
 
 ---
 
 ## 🎯 FASE 13
 
-GENERADOR POR LEARNING OBJECTIVE
-
-POST /api/examenes/objetivos
+RESPONSIVE + DARK MODE
 
 ---
 
 ## 🎯 FASE 14
 
-GENERADOR DE REPASO
-
-POST /api/examenes/repaso
-
----
-
-## 🎯 FASE 15
-
-GENERADOR PERSONALIZADO
-
-POST /api/examenes/personalizado
-
----
-
-## 🎯 FASE 16
-
-PANTALLA SELECCIÓN DE CERTIFICACIÓN
-
----
-
-## 🎯 FASE 17
-
-PANTALLA HOME
-
-Mostrar:
-
-✅ Examen Oficial
-
-✅ Examen Rápido
-
-✅ Examen por Capítulo
-
-✅ Examen por Learning Objective
-
-✅ Examen de Repaso
-
-✅ Examen Personalizado
-
----
-
-## 🎯 FASE 18
-
-PANTALLA EXAMEN
-
-* Mostrar pregunta
-* Mostrar imagen si existe
-* Renderizar opciones dinámicas
-* navegación
-* contador
-
----
-
-## 🎯 FASE 19
-
-TEMPORIZADOR
-
-* 60 minutos
-* envío automático al terminar
-
----
-
-## 🎯 FASE 20
-
-GUARDAR RESPUESTAS
-
-* Persistir respuestas usuario
-
----
-
-## 🎯 FASE 21
-
-RESULTADOS
-
-Mostrar:
-
-* puntaje
-* porcentaje
-* aprobó/no aprobó
-* correctas/incorrectas
-
----
-
-## 🎯 FASE 22
-
-REVISIÓN DE RESPUESTAS
-
-* Mostrar explicación
-* respuesta correcta
-* mostrar imagen original si existe
-
----
-
-## 🎯 FASE 23
-
-HISTORIAL DE EXÁMENES
-
-* Lista de intentos anteriores
-
-Guardar también:
-
-* certificacion
-
----
-
-## 🎯 FASE 24
-
-ESTADÍSTICAS AVANZADAS
-
-Mostrar:
-
-✅ rendimiento por capítulo
-
-✅ rendimiento por sección
-
-✅ rendimiento por learning objective
-
-✅ áreas débiles
-
-✅ porcentaje por objetivo
-
----
-
-## 🎯 FASE 25
-
-MODO OSCURO
-
----
-
-## 🎯 FASE 26
-
-RESPONSIVE DESIGN
-
-* Adaptar imágenes a móviles
-* Mantener proporciones
-* Zoom opcional
-
----
-
-## 🎯 FASE 27
-
 MEJORAS FINALES
-
-* optimización
-* validaciones
-* UX
-
----
-
-# 🎯 REGLAS IMPORTANTES DEL GENERADOR DE EXÁMENES
-
-El simulador DEBE:
-
-✅ Generar preguntas dinámicamente
-
-✅ No repetir preguntas
-
-✅ Generar preguntas SOLO de la certificación elegida
-
-✅ Respetar distribución del syllabus
-
-✅ Mezclar respuestas dinámicamente
-
-✅ Mostrar progreso:
-
-Pregunta 5 de 40
-
-✅ Calcular automáticamente:
-
-* score
-* porcentaje
-
-✅ Aprobar con:
-65%
-
----
-
-# 🎯 EJEMPLO DE JSON DE PREGUNTAS
-
-[
-{
-"pregunta": "¿Qué es testing?",
-"certificacion": "Foundation",
-"capitulo": "1",
-"seccion": "1.1",
-"learning_objective": "FL-1.1.1",
-"imagen_url": null,
-"imagen_descripcion": null,
-"opciones": [
-"Validar calidad",
-"Eliminar bugs",
-"Crear software",
-"Compilar código"
-],
-"respuesta_correcta_texto": "Validar calidad"
-}
-]
-
----
-
-# 🎨 REQUISITOS VISUALES
-
-Las imágenes deben:
-
-✅ adaptarse a móviles
-
-✅ no romper el layout
-
-✅ mantener proporción
-
-✅ permitir scroll si son muy grandes
-
-✅ mostrar texto alternativo (alt)
 
 ---
 
 # 🚀 ESCALABILIDAD FUTURA
 
-La arquitectura debe permitir agregar nuevas certificaciones sin modificar la lógica principal.
+La arquitectura debe permitir agregar nuevas certificaciones e idiomas sin modificar la lógica principal.
 
 Solo agregando:
 
 ✅ nuevas preguntas
 
-✅ nueva certificación
+✅ nuevos idiomas
 
-✅ nuevos JSON/CSV
+✅ nuevos JSON
 
 ✅ nuevos blueprints
 
@@ -1266,18 +918,33 @@ Mostrar un mensaje indicando:
 Has construido una plataforma profesional de simulación ISTQB con:
 
 ✅ React + Vite
+
 ✅ FastAPI
+
 ✅ MySQL
+
+✅ Multiidioma
+
 ✅ Generación dinámica de exámenes
+
 ✅ Aleatorización dinámica de respuestas
+
 ✅ Múltiples certificaciones ISTQB
+
 ✅ Distribución inteligente por syllabus
+
 ✅ Learning Objectives oficiales
+
 ✅ Temporizador
+
 ✅ Resultados automáticos
+
 ✅ Historial
+
 ✅ Estadísticas avanzadas
+
 ✅ Responsive Design
+
 ✅ Soporte de imágenes y diagramas
 
 La aplicación estará lista para:
@@ -1285,6 +952,8 @@ La aplicación estará lista para:
 ✅ practicar ISTQB
 
 ✅ agregar más preguntas
+
+✅ agregar nuevos idiomas
 
 ✅ desplegarse en producción
 

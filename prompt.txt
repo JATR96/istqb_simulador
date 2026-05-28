@@ -1,7 +1,9 @@
 Ejecuta el siguiente prompt sin saltarte ninguna instrucción:
 
+====================================================================================
+
 🧠 PROYECTO REACT + FASTAPI – PLATAFORMA PROFESIONAL DE SIMULACIÓN ISTQB MULTI-CERTIFICACIÓN
-(Backend REST con MySQL + Soporte de Imágenes + Múltiples Certificaciones ISTQB)
+(Backend REST con MySQL + Soporte de Imágenes + Aleatorización Dinámica + Múltiples Certificaciones ISTQB)
 
 ====================================================================================
 
@@ -11,16 +13,28 @@ Construiremos una plataforma profesional de simulación de exámenes ISTQB 🎯
 
 El objetivo será crear una aplicación completa donde el usuario pueda:
 
-Resolver exámenes ISTQB simulados.
-Elegir diferentes certificaciones ISTQB.
-Elegir diferentes modos de examen.
-Trabajar con bancos de preguntas separados por certificación.
-Generar automáticamente exámenes reales.
-Mostrar resultados, puntaje y respuestas correctas.
-Simular tiempo real del examen.
-Guardar progreso e historial.
-Consumir preguntas desde una API REST.
-Mostrar imágenes, diagramas, tablas y esquemas visuales.
+✅ Resolver exámenes ISTQB simulados
+
+✅ Elegir diferentes certificaciones ISTQB
+
+✅ Elegir diferentes modos de examen
+
+✅ Trabajar con bancos de preguntas separados por certificación
+
+✅ Generar automáticamente exámenes reales
+
+✅ Mostrar resultados, puntaje y respuestas correctas
+
+✅ Simular tiempo real del examen
+
+✅ Guardar progreso e historial
+
+✅ Consumir preguntas desde una API REST
+
+✅ Mostrar imágenes, diagramas, tablas y esquemas visuales
+
+✅ Aleatorizar preguntas y respuestas automáticamente
+
 🎯 CERTIFICACIONES SOPORTADAS
 
 El sistema debe soportar inicialmente:
@@ -76,8 +90,7 @@ MySQL
 
 ⚠️ MODO INTERACTIVO ESTRICTO (POR FASES)
 
-REGLAS:
-
+REGLAS
 Mostrar EXACTAMENTE una sola fase por respuesta.
 NO adelantar fases futuras.
 Terminar SIEMPRE con:
@@ -104,11 +117,16 @@ No repetir fases ya mostradas.
 Todas las respuestas deben incluir código funcional y compatible entre frontend y backend.
 NUNCA entregar fragmentos incompletos.
 Siempre generar archivos completos listos para copiar y pegar.
+Explicar claramente:
+por qué se hace
+qué problema resuelve
+buenas prácticas
+errores comunes
 🎯 OBJETIVO DEL SISTEMA
 
 La plataforma permitirá practicar diferentes certificaciones ISTQB.
 
-Características principales:
+Características principales
 
 ✅ Banco de preguntas multi-certificación
 
@@ -145,6 +163,8 @@ D
 
 ✅ Escalable para nuevas certificaciones
 
+✅ Aleatorización dinámica de respuestas
+
 📊 ESTRUCTURA DE DATOS
 Tabla principal: preguntas
 
@@ -154,11 +174,8 @@ id
 pregunta
 imagen_url
 imagen_descripcion
-opcion_a
-opcion_b
-opcion_c
-opcion_d
-respuesta_correcta
+opciones (JSON)
+respuesta_correcta_texto
 explicacion
 categoria
 dificultad
@@ -182,6 +199,8 @@ id
 examen_id
 pregunta_id
 respuesta_usuario
+respuesta_correcta
+posicion_respuesta
 es_correcta
 🖼️ SOPORTE DE IMÁGENES
 
@@ -216,6 +235,46 @@ El sistema debe funcionar tanto con:
 
 ✅ preguntas con tablas o esquemas visuales
 
+🎲 ALEATORIZACIÓN DINÁMICA DE RESPUESTAS
+
+El sistema DEBE mezclar automáticamente el orden de las opciones en cada intento.
+
+🎯 OBJETIVO
+
+Evitar que el usuario memorice:
+
+✅ la posición visual de la respuesta
+
+Ejemplo:
+
+Primer intento:
+
+A) Selenium
+B) Cypress ✅
+C) Playwright
+D) Appium
+
+Segundo intento:
+
+A) Playwright
+B) Appium
+C) Selenium
+D) Cypress ✅
+
+⚠️ REGLAS IMPORTANTES
+
+El sistema DEBE:
+
+✅ mezclar dinámicamente las opciones
+
+✅ recalcular automáticamente la respuesta correcta
+
+✅ hacerlo en CADA examen nuevo
+
+✅ mantener consistencia al guardar resultados
+
+✅ evitar memorización visual
+
 📦 SOPORTE BACKEND FASTAPI
 
 Agregar:
@@ -236,13 +295,17 @@ Ejemplo:
 
 ✅ Validación de extensiones permitidas
 
-✅ Posibilidad futura de subir imágenes desde panel administrador
+✅ random.shuffle()
+
+✅ Lógica de aleatorización en:
+
+services/generador_examen.py
 
 📦 SOPORTE FRONTEND REACT
 
 Cuando una pregunta tenga imagen_url:
 
-✅ Mostrar la imagen debajo de la pregunta
+✅ Mostrar imagen debajo de la pregunta
 
 Diseño:
 
@@ -250,7 +313,7 @@ Pregunta
 ↓
 Imagen
 ↓
-Opciones A/B/C/D
+Opciones dinámicas
 
 La imagen debe ser:
 
@@ -305,7 +368,7 @@ C:\Cursos\ISTQB\istqb_simulador
 
 
 
-Estructura:
+Estructura
 
 istqb_simulador/
 │
@@ -329,7 +392,7 @@ istqb_simulador/
 │ └── App.jsx
 
 📦 FASES DEL PROYECTO
-🎯 FASE 1:
+🎯 FASE 1
 
 CREACIÓN DEL PROYECTO Y ENTORNO
 
@@ -337,7 +400,7 @@ Crear backend FastAPI
 Crear frontend React + Vite
 Configurar entorno virtual
 Instalar dependencias
-🎯 FASE 2:
+🎯 FASE 2
 
 CONFIGURACIÓN BASE FASTAPI
 
@@ -345,14 +408,14 @@ main.py
 endpoint prueba
 uvicorn
 StaticFiles para imágenes
-🎯 FASE 3:
+🎯 FASE 3
 
 CONFIGURACIÓN REACT + VITE
 
 Crear layout base
 React Router
 Navbar
-🎯 FASE 4:
+🎯 FASE 4
 
 BASE DE DATOS MYSQL
 
@@ -361,24 +424,25 @@ istqb_db
 Configurar .env
 SQLAlchemy
 conexión MySQL
-🎯 FASE 5:
+🎯 FASE 5
 
 MODELO PREGUNTA
 
 Tabla preguntas
 Categorías A/B/C/D
-Respuesta correcta
 Explicación
 imagen_url
 imagen_descripcion
+opciones JSON
+respuesta_correcta_texto
 certificacion
-🎯 FASE 6:
+🎯 FASE 6
 
 MIGRACIONES ALEMBIC
 
 Configurar Alembic
 Crear tablas
-🎯 FASE 7:
+🎯 FASE 7
 
 IMPORTADOR DE PREGUNTAS
 
@@ -387,7 +451,7 @@ Insertar preguntas automáticamente
 Validar duplicados
 Importar imágenes asociadas
 Importar preguntas por certificación
-🎯 FASE 8:
+🎯 FASE 8
 
 ENDPOINT LISTAR PREGUNTAS
 
@@ -396,11 +460,11 @@ GET /api/preguntas
 Debe devolver:
 
 texto
-opciones
+opciones dinámicas
 imagen_url
 imagen_descripcion
 certificacion
-🎯 FASE 9:
+🎯 FASE 9
 
 ENDPOINT CERTIFICACIONES
 
@@ -416,7 +480,7 @@ Debe devolver:
 "Security"
 ]
 
-🎯 FASE 10:
+🎯 FASE 10
 
 GENERADOR DE EXAMEN ALEATORIO
 
@@ -424,11 +488,17 @@ POST /api/examenes/generar
 
 Debe:
 
-seleccionar 40 preguntas aleatorias
-evitar repetidas
-generar preguntas SOLO de la certificación elegida
-devolver JSON listo para frontend
-🎯 FASE 11:
+✅ seleccionar 40 preguntas aleatorias
+
+✅ evitar repetidas
+
+✅ generar preguntas SOLO de la certificación elegida
+
+✅ mezclar respuestas automáticamente
+
+✅ devolver JSON listo para frontend
+
+🎯 FASE 11
 
 GENERADOR POR CATEGORÍA
 
@@ -449,7 +519,7 @@ Body:
 "certificacion": "Automation"
 }
 
-🎯 FASE 12:
+🎯 FASE 12
 
 PANTALLA SELECCIÓN DE CERTIFICACIÓN
 
@@ -467,7 +537,7 @@ nombre
 descripción
 icono
 cantidad de preguntas disponibles
-🎯 FASE 13:
+🎯 FASE 13
 
 PANTALLA HOME
 
@@ -478,27 +548,27 @@ Examen A
 Examen B
 Examen C
 Examen D
-🎯 FASE 14:
+🎯 FASE 14
 
 PANTALLA EXAMEN
 
 Mostrar pregunta
 Mostrar imagen si existe
-opciones
+Renderizar opciones dinámicas
 navegación
 contador
-🎯 FASE 15:
+🎯 FASE 15
 
 TEMPORIZADOR
 
 60 minutos
 envío automático al terminar
-🎯 FASE 16:
+🎯 FASE 16
 
 GUARDAR RESPUESTAS
 
 Persistir respuestas usuario
-🎯 FASE 17:
+🎯 FASE 17
 
 RESULTADOS
 
@@ -508,14 +578,14 @@ puntaje
 porcentaje
 aprobó/no aprobó
 correctas/incorrectas
-🎯 FASE 18:
+🎯 FASE 18
 
 REVISIÓN DE RESPUESTAS
 
 Mostrar explicación
 respuesta correcta
 mostrar imagen original si existe
-🎯 FASE 19:
+🎯 FASE 19
 
 HISTORIAL DE EXÁMENES
 
@@ -524,18 +594,18 @@ Lista de intentos anteriores
 Guardar también:
 
 certificacion
-🎯 FASE 20:
+🎯 FASE 20
 
 MODO OSCURO
 
-🎯 FASE 21:
+🎯 FASE 21
 
 RESPONSIVE DESIGN
 
 Adaptar imágenes a móviles
 Mantener proporciones
 Zoom opcional
-🎯 FASE 22:
+🎯 FASE 22
 
 MEJORAS FINALES
 
@@ -551,6 +621,8 @@ El simulador DEBE:
 ✅ No repetir preguntas
 
 ✅ Generar preguntas SOLO de la certificación elegida
+
+✅ Mezclar respuestas dinámicamente
 
 ✅ Permitir:
 
@@ -578,11 +650,13 @@ porcentaje
 "categoria": "B",
 "imagen_url": "/uploads/automation/grid.png",
 "imagen_descripcion": "Arquitectura Selenium Grid",
-"opcion_a": "Escalar pruebas",
-"opcion_b": "Reducir RAM",
-"opcion_c": "Eliminar Selenium",
-"opcion_d": "Reemplazar APIs",
-"respuesta_correcta": "A",
+"opciones": [
+"Escalar pruebas",
+"Reducir RAM",
+"Eliminar Selenium",
+"Reemplazar APIs"
+],
+"respuesta_correcta_texto": "Escalar pruebas",
 "dificultad": "media"
 }
 ]
@@ -627,6 +701,7 @@ Has construido una plataforma profesional de simulación ISTQB con:
 ✅ FastAPI
 ✅ MySQL
 ✅ Generación aleatoria de exámenes
+✅ Aleatorización dinámica de respuestas
 ✅ Exámenes tipo A/B/C/D
 ✅ Múltiples certificaciones ISTQB
 ✅ Temporizador
@@ -637,11 +712,15 @@ Has construido una plataforma profesional de simulación ISTQB con:
 
 La aplicación estará lista para:
 
-practicar ISTQB
-agregar más preguntas
-desplegarse en producción
-usar autenticación futura
-exportar resultados PDF
+✅ practicar ISTQB
+
+✅ agregar más preguntas
+
+✅ desplegarse en producción
+
+✅ usar autenticación futura
+
+✅ exportar resultados PDF
 
 El siguiente paso será:
 

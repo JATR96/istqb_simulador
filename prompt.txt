@@ -18,10 +18,6 @@ El objetivo será crear una aplicación completa donde el usuario pueda:
 
 ✅ Elegir diferentes certificaciones ISTQB
 
-✅ Elegir diferentes modos de examen
-
-✅ Trabajar con bancos de preguntas separados por certificación
-
 ✅ Generar automáticamente exámenes realistas
 
 ✅ Mostrar resultados, puntaje y respuestas correctas
@@ -37,6 +33,10 @@ El objetivo será crear una aplicación completa donde el usuario pueda:
 ✅ Aleatorizar preguntas y respuestas automáticamente
 
 ✅ Generar exámenes balanceados según el syllabus oficial ISTQB
+
+✅ Practicar por capítulos y learning objectives
+
+✅ Reforzar preguntas incorrectas automáticamente
 
 ---
 
@@ -64,19 +64,162 @@ El sistema debe soportar inicialmente:
 
 ---
 
-# 🎯 MODOS DE EXAMEN
+# 🚀 MODOS PROFESIONALES DE EXAMEN
+
+La plataforma debe soportar los siguientes modos:
+
+---
+
+## ✅ EXAMEN OFICIAL ALEATORIO
+
+Simula el examen oficial ISTQB.
+
+Debe:
+
+✅ generar exactamente 40 preguntas
+
+✅ respetar la distribución interna del syllabus
+
+✅ seleccionar preguntas aleatorias del banco
+
+✅ mezclar preguntas
+
+✅ mezclar respuestas
+
+✅ generar un examen diferente en cada intento
+
+---
+
+## ✅ EXAMEN RÁPIDO
+
+Modo rápido para práctica rápida.
+
+Debe:
+
+✅ generar 10 preguntas aleatorias
+
+✅ seleccionar preguntas del banco de la certificación elegida
+
+✅ mezclar preguntas
+
+✅ mezclar respuestas
+
+Objetivo:
+
+✅ práctica rápida diaria
+
+✅ micro sesiones de estudio
+
+---
+
+## ✅ EXAMEN POR CAPÍTULO
+
+Permite practicar capítulos específicos.
 
 El usuario podrá elegir:
 
-✅ Examen Aleatorio
+✅ capítulo 1
 
-✅ Examen Tipo A
+✅ capítulo 2
 
-✅ Examen Tipo B
+✅ capítulo 3
 
-✅ Examen Tipo C
+etc.
 
-✅ Examen Tipo D
+El sistema debe:
+
+✅ generar preguntas SOLO del capítulo seleccionado
+
+✅ permitir elegir cantidad de preguntas
+
+✅ mezclar preguntas y respuestas
+
+Ejemplo:
+
+{
+"capitulo": "1",
+"cantidad": 15
+}
+
+---
+
+## ✅ EXAMEN POR LEARNING OBJECTIVE
+
+Permite practicar objetivos específicos.
+
+El usuario podrá seleccionar:
+
+✅ FL-1.1.1
+
+✅ FL-2.3.2
+
+✅ ATM-3.2.1
+
+etc.
+
+El sistema debe:
+
+✅ filtrar preguntas por learning objective
+
+✅ permitir seleccionar varios objetivos
+
+✅ generar examen personalizado
+
+---
+
+## ✅ EXAMEN DE REPASO
+
+Debe generar un examen usando:
+
+✅ preguntas respondidas incorrectamente anteriormente
+
+Objetivo:
+
+✅ reforzar debilidades
+
+✅ mejorar aprendizaje
+
+El backend debe:
+
+1. leer historial del usuario
+
+2. detectar preguntas falladas
+
+3. generar examen basado en errores anteriores
+
+4. mezclar preguntas y respuestas
+
+---
+
+## ✅ EXAMEN PERSONALIZADO
+
+El usuario podrá construir su propio examen.
+
+Debe permitir elegir:
+
+✅ capítulos
+
+✅ cantidad de preguntas
+
+✅ learning objectives
+
+✅ certificación
+
+✅ incluir/excluir preguntas ya respondidas
+
+✅ temporizador opcional
+
+Ejemplo:
+
+{
+"certificacion": "Foundation",
+"capitulos": ["1", "2"],
+"cantidad": 25,
+"learning_objectives": [
+"FL-1.1.1",
+"FL-2.3.2"
+]
+}
 
 ---
 
@@ -153,10 +296,13 @@ solo cuando aplique.
 
 13. Explicar claramente:
 
-* por qué se hace
-* qué problema resuelve
-* buenas prácticas
-* errores comunes
+✅ por qué se hace
+
+✅ qué problema resuelve
+
+✅ buenas prácticas
+
+✅ errores comunes
 
 ---
 
@@ -170,22 +316,15 @@ La plataforma permitirá practicar diferentes certificaciones ISTQB.
 
 ✅ Exámenes automáticos
 
-✅ Exámenes de 40 preguntas
+✅ Exámenes dinámicos
 
 ✅ Preguntas aleatorias
-
-✅ Exámenes por categorías:
-
-* A
-* B
-* C
-* D
 
 ✅ Temporizador tipo examen real
 
 ✅ Resultados automáticos
 
-✅ Estadísticas
+✅ Estadísticas avanzadas
 
 ✅ Historial de intentos
 
@@ -207,6 +346,8 @@ La plataforma permitirá practicar diferentes certificaciones ISTQB.
 
 ✅ Learning Objectives oficiales
 
+✅ Engine profesional de certificaciones
+
 ---
 
 # 📊 ESTRUCTURA DE DATOS
@@ -222,7 +363,6 @@ Campos:
 * opciones (JSON)
 * respuesta_correcta_texto
 * explicacion
-* categoria
 * certificacion
 * capitulo
 * seccion
@@ -408,7 +548,7 @@ El usuario solo selecciona:
 
 ✅ certificación
 
-✅ tipo de examen
+✅ modo de examen
 
 ---
 
@@ -530,21 +670,13 @@ La imagen debe ser:
 
 # 🎯 FUNCIONALIDADES CLAVE
 
-✅ Generar 40 preguntas automáticamente
+✅ Generar preguntas automáticamente
 
 ✅ Permitir elegir certificación
 
-✅ Permitir elegir:
+✅ Permitir elegir modo de examen
 
-* Examen Aleatorio
-* Examen A
-* Examen B
-* Examen C
-* Examen D
-
-✅ Temporizador:
-
-* 60 minutos
+✅ Temporizador configurable
 
 ✅ Navegación:
 
@@ -596,6 +728,44 @@ istqb_simulador/
 │   ├── pages/
 │   ├── services/
 │   └── App.jsx
+
+---
+
+# 📦 NUEVOS ENDPOINTS
+
+## Generar examen oficial
+
+POST /api/examenes/oficial
+
+---
+
+## Generar examen rápido
+
+POST /api/examenes/rapido
+
+---
+
+## Generar examen por capítulo
+
+POST /api/examenes/capitulo
+
+---
+
+## Generar examen por learning objective
+
+POST /api/examenes/objetivos
+
+---
+
+## Generar examen de repaso
+
+POST /api/examenes/repaso
+
+---
+
+## Generar examen personalizado
+
+POST /api/examenes/personalizado
 
 ---
 
@@ -655,7 +825,6 @@ BASE DE DATOS MYSQL
 MODELO PREGUNTA
 
 * Tabla preguntas
-* Categorías A/B/C/D
 * Explicación
 * imagen_url
 * imagen_descripcion
@@ -715,27 +884,17 @@ ENDPOINT CERTIFICACIONES
 
 GET /api/certificaciones
 
-Debe devolver:
-
-[
-"Foundation",
-"Automation",
-"Performance",
-"Agile",
-"Security"
-]
-
 ---
 
 ## 🎯 FASE 10
 
-GENERADOR DE EXAMEN ALEATORIO
+GENERADOR DE EXAMEN OFICIAL
 
-POST /api/examenes/generar
+POST /api/examenes/oficial
 
 Debe:
 
-✅ seleccionar 40 preguntas aleatorias
+✅ seleccionar preguntas aleatorias
 
 ✅ evitar repetidas
 
@@ -751,63 +910,71 @@ Debe:
 
 ## 🎯 FASE 11
 
-GENERADOR POR CATEGORÍA
+GENERADOR DE EXAMEN RÁPIDO
 
-Opciones:
-
-* A
-* B
-* C
-* D
-
-Ejemplo:
-
-POST /api/examenes/generar/B
-
-Body:
-
-{
-"certificacion": "Automation"
-}
+POST /api/examenes/rapido
 
 ---
 
 ## 🎯 FASE 12
 
-PANTALLA SELECCIÓN DE CERTIFICACIÓN
+GENERADOR POR CAPÍTULO
 
-Mostrar cards visuales:
-
-✅ Foundation
-✅ Automation
-✅ Performance
-✅ Agile
-✅ Security
-
-Cada card debe incluir:
-
-* nombre
-* descripción
-* icono
-* cantidad de preguntas disponibles
+POST /api/examenes/capitulo
 
 ---
 
 ## 🎯 FASE 13
 
-PANTALLA HOME
+GENERADOR POR LEARNING OBJECTIVE
 
-Opciones:
-
-* Iniciar examen aleatorio
-* Examen A
-* Examen B
-* Examen C
-* Examen D
+POST /api/examenes/objetivos
 
 ---
 
 ## 🎯 FASE 14
+
+GENERADOR DE REPASO
+
+POST /api/examenes/repaso
+
+---
+
+## 🎯 FASE 15
+
+GENERADOR PERSONALIZADO
+
+POST /api/examenes/personalizado
+
+---
+
+## 🎯 FASE 16
+
+PANTALLA SELECCIÓN DE CERTIFICACIÓN
+
+---
+
+## 🎯 FASE 17
+
+PANTALLA HOME
+
+Mostrar:
+
+✅ Examen Oficial
+
+✅ Examen Rápido
+
+✅ Examen por Capítulo
+
+✅ Examen por Learning Objective
+
+✅ Examen de Repaso
+
+✅ Examen Personalizado
+
+---
+
+## 🎯 FASE 18
 
 PANTALLA EXAMEN
 
@@ -819,7 +986,7 @@ PANTALLA EXAMEN
 
 ---
 
-## 🎯 FASE 15
+## 🎯 FASE 19
 
 TEMPORIZADOR
 
@@ -828,7 +995,7 @@ TEMPORIZADOR
 
 ---
 
-## 🎯 FASE 16
+## 🎯 FASE 20
 
 GUARDAR RESPUESTAS
 
@@ -836,7 +1003,7 @@ GUARDAR RESPUESTAS
 
 ---
 
-## 🎯 FASE 17
+## 🎯 FASE 21
 
 RESULTADOS
 
@@ -849,7 +1016,7 @@ Mostrar:
 
 ---
 
-## 🎯 FASE 18
+## 🎯 FASE 22
 
 REVISIÓN DE RESPUESTAS
 
@@ -859,7 +1026,7 @@ REVISIÓN DE RESPUESTAS
 
 ---
 
-## 🎯 FASE 19
+## 🎯 FASE 23
 
 HISTORIAL DE EXÁMENES
 
@@ -871,7 +1038,7 @@ Guardar también:
 
 ---
 
-## 🎯 FASE 20
+## 🎯 FASE 24
 
 ESTADÍSTICAS AVANZADAS
 
@@ -889,13 +1056,13 @@ Mostrar:
 
 ---
 
-## 🎯 FASE 21
+## 🎯 FASE 25
 
 MODO OSCURO
 
 ---
 
-## 🎯 FASE 22
+## 🎯 FASE 26
 
 RESPONSIVE DESIGN
 
@@ -905,7 +1072,7 @@ RESPONSIVE DESIGN
 
 ---
 
-## 🎯 FASE 23
+## 🎯 FASE 27
 
 MEJORAS FINALES
 
@@ -919,7 +1086,7 @@ MEJORAS FINALES
 
 El simulador DEBE:
 
-✅ Elegir exactamente 40 preguntas
+✅ Generar preguntas dinámicamente
 
 ✅ No repetir preguntas
 
@@ -928,11 +1095,6 @@ El simulador DEBE:
 ✅ Respetar distribución del syllabus
 
 ✅ Mezclar respuestas dinámicamente
-
-✅ Permitir:
-
-* mezcla total aleatoria
-* exámenes por tipo A/B/C/D
 
 ✅ Mostrar progreso:
 
@@ -957,7 +1119,6 @@ Pregunta 5 de 40
 "capitulo": "1",
 "seccion": "1.1",
 "learning_objective": "FL-1.1.1",
-"categoria": "A",
 "imagen_url": null,
 "imagen_descripcion": null,
 "opciones": [
@@ -1017,9 +1178,8 @@ Has construido una plataforma profesional de simulación ISTQB con:
 ✅ React + Vite
 ✅ FastAPI
 ✅ MySQL
-✅ Generación aleatoria de exámenes
+✅ Generación dinámica de exámenes
 ✅ Aleatorización dinámica de respuestas
-✅ Exámenes tipo A/B/C/D
 ✅ Múltiples certificaciones ISTQB
 ✅ Distribución inteligente por syllabus
 ✅ Learning Objectives oficiales

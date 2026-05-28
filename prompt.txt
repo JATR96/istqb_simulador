@@ -2,12 +2,13 @@ Ejecuta el siguiente prompt sin saltarte ninguna instrucción:
 
 ====================================================================================
 
-🧠 PROYECTO REACT + FASTAPI – PLATAFORMA PROFESIONAL DE SIMULACIÓN ISTQB MULTI-CERTIFICACIÓN
-(Backend REST con MySQL + Soporte de Imágenes + Aleatorización Dinámica + Múltiples Certificaciones ISTQB)
+# 🧠 PROYECTO REACT + FASTAPI – PLATAFORMA PROFESIONAL DE SIMULACIÓN ISTQB MULTI-CERTIFICACIÓN
+
+## (Backend REST con MySQL + Soporte de Imágenes + Aleatorización Dinámica + Distribución Inteligente por Syllabus ISTQB)
 
 ====================================================================================
 
-👋 BIENVENIDA
+# 👋 BIENVENIDA
 
 Construiremos una plataforma profesional de simulación de exámenes ISTQB 🎯
 
@@ -21,7 +22,7 @@ El objetivo será crear una aplicación completa donde el usuario pueda:
 
 ✅ Trabajar con bancos de preguntas separados por certificación
 
-✅ Generar automáticamente exámenes reales
+✅ Generar automáticamente exámenes realistas
 
 ✅ Mostrar resultados, puntaje y respuestas correctas
 
@@ -35,7 +36,11 @@ El objetivo será crear una aplicación completa donde el usuario pueda:
 
 ✅ Aleatorizar preguntas y respuestas automáticamente
 
-🎯 CERTIFICACIONES SOPORTADAS
+✅ Generar exámenes balanceados según el syllabus oficial ISTQB
+
+---
+
+# 🎯 CERTIFICACIONES SOPORTADAS
 
 El sistema debe soportar inicialmente:
 
@@ -57,7 +62,9 @@ El sistema debe soportar inicialmente:
 
 ✅ ISTQB AI Testing (futuro)
 
-🎯 MODOS DE EXAMEN
+---
+
+# 🎯 MODOS DE EXAMEN
 
 El usuario podrá elegir:
 
@@ -71,62 +78,93 @@ El usuario podrá elegir:
 
 ✅ Examen Tipo D
 
-🛠️ TECNOLOGÍAS PRINCIPALES
-FRONTEND
-React + Vite
-React Router
-Axios
-Bootstrap o Tailwind
-Context API o Zustand
-BACKEND
-FastAPI
-SQLAlchemy
-MySQL
-Alembic
-Pydantic
-BASE DE DATOS
-MySQL
-📣 INSTRUCCIONES GENERALES
+---
+
+# 🛠️ TECNOLOGÍAS PRINCIPALES
+
+## FRONTEND
+
+* React + Vite
+* React Router
+* Axios
+* Bootstrap o Tailwind
+* Context API o Zustand
+
+## BACKEND
+
+* FastAPI
+* SQLAlchemy
+* MySQL
+* Alembic
+* Pydantic
+
+## BASE DE DATOS
+
+* MySQL
+
+---
+
+# 📣 INSTRUCCIONES GENERALES
 
 ⚠️ MODO INTERACTIVO ESTRICTO (POR FASES)
 
-REGLAS
-Mostrar EXACTAMENTE una sola fase por respuesta.
-NO adelantar fases futuras.
-Terminar SIEMPRE con:
+## REGLAS
+
+1. Mostrar EXACTAMENTE una sola fase por respuesta.
+
+2. NO adelantar fases futuras.
+
+3. Terminar SIEMPRE con:
 
 👉 ¿Continuamos? Responde: listo para la siguiente fase.
 
-Solo avanzar cuando el usuario escriba:
-listo
-listo fase X
-Si el usuario hace preguntas externas:
-responder brevemente
-luego continuar indicando la fase actual.
-Cada archivo debe indicar:
-ruta completa
-si es (NUEVO) o (MODIFICADO)
-Usar:
-[NUEVO]
-[MODIFICADO]
+4. Solo avanzar cuando el usuario escriba:
+
+* listo
+* listo fase X
+
+5. Si el usuario hace preguntas externas:
+
+* responder brevemente
+* luego continuar indicando la fase actual.
+
+6. Cada archivo debe indicar:
+
+* ruta completa
+* si es (NUEVO) o (MODIFICADO)
+
+7. Usar:
+
+# [NUEVO]
+
+# [MODIFICADO]
 
 solo cuando aplique.
 
-Agregar comentarios explicativos claros en el código.
-No repetir fases ya mostradas.
-Todas las respuestas deben incluir código funcional y compatible entre frontend y backend.
-NUNCA entregar fragmentos incompletos.
-Siempre generar archivos completos listos para copiar y pegar.
-Explicar claramente:
-por qué se hace
-qué problema resuelve
-buenas prácticas
-errores comunes
-🎯 OBJETIVO DEL SISTEMA
+8. Agregar comentarios explicativos claros en el código.
+
+9. No repetir fases ya mostradas.
+
+10. Todas las respuestas deben incluir código funcional y compatible entre frontend y backend.
+
+11. NUNCA entregar fragmentos incompletos.
+
+12. Siempre generar archivos completos listos para copiar y pegar.
+
+13. Explicar claramente:
+
+* por qué se hace
+* qué problema resuelve
+* buenas prácticas
+* errores comunes
+
+---
+
+# 🎯 OBJETIVO DEL SISTEMA
 
 La plataforma permitirá practicar diferentes certificaciones ISTQB.
 
-Características principales
+## Características principales
 
 ✅ Banco de preguntas multi-certificación
 
@@ -138,10 +176,10 @@ Características principales
 
 ✅ Exámenes por categorías:
 
-A
-B
-C
-D
+* A
+* B
+* C
+* D
 
 ✅ Temporizador tipo examen real
 
@@ -165,44 +203,62 @@ D
 
 ✅ Aleatorización dinámica de respuestas
 
-📊 ESTRUCTURA DE DATOS
-Tabla principal: preguntas
+✅ Distribución inteligente por syllabus
+
+✅ Learning Objectives oficiales
+
+---
+
+# 📊 ESTRUCTURA DE DATOS
+
+## Tabla principal: preguntas
 
 Campos:
 
-id
-pregunta
-imagen_url
-imagen_descripcion
-opciones (JSON)
-respuesta_correcta_texto
-explicacion
-categoria
-dificultad
-certificacion
-Tabla: examenes
+* id
+* pregunta
+* imagen_url
+* imagen_descripcion
+* opciones (JSON)
+* respuesta_correcta_texto
+* explicacion
+* categoria
+* certificacion
+* capitulo
+* seccion
+* learning_objective
+
+---
+
+## Tabla: examenes
 
 Campos:
 
-id
-fecha
-puntaje
-porcentaje
-tiempo_empleado
-tipo_examen
-certificacion
-Tabla: respuestas_usuario
+* id
+* fecha
+* puntaje
+* porcentaje
+* tiempo_empleado
+* tipo_examen
+* certificacion
+
+---
+
+## Tabla: respuestas_usuario
 
 Campos:
 
-id
-examen_id
-pregunta_id
-respuesta_usuario
-respuesta_correcta
-posicion_respuesta
-es_correcta
-🖼️ SOPORTE DE IMÁGENES
+* id
+* examen_id
+* pregunta_id
+* respuesta_usuario
+* respuesta_correcta
+* posicion_respuesta
+* es_correcta
+
+---
+
+# 🖼️ SOPORTE DE IMÁGENES
 
 El sistema DEBE permitir:
 
@@ -216,12 +272,15 @@ El sistema DEBE permitir:
 
 ✅ Soportar formatos:
 
-PNG
-JPG
-JPEG
-WEBP
-SVG
-🎯 REGLAS IMPORTANTES DE IMÁGENES
+* PNG
+* JPG
+* JPEG
+* WEBP
+* SVG
+
+---
+
+# 🎯 REGLAS IMPORTANTES DE IMÁGENES
 
 Las imágenes deben ser OPCIONALES.
 
@@ -235,11 +294,15 @@ El sistema debe funcionar tanto con:
 
 ✅ preguntas con tablas o esquemas visuales
 
-🎲 ALEATORIZACIÓN DINÁMICA DE RESPUESTAS
+---
+
+# 🎲 ALEATORIZACIÓN DINÁMICA DE RESPUESTAS
 
 El sistema DEBE mezclar automáticamente el orden de las opciones en cada intento.
 
-🎯 OBJETIVO
+---
+
+## 🎯 OBJETIVO
 
 Evitar que el usuario memorice:
 
@@ -261,7 +324,9 @@ B) Appium
 C) Selenium
 D) Cypress ✅
 
-⚠️ REGLAS IMPORTANTES
+---
+
+# ⚠️ REGLAS IMPORTANTES
 
 El sistema DEBE:
 
@@ -275,7 +340,135 @@ El sistema DEBE:
 
 ✅ evitar memorización visual
 
-📦 SOPORTE BACKEND FASTAPI
+---
+
+# 🎯 DISTRIBUCIÓN AUTOMÁTICA POR SYLLABUS ISTQB
+
+El sistema NO debe usar dificultad tipo:
+
+❌ fácil
+❌ media
+❌ difícil
+
+Los exámenes reales ISTQB se construyen usando:
+
+✅ capítulos oficiales
+
+✅ secciones oficiales
+
+✅ learning objectives
+
+✅ distribución oficial de preguntas
+
+---
+
+# 📚 ESTRUCTURA DEL SYLLABUS
+
+Cada pregunta debe pertenecer a:
+
+✅ capítulo
+
+✅ sección
+
+✅ learning objective
+
+Ejemplo:
+
+| pregunta         | capitulo | seccion | learning_objective |
+| ---------------- | -------- | ------- | ------------------ |
+| ¿Qué es testing? | 1        | 1.1     | FL-1.1.1           |
+
+---
+
+# 🎯 GENERACIÓN INTELIGENTE DE EXÁMENES
+
+El backend debe generar automáticamente exámenes balanceados.
+
+Ejemplo interno:
+
+* 8 preguntas del capítulo 1
+* 5 preguntas del capítulo 2
+* 7 preguntas del capítulo 3
+* 10 preguntas del capítulo 4
+* 10 preguntas del capítulo 5
+
+Total:
+
+40 preguntas
+
+---
+
+# ⚠️ IMPORTANTE
+
+La distribución NO debe ser visible para el usuario.
+
+Todo debe hacerse INTERNAMENTE en backend.
+
+El usuario solo selecciona:
+
+✅ certificación
+
+✅ tipo de examen
+
+---
+
+# 📦 CONFIGURACIÓN INTERNA
+
+Crear carpeta:
+
+exam_blueprints/
+
+Ejemplo:
+
+foundation_distribution.json
+
+Contenido:
+
+{
+"1": 8,
+"2": 5,
+"3": 7,
+"4": 10,
+"5": 10
+}
+
+---
+
+# 📦 SOPORTE MULTI-CERTIFICACIÓN
+
+Cada certificación debe tener su propia distribución.
+
+Ejemplos:
+
+* foundation_distribution.json
+* automation_distribution.json
+* performance_distribution.json
+
+---
+
+# 🎯 LEARNING OBJECTIVES
+
+Cada pregunta debe estar asociada a un Learning Objective oficial.
+
+Ejemplos:
+
+* FL-1.1.1
+* FL-2.3.2
+* ATM-3.2.1
+
+Esto permitirá:
+
+✅ estadísticas por objetivo
+
+✅ análisis de debilidades
+
+✅ dashboard inteligente
+
+✅ recomendaciones de estudio
+
+---
+
+# 📦 SOPORTE BACKEND FASTAPI
 
 Agregar:
 
@@ -301,7 +494,13 @@ Ejemplo:
 
 services/generador_examen.py
 
-📦 SOPORTE FRONTEND REACT
+✅ Lógica de distribución inteligente
+
+✅ Lectura de blueprints JSON
+
+---
+
+# 📦 SOPORTE FRONTEND REACT
 
 Cuando una pregunta tenga imagen_url:
 
@@ -327,7 +526,9 @@ La imagen debe ser:
 
 ✅ compatible con dark mode
 
-🎯 FUNCIONALIDADES CLAVE
+---
+
+# 🎯 FUNCIONALIDADES CLAVE
 
 ✅ Generar 40 preguntas automáticamente
 
@@ -335,123 +536,161 @@ La imagen debe ser:
 
 ✅ Permitir elegir:
 
-Examen Aleatorio
-Examen A
-Examen B
-Examen C
-Examen D
+* Examen Aleatorio
+* Examen A
+* Examen B
+* Examen C
+* Examen D
 
 ✅ Temporizador:
 
-60 minutos
+* 60 minutos
 
 ✅ Navegación:
 
-siguiente/anterior pregunta
+* siguiente/anterior pregunta
 
 ✅ Marcar preguntas para revisión
 
 ✅ Mostrar:
 
-porcentaje
-preguntas correctas
-incorrectas
-tiempo usado
+* porcentaje
+* preguntas correctas
+* incorrectas
+* tiempo usado
 
 ✅ Mostrar respuestas correctas al finalizar
 
-🧱 ESTRUCTURA DEL PROYECTO
+---
+
+# 🧱 ESTRUCTURA DEL PROYECTO
 
 Ruta sugerida:
 
-C:\Cursos\ISTQB\istqb_simulador
+C:\Cursos\ISTQB\istqb_simulador\
 
-
-
-Estructura
+## Estructura
 
 istqb_simulador/
 │
 ├── backend/
-│ ├── uploads/
-│ │ └── diagramas/
-│ │
-│ ├── main.py
-│ ├── database.py
-│ ├── models/
-│ ├── schemas/
-│ ├── services/
-│ ├── api/
-│ └── .env
+│   ├── uploads/
+│   │   └── diagramas/
+│   │
+│   ├── exam_blueprints/
+│   │   ├── foundation_distribution.json
+│   │   ├── automation_distribution.json
+│   │   └── performance_distribution.json
+│   │
+│   ├── main.py
+│   ├── database.py
+│   ├── models/
+│   ├── schemas/
+│   ├── services/
+│   ├── api/
+│   └── .env
 │
 ├── frontend/
-│ ├── src/
-│ ├── components/
-│ ├── pages/
-│ ├── services/
-│ └── App.jsx
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   └── App.jsx
 
-📦 FASES DEL PROYECTO
-🎯 FASE 1
+---
+
+# 📦 FASES DEL PROYECTO
+
+---
+
+## 🎯 FASE 1
 
 CREACIÓN DEL PROYECTO Y ENTORNO
 
-Crear backend FastAPI
-Crear frontend React + Vite
-Configurar entorno virtual
-Instalar dependencias
-🎯 FASE 2
+* Crear backend FastAPI
+* Crear frontend React + Vite
+* Configurar entorno virtual
+* Instalar dependencias
+
+---
+
+## 🎯 FASE 2
 
 CONFIGURACIÓN BASE FASTAPI
 
-main.py
-endpoint prueba
-uvicorn
-StaticFiles para imágenes
-🎯 FASE 3
+* main.py
+* endpoint prueba
+* uvicorn
+* StaticFiles para imágenes
+
+---
+
+## 🎯 FASE 3
 
 CONFIGURACIÓN REACT + VITE
 
-Crear layout base
-React Router
-Navbar
-🎯 FASE 4
+* Crear layout base
+* React Router
+* Navbar
+
+---
+
+## 🎯 FASE 4
 
 BASE DE DATOS MYSQL
 
-Crear BD:
-istqb_db
-Configurar .env
-SQLAlchemy
-conexión MySQL
-🎯 FASE 5
+* Crear BD:
+  istqb_db
+
+* Configurar .env
+
+* SQLAlchemy
+
+* conexión MySQL
+
+---
+
+## 🎯 FASE 5
 
 MODELO PREGUNTA
 
-Tabla preguntas
-Categorías A/B/C/D
-Explicación
-imagen_url
-imagen_descripcion
-opciones JSON
-respuesta_correcta_texto
-certificacion
-🎯 FASE 6
+* Tabla preguntas
+* Categorías A/B/C/D
+* Explicación
+* imagen_url
+* imagen_descripcion
+* opciones JSON
+* respuesta_correcta_texto
+* certificacion
+* capitulo
+* seccion
+* learning_objective
+
+---
+
+## 🎯 FASE 6
 
 MIGRACIONES ALEMBIC
 
-Configurar Alembic
-Crear tablas
-🎯 FASE 7
+* Configurar Alembic
+* Crear tablas
+
+---
+
+## 🎯 FASE 7
 
 IMPORTADOR DE PREGUNTAS
 
-Leer JSON/CSV
-Insertar preguntas automáticamente
-Validar duplicados
-Importar imágenes asociadas
-Importar preguntas por certificación
-🎯 FASE 8
+* Leer JSON/CSV
+* Insertar preguntas automáticamente
+* Validar duplicados
+* Importar imágenes asociadas
+* Importar preguntas por certificación
+* Importar capítulos y learning objectives
+
+---
+
+## 🎯 FASE 8
 
 ENDPOINT LISTAR PREGUNTAS
 
@@ -459,12 +698,18 @@ GET /api/preguntas
 
 Debe devolver:
 
-texto
-opciones dinámicas
-imagen_url
-imagen_descripcion
-certificacion
-🎯 FASE 9
+* texto
+* opciones dinámicas
+* imagen_url
+* imagen_descripcion
+* certificacion
+* capitulo
+* seccion
+* learning_objective
+
+---
+
+## 🎯 FASE 9
 
 ENDPOINT CERTIFICACIONES
 
@@ -480,7 +725,9 @@ Debe devolver:
 "Security"
 ]
 
-🎯 FASE 10
+---
+
+## 🎯 FASE 10
 
 GENERADOR DE EXAMEN ALEATORIO
 
@@ -494,20 +741,24 @@ Debe:
 
 ✅ generar preguntas SOLO de la certificación elegida
 
+✅ respetar distribución interna del syllabus
+
 ✅ mezclar respuestas automáticamente
 
 ✅ devolver JSON listo para frontend
 
-🎯 FASE 11
+---
+
+## 🎯 FASE 11
 
 GENERADOR POR CATEGORÍA
 
 Opciones:
 
-A
-B
-C
-D
+* A
+* B
+* C
+* D
 
 Ejemplo:
 
@@ -519,7 +770,9 @@ Body:
 "certificacion": "Automation"
 }
 
-🎯 FASE 12
+---
+
+## 🎯 FASE 12
 
 PANTALLA SELECCIÓN DE CERTIFICACIÓN
 
@@ -533,86 +786,136 @@ Mostrar cards visuales:
 
 Cada card debe incluir:
 
-nombre
-descripción
-icono
-cantidad de preguntas disponibles
-🎯 FASE 13
+* nombre
+* descripción
+* icono
+* cantidad de preguntas disponibles
+
+---
+
+## 🎯 FASE 13
 
 PANTALLA HOME
 
 Opciones:
 
-Iniciar examen aleatorio
-Examen A
-Examen B
-Examen C
-Examen D
-🎯 FASE 14
+* Iniciar examen aleatorio
+* Examen A
+* Examen B
+* Examen C
+* Examen D
+
+---
+
+## 🎯 FASE 14
 
 PANTALLA EXAMEN
 
-Mostrar pregunta
-Mostrar imagen si existe
-Renderizar opciones dinámicas
-navegación
-contador
-🎯 FASE 15
+* Mostrar pregunta
+* Mostrar imagen si existe
+* Renderizar opciones dinámicas
+* navegación
+* contador
+
+---
+
+## 🎯 FASE 15
 
 TEMPORIZADOR
 
-60 minutos
-envío automático al terminar
-🎯 FASE 16
+* 60 minutos
+* envío automático al terminar
+
+---
+
+## 🎯 FASE 16
 
 GUARDAR RESPUESTAS
 
-Persistir respuestas usuario
-🎯 FASE 17
+* Persistir respuestas usuario
+
+---
+
+## 🎯 FASE 17
 
 RESULTADOS
 
 Mostrar:
 
-puntaje
-porcentaje
-aprobó/no aprobó
-correctas/incorrectas
-🎯 FASE 18
+* puntaje
+* porcentaje
+* aprobó/no aprobó
+* correctas/incorrectas
+
+---
+
+## 🎯 FASE 18
 
 REVISIÓN DE RESPUESTAS
 
-Mostrar explicación
-respuesta correcta
-mostrar imagen original si existe
-🎯 FASE 19
+* Mostrar explicación
+* respuesta correcta
+* mostrar imagen original si existe
+
+---
+
+## 🎯 FASE 19
 
 HISTORIAL DE EXÁMENES
 
-Lista de intentos anteriores
+* Lista de intentos anteriores
 
 Guardar también:
 
-certificacion
-🎯 FASE 20
+* certificacion
+
+---
+
+## 🎯 FASE 20
+
+ESTADÍSTICAS AVANZADAS
+
+Mostrar:
+
+✅ rendimiento por capítulo
+
+✅ rendimiento por sección
+
+✅ rendimiento por learning objective
+
+✅ áreas débiles
+
+✅ porcentaje por objetivo
+
+---
+
+## 🎯 FASE 21
 
 MODO OSCURO
 
-🎯 FASE 21
+---
+
+## 🎯 FASE 22
 
 RESPONSIVE DESIGN
 
-Adaptar imágenes a móviles
-Mantener proporciones
-Zoom opcional
-🎯 FASE 22
+* Adaptar imágenes a móviles
+* Mantener proporciones
+* Zoom opcional
+
+---
+
+## 🎯 FASE 23
 
 MEJORAS FINALES
 
-optimización
-validaciones
-UX
-🎯 REGLAS IMPORTANTES DEL GENERADOR DE EXÁMENES
+* optimización
+* validaciones
+* UX
+
+---
+
+# 🎯 REGLAS IMPORTANTES DEL GENERADOR DE EXÁMENES
 
 El simulador DEBE:
 
@@ -622,12 +925,14 @@ El simulador DEBE:
 
 ✅ Generar preguntas SOLO de la certificación elegida
 
+✅ Respetar distribución del syllabus
+
 ✅ Mezclar respuestas dinámicamente
 
 ✅ Permitir:
 
-mezcla total aleatoria
-exámenes por tipo A/B/C/D
+* mezcla total aleatoria
+* exámenes por tipo A/B/C/D
 
 ✅ Mostrar progreso:
 
@@ -635,33 +940,39 @@ Pregunta 5 de 40
 
 ✅ Calcular automáticamente:
 
-score
-porcentaje
+* score
+* porcentaje
 
 ✅ Aprobar con:
 65%
 
-🎯 EJEMPLO DE JSON DE PREGUNTAS
+---
+
+# 🎯 EJEMPLO DE JSON DE PREGUNTAS
 
 [
 {
-"pregunta": "¿Qué ventaja tiene Selenium Grid?",
-"certificacion": "Automation",
-"categoria": "B",
-"imagen_url": "/uploads/automation/grid.png",
-"imagen_descripcion": "Arquitectura Selenium Grid",
+"pregunta": "¿Qué es testing?",
+"certificacion": "Foundation",
+"capitulo": "1",
+"seccion": "1.1",
+"learning_objective": "FL-1.1.1",
+"categoria": "A",
+"imagen_url": null,
+"imagen_descripcion": null,
 "opciones": [
-"Escalar pruebas",
-"Reducir RAM",
-"Eliminar Selenium",
-"Reemplazar APIs"
+"Validar calidad",
+"Eliminar bugs",
+"Crear software",
+"Compilar código"
 ],
-"respuesta_correcta_texto": "Escalar pruebas",
-"dificultad": "media"
+"respuesta_correcta_texto": "Validar calidad"
 }
 ]
 
-🎨 REQUISITOS VISUALES
+---
+
+# 🎨 REQUISITOS VISUALES
 
 Las imágenes deben:
 
@@ -675,7 +986,9 @@ Las imágenes deben:
 
 ✅ mostrar texto alternativo (alt)
 
-🚀 ESCALABILIDAD FUTURA
+---
+
+# 🚀 ESCALABILIDAD FUTURA
 
 La arquitectura debe permitir agregar nuevas certificaciones sin modificar la lógica principal.
 
@@ -687,7 +1000,11 @@ Solo agregando:
 
 ✅ nuevos JSON/CSV
 
-✨ MENSAJE FINAL
+✅ nuevos blueprints
+
+---
+
+# ✨ MENSAJE FINAL
 
 Cuando finalice el proyecto:
 
@@ -704,9 +1021,12 @@ Has construido una plataforma profesional de simulación ISTQB con:
 ✅ Aleatorización dinámica de respuestas
 ✅ Exámenes tipo A/B/C/D
 ✅ Múltiples certificaciones ISTQB
+✅ Distribución inteligente por syllabus
+✅ Learning Objectives oficiales
 ✅ Temporizador
 ✅ Resultados automáticos
 ✅ Historial
+✅ Estadísticas avanzadas
 ✅ Responsive Design
 ✅ Soporte de imágenes y diagramas
 
@@ -724,7 +1044,9 @@ La aplicación estará lista para:
 
 El siguiente paso será:
 
-agregar login
-dashboard avanzado
-estadísticas
-IA para recomendaciones de estudio
+* agregar login
+* dashboard avanzado
+* estadísticas inteligentes
+* IA para recomendaciones de estudio
+* panel administrador
+* generación automática de reportes

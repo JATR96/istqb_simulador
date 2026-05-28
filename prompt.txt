@@ -1,0 +1,651 @@
+Ejecuta el siguiente prompt sin saltarte ninguna instrucción:
+
+🧠 PROYECTO REACT + FASTAPI – PLATAFORMA PROFESIONAL DE SIMULACIÓN ISTQB MULTI-CERTIFICACIÓN
+(Backend REST con MySQL + Soporte de Imágenes + Múltiples Certificaciones ISTQB)
+
+====================================================================================
+
+👋 BIENVENIDA
+
+Construiremos una plataforma profesional de simulación de exámenes ISTQB 🎯
+
+El objetivo será crear una aplicación completa donde el usuario pueda:
+
+Resolver exámenes ISTQB simulados.
+Elegir diferentes certificaciones ISTQB.
+Elegir diferentes modos de examen.
+Trabajar con bancos de preguntas separados por certificación.
+Generar automáticamente exámenes reales.
+Mostrar resultados, puntaje y respuestas correctas.
+Simular tiempo real del examen.
+Guardar progreso e historial.
+Consumir preguntas desde una API REST.
+Mostrar imágenes, diagramas, tablas y esquemas visuales.
+🎯 CERTIFICACIONES SOPORTADAS
+
+El sistema debe soportar inicialmente:
+
+✅ ISTQB Foundation Level
+
+✅ ISTQB Agile Tester
+
+✅ ISTQB Automation Tester
+
+✅ ISTQB Performance Testing
+
+✅ ISTQB Test Manager
+
+✅ ISTQB Security Tester
+
+✅ ISTQB Mobile Application Testing
+
+✅ ISTQB Usability Testing
+
+✅ ISTQB AI Testing (futuro)
+
+🎯 MODOS DE EXAMEN
+
+El usuario podrá elegir:
+
+✅ Examen Aleatorio
+
+✅ Examen Tipo A
+
+✅ Examen Tipo B
+
+✅ Examen Tipo C
+
+✅ Examen Tipo D
+
+🛠️ TECNOLOGÍAS PRINCIPALES
+FRONTEND
+React + Vite
+React Router
+Axios
+Bootstrap o Tailwind
+Context API o Zustand
+BACKEND
+FastAPI
+SQLAlchemy
+MySQL
+Alembic
+Pydantic
+BASE DE DATOS
+MySQL
+📣 INSTRUCCIONES GENERALES
+
+⚠️ MODO INTERACTIVO ESTRICTO (POR FASES)
+
+REGLAS:
+
+Mostrar EXACTAMENTE una sola fase por respuesta.
+NO adelantar fases futuras.
+Terminar SIEMPRE con:
+
+👉 ¿Continuamos? Responde: listo para la siguiente fase.
+
+Solo avanzar cuando el usuario escriba:
+listo
+listo fase X
+Si el usuario hace preguntas externas:
+responder brevemente
+luego continuar indicando la fase actual.
+Cada archivo debe indicar:
+ruta completa
+si es (NUEVO) o (MODIFICADO)
+Usar:
+[NUEVO]
+[MODIFICADO]
+
+solo cuando aplique.
+
+Agregar comentarios explicativos claros en el código.
+No repetir fases ya mostradas.
+Todas las respuestas deben incluir código funcional y compatible entre frontend y backend.
+NUNCA entregar fragmentos incompletos.
+Siempre generar archivos completos listos para copiar y pegar.
+🎯 OBJETIVO DEL SISTEMA
+
+La plataforma permitirá practicar diferentes certificaciones ISTQB.
+
+Características principales:
+
+✅ Banco de preguntas multi-certificación
+
+✅ Exámenes automáticos
+
+✅ Exámenes de 40 preguntas
+
+✅ Preguntas aleatorias
+
+✅ Exámenes por categorías:
+
+A
+B
+C
+D
+
+✅ Temporizador tipo examen real
+
+✅ Resultados automáticos
+
+✅ Estadísticas
+
+✅ Historial de intentos
+
+✅ Explicación opcional de respuestas
+
+✅ Modo oscuro
+
+✅ Responsive
+
+✅ Soporte de imágenes y diagramas
+
+✅ Soporte de tablas y esquemas visuales
+
+✅ Escalable para nuevas certificaciones
+
+📊 ESTRUCTURA DE DATOS
+Tabla principal: preguntas
+
+Campos:
+
+id
+pregunta
+imagen_url
+imagen_descripcion
+opcion_a
+opcion_b
+opcion_c
+opcion_d
+respuesta_correcta
+explicacion
+categoria
+dificultad
+certificacion
+Tabla: examenes
+
+Campos:
+
+id
+fecha
+puntaje
+porcentaje
+tiempo_empleado
+tipo_examen
+certificacion
+Tabla: respuestas_usuario
+
+Campos:
+
+id
+examen_id
+pregunta_id
+respuesta_usuario
+es_correcta
+🖼️ SOPORTE DE IMÁGENES
+
+El sistema DEBE permitir:
+
+✅ Asociar imágenes opcionales a cada pregunta
+
+✅ Mostrar diagramas o cuadros en el frontend
+
+✅ Guardar rutas o URLs de imágenes en MySQL
+
+✅ Mostrar imágenes responsive en React
+
+✅ Soportar formatos:
+
+PNG
+JPG
+JPEG
+WEBP
+SVG
+🎯 REGLAS IMPORTANTES DE IMÁGENES
+
+Las imágenes deben ser OPCIONALES.
+
+El sistema debe funcionar tanto con:
+
+✅ preguntas solo texto
+
+✅ preguntas con imagen
+
+✅ preguntas con diagramas
+
+✅ preguntas con tablas o esquemas visuales
+
+📦 SOPORTE BACKEND FASTAPI
+
+Agregar:
+
+✅ Carpeta uploads/
+
+Ejemplo:
+
+backend/uploads/
+
+✅ Endpoint para servir imágenes estáticas
+
+Ejemplo:
+
+/uploads/diagramas/imagen1.png
+
+✅ Configuración StaticFiles de FastAPI
+
+✅ Validación de extensiones permitidas
+
+✅ Posibilidad futura de subir imágenes desde panel administrador
+
+📦 SOPORTE FRONTEND REACT
+
+Cuando una pregunta tenga imagen_url:
+
+✅ Mostrar la imagen debajo de la pregunta
+
+Diseño:
+
+Pregunta
+↓
+Imagen
+↓
+Opciones A/B/C/D
+
+La imagen debe ser:
+
+✅ responsive
+
+✅ centrada
+
+✅ con borde suave
+
+✅ zoom opcional
+
+✅ compatible con dark mode
+
+🎯 FUNCIONALIDADES CLAVE
+
+✅ Generar 40 preguntas automáticamente
+
+✅ Permitir elegir certificación
+
+✅ Permitir elegir:
+
+Examen Aleatorio
+Examen A
+Examen B
+Examen C
+Examen D
+
+✅ Temporizador:
+
+60 minutos
+
+✅ Navegación:
+
+siguiente/anterior pregunta
+
+✅ Marcar preguntas para revisión
+
+✅ Mostrar:
+
+porcentaje
+preguntas correctas
+incorrectas
+tiempo usado
+
+✅ Mostrar respuestas correctas al finalizar
+
+🧱 ESTRUCTURA DEL PROYECTO
+
+Ruta sugerida:
+
+C:\Cursos\ISTQB\istqb_simulador
+
+
+
+Estructura:
+
+istqb_simulador/
+│
+├── backend/
+│ ├── uploads/
+│ │ └── diagramas/
+│ │
+│ ├── main.py
+│ ├── database.py
+│ ├── models/
+│ ├── schemas/
+│ ├── services/
+│ ├── api/
+│ └── .env
+│
+├── frontend/
+│ ├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── services/
+│ └── App.jsx
+
+📦 FASES DEL PROYECTO
+🎯 FASE 1:
+
+CREACIÓN DEL PROYECTO Y ENTORNO
+
+Crear backend FastAPI
+Crear frontend React + Vite
+Configurar entorno virtual
+Instalar dependencias
+🎯 FASE 2:
+
+CONFIGURACIÓN BASE FASTAPI
+
+main.py
+endpoint prueba
+uvicorn
+StaticFiles para imágenes
+🎯 FASE 3:
+
+CONFIGURACIÓN REACT + VITE
+
+Crear layout base
+React Router
+Navbar
+🎯 FASE 4:
+
+BASE DE DATOS MYSQL
+
+Crear BD:
+istqb_db
+Configurar .env
+SQLAlchemy
+conexión MySQL
+🎯 FASE 5:
+
+MODELO PREGUNTA
+
+Tabla preguntas
+Categorías A/B/C/D
+Respuesta correcta
+Explicación
+imagen_url
+imagen_descripcion
+certificacion
+🎯 FASE 6:
+
+MIGRACIONES ALEMBIC
+
+Configurar Alembic
+Crear tablas
+🎯 FASE 7:
+
+IMPORTADOR DE PREGUNTAS
+
+Leer JSON/CSV
+Insertar preguntas automáticamente
+Validar duplicados
+Importar imágenes asociadas
+Importar preguntas por certificación
+🎯 FASE 8:
+
+ENDPOINT LISTAR PREGUNTAS
+
+GET /api/preguntas
+
+Debe devolver:
+
+texto
+opciones
+imagen_url
+imagen_descripcion
+certificacion
+🎯 FASE 9:
+
+ENDPOINT CERTIFICACIONES
+
+GET /api/certificaciones
+
+Debe devolver:
+
+[
+"Foundation",
+"Automation",
+"Performance",
+"Agile",
+"Security"
+]
+
+🎯 FASE 10:
+
+GENERADOR DE EXAMEN ALEATORIO
+
+POST /api/examenes/generar
+
+Debe:
+
+seleccionar 40 preguntas aleatorias
+evitar repetidas
+generar preguntas SOLO de la certificación elegida
+devolver JSON listo para frontend
+🎯 FASE 11:
+
+GENERADOR POR CATEGORÍA
+
+Opciones:
+
+A
+B
+C
+D
+
+Ejemplo:
+
+POST /api/examenes/generar/B
+
+Body:
+
+{
+"certificacion": "Automation"
+}
+
+🎯 FASE 12:
+
+PANTALLA SELECCIÓN DE CERTIFICACIÓN
+
+Mostrar cards visuales:
+
+✅ Foundation
+✅ Automation
+✅ Performance
+✅ Agile
+✅ Security
+
+Cada card debe incluir:
+
+nombre
+descripción
+icono
+cantidad de preguntas disponibles
+🎯 FASE 13:
+
+PANTALLA HOME
+
+Opciones:
+
+Iniciar examen aleatorio
+Examen A
+Examen B
+Examen C
+Examen D
+🎯 FASE 14:
+
+PANTALLA EXAMEN
+
+Mostrar pregunta
+Mostrar imagen si existe
+opciones
+navegación
+contador
+🎯 FASE 15:
+
+TEMPORIZADOR
+
+60 minutos
+envío automático al terminar
+🎯 FASE 16:
+
+GUARDAR RESPUESTAS
+
+Persistir respuestas usuario
+🎯 FASE 17:
+
+RESULTADOS
+
+Mostrar:
+
+puntaje
+porcentaje
+aprobó/no aprobó
+correctas/incorrectas
+🎯 FASE 18:
+
+REVISIÓN DE RESPUESTAS
+
+Mostrar explicación
+respuesta correcta
+mostrar imagen original si existe
+🎯 FASE 19:
+
+HISTORIAL DE EXÁMENES
+
+Lista de intentos anteriores
+
+Guardar también:
+
+certificacion
+🎯 FASE 20:
+
+MODO OSCURO
+
+🎯 FASE 21:
+
+RESPONSIVE DESIGN
+
+Adaptar imágenes a móviles
+Mantener proporciones
+Zoom opcional
+🎯 FASE 22:
+
+MEJORAS FINALES
+
+optimización
+validaciones
+UX
+🎯 REGLAS IMPORTANTES DEL GENERADOR DE EXÁMENES
+
+El simulador DEBE:
+
+✅ Elegir exactamente 40 preguntas
+
+✅ No repetir preguntas
+
+✅ Generar preguntas SOLO de la certificación elegida
+
+✅ Permitir:
+
+mezcla total aleatoria
+exámenes por tipo A/B/C/D
+
+✅ Mostrar progreso:
+
+Pregunta 5 de 40
+
+✅ Calcular automáticamente:
+
+score
+porcentaje
+
+✅ Aprobar con:
+65%
+
+🎯 EJEMPLO DE JSON DE PREGUNTAS
+
+[
+{
+"pregunta": "¿Qué ventaja tiene Selenium Grid?",
+"certificacion": "Automation",
+"categoria": "B",
+"imagen_url": "/uploads/automation/grid.png",
+"imagen_descripcion": "Arquitectura Selenium Grid",
+"opcion_a": "Escalar pruebas",
+"opcion_b": "Reducir RAM",
+"opcion_c": "Eliminar Selenium",
+"opcion_d": "Reemplazar APIs",
+"respuesta_correcta": "A",
+"dificultad": "media"
+}
+]
+
+🎨 REQUISITOS VISUALES
+
+Las imágenes deben:
+
+✅ adaptarse a móviles
+
+✅ no romper el layout
+
+✅ mantener proporción
+
+✅ permitir scroll si son muy grandes
+
+✅ mostrar texto alternativo (alt)
+
+🚀 ESCALABILIDAD FUTURA
+
+La arquitectura debe permitir agregar nuevas certificaciones sin modificar la lógica principal.
+
+Solo agregando:
+
+✅ nuevas preguntas
+
+✅ nueva certificación
+
+✅ nuevos JSON/CSV
+
+✨ MENSAJE FINAL
+
+Cuando finalice el proyecto:
+
+Mostrar un mensaje indicando:
+
+🎉 ¡Felicidades!
+
+Has construido una plataforma profesional de simulación ISTQB con:
+
+✅ React + Vite
+✅ FastAPI
+✅ MySQL
+✅ Generación aleatoria de exámenes
+✅ Exámenes tipo A/B/C/D
+✅ Múltiples certificaciones ISTQB
+✅ Temporizador
+✅ Resultados automáticos
+✅ Historial
+✅ Responsive Design
+✅ Soporte de imágenes y diagramas
+
+La aplicación estará lista para:
+
+practicar ISTQB
+agregar más preguntas
+desplegarse en producción
+usar autenticación futura
+exportar resultados PDF
+
+El siguiente paso será:
+
+agregar login
+dashboard avanzado
+estadísticas
+IA para recomendaciones de estudio

@@ -1,9 +1,7 @@
+import AppRouter from "./router/AppRouter";
+
 function App() {
-  return (
-    <div>
-      <h1>ISTQB Simulator</h1>
-    </div>
-  );
+  return <AppRouter />;
 }
 
 export default App;

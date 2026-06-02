@@ -10,12 +10,14 @@ from database import Base
 
 from models import ExamAttempt
 from models import UserAnswer
+from models import Question
 
 # ==========================================
 # ROUTERS
 # ==========================================
 
 from api.routes.health_routes import router as health_router
+from api.routes.question_routes import router as question_router
 
 # ==========================================
 # CREAR TABLAS
@@ -54,6 +56,8 @@ app.add_middleware(
 # ==========================================
 
 app.include_router(health_router)
+
+app.include_router(question_router)
 
 # ==========================================
 # ROOT

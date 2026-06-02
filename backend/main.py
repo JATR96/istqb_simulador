@@ -1,9 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from database import engine
-from database import Base
-
 # ==========================================
 # IMPORTAR MODELOS
 # ==========================================
@@ -18,12 +15,6 @@ from models import Question
 
 from api.routes.health_routes import router as health_router
 from api.routes.question_routes import router as question_router
-
-# ==========================================
-# CREAR TABLAS
-# ==========================================
-
-Base.metadata.create_all(bind=engine)
 
 # ==========================================
 # FASTAPI

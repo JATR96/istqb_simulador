@@ -9,7 +9,10 @@ function LanguageSwitcher() {
   |--------------------------------------------------------------------------
   */
 
-  const changeLanguage = (language) => {
+  const changeLanguage = (event) => {
+
+    const language = event.target.value;
+
     i18n.changeLanguage(language);
 
     localStorage.setItem(
@@ -20,17 +23,20 @@ function LanguageSwitcher() {
 
   return (
     <div className="language-switcher">
-      <button
-        onClick={() => changeLanguage("es")}
+      <select
+        value={i18n.language}
+        onChange={changeLanguage}
       >
-        {t("language.spanish")}
-      </button>
 
-      <button
-        onClick={() => changeLanguage("en")}
-      >
-        {t("language.english")}
-      </button>
+        <option value="es">
+          {t("language.spanish")}
+        </option>
+
+        <option value="en">
+          {t("language.english")}
+        </option>
+
+      </select>
     </div>
   );
 }

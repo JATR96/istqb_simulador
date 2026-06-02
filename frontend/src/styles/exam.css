@@ -108,3 +108,14 @@
 .finish-button:hover {
   opacity: 0.9;
 }
+
+.question-card,
+.review-card,
+.stats-card,
+.chart-container,
+.incorrect-section {
+
+  transition:
+    background 0.3s,
+    color 0.3s;
+}

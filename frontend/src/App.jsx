@@ -12,6 +12,8 @@ import ResultPage from "./pages/ResultPage";
 
 import StatisticsPage from "./pages/StatisticsPage";
 
+import ThemeToggle from "./components/ThemeToggle";
+
 function App() {
 
   return (
@@ -40,6 +42,8 @@ function App() {
         />
 
       </Routes>
+
+      <ThemeToggle />
 
     </BrowserRouter>
   );

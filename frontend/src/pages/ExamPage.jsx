@@ -14,6 +14,10 @@ import QuestionNavigator from "../components/QuestionNavigator";
 
 import "../styles/exam.css";
 
+import { useNavigate } from "react-router-dom";
+
+import { submitExam } from "../services/examService";
+
 /*
 |--------------------------------------------------------------------------
 | EXAM PAGE
@@ -36,6 +40,8 @@ function ExamPage() {
 
   const [markedQuestions, setMarkedQuestions] =
     useState([]);
+
+  const navigate = useNavigate();
 
   /*
   |--------------------------------------------------------------------------
@@ -178,6 +184,53 @@ function ExamPage() {
 
   /*
   |--------------------------------------------------------------------------
+  | FINALIZAR EXAMEN
+  |--------------------------------------------------------------------------
+  */
+
+  const finishExam = async () => {
+
+  try {
+
+    const formattedAnswers =
+      questions.map((question, index) => ({
+
+        question_id: question.id,
+
+        selected_option_id:
+          answers[index] || -1
+      }));
+
+    const result =
+      await submitExam({
+
+        certification:
+          "Foundation",
+
+        language: "es",
+
+        exam_mode: "quick",
+
+        duration_seconds: 3600,
+
+        answers: formattedAnswers
+      });
+
+    navigate(
+      "/results",
+      {
+        state: result
+      }
+    );
+
+    } catch (error) {
+
+      console.error(error);
+    }
+  };
+
+  /*
+  |--------------------------------------------------------------------------
   | LOADING
   |--------------------------------------------------------------------------
   */
@@ -268,6 +321,17 @@ function ExamPage() {
           toggleMarkQuestion
         }
       />
+
+      {/* ================================== */}
+      {/* FINALIZAR EXAMEN */}
+      {/* ================================== */}
+
+      <button
+        className="finish-button"
+        onClick={finishExam}
+      >
+        Finalizar examen
+      </button>
 
     </div>
   );

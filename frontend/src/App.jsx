@@ -8,6 +8,8 @@ import HomePage from "./pages/HomePage";
 
 import ExamPage from "./pages/ExamPage";
 
+import ResultPage from "./pages/ResultPage";
+
 function App() {
 
   return (
@@ -23,6 +25,11 @@ function App() {
         <Route
           path="/exam"
           element={<ExamPage />}
+        />
+
+        <Route
+          path="/results"
+          element={<ResultPage />}
         />
 
       </Routes>

@@ -17,6 +17,7 @@ from api.routes.health_routes import router as health_router
 from api.routes.question_routes import router as question_router
 from api.routes.import_routes import router as import_router
 from api.routes.exam_routes import router as exam_router
+from api.routes.result_routes import router as result_router
 
 # ==========================================
 # FASTAPI
@@ -55,6 +56,8 @@ app.include_router(question_router)
 app.include_router(import_router)
 
 app.include_router(exam_router)
+
+app.include_router(result_router)
 
 # ==========================================
 # ROOT

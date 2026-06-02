@@ -1,0 +1,51 @@
+.result-page {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.result-summary {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.passed {
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.failed {
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
+.explanation {
+  margin-top: 10px;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+}

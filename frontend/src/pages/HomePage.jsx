@@ -1,11 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 function HomePage() {
+  const { t } = useTranslation();
+
   return (
     <div className="page-container">
-      <h2>Bienvenido al Simulador ISTQB</h2>
+      <h2>
+        {t("home.title")}
+      </h2>
 
       <p>
-        Plataforma profesional de simulación
-        multi-certificación ISTQB.
+        {t("home.description")}
       </p>
     </div>
   );

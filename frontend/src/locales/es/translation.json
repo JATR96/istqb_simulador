@@ -1,0 +1,35 @@
+{
+  "app": {
+    "title": "Simulador ISTQB "
+  },
+
+  "navbar": {
+    "home": "Inicio",
+    "exams": "Exámenes",
+    "results": "Resultados"
+  },
+
+  "home": {
+    "title": "Bienvenido al Simulador ISTQB",
+    "description": "Plataforma profesional de simulación multi-certificación ISTQB."
+  },
+
+  "exams": {
+    "title": "Exámenes",
+    "description": "Aquí se mostrarán los modos de examen."
+  },
+
+  "results": {
+    "title": "Resultados",
+    "description": "Aquí se mostrarán estadísticas y resultados."
+  },
+
+  "language": {
+    "spanish": "Español",
+    "english": "Inglés"
+  },
+
+  "notFound": {
+    "title": "Página no encontrada"
+  }
+}

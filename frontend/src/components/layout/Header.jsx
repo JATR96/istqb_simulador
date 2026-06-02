@@ -1,14 +1,24 @@
+import { useTranslation } from "react-i18next";
+
 import Navbar from "./Navbar";
 
+import LanguageSwitcher from "../language/LanguageSwitcher";
+
 function Header() {
+  const { t } = useTranslation();
+
   return (
     <header className="header">
       <div className="header-container">
         <h1 className="logo">
-          ISTQB Simulator
+          {t("app.title")}
         </h1>
 
-        <Navbar />
+        <div className="header-right">
+          <Navbar />
+
+          <LanguageSwitcher />
+        </div>
       </div>
     </header>
   );

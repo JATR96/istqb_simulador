@@ -1,10 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 function ResultsPage() {
+  const { t } = useTranslation();
+
   return (
     <div className="page-container">
-      <h2>Resultados</h2>
+      <h2>
+        {t("results.title")}
+      </h2>
 
       <p>
-        Aquí se mostrarán estadísticas y resultados.
+        {t("results.description")}
       </p>
     </div>
   );

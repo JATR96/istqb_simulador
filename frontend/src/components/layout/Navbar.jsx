@@ -1,16 +1,22 @@
 import { Link } from "react-router-dom";
 
+import { useTranslation } from "react-i18next";
+
 function Navbar() {
+  const { t } = useTranslation();
+
   return (
     <nav className="navbar">
-      <Link to="/">Inicio</Link>
+      <Link to="/">
+        {t("navbar.home")}
+      </Link>
 
       <Link to="/exams">
-        Exámenes
+        {t("navbar.exams")}
       </Link>
 
       <Link to="/results">
-        Resultados
+        {t("navbar.results")}
       </Link>
     </nav>
   );

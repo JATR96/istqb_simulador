@@ -57,3 +57,38 @@
 .navbar a:hover {
   opacity: 0.8;
 }
+
+/*
+|--------------------------------------------------------------------------
+| HEADER RIGHT
+|--------------------------------------------------------------------------
+*/
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*
+|--------------------------------------------------------------------------
+| LANGUAGE SWITCHER
+|--------------------------------------------------------------------------
+*/
+
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.language-switcher button {
+  border: none;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.language-switcher button:hover {
+  opacity: 0.9;
+}

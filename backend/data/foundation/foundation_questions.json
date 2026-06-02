@@ -1,147 +1,114 @@
 [
   {
-    "certification": "Foundation",
-
-    "chapter": "1",
-
-    "section": "1.1",
-
-    "learning_objective": "FL-1.1.1",
-
-    "image_url": null,
-
-    "image_description": null,
-
-    "translations": {
-
-      "es": {
-
-        "pregunta": "¿Cuál es el principal objetivo del testing?",
-
-        "opciones": [
-          {
-            "id": 1,
-            "texto": "Encontrar defectos"
-          },
-          {
-            "id": 2,
-            "texto": "Escribir código"
-          },
-          {
-            "id": 3,
-            "texto": "Crear servidores"
-          },
-          {
-            "id": 4,
-            "texto": "Diseñar interfaces"
-          }
-        ],
-
-        "respuesta_correcta_id": 1,
-
-        "explicacion": "Testing ayuda a encontrar defectos y reducir riesgos."
-      },
-
-      "en": {
-
-        "pregunta": "What is the primary objective of testing?",
-
-        "opciones": [
-          {
-            "id": 1,
-            "texto": "Find defects"
-          },
-          {
-            "id": 2,
-            "texto": "Write code"
-          },
-          {
-            "id": 3,
-            "texto": "Create servers"
-          },
-          {
-            "id": 4,
-            "texto": "Design interfaces"
-          }
-        ],
-
-        "respuesta_correcta_id": 1,
-
-        "explicacion": "Testing helps identify defects and reduce risks."
-      }
+    "certification":"Foundation",
+    "chapter":"1",
+    "section":"1.1.1",
+    "learning_objective":"FL-1.1.1",
+    "image_url":null,
+    "image_description":null,
+    "translations":{
+        "es":{
+          "pregunta":"¿Cuál de las siguientes afirmaciones describe un objetivo de prueba válido?\n\nSeleccione UNA opción\n",
+          "opciones":[
+              {
+                "id":1,
+                "texto":"Demostrar que no existen defectos sin corregir en el sistema bajo prueba"
+              },
+              {
+                "id":2,
+                "texto":"Demostrar que no habrá fallas después de la implementación del sistema en producción"
+              },
+              {
+                "id":3,
+                "texto":"Reducir el nivel de riesgo del objeto de prueba y aumentar la confianza en el nivel de calidad"
+              },
+              {
+                "id":4,
+                "texto":"Verificar que no existan combinaciones de entradas no probadas"
+              }
+          ],
+          "respuesta_correcta_id":3,
+          "explicacion":"a) Is not correct. It is impossible to prove that there are no defects anymore in the system under test. See testing principle 1\nb) Is not correct. See testing principle 7\nc) Is correct. Testing finds defects and failures which reduces the level of risk and at the same time gives more confidence in the quality level of the test object\nd) Is not correct. It is impossible to test all combinations of inputs (see testing principle 2)"
+        },
+        "en":{
+          "pregunta":"Which of the following statements describe a valid test objective?\n\nSelect ONE option.\n",
+          "opciones":[
+              {
+                "id":1,
+                "texto":" To prove that there are no unfixed defects in the system under test"
+              },
+              {
+                "id":2,
+                "texto":"To prove that there will be no failures after the implementation of the system into production"
+              },
+              {
+                "id":3,
+                "texto":"To reduce the risk level of the test object and to build confidence in the quality level"
+              },
+              {
+                "id":4,
+                "texto":"To verify that there are no untested combinations of inputs"
+              }
+          ],
+          "respuesta_correcta_id":3,
+          "explicacion":"a) Is not correct. It is impossible to prove that there are no defects anymore in the system under test. See testing principle 1\nb) Is not correct. See testing principle 7\nc) Is correct. Testing finds defects and failures which reduces the level of risk and at the same time gives more confidence in the quality level of the test object\nd) Is not correct. It is impossible to test all combinations of inputs (see testing principle 2)"
+        }
     }
   },
-
   {
-    "certification": "Foundation",
-
-    "chapter": "2",
-
-    "section": "2.1",
-
-    "learning_objective": "FL-2.1.1",
-
-    "image_url": null,
-
-    "image_description": null,
-
-    "translations": {
-
-      "es": {
-
-        "pregunta": "¿Qué es testing estático?",
-
-        "opciones": [
-          {
-            "id": 1,
-            "texto": "Testing sin ejecutar código"
-          },
-          {
-            "id": 2,
-            "texto": "Testing automático"
-          },
-          {
-            "id": 3,
-            "texto": "Testing de performance"
-          },
-          {
-            "id": 4,
-            "texto": "Testing móvil"
-          }
-        ],
-
-        "respuesta_correcta_id": 1,
-
-        "explicacion": "El testing estático analiza artefactos sin ejecutar software."
-      },
-
-      "en": {
-
-        "pregunta": "What is static testing?",
-
-        "opciones": [
-          {
-            "id": 1,
-            "texto": "Testing without executing code"
-          },
-          {
-            "id": 2,
-            "texto": "Automation testing"
-          },
-          {
-            "id": 3,
-            "texto": "Performance testing"
-          },
-          {
-            "id": 4,
-            "texto": "Mobile testing"
-          }
-        ],
-
-        "respuesta_correcta_id": 1,
-
-        "explicacion": "Static testing analyzes artifacts without executing software."
-      }
+    "certification":"Foundation",
+    "chapter":"1",
+    "section":"1.2.1",
+    "learning_objective":"FL-1.2.1",
+    "image_url":null,
+    "image_description":null,
+    "translations":{
+        "es":{
+          "pregunta":"¿Cuál de las siguientes opciones muestra un ejemplo de actividades de prueba que contribuyen al éxito?\n\nSeleccione UNA opción\n",
+          "opciones":[
+              {
+                "id":1,
+                "texto":"La participación de los evaluadores en las distintas actividades del ciclo de vida del desarrollo de software (SDLC) ayuda a detectar defectos en los productos."
+              },
+              {
+                "id":2,
+                "texto":"Los evaluadores procuran no interrumpir a los desarrolladores durante la programación, lo que permite que estos escriban mejor código."
+              },
+              {
+                "id":3,
+                "texto":"La colaboración de los evaluadores con los usuarios finales contribuye a mejorar la calidad de los informes de defectos durante la integración de componentes y las pruebas del sistema."
+              },
+              {
+                "id":4,
+                "texto":"Los evaluadores certificados diseñan casos de prueba mucho mejores que los evaluadores no certificados."
+              }
+          ],
+          "respuesta_correcta_id":1,
+          "explicacion":"a) Es correcto. Es importante que los evaluadores participen desde el inicio del ciclo de vida del desarrollo de software (SDLC). Esto aumentará la comprensión de las decisiones de diseño y permitirá detectar defectos tempranamente.\nb) No es correcto. Tanto los desarrolladores como los evaluadores comprenderán mejor los productos de trabajo de los demás y cómo probar el código.\nc) No es correcto. Los usuarios finales no ayudarán a los evaluadores a mejorar la calidad de los informes de defectos; además, los usuarios generalmente no participan en niveles de prueba de bajo nivel, como las pruebas de integración.\nd) No es correcto. Estar certificado no significa automáticamente que el evaluador será mejor en el diseño de pruebas."
+        },
+        "en":{
+          "pregunta":"Which of the following options shows an example of test activities that contribute to success?\n\nSelect ONE option.\n",
+          "opciones":[
+              {
+                "id":1,
+                "texto":"Having testers involved during various software development lifecycle (SDLC) activities will help to detect defects in work products"
+              },
+              {
+                "id":2,
+                "texto":"Testers try not to disturb the developers while coding, so that the developers write better code"
+              },
+              {
+                "id":3,
+                "texto":"Testers collaborating with end users help to improve the quality of defect reports during component integration and system testing"
+              },
+              {
+                "id":4,
+                "texto":"Certified testers will design much better test cases than non-certified testers"
+              }
+          ],
+          "respuesta_correcta_id":1,
+          "explicacion":"a) Is correct. It is important that testers are involved from the beginning of the software development lifecycle (SDLC). It will increase understanding of design decisions and will detect defects early.\nb) Is not correct. Both developers and testers will have more understanding of each other's work products and how to test the code\nc) Is not correct. End users will not help the testers in increasing the quality of defect reports; also, users usually do not participate in low-level testing levels like integration testing\nd) Is not correct. Being certified does not automatically mean that the tester will be better in test design"
+        }
     }
   }
 ]

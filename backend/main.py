@@ -15,6 +15,7 @@ from models import Question
 
 from api.routes.health_routes import router as health_router
 from api.routes.question_routes import router as question_router
+from api.routes.import_routes import router as import_router
 
 # ==========================================
 # FASTAPI
@@ -49,6 +50,8 @@ app.add_middleware(
 app.include_router(health_router)
 
 app.include_router(question_router)
+
+app.include_router(import_router)
 
 # ==========================================
 # ROOT

@@ -1,0 +1,147 @@
+[
+  {
+    "certification": "Foundation",
+
+    "chapter": "1",
+
+    "section": "1.1",
+
+    "learning_objective": "FL-1.1.1",
+
+    "image_url": null,
+
+    "image_description": null,
+
+    "translations": {
+
+      "es": {
+
+        "pregunta": "¿Cuál es el principal objetivo del testing?",
+
+        "opciones": [
+          {
+            "id": 1,
+            "texto": "Encontrar defectos"
+          },
+          {
+            "id": 2,
+            "texto": "Escribir código"
+          },
+          {
+            "id": 3,
+            "texto": "Crear servidores"
+          },
+          {
+            "id": 4,
+            "texto": "Diseñar interfaces"
+          }
+        ],
+
+        "respuesta_correcta_id": 1,
+
+        "explicacion": "Testing ayuda a encontrar defectos y reducir riesgos."
+      },
+
+      "en": {
+
+        "pregunta": "What is the primary objective of testing?",
+
+        "opciones": [
+          {
+            "id": 1,
+            "texto": "Find defects"
+          },
+          {
+            "id": 2,
+            "texto": "Write code"
+          },
+          {
+            "id": 3,
+            "texto": "Create servers"
+          },
+          {
+            "id": 4,
+            "texto": "Design interfaces"
+          }
+        ],
+
+        "respuesta_correcta_id": 1,
+
+        "explicacion": "Testing helps identify defects and reduce risks."
+      }
+    }
+  },
+
+  {
+    "certification": "Foundation",
+
+    "chapter": "2",
+
+    "section": "2.1",
+
+    "learning_objective": "FL-2.1.1",
+
+    "image_url": null,
+
+    "image_description": null,
+
+    "translations": {
+
+      "es": {
+
+        "pregunta": "¿Qué es testing estático?",
+
+        "opciones": [
+          {
+            "id": 1,
+            "texto": "Testing sin ejecutar código"
+          },
+          {
+            "id": 2,
+            "texto": "Testing automático"
+          },
+          {
+            "id": 3,
+            "texto": "Testing de performance"
+          },
+          {
+            "id": 4,
+            "texto": "Testing móvil"
+          }
+        ],
+
+        "respuesta_correcta_id": 1,
+
+        "explicacion": "El testing estático analiza artefactos sin ejecutar software."
+      },
+
+      "en": {
+
+        "pregunta": "What is static testing?",
+
+        "opciones": [
+          {
+            "id": 1,
+            "texto": "Testing without executing code"
+          },
+          {
+            "id": 2,
+            "texto": "Automation testing"
+          },
+          {
+            "id": 3,
+            "texto": "Performance testing"
+          },
+          {
+            "id": 4,
+            "texto": "Mobile testing"
+          }
+        ],
+
+        "respuesta_correcta_id": 1,
+
+        "explicacion": "Static testing analyzes artifacts without executing software."
+      }
+    }
+  }
+]

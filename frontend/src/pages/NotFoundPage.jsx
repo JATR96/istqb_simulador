@@ -1,15 +1,29 @@
-import { useTranslation } from "react-i18next";
+import {
+  Link
+} from "react-router-dom";
 
 function NotFoundPage() {
-  const { t } = useTranslation();
 
   return (
-    <div className="page-container">
-      <h2>404</h2>
+    <div
+      style={{
+        padding: "60px",
+        textAlign: "center"
+      }}
+    >
 
-      <p>
-        {t("notFound.title")}
-      </p>
+      <h1>
+        404
+      </h1>
+
+      <h2>
+        Página no encontrada
+      </h2>
+
+      <Link to="/">
+        Volver al inicio
+      </Link>
+
     </div>
   );
 }

@@ -26,6 +26,10 @@ import {
   ThemeProvider
 } from "./context/ThemeContext";
 
+import {
+  ToastProvider
+} from "./context/ToastContext";
+
 ReactDOM.createRoot(
   document.getElementById("root")
 ).render(
@@ -34,7 +38,11 @@ ReactDOM.createRoot(
 
     <ThemeProvider>
 
-      <AppRouter />
+      <ToastProvider>
+
+        <AppRouter />
+
+      </ToastProvider>
 
     </ThemeProvider>
 

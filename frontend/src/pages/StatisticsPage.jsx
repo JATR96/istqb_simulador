@@ -6,6 +6,8 @@ import StatsCard from "../components/StatsCard";
 
 import PerformanceChart from "../components/PerformanceChart";
 
+import Loader from "../components/Loader";
+
 import "../styles/statistics.css";
 
 function StatisticsPage() {
@@ -63,11 +65,7 @@ function StatisticsPage() {
 
   if (loading) {
 
-    return (
-      <div className="statistics-page">
-        Cargando estadísticas...
-      </div>
-    );
+    return <Loader />;
   }
 
   /*

@@ -18,6 +18,8 @@ import { useNavigate } from "react-router-dom";
 
 import { submitExam } from "../services/examService";
 
+import Loader from "../components/Loader";
+
 /*
 |--------------------------------------------------------------------------
 | EXAM PAGE
@@ -237,11 +239,7 @@ function ExamPage() {
 
   if (loading) {
 
-    return (
-      <div className="loading">
-        Cargando examen...
-      </div>
-    );
+    return <Loader />;
   }
 
   /*

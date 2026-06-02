@@ -14,10 +14,14 @@ import StatisticsPage from "./pages/StatisticsPage";
 
 import ThemeToggle from "./components/ThemeToggle";
 
+import Header from "./components/layout/Header";
+
 function App() {
 
   return (
     <BrowserRouter>
+
+      <Header />
 
       <Routes>
 

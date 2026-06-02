@@ -10,6 +10,8 @@ import ExamPage from "./pages/ExamPage";
 
 import ResultPage from "./pages/ResultPage";
 
+import StatisticsPage from "./pages/StatisticsPage";
+
 function App() {
 
   return (
@@ -30,6 +32,11 @@ function App() {
         <Route
           path="/results"
           element={<ResultPage />}
+        />
+
+        <Route
+          path="/statistics"
+          element={<StatisticsPage />}
         />
 
       </Routes>

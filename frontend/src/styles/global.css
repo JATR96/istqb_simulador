@@ -76,8 +76,8 @@ body.dark .option-button.selected {
 
 .theme-toggle {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
   border: none;
   padding: 10px 14px;
   border-radius: 18px;

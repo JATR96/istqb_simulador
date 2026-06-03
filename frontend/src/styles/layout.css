@@ -76,19 +76,69 @@
 |--------------------------------------------------------------------------
 */
 
+/*
+|--------------------------------------------------------------------------
+| LANGUAGE SWITCHER
+|--------------------------------------------------------------------------
+*/
+
 .language-switcher {
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
 }
 
-.language-switcher button {
-  border: none;
-  padding: 0.5rem 0.8rem;
+/* ====================================== */
+/* SELECT */
+/* ====================================== */
+
+.language-switcher select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #ffffff;
+  color: #222;
+  border: 2px solid #1976d2;
+  padding: 10px 20px;
+  border-radius: 12px;
   cursor: pointer;
-  border-radius: 5px;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 15px;
+  transition:
+    all 0.3s ease;
+  outline: none;
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.08);
 }
 
-.language-switcher button:hover {
-  opacity: 0.9;
+/* ====================================== */
+/* HOVER */
+/* ====================================== */
+
+.language-switcher select:hover {
+  background: #f5f9ff;
+  border-color: #1565c0;
+  transform: translateY(-1px);
+}
+
+/* ====================================== */
+/* FOCUS */
+/* ====================================== */
+
+.language-switcher select:focus {
+  box-shadow:
+    0 0 0 4px rgba(25,118,210,0.2);
+}
+
+/* ====================================== */
+/* DARK MODE */
+/* ====================================== */
+
+body.dark .language-switcher select {
+  background: #1e1e1e;
+  color: white;
+  border-color: #64b5f6;
+}
+
+body.dark .language-switcher select:hover {
+  background: #2b2b2b;
 }

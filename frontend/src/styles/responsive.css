@@ -3,16 +3,13 @@
 /* ===================================== */
 
 @media (max-width: 992px) {
-
   .exam-page,
   .result-page,
   .statistics-page {
-
     padding: 15px;
   }
 
   .chart-bars {
-
     overflow-x: auto;
   }
 }
@@ -24,48 +21,37 @@
 @media (max-width: 768px) {
 
   .question-navigation {
-
     flex-direction: column;
-
     gap: 12px;
   }
 
   .question-navigation button {
-
     width: 100%;
   }
 
   .option-button {
-
     font-size: 15px;
   }
 
   .question-title {
-
     font-size: 20px;
   }
 
   .timer {
-
     font-size: 20px;
   }
 
   .stats-grid {
-
     grid-template-columns: 1fr;
   }
 
   .chart-bar {
-
     width: 30px;
   }
 
   .theme-toggle {
-
-    top: 10px;
-
+    bottom: 10px;
     right: 10px;
-
     padding: 10px 14px;
   }
 }
@@ -75,23 +61,19 @@
 /* ===================================== */
 
 @media (max-width: 480px) {
-
   .exam-page,
   .result-page,
   .statistics-page {
-
     padding: 10px;
   }
 
   .question-card,
   .review-card,
   .stats-card {
-
     padding: 15px;
   }
 
   .finish-button {
-
     font-size: 16px;
   }
 }

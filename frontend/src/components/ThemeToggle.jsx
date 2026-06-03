@@ -22,8 +22,8 @@ function ThemeToggle() {
     >
 
       {theme === "light"
-        ? "🌙 Dark"
-        : "☀️ Light"}
+        ? "🌙"
+        : "☀️"}
 
     </button>
   );

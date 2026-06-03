@@ -8,7 +8,7 @@
     "image_description":null,
     "translations":{
         "es":{
-          "pregunta":"¿Cuál de las siguientes afirmaciones describe un objetivo de prueba válido?\n\nSeleccione UNA opción\n",
+          "pregunta":"¿Cuál de las siguientes afirmaciones describe un objetivo de prueba válido?\nSeleccione UNA opción\n",
           "opciones":[
               {
                 "id":1,
@@ -31,7 +31,7 @@
           "explicacion":"a) No es correcto. Es imposible demostrar que ya no existen defectos en el sistema bajo prueba. Véase el principio de prueba 1.\nb) No es correcto. Véase el principio de prueba 7.\nc) Es correcto. Las pruebas detectan defectos y fallos, lo que reduce el nivel de riesgo y, al mismo tiempo, aumenta la confianza en el nivel de calidad del objeto de prueba.\nd) No es correcto. Es imposible probar todas las combinaciones de entradas (véase el principio de prueba 2)."
         },
         "en":{
-          "pregunta":"Which of the following statements describe a valid test objective?\n\nSelect ONE option.\n",
+          "pregunta":"Which of the following statements describe a valid test objective?\nSelect ONE option.\n",
           "opciones":[
               {
                 "id":1,
@@ -64,7 +64,7 @@
     "image_description":null,
     "translations":{
         "es":{
-          "pregunta":"¿Cuál de las siguientes opciones muestra un ejemplo de actividades de prueba que contribuyen al éxito?\n\nSeleccione UNA opción\n",
+          "pregunta":"¿Cuál de las siguientes opciones muestra un ejemplo de actividades de prueba que contribuyen al éxito?\nSeleccione UNA opción\n",
           "opciones":[
               {
                 "id":1,
@@ -87,7 +87,7 @@
           "explicacion":"a) Es correcto. Es importante que los evaluadores participen desde el inicio del ciclo de vida del desarrollo de software (SDLC). Esto aumentará la comprensión de las decisiones de diseño y permitirá detectar defectos tempranamente.\nb) No es correcto. Tanto los desarrolladores como los evaluadores comprenderán mejor los productos de trabajo de los demás y cómo probar el código.\nc) No es correcto. Los usuarios finales no ayudarán a los evaluadores a mejorar la calidad de los informes de defectos; además, los usuarios generalmente no participan en niveles de prueba de bajo nivel, como las pruebas de integración.\nd) No es correcto. Estar certificado no significa automáticamente que el evaluador será mejor en el diseño de pruebas."
         },
         "en":{
-          "pregunta":"Which of the following options shows an example of test activities that contribute to success?\n\nSelect ONE option.\n",
+          "pregunta":"Which of the following options shows an example of test activities that contribute to success?\nSelect ONE option.\n",
           "opciones":[
               {
                 "id":1,

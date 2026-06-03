@@ -33,6 +33,13 @@
   border-radius: 10px;
 }
 
+.question {
+  font-size: 18px;
+  margin-bottom: 10px;
+  white-space: pre-line;
+  line-height: 1.8;
+}
+
 .correct {
   color: green;
   font-weight: bold;
@@ -48,4 +55,6 @@
   background: #f5f5f5;
   padding: 10px;
   border-radius: 8px;
+  white-space: pre-line;
+  line-height: 1.8;
 }

@@ -17,6 +17,24 @@ function ResultPage() {
     );
   }
 
+  /*
+|--------------------------------------------------------------------------
+| OPTION LETTER
+|--------------------------------------------------------------------------
+*/
+
+  const getOptionLetter = (optionId) => {
+
+    const letters = {
+      1: "A",
+      2: "B",
+      3: "C",
+      4: "D"
+    };
+
+    return letters[optionId] || "";
+  };
+
   return (
     <div className="result-page">
 
@@ -75,20 +93,30 @@ function ResultPage() {
             className="review-card"
           >
 
-            <h3>
+            <h3 className="question">
               {item.question}
             </h3>
 
             <p>
               Tu respuesta:
               {" "}
-              {item.selected_option_id}
+              {
+                item.selected_option_id === -1
+                  ? "Sin responder"
+                  : getOptionLetter(
+                      item.selected_option_id
+                    )
+              }
             </p>
 
             <p>
               Correcta:
               {" "}
-              {item.correct_option_id}
+              {
+                getOptionLetter(
+                  item.correct_option_id
+                )
+              }
             </p>
 
             <p

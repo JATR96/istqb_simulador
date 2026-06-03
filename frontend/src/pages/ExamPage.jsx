@@ -324,12 +324,14 @@ function ExamPage() {
       {/* FINALIZAR EXAMEN */}
       {/* ================================== */}
 
-      <button
-        className="finish-button"
-        onClick={finishExam}
-      >
-        Finalizar examen
-      </button>
+      <div className="finish-container">
+        <button
+          className="finish-button"
+          onClick={finishExam}
+        >
+          Finalizar examen
+        </button>
+      </div>
 
     </div>
   );

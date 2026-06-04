@@ -3,12 +3,24 @@ import json
 import re
 
 
-def clean_text(text):
-    return text.strip().replace("\r", "")
+def extract_chapter_section(learning_objective):
+    """
+    TAE-2.2.1
+    -> chapter=2
+    -> section=2.2.1
+    """
+
+    try:
+        section = learning_objective.split("-")[1]
+        chapter = section.split(".")[0]
+
+        return chapter, section
+
+    except Exception:
+        return "", ""
 
 
 def parse_question_block(block):
-    lines = [line.strip() for line in block.split("\n")]
 
     question = {
         "certification": "",
@@ -24,6 +36,8 @@ def parse_question_block(block):
         "translations": {}
     }
 
+    lines = [line.strip() for line in block.split("\n")]
+
     current_lang = None
     current_mode = None
 
@@ -31,60 +45,82 @@ def parse_question_block(block):
     explanation_text = []
     options = []
 
-    i = 0
-
-    while i < len(lines):
-        line = lines[i]
+    for line in lines:
 
         if not line:
-            i += 1
             continue
 
-        # =========================
+        # ==================================================
         # CABECERA
-        # =========================
+        # ==================================================
 
         if line.startswith("CERTIFICATION:"):
             question["certification"] = line.split(":", 1)[1].strip()
 
-        elif line.startswith("CHAPTER:"):
-            question["chapter"] = line.split(":", 1)[1].strip()
-
-        elif line.startswith("SECTION:"):
-            question["section"] = line.split(":", 1)[1].strip()
-
         elif line.startswith("LEARNING_OBJECTIVE:"):
-            question["learning_objective"] = line.split(":", 1)[1].strip()
+
+            lo = line.split(":", 1)[1].strip()
+
+            question["learning_objective"] = lo
+
+            chapter, section = extract_chapter_section(lo)
+
+            question["chapter"] = chapter
+            question["section"] = section
 
         elif line.startswith("K_LEVEL:"):
             question["k_level"] = line.split(":", 1)[1].strip()
 
         elif line.startswith("POINTS:"):
-            question["points"] = int(line.split(":", 1)[1].strip())
+            question["points"] = int(
+                line.split(":", 1)[1].strip()
+            )
 
         elif line.startswith("RESPUESTAS_CORRECTAS:"):
+
             raw = line.split(":", 1)[1].strip()
 
-            question["respuestas_correctas"] = [
+            correctas = [
                 int(x.strip())
                 for x in raw.split(",")
                 if x.strip()
             ]
 
+            question["respuestas_correctas"] = correctas
+
+            question["tipo_pregunta"] = (
+                "eleccion_simple"
+                if len(correctas) == 1
+                else "eleccion_multiple"
+            )
+
         elif line.startswith("IMAGE_URL:"):
+
             value = line.split(":", 1)[1].strip()
-            question["image_url"] = value if value else None
+
+            question["image_url"] = (
+                value if value else None
+            )
 
         elif line.startswith("IMAGE_DESCRIPTION:"):
-            value = line.split(":", 1)[1].strip()
-            question["image_description"] = value if value else None
 
-        # =========================
+            value = line.split(":", 1)[1].strip()
+
+            question["image_description"] = (
+                value if value else None
+            )
+
+        # ==================================================
         # IDIOMAS
-        # =========================
+        # ==================================================
 
         elif re.match(r"\[[a-z]{2}\]", line.lower()):
-            current_lang = line.replace("[", "").replace("]", "").lower()
+
+            current_lang = (
+                line.replace("[", "")
+                .replace("]", "")
+                .lower()
+            )
 
             question["translations"][current_lang] = {
                 "pregunta": "",
@@ -93,23 +129,23 @@ def parse_question_block(block):
             }
 
         elif line.startswith("[/"):
-            if current_lang:
-                question["translations"][current_lang]["pregunta"] = "\n".join(question_text).strip()
 
-                question["translations"][current_lang]["opciones"] = options
+            question["translations"][current_lang] = {
+                "pregunta": "\n".join(question_text).strip(),
+                "opciones": options,
+                "explicacion": "\n".join(explanation_text).strip()
+            }
 
-                question["translations"][current_lang]["explicacion"] = "\n".join(explanation_text).strip()
+            current_lang = None
+            current_mode = None
 
             question_text = []
             explanation_text = []
             options = []
 
-            current_lang = None
-            current_mode = None
-
-        # =========================
-        # BLOQUES
-        # =========================
+        # ==================================================
+        # SECCIONES
+        # ==================================================
 
         elif line.upper() in ["PREGUNTA:", "QUESTION:"]:
             current_mode = "question"
@@ -129,37 +165,26 @@ def parse_question_block(block):
 
                 if "|" in line:
 
-                    idx, text = line.split("|", 1)
+                    option_id, option_text = line.split("|", 1)
 
                     options.append({
-                        "id": int(idx.strip()),
-                        "texto": text.strip()
+                        "id": int(option_id.strip()),
+                        "texto": option_text.strip()
                     })
 
             elif current_mode == "explanation":
                 explanation_text.append(line)
 
-        i += 1
-
-    # =========================
-    # TIPO PREGUNTA
-    # =========================
-
-    if len(question["respuestas_correctas"]) == 1:
-        question["tipo_pregunta"] = "eleccion_simple"
-    else:
-        question["tipo_pregunta"] = "eleccion_multiple"
-
     return question
 
 
-def parse_docx_to_json(docx_file):
+def parse_docx(docx_path):
 
-    doc = Document(docx_file)
+    doc = Document(docx_path)
 
     content = "\n".join(
-        p.text
-        for p in doc.paragraphs
+        paragraph.text
+        for paragraph in doc.paragraphs
     )
 
     blocks = re.findall(
@@ -178,24 +203,38 @@ def parse_docx_to_json(docx_file):
     return questions
 
 
-if __name__ == "__main__":
-
-    archivo = "preguntas.docx"
-
-    preguntas = parse_docx_to_json(archivo)
+def save_json(data, output_file):
 
     with open(
-        "automation_tester_questions.json",
+        output_file,
         "w",
         encoding="utf-8"
     ) as f:
+
         json.dump(
-            preguntas,
+            data,
             f,
             ensure_ascii=False,
             indent=4
         )
 
+
+if __name__ == "__main__":
+
+    INPUT_DOCX = "preguntas.docx"
+    OUTPUT_JSON = "automation_tester_questions.json"
+
+    preguntas = parse_docx(INPUT_DOCX)
+
+    save_json(
+        preguntas,
+        OUTPUT_JSON
+    )
+
     print(
-        f"Se generaron {len(preguntas)} preguntas correctamente."
+        f"Preguntas procesadas: {len(preguntas)}"
+    )
+
+    print(
+        f"Archivo generado: {OUTPUT_JSON}"
     )

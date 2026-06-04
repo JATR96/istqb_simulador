@@ -1,0 +1,191 @@
+[
+    {
+        "certification": "Automation Tester",
+        "chapter": "1",
+        "section": "1.1.1",
+        "learning_objective": "TAE-1.1.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones representa una limitación de la automatización de pruebas?\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Solo las pruebas de usabilidad pueden automatizarse eficazmente."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "La automatización de pruebas solo puede ejecutarse después de realizar las pruebas del sistema."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "La automatización de pruebas solo puede verificar resultados que se puedan comprobar visualmente."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "La automatización de pruebas solo puede verificar resultados que se puedan comprobar mediante código."
+                    }
+                ],
+                "explicacion": "a) Incorrecta. La automatización de pruebas puede realizarse antes y después de las pruebas del sistema.\nb) Incorrecta. Se refiere a una limitación inexistente.\nc) Incorrecta. La automatización de pruebas no se limita a comprobar solo los resultados que se pueden comprobar visualmente.\nd) Correcta. Como se indica en el programa: \"La automatización de pruebas solo puede comprobar los resultados de las pruebas que se pueden comprobar mediante un oráculo de pruebas automatizado\". Esta es una limitación y significa que los resultados de los scripts automatizados son verificados por la máquina programada para ello (código)."
+            },
+            "en": {
+                "pregunta": "Which of the following is a limitation of test automation?\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Only usability tests can be automated effectively"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Test automation can be executed only after system testing is done"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Test automation can only check results that can be verified visually"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Test automation can only check results that can be verified by code"
+                    }
+                ],
+                "explicacion": "a) Is not correct. Test automation can be performed before and after system testing.\nb) Is not correct. It refers to non-existing limitation.\nc) Is not correct. Test automation is not limited to check only the results that can be verified visually.\nd) Is correct. As in syllabus: \"Test automation can only check test results that can be verified by an automated test oracle\". This is a limitation and means that results of the automated scripts are verified by the machine which is programmed to do so (code)."
+            }
+        }
+    },
+    {
+        "certification": "Automation Tester",
+        "chapter": "1",
+        "section": "1.2.1",
+        "learning_objective": "TAE-1.2.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes afirmaciones es cierta sobre la automatización de pruebas y el ciclo de vida del desarrollo de software (SDLC)?\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "En el desarrollo ágil de software, las pruebas automatizadas se centran más en las pruebas de aceptación que en las pruebas de componentes."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "En el desarrollo ágil de software, las pruebas automatizadas se centran más en las pruebas de componentes que en las pruebas de aceptación."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "En el modelo V, la ejecución de pruebas automatizadas debe realizarse después de la ejecución de pruebas manuales."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "En el modelo V, la implementación de la automatización de pruebas se realiza a lo largo de todo el ciclo de desarrollo de software."
+                    }
+                ],
+                "explicacion": "a) No es correcta. En el desarrollo ágil de software, el volumen de pruebas automatizadas de componentes es mayor que el de las pruebas automatizadas de aceptación.\nb) Es correcta. En el desarrollo ágil de software, el volumen de pruebas automatizadas de componentes es mayor que el de las pruebas automatizadas de aceptación.\nc) No es correcta. No existe tal regla en el modelo V.\nd) No es correcta. La planificación de pruebas del modelo V, incluida la planificación de la automatización de pruebas, se realiza en la fase inicial del ciclo de vida del desarrollo de software."
+            },
+            "en": {
+                "pregunta": "Which of the following is true about test automation and the SDLC?\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "In Agile software development automated tests focus more on acceptance tests than on component tests"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "In Agile software development automated tests focus more on component tests than on acceptance tests"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "In the V-model automated test execution must be performed after manual test execution"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "In the V-model implementation of test automation is performed throughout the whole software development cycle"
+                    }
+                ],
+                "explicacion": "a) Is not correct. In Agile software development, automated component tests are higher in volume compared to automated acceptance tests.\nb) Is correct. In Agile software development, automated component tests are higher in volume compared to automated acceptance tests.\nc) Is not correct. There is no such rule in the V-model.\nd) Is not correct. V-model test planning, including planning of test automation, is performed in the early phase of the software development lifecycle."
+            }
+        }
+    },
+    {
+        "certification": "Automation Tester",
+        "chapter": "2",
+        "section": "2.2.1",
+        "learning_objective": "TAE-2.2.1",
+        "k_level": "K4",
+        "points": 3,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_multiple",
+        "respuestas_correctas": [
+            1,
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Usted trabaja para una empresa de TI que desarrolla un sistema multimedia para automóviles integrado basado en Android. El software contiene varios componentes que trabajan conjuntamente. Los desarrolladores siguen el enfoque de desarrollo guiado por pruebas (TDD). Tras el desarrollo del software, este se entrega a otra empresa de TI que lo integra con los componentes de hardware y los vende conjuntamente a los fabricantes de automóviles.\n¿Qué aspectos debería considerar la empresa de TI para la que trabaja al recopilar los requisitos de automatización de pruebas?\nSeleccione DOS opciones.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "¿Es importante que el enfoque de automatización de pruebas admita las pruebas de componentes?"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "¿Debería el enfoque de automatización de pruebas admitir las pruebas beta?"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "¿Es importante que el enfoque de automatización de pruebas admita las pruebas del software en la mayor cantidad posible de tipos de automóviles?"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "¿Qué roles de probador debería admitir el enfoque de automatización de pruebas?"
+                    },
+                    {
+                        "id": 5,
+                        "texto": "¿Es importante que el enfoque de automatización de pruebas admita la aprobación de la aplicación en la tienda de aplicaciones móviles?"
+                    }
+                ],
+                "explicacion": "a) Correcto. Las pruebas de componentes las realiza la empresa de TI desarrolladora.\nb) Incorrecto. No se realizan pruebas beta.\nc) Incorrecto. Las pruebas en la mayor cantidad posible de tipos de automóviles las realiza la empresa de TI integradora.\nd) Correcto. Las pruebas automatizadas de componentes son diseñadas y ejecutadas por los desarrolladores.\ne) No es correcto. No se implementó el enfoque de automatización de pruebas para respaldar la aprobación de la tienda de aplicaciones móviles."
+            },
+            "en": {
+                "pregunta": "You are working for an IT company which is developing a built-in Android-based car multimedia system. The software contains several components working together. Developers are following the test-driven development approach. After the development of the software, it is delivered to another IT company which integrates the software with the hardware elements and sells them together to car manufacturers.\nWhich of the following should be considered during capturing the test automation requirements by the IT company you are working for?\nSelect TWO options.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Is it important for the test automation approach to support component testing?"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Should the test automation approach support beta testing?"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Is it important for the test automation approach to support the testing of the software in as many different types of cars as possible?"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Which tester roles should be supported by the test automation approach?"
+                    },
+                    {
+                        "id": 5,
+                        "texto": "Is it important for the test automation approach to support the mobile application store approval?"
+                    }
+                ],
+                "explicacion": "a) Is correct. Component testing is performed by the developing IT company.\nb) Is not correct. Beta testing is not performed.\nc) Is not correct. The testing of as many different types of cars as possible is performed by the integrator IT company.\nd) Is correct. Automated component tests are designed and executed by the developers.\ne) Is not correct. The test automation approach to support the mobile application store approval is not performed."
+            }
+        }
+    }
+]

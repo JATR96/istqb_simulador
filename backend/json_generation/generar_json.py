@@ -1,240 +1,444 @@
-from docx import Document
 import json
 import re
+from docx import Document
 
 
-def extract_chapter_section(learning_objective):
-    """
-    TAE-2.2.1
-    -> chapter=2
-    -> section=2.2.1
-    """
+# =====================================================
+# UTILIDADES
+# =====================================================
+
+def leer_word(ruta):
+    doc = Document(ruta)
+
+    texto = []
+
+    for p in doc.paragraphs:
+        texto.append(p.text)
+
+    return "\n".join(texto)
+
+
+def obtener_chapter(lo):
 
     try:
-        section = learning_objective.split("-")[1]
-        chapter = section.split(".")[0]
-
-        return chapter, section
+        return lo.split("-")[1].split(".")[0]
 
     except Exception:
-        return "", ""
+        return ""
 
 
-def parse_question_block(block):
+def obtener_section(lo):
+    return lo.split("-")[1]
 
-    question = {
-        "certification": "",
-        "chapter": "",
-        "section": "",
-        "learning_objective": "",
-        "k_level": "",
-        "points": 1,
-        "image_url": None,
-        "image_description": None,
-        "tipo_pregunta": "",
-        "respuestas_correctas": [],
-        "translations": {}
+
+def detectar_tipo(respuestas):
+
+    if len(respuestas) > 1:
+        return "eleccion_multiple"
+
+    return "eleccion_simple"
+
+
+# =====================================================
+# RESPUESTAS CORRECTAS
+# =====================================================
+
+def parsear_respuestas(texto):
+
+    mapping = {
+        "a": 1,
+        "b": 2,
+        "c": 3,
+        "d": 4,
+        "e": 5,
+        "f": 6,
+        "g": 7,
+        "h": 8
     }
 
-    lines = [line.strip() for line in block.split("\n")]
+    respuestas = []
 
-    current_lang = None
-    current_mode = None
+    for item in texto.split(","):
 
-    question_text = []
-    explanation_text = []
-    options = []
+        item = item.strip().lower()
 
-    for line in lines:
-
-        if not line:
+        if not item:
             continue
 
-        # ==================================================
-        # CABECERA
-        # ==================================================
+        if item.isdigit():
 
-        if line.startswith("CERTIFICATION:"):
-            question["certification"] = line.split(":", 1)[1].strip()
+            respuestas.append(int(item))
 
-        elif line.startswith("LEARNING_OBJECTIVE:"):
+        elif item in mapping:
 
-            lo = line.split(":", 1)[1].strip()
+            respuestas.append(mapping[item])
 
-            question["learning_objective"] = lo
-
-            chapter, section = extract_chapter_section(lo)
-
-            question["chapter"] = chapter
-            question["section"] = section
-
-        elif line.startswith("K_LEVEL:"):
-            question["k_level"] = line.split(":", 1)[1].strip()
-
-        elif line.startswith("POINTS:"):
-            question["points"] = int(
-                line.split(":", 1)[1].strip()
-            )
-
-        elif line.startswith("RESPUESTAS_CORRECTAS:"):
-
-            raw = line.split(":", 1)[1].strip()
-
-            correctas = [
-                int(x.strip())
-                for x in raw.split(",")
-                if x.strip()
-            ]
-
-            question["respuestas_correctas"] = correctas
-
-            question["tipo_pregunta"] = (
-                "eleccion_simple"
-                if len(correctas) == 1
-                else "eleccion_multiple"
-            )
-
-        elif line.startswith("IMAGE_URL:"):
-
-            value = line.split(":", 1)[1].strip()
-
-            question["image_url"] = (
-                value if value else None
-            )
-
-        elif line.startswith("IMAGE_DESCRIPTION:"):
-
-            value = line.split(":", 1)[1].strip()
-
-            question["image_description"] = (
-                value if value else None
-            )
-
-        # ==================================================
-        # IDIOMAS
-        # ==================================================
-
-        elif re.match(r"\[[a-z]{2}\]", line.lower()):
-
-            current_lang = (
-                line.replace("[", "")
-                .replace("]", "")
-                .lower()
-            )
-
-            question["translations"][current_lang] = {
-                "pregunta": "",
-                "opciones": [],
-                "explicacion": ""
-            }
-
-        elif line.startswith("[/"):
-
-            question["translations"][current_lang] = {
-                "pregunta": "\n".join(question_text).strip(),
-                "opciones": options,
-                "explicacion": "\n".join(explanation_text).strip()
-            }
-
-            current_lang = None
-            current_mode = None
-
-            question_text = []
-            explanation_text = []
-            options = []
-
-        # ==================================================
-        # SECCIONES
-        # ==================================================
-
-        elif line.upper() in ["PREGUNTA:", "QUESTION:"]:
-            current_mode = "question"
-
-        elif line.upper() in ["OPCIONES:", "OPTIONS:"]:
-            current_mode = "options"
-
-        elif line.upper() in ["EXPLICACION:", "EXPLANATION:"]:
-            current_mode = "explanation"
-
-        else:
-
-            if current_mode == "question":
-                question_text.append(line)
-
-            elif current_mode == "options":
-
-                if "|" in line:
-
-                    option_id, option_text = line.split("|", 1)
-
-                    options.append({
-                        "id": int(option_id.strip()),
-                        "texto": option_text.strip()
-                    })
-
-            elif current_mode == "explanation":
-                explanation_text.append(line)
-
-    return question
+    return respuestas
 
 
-def parse_docx(docx_path):
+# =====================================================
+# OPCIONES
+# =====================================================
 
-    doc = Document(docx_path)
+def parsear_opciones(texto):
 
-    content = "\n".join(
-        paragraph.text
-        for paragraph in doc.paragraphs
+    opciones = []
+
+    patron = r'([a-z])\)\s*(.*?)(?=\n[a-z]\)|$)'
+
+    matches = re.findall(
+        patron,
+        texto,
+        flags=re.DOTALL | re.IGNORECASE
     )
 
-    blocks = re.findall(
-        r"=== QUESTION START ===(.*?)=== QUESTION END ===",
-        content,
+    for letra, contenido in matches:
+
+        opciones.append({
+            "id": ord(letra.lower()) - ord("a") + 1,
+            "texto": " ".join(
+                contenido.strip().split()
+            )
+        })
+
+    return opciones
+
+
+# =====================================================
+# BLOQUE IDIOMA
+# =====================================================
+
+def extraer_bloque(texto, idioma):
+
+    patron = rf'\[{idioma}\](.*?)\[/{idioma}\]'
+
+    match = re.search(
+        patron,
+        texto,
+        flags=re.DOTALL | re.IGNORECASE
+    )
+
+    if not match:
+        return None
+
+    return match.group(1).strip()
+
+
+def parsear_bloque_es(texto):
+
+    pregunta = re.search(
+        r'PREGUNTA:\s*(.*?)\s*OPCIONES:',
+        texto,
         re.DOTALL
     )
 
-    questions = []
+    opciones = re.search(
+        r'OPCIONES:\s*(.*?)\s*EXPLICACION:',
+        texto,
+        re.DOTALL
+    )
 
-    for block in blocks:
-        questions.append(
-            parse_question_block(block)
+    explicacion = re.search(
+        r'EXPLICACION:\s*(.*)',
+        texto,
+        re.DOTALL
+    )
+
+    return {
+        "pregunta": pregunta.group(1).strip(),
+        "opciones": parsear_opciones(
+            opciones.group(1)
+        ),
+        "explicacion": explicacion.group(1).strip()
+    }
+
+
+def parsear_bloque_en(texto):
+
+    pregunta = re.search(
+        r'QUESTION:\s*(.*?)\s*OPTIONS:',
+        texto,
+        re.DOTALL
+    )
+
+    opciones = re.search(
+        r'OPTIONS:\s*(.*?)\s*EXPLANATION:',
+        texto,
+        re.DOTALL
+    )
+
+    explicacion = re.search(
+        r'EXPLANATION:\s*(.*)',
+        texto,
+        re.DOTALL
+    )
+
+    return {
+        "pregunta": pregunta.group(1).strip(),
+        "opciones": parsear_opciones(
+            opciones.group(1)
+        ),
+        "explicacion": explicacion.group(1).strip()
+    }
+
+
+# =====================================================
+# CABECERA
+# =====================================================
+
+def obtener_campo(nombre, texto):
+
+    for linea in texto.splitlines():
+
+        linea = linea.strip()
+
+        if linea.startswith(f"{nombre}:"):
+
+            valor = linea[len(f"{nombre}:"):].strip()
+
+            return valor
+
+    return ""
+
+# =====================================================
+# IDIOMA
+# =====================================================
+
+def parsear_bloque_generico(
+        texto,
+        pregunta_tag,
+        opciones_tag,
+        explicacion_tag
+):
+
+    pregunta = re.search(
+        rf'{pregunta_tag}:\s*(.*?)\s*{opciones_tag}:',
+        texto,
+        re.DOTALL
+    )
+
+    opciones = re.search(
+        rf'{opciones_tag}:\s*(.*?)\s*{explicacion_tag}:',
+        texto,
+        re.DOTALL
+    )
+
+    explicacion = re.search(
+        rf'{explicacion_tag}:\s*(.*)',
+        texto,
+        re.DOTALL
+    )
+
+    return {
+        "pregunta":
+            pregunta.group(1).strip()
+            if pregunta else "",
+
+        "opciones":
+            parsear_opciones(
+                opciones.group(1)
+            ) if opciones else [],
+
+        "explicacion":
+            explicacion.group(1).strip()
+            if explicacion else ""
+    }
+
+# =====================================================
+# PARSEAR PREGUNTA
+# =====================================================
+
+def parsear_pregunta(texto):
+
+    certification = obtener_campo(
+        "CERTIFICATION",
+        texto
+    )
+
+    learning_objective = obtener_campo(
+        "LEARNING_OBJECTIVE",
+        texto
+    )
+
+    k_level = obtener_campo(
+        "K_LEVEL",
+        texto
+    )
+
+    points = obtener_campo(
+        "POINTS",
+        texto
+    )
+
+    respuestas_correctas = obtener_campo(
+        "RESPUESTAS_CORRECTAS",
+        texto
+    )
+
+    image_url = obtener_campo(
+        "IMAGE_URL",
+        texto
+    )
+
+    image_description = obtener_campo(
+        "IMAGE_DESCRIPTION",
+        texto
+    )
+
+    respuestas = parsear_respuestas(
+        respuestas_correctas
+    )
+
+    resultado = {
+        "certification": certification,
+
+        "chapter":
+            obtener_chapter(
+                learning_objective
+            ),
+
+        "section":
+            obtener_section(
+                learning_objective
+            ),
+
+        "learning_objective":
+            learning_objective,
+
+        "k_level":
+            k_level,
+
+        "points":
+            int(points)
+            if points else 1,
+
+        "image_url":
+            image_url
+            if image_url else None,
+
+        "image_description":
+            image_description
+            if image_description else None,
+
+        "tipo_pregunta":
+            detectar_tipo(
+                respuestas
+            ),
+
+        "respuestas_correctas":
+            respuestas,
+
+        "translations": {}
+    }
+
+    # Español
+
+    bloque_es = extraer_bloque(
+        texto,
+        "es"
+    )
+
+    if bloque_es:
+
+        resultado["translations"]["es"] = (
+            parsear_bloque_generico(
+                bloque_es,
+                "PREGUNTA",
+                "OPCIONES",
+                "EXPLICACION"
+            )
         )
 
-    return questions
+    # Inglés
+
+    bloque_en = extraer_bloque(
+        texto,
+        "en"
+    )
+
+    if bloque_en:
+
+        resultado["translations"]["en"] = (
+            parsear_bloque_generico(
+                bloque_en,
+                "QUESTION",
+                "OPTIONS",
+                "EXPLANATION"
+            )
+        )
+
+    # Portugués (futuro)
+
+    bloque_pt = extraer_bloque(
+        texto,
+        "pt"
+    )
+
+    if bloque_pt:
+
+        resultado["translations"]["pt"] = (
+            parsear_bloque_generico(
+                bloque_pt,
+                "QUESTION",
+                "OPTIONS",
+                "EXPLANATION"
+            )
+        )
+
+    return resultado
+
+# =====================================================
+# GENERAR JSON
+# =====================================================
+
+def generar_json(ruta_docx):
+
+    contenido = leer_word(
+        ruta_docx
+    )
+
+    bloques = [
+        b.strip()
+        for b in contenido.split("---")
+        if b.strip()
+    ]
+
+    preguntas = []
+
+    for bloque in bloques:
+
+        preguntas.append(
+            parsear_pregunta(
+                bloque
+            )
+        )
+
+    return preguntas
 
 
-def save_json(data, output_file):
+# =====================================================
+# MAIN
+# =====================================================
+
+if __name__ == "__main__":
+
+    preguntas = generar_json(
+        "preguntas.docx"
+    )
 
     with open(
-        output_file,
+        "preguntas_generadas.json",
         "w",
         encoding="utf-8"
     ) as f:
 
         json.dump(
-            data,
+            preguntas,
             f,
             ensure_ascii=False,
             indent=4
         )
 
-
-if __name__ == "__main__":
-
-    INPUT_DOCX = "preguntas.docx"
-    OUTPUT_JSON = "automation_tester_questions.json"
-
-    preguntas = parse_docx(INPUT_DOCX)
-
-    save_json(
-        preguntas,
-        OUTPUT_JSON
-    )
-
     print(
-        f"Preguntas procesadas: {len(preguntas)}"
-    )
-
-    print(
-        f"Archivo generado: {OUTPUT_JSON}"
+        f"Preguntas generadas: {len(preguntas)}"
     )

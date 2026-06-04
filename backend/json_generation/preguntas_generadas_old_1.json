@@ -1,0 +1,62 @@
+[
+    {
+        "certification": "Automation Tester",
+        "chapter": "1",
+        "section": "1.1.1",
+        "learning_objective": "TAE-1.1.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": "null",
+        "image_description": "null",
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones representa una limitación de la automatización de pruebas?\n\nSelecciona UNA opción",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Solo las pruebas de usabilidad pueden automatizarse eficazmente."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "La automatización de pruebas solo puede ejecutarse después de realizar las pruebas del sistema."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "La automatización de pruebas solo puede verificar resultados que se puedan comprobar visualmente."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "La automatización de pruebas solo puede verificar resultados que se puedan comprobar mediante código."
+                    }
+                ],
+                "explicacion": "a) Incorrecta. La automatización de pruebas puede realizarse antes y después de las pruebas del sistema.\nb) Incorrecta. Se refiere a una limitación inexistente.\nc) Incorrecta. La automatización de pruebas no se limita a comprobar solo los resultados que se pueden comprobar visualmente.\nd) Correcta. Como se indica en el programa: \"La automatización de pruebas solo puede comprobar los resultados de las pruebas que se pueden comprobar mediante un oráculo de pruebas automatizado\". Esta es una limitación y significa que los resultados de los scripts automatizados son verificados por la máquina programada para ello (código)."
+            },
+            "en": {
+                "pregunta": "Which of the following is a limitation of test automation?\n\nSelect ONE option",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Only usability tests can be automated effectively"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Test automation can be executed only after system testing is done"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Test automation can only check results that can be verified visually"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Test automation can only check results that can be verified by code"
+                    }
+                ],
+                "explicacion": "a) Is not correct. Test automation can be performed before and after system testing.\nb) Is not correct. It refers to non-existing limitation.\nc) Is not correct. Test automation is not limited to check only the results that can be verified visually.\nd) Is correct. As in syllabus: \"Test automation can only check test results that can be verified by an automated test oracle\". This is a limitation and means that results of the automated scripts are verified by the machine which is programmed to do so (code)."
+            }
+        }
+    }
+]

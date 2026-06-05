@@ -1,6 +1,7 @@
 import json
 import re
 from docx import Document
+from validar_banco_preguntas import validar_banco
 
 # =====================================================
 # UTILIDADES
@@ -439,6 +440,22 @@ if __name__ == "__main__":
         "preguntas.docx"
     )
 
+    errores = validar_banco(
+        preguntas
+    )
+
+    if errores > 0:
+
+        print(
+            "\n❌ JSON NO generado."
+        )
+
+        print(
+            "Corrige los errores primero."
+        )
+
+        exit()
+
     with open(
         "preguntas_generadas.json",
         "w",
@@ -453,5 +470,5 @@ if __name__ == "__main__":
         )
 
     print(
-        f"JSON generado correctamente con {len(preguntas)} preguntas"
+        f"\n✅ JSON generado correctamente con {len(preguntas)} preguntas"
     )

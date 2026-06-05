@@ -50,16 +50,27 @@ def detectar_tipo(respuestas):
 
 def validar_opciones(opciones):
 
-    ids = [o["id"] for o in opciones]
+    ids = sorted(
+        [o["id"] for o in opciones]
+    )
 
-    esperado = list(range(1, len(ids) + 1))
+    if not ids:
+        raise Exception(
+            "No se encontraron opciones"
+        )
 
-    if sorted(ids) != esperado:
+    esperado = list(
+        range(
+            min(ids),
+            max(ids) + 1
+        )
+    )
+
+    if ids != esperado:
 
         raise Exception(
             f"Opciones inválidas. Esperado {esperado} pero encontró {ids}"
         )
-
 
 # =====================================================
 # RESPUESTAS CORRECTAS
@@ -110,12 +121,12 @@ def parsear_opciones(texto):
 
     opciones = []
 
-    patron = r'([a-z])\)\s*(.*?)(?=\n[a-z]\)|$)'
+    patron = r'^\s*([a-z])\)\s*(.*?)\s*(?=^\s*[a-z]\)|\Z)'
 
     matches = re.findall(
         patron,
         texto,
-        flags=re.DOTALL | re.IGNORECASE
+        flags=re.DOTALL | re.MULTILINE | re.IGNORECASE
     )
 
     for letra, contenido in matches:

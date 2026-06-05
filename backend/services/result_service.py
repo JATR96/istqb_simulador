@@ -31,6 +31,10 @@ def process_exam_result(
 
     review = []
 
+    total_points = 0
+
+    earned_points = 0
+
     # ======================================
     # CREAR EXAM ATTEMPT
     # ======================================
@@ -90,30 +94,74 @@ def process_exam_result(
         )
 
         # ==================================
-        # RESPUESTAS CORRECTAS
+        # DATOS DE LA PREGUNTA
         # ==================================
 
         correct_option_ids = (
             question.respuestas_correctas
         )
 
+        question_type = (
+            question.tipo_pregunta
+        )
+
+        question_points = (
+            question.points
+        )
+
+        total_points += question_points
+
         # ==================================
         # VALIDAR RESPUESTA
         # ==================================
 
-        is_correct = (
+        if question_type == "eleccion_simple":
 
-            answer.selected_option_id
+            is_correct = (
 
-            in
+                answer.selected_option_id
 
-            correct_option_ids
+                ==
 
-        )
+                correct_option_ids[0]
+
+            )
+
+        elif question_type == "multiple_respuesta":
+
+            # Preparado para futuras preguntas
+            # de selección múltiple
+
+            selected_answers = set(
+                getattr(
+                    answer,
+                    "selected_option_ids",
+                    []
+                )
+            )
+
+            expected_answers = set(
+                correct_option_ids
+            )
+
+            is_correct = (
+                selected_answers ==
+                expected_answers
+            )
+
+        else:
+
+            is_correct = False
+
+        # ==================================
+        # CONTABILIZAR RESULTADO
+        # ==================================
 
         if is_correct:
 
             correct_answers += 1
+
+            earned_points += question_points
 
         # ==================================
         # GUARDAR USER ANSWER
@@ -164,6 +212,15 @@ def process_exam_result(
             "is_correct":
                 is_correct,
 
+            "type":
+                question.tipo_pregunta,
+
+            "k_level":
+                question.k_level,
+
+            "points":
+                question.points,
+
             "explanation":
                 translation[
                     "explicacion"
@@ -183,16 +240,22 @@ def process_exam_result(
         correct_answers
     )
 
-    score = round(
+    if total_points > 0:
 
-        (
-            correct_answers /
-            total_questions
-        ) * 100,
+        score = round(
 
-        2
+            (
+                earned_points /
+                total_points
+            ) * 100,
 
-    )
+            2
+
+        )
+
+    else:
+
+        score = 0
 
     # ======================================
     # ISTQB PASS SCORE
@@ -218,10 +281,20 @@ def process_exam_result(
 
     db.commit()
 
+    # ======================================
+    # RESPONSE
+    # ======================================
+
     return {
 
         "score":
             score,
+
+        "earned_points":
+            earned_points,
+
+        "total_points":
+            total_points,
 
         "passed":
             passed,

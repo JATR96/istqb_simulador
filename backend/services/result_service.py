@@ -71,27 +71,48 @@ def process_exam_result(
 
     for answer in request.answers:
 
-        question = db.query(
-            Question
-        ).filter(
-            Question.id ==
-            answer.question_id
-        ).first()
+        question = (
+            db.query(Question)
+            .filter(
+                Question.id ==
+                answer.question_id
+            )
+            .first()
+        )
 
-        translation = question.translations[
-            request.language
-        ]
+        if not question:
+            continue
 
-        correct_option_id = translation[
-            "respuesta_correcta_id"
-        ]
+        translation = (
+            question.translations[
+                request.language
+            ]
+        )
+
+        # ==================================
+        # RESPUESTAS CORRECTAS
+        # ==================================
+
+        correct_option_ids = (
+            question.respuestas_correctas
+        )
+
+        # ==================================
+        # VALIDAR RESPUESTA
+        # ==================================
 
         is_correct = (
-            answer.selected_option_id ==
-            correct_option_id
+
+            answer.selected_option_id
+
+            in
+
+            correct_option_ids
+
         )
 
         if is_correct:
+
             correct_answers += 1
 
         # ==================================
@@ -109,7 +130,8 @@ def process_exam_result(
             selected_option_id=
                 answer.selected_option_id,
 
-            is_correct=is_correct
+            is_correct=
+                is_correct
         )
 
         db.add(user_answer)
@@ -128,11 +150,16 @@ def process_exam_result(
                     "pregunta"
                 ],
 
+            "options":
+                translation[
+                    "opciones"
+                ],
+
             "selected_option_id":
                 answer.selected_option_id,
 
-            "correct_option_id":
-                correct_option_id,
+            "correct_option_ids":
+                correct_option_ids,
 
             "is_correct":
                 is_correct,
@@ -157,11 +184,14 @@ def process_exam_result(
     )
 
     score = round(
+
         (
             correct_answers /
             total_questions
         ) * 100,
+
         2
+
     )
 
     # ======================================
@@ -190,9 +220,11 @@ def process_exam_result(
 
     return {
 
-        "score": score,
+        "score":
+            score,
 
-        "passed": passed,
+        "passed":
+            passed,
 
         "total_questions":
             total_questions,
@@ -203,5 +235,6 @@ def process_exam_result(
         "incorrect_answers":
             incorrect_answers,
 
-        "review": review
+        "review":
+            review
     }

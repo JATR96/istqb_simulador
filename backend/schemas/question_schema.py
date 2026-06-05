@@ -17,7 +17,6 @@ class OptionSchema(BaseModel):
     id: int
     texto: str
 
-
 # ==========================================
 # TRADUCCIÓN
 # ==========================================
@@ -27,10 +26,9 @@ class TranslationSchema(BaseModel):
 
     opciones: List[OptionSchema]
 
-    respuesta_correcta_id: int
+    respuestas_correctas: List[int]
 
     explicacion: str
-
 
 # ==========================================
 # QUESTION BASE
@@ -46,12 +44,19 @@ class QuestionBase(BaseModel):
 
     learning_objective: str
 
+    k_level: str
+
+    points: int
+
+    tipo_pregunta: str
+
+    respuestas_correctas: List[int]
+
     image_url: Optional[str] = None
 
     image_description: Optional[str] = None
 
     translations: Dict[str, Any]
-
 
 # ==========================================
 # CREATE QUESTION
@@ -59,7 +64,6 @@ class QuestionBase(BaseModel):
 
 class QuestionCreate(QuestionBase):
     pass
-
 
 # ==========================================
 # RESPONSE QUESTION

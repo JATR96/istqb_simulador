@@ -22,11 +22,12 @@ class OptionSchema(BaseModel):
 # ==========================================
 
 class TranslationSchema(BaseModel):
+    
     pregunta: str
 
-    opciones: List[OptionSchema]
-
-    respuestas_correctas: List[int]
+    opciones: List[
+        OptionSchema
+    ]
 
     explicacion: str
 

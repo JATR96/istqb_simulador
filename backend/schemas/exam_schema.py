@@ -43,6 +43,12 @@ class ExamQuestionResponse(BaseModel):
 
     id: int
 
+    type: str
+
+    k_level: str
+
+    points: int
+
     question: str
 
     options: List[OptionResponse]
@@ -64,10 +70,16 @@ class ExamQuestionResponse(BaseModel):
 
 class GenerateExamResponse(BaseModel):
 
+    certification: str
+
+    blueprint: dict
+
     total_questions: int
 
     requested_questions: int
 
     adjusted: bool
 
-    questions: List[ExamQuestionResponse]
+    questions: List[
+        ExamQuestionResponse
+    ]

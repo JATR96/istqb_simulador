@@ -49,22 +49,37 @@ def serialize_question(
     )
 
     return {
-        "id": question.id,
+        "id": 
+            question.id,
 
-        "question": translation[
-            "pregunta"
-        ],
+        "type":
+            question.tipo_pregunta,
 
-        "options": shuffled_options,
+        "k_level":
+            question.k_level,
 
-        "image_url": question.image_url,
+        "points":
+            question.points,
+
+        "question": 
+            translation[
+                "pregunta"
+            ],
+
+        "options": 
+            shuffled_options,
+
+        "image_url": 
+            question.image_url,
 
         "image_description":
             question.image_description,
 
-        "chapter": question.chapter,
+        "chapter": 
+            question.chapter,
 
-        "section": question.section,
+        "section": 
+            question.section,
 
         "learning_objective":
             question.learning_objective
@@ -272,21 +287,32 @@ def load_blueprint(
     certification
 ):
     """
-    Carga distribución syllabus.
+    Carga blueprint según certificación.
     """
 
-    if certification == "Foundation":
+    blueprints = {
 
-        with open(
+        "Foundation Tester":
             "exam_blueprints/foundation_distribution.json",
-            "r",
-            encoding="utf-8"
-        ) as file:
 
-            return json.load(file)
+        "Automation Tester":
+            "exam_blueprints/automation_distribution.json"
+    }
 
-    return {}
+    blueprint_file = blueprints.get(
+        certification
+    )
 
+    if not blueprint_file:
+        return {}
+
+    with open(
+        blueprint_file,
+        "r",
+        encoding="utf-8"
+    ) as file:
+
+        return json.load(file)
 
 # ==========================================
 # EXAMEN OFICIAL
@@ -305,6 +331,38 @@ def generate_official_exam(
         certification
     )
 
+    if not blueprint:
+
+        raise ValueError(
+            f"No existe blueprint para {certification}"
+        )
+    
+    questions_per_chapter = (
+        blueprint[
+            "questions_per_chapter"
+            ]
+        )
+
+    points_per_chapter = (
+        blueprint[
+            "points_per_chapter"
+        ]
+    )
+
+    if set(
+        questions_per_chapter.keys()
+    ) != set(
+        points_per_chapter.keys()
+    ):
+
+        raise ValueError(
+            f"Blueprint inválido para {certification}"
+        )
+
+    expected_questions = sum(
+        questions_per_chapter.values()
+    )
+
     selected_questions = []
 
     used_question_ids = set()
@@ -313,7 +371,9 @@ def generate_official_exam(
     # DISTRIBUCIÓN POR CHAPTER
     # ======================================
 
-    for chapter, quantity in blueprint.items():
+    for chapter, quantity in (
+        questions_per_chapter.items()
+    ):
 
         chapter_questions = db.query(
             Question
@@ -346,6 +406,9 @@ def generate_official_exam(
 
         if quantity > available:
             quantity = available
+
+        if quantity == 0:
+            continue
 
         # ==================================
         # RANDOM SAMPLE
@@ -386,10 +449,17 @@ def generate_official_exam(
         "total_questions":
             len(serialized_questions),
 
-        "requested_questions": 40,
+        "requested_questions": 
+            expected_questions,
 
         "adjusted": False,
 
         "questions":
-            serialized_questions
+            serialized_questions,
+
+        "certification":
+            blueprint["certification"],
+
+        "blueprint":
+            questions_per_chapter,
     }

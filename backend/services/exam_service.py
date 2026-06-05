@@ -371,6 +371,8 @@ def generate_official_exam(
     # DISTRIBUCIÓN POR CHAPTER
     # ======================================
 
+    adjusted = False
+
     for chapter, quantity in (
         questions_per_chapter.items()
     ):
@@ -406,7 +408,9 @@ def generate_official_exam(
 
         if quantity > available:
             quantity = available
+            adjusted = True
 
+        # No existen preguntas para este capítulo
         if quantity == 0:
             continue
 
@@ -452,7 +456,7 @@ def generate_official_exam(
         "requested_questions": 
             expected_questions,
 
-        "adjusted": False,
+        "adjusted": adjusted,
 
         "questions":
             serialized_questions,

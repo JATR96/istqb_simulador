@@ -71,6 +71,8 @@ class SubmitExamResponse(BaseModel):
 
     total_points: int
 
+    passing_points: int
+
     passed: bool
 
     total_questions: int

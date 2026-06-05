@@ -10,6 +10,10 @@ from models.user_answer_model import (
     UserAnswer
 )
 
+from services.certification_service import (
+    load_certification_config
+)
+
 """
 Servicio profesional de resultados.
 """
@@ -253,10 +257,21 @@ def process_exam_result(
         score = 0
 
     # ======================================
-    # ISTQB PASS SCORE
+    # CERTIFICACIÓN
     # ======================================
 
-    passed = score >= 65
+    config = load_certification_config(
+        request.certification
+    )
+
+    passing_points = config[
+        "passing_points"
+    ]
+
+    passed = (
+        earned_points >=
+        passing_points
+    )
 
     # ======================================
     # UPDATE ATTEMPT
@@ -290,6 +305,9 @@ def process_exam_result(
 
         "total_points":
             total_points,
+
+        "passing_points":
+            passing_points,
 
         "passed":
             passed,

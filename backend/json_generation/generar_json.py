@@ -2,7 +2,6 @@ import json
 import re
 from docx import Document
 
-
 # =====================================================
 # UTILIDADES
 # =====================================================
@@ -28,7 +27,12 @@ def obtener_chapter(lo):
 
 
 def obtener_section(lo):
-    return lo.split("-")[1]
+
+    try:
+        return lo.split("-")[1]
+
+    except Exception:
+        return ""
 
 
 def detectar_tipo(respuestas):
@@ -37,6 +41,23 @@ def detectar_tipo(respuestas):
         return "eleccion_multiple"
 
     return "eleccion_simple"
+
+
+# =====================================================
+# VALIDACIONES
+# =====================================================
+
+def validar_opciones(opciones):
+
+    ids = [o["id"] for o in opciones]
+
+    esperado = list(range(1, len(ids) + 1))
+
+    if sorted(ids) != esperado:
+
+        raise Exception(
+            f"Opciones inválidas. Esperado {esperado} pero encontró {ids}"
+        )
 
 
 # =====================================================
@@ -67,11 +88,15 @@ def parsear_respuestas(texto):
 
         if item.isdigit():
 
-            respuestas.append(int(item))
+            respuestas.append(
+                int(item)
+            )
 
         elif item in mapping:
 
-            respuestas.append(mapping[item])
+            respuestas.append(
+                mapping[item]
+            )
 
     return respuestas
 
@@ -101,11 +126,60 @@ def parsear_opciones(texto):
             )
         })
 
+    validar_opciones(opciones)
+
     return opciones
 
 
 # =====================================================
-# BLOQUE IDIOMA
+# BLOQUES DE PREGUNTAS
+# =====================================================
+
+def obtener_bloques(contenido):
+
+    bloques = re.findall(
+        r'=== QUESTION START ===(.*?)=== QUESTION END ===',
+        contenido,
+        flags=re.DOTALL
+    )
+
+    if bloques:
+
+        return [
+            b.strip()
+            for b in bloques
+            if b.strip()
+        ]
+
+    return [
+        b.strip()
+        for b in contenido.split("---")
+        if b.strip()
+    ]
+
+
+# =====================================================
+# CAMPOS CABECERA
+# =====================================================
+
+def obtener_campo(nombre, texto):
+
+    for linea in texto.splitlines():
+
+        linea = linea.strip()
+
+        if linea.startswith(f"{nombre}:"):
+
+            return linea.replace(
+                f"{nombre}:",
+                "",
+                1
+            ).strip()
+
+    return ""
+
+# =====================================================
+# IDIOMAS
 # =====================================================
 
 def extraer_bloque(texto, idioma):
@@ -124,86 +198,6 @@ def extraer_bloque(texto, idioma):
     return match.group(1).strip()
 
 
-def parsear_bloque_es(texto):
-
-    pregunta = re.search(
-        r'PREGUNTA:\s*(.*?)\s*OPCIONES:',
-        texto,
-        re.DOTALL
-    )
-
-    opciones = re.search(
-        r'OPCIONES:\s*(.*?)\s*EXPLICACION:',
-        texto,
-        re.DOTALL
-    )
-
-    explicacion = re.search(
-        r'EXPLICACION:\s*(.*)',
-        texto,
-        re.DOTALL
-    )
-
-    return {
-        "pregunta": pregunta.group(1).strip(),
-        "opciones": parsear_opciones(
-            opciones.group(1)
-        ),
-        "explicacion": explicacion.group(1).strip()
-    }
-
-
-def parsear_bloque_en(texto):
-
-    pregunta = re.search(
-        r'QUESTION:\s*(.*?)\s*OPTIONS:',
-        texto,
-        re.DOTALL
-    )
-
-    opciones = re.search(
-        r'OPTIONS:\s*(.*?)\s*EXPLANATION:',
-        texto,
-        re.DOTALL
-    )
-
-    explicacion = re.search(
-        r'EXPLANATION:\s*(.*)',
-        texto,
-        re.DOTALL
-    )
-
-    return {
-        "pregunta": pregunta.group(1).strip(),
-        "opciones": parsear_opciones(
-            opciones.group(1)
-        ),
-        "explicacion": explicacion.group(1).strip()
-    }
-
-
-# =====================================================
-# CABECERA
-# =====================================================
-
-def obtener_campo(nombre, texto):
-
-    for linea in texto.splitlines():
-
-        linea = linea.strip()
-
-        if linea.startswith(f"{nombre}:"):
-
-            valor = linea[len(f"{nombre}:"):].strip()
-
-            return valor
-
-    return ""
-
-# =====================================================
-# IDIOMA
-# =====================================================
-
 def parsear_bloque_generico(
         texto,
         pregunta_tag,
@@ -214,22 +208,23 @@ def parsear_bloque_generico(
     pregunta = re.search(
         rf'{pregunta_tag}:\s*(.*?)\s*{opciones_tag}:',
         texto,
-        re.DOTALL
+        re.DOTALL | re.IGNORECASE
     )
 
     opciones = re.search(
         rf'{opciones_tag}:\s*(.*?)\s*{explicacion_tag}:',
         texto,
-        re.DOTALL
+        re.DOTALL | re.IGNORECASE
     )
 
     explicacion = re.search(
         rf'{explicacion_tag}:\s*(.*)',
         texto,
-        re.DOTALL
+        re.DOTALL | re.IGNORECASE
     )
 
     return {
+
         "pregunta":
             pregunta.group(1).strip()
             if pregunta else "",
@@ -243,6 +238,7 @@ def parsear_bloque_generico(
             explicacion.group(1).strip()
             if explicacion else ""
     }
+
 
 # =====================================================
 # PARSEAR PREGUNTA
@@ -290,7 +286,9 @@ def parsear_pregunta(texto):
     )
 
     resultado = {
-        "certification": certification,
+
+        "certification":
+            certification,
 
         "chapter":
             obtener_chapter(
@@ -331,7 +329,9 @@ def parsear_pregunta(texto):
         "translations": {}
     }
 
-    # Español
+    # =====================
+    # ESPAÑOL
+    # =====================
 
     bloque_es = extraer_bloque(
         texto,
@@ -349,7 +349,9 @@ def parsear_pregunta(texto):
             )
         )
 
-    # Inglés
+    # =====================
+    # INGLÉS
+    # =====================
 
     bloque_en = extraer_bloque(
         texto,
@@ -367,7 +369,9 @@ def parsear_pregunta(texto):
             )
         )
 
-    # Portugués (futuro)
+    # =====================
+    # PORTUGUÉS (FUTURO)
+    # =====================
 
     bloque_pt = extraer_bloque(
         texto,
@@ -387,31 +391,40 @@ def parsear_pregunta(texto):
 
     return resultado
 
+
 # =====================================================
 # GENERAR JSON
 # =====================================================
 
 def generar_json(ruta_docx):
 
-    contenido = leer_word(
-        ruta_docx
+    contenido = leer_word(ruta_docx)
+
+    bloques = obtener_bloques(
+        contenido
     )
 
-    bloques = [
-        b.strip()
-        for b in contenido.split("---")
-        if b.strip()
-    ]
+    print(
+        f"Preguntas encontradas: {len(bloques)}"
+    )
 
     preguntas = []
 
-    for bloque in bloques:
+    for i, bloque in enumerate(bloques, start=1):
 
-        preguntas.append(
-            parsear_pregunta(
-                bloque
+        try:
+
+            preguntas.append(
+                parsear_pregunta(
+                    bloque
+                )
             )
-        )
+
+        except Exception as e:
+
+            print(
+                f"Error en pregunta {i}: {e}"
+            )
 
     return preguntas
 
@@ -440,5 +453,5 @@ if __name__ == "__main__":
         )
 
     print(
-        f"Preguntas generadas: {len(preguntas)}"
+        f"JSON generado correctamente con {len(preguntas)} preguntas"
     )

@@ -94,7 +94,7 @@ def process_exam_result(
         )
 
         # ==================================
-        # DATOS DE LA PREGUNTA
+        # DATOS DE PREGUNTA
         # ==================================
 
         correct_option_ids = (
@@ -115,29 +115,26 @@ def process_exam_result(
         # VALIDAR RESPUESTA
         # ==================================
 
+        is_correct = False
+
         if question_type == "eleccion_simple":
 
             is_correct = (
 
-                answer.selected_option_id
+                len(answer.selected_option_ids) > 0
 
+                and
+
+                answer.selected_option_ids[0]
                 ==
-
                 correct_option_ids[0]
 
             )
 
-        elif question_type == "multiple_respuesta":
-
-            # Preparado para futuras preguntas
-            # de selección múltiple
+        elif question_type == "eleccion_multiple":
 
             selected_answers = set(
-                getattr(
-                    answer,
-                    "selected_option_ids",
-                    []
-                )
+                answer.selected_option_ids
             )
 
             expected_answers = set(
@@ -149,12 +146,8 @@ def process_exam_result(
                 expected_answers
             )
 
-        else:
-
-            is_correct = False
-
         # ==================================
-        # CONTABILIZAR RESULTADO
+        # CONTABILIZAR SCORE
         # ==================================
 
         if is_correct:
@@ -175,8 +168,8 @@ def process_exam_result(
             question_id=
                 question.id,
 
-            selected_option_id=
-                answer.selected_option_id,
+            selected_option_ids=
+                answer.selected_option_ids,
 
             is_correct=
                 is_correct
@@ -203,8 +196,8 @@ def process_exam_result(
                     "opciones"
                 ],
 
-            "selected_option_id":
-                answer.selected_option_id,
+            "selected_option_ids":
+                answer.selected_option_ids,
 
             "correct_option_ids":
                 correct_option_ids,
@@ -220,6 +213,9 @@ def process_exam_result(
 
             "points":
                 question.points,
+
+            "certification":
+                question.certification,
 
             "explanation":
                 translation[
@@ -250,7 +246,6 @@ def process_exam_result(
             ) * 100,
 
             2
-
         )
 
     else:

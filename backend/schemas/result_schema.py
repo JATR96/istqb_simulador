@@ -13,7 +13,7 @@ class UserAnswerRequest(BaseModel):
 
     question_id: int
 
-    selected_option_id: int
+    selected_option_ids: List[int]
 
 
 # ==========================================
@@ -45,7 +45,7 @@ class ReviewQuestionResponse(BaseModel):
 
     options: list
 
-    selected_option_id: int
+    selected_option_ids: List[int]
 
     correct_option_ids: List[int]
 

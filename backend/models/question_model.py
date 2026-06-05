@@ -15,6 +15,10 @@ Soporta:
 - multiidioma
 - imágenes
 - learning objectives
+- K level
+- puntos
+- tipo de pregunta
+- respuestas correctas (para preguntas con múltiples respuestas correctas)
 - múltiples certificaciones
 """
 
@@ -69,6 +73,30 @@ class Question(Base):
     )
 
     # ==========================================
+    # K LEVEL, PUNTOS, TIPO DE PREGUNTA, RESPUESTAS CORRECTAS
+    # ==========================================
+
+    k_level = Column(
+        String(10),
+        nullable=False
+    )
+
+    points = Column(
+        Integer,
+        default=1
+    )
+
+    tipo_pregunta = Column(
+        String(50),
+        nullable=False
+    )
+
+    respuestas_correctas = Column(
+        JSON,
+        nullable=False
+    )
+
+    # ==========================================
     # IMAGEN
     # ==========================================
 
@@ -98,4 +126,4 @@ class Question(Base):
     created_at = Column(
         DateTime(timezone=True),
         server_default=func.now()
-    )
+    ) 

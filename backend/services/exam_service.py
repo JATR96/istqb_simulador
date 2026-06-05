@@ -1,4 +1,5 @@
 import random
+import os
 import json
 
 from sqlalchemy.orm import Session
@@ -287,32 +288,45 @@ def load_blueprint(
     certification
 ):
     """
-    Carga blueprint según certificación.
+    Busca blueprint automáticamente.
     """
 
-    blueprints = {
+    for file_name in os.listdir(
+        "exam_blueprints"
+    ):
 
-        "Foundation Tester":
-            "exam_blueprints/foundation_distribution.json",
+        if not file_name.endswith(
+            ".json"
+        ):
+            continue
 
-        "Automation Tester":
-            "exam_blueprints/automation_distribution.json"
-    }
+        file_path = os.path.join(
+            "exam_blueprints",
+            file_name
+        )
 
-    blueprint_file = blueprints.get(
-        certification
+        with open(
+            file_path,
+            "r",
+            encoding="utf-8"
+        ) as file:
+
+            blueprint = json.load(
+                file
+            )
+
+            if (
+                blueprint[
+                    "certification"
+                ]
+                ==
+                certification
+            ):
+                return blueprint
+
+    raise ValueError(
+        f"No existe blueprint para {certification}"
     )
-
-    if not blueprint_file:
-        return {}
-
-    with open(
-        blueprint_file,
-        "r",
-        encoding="utf-8"
-    ) as file:
-
-        return json.load(file)
 
 # ==========================================
 # EXAMEN OFICIAL

@@ -7,12 +7,12 @@ CERTIFICATIONS_PATH = (
 )
 
 
-def load_certification_config(
-    certification
-):
+def get_available_certifications():
     """
-    Carga configuración ISTQB.
+    Obtiene certificaciones disponibles.
     """
+
+    certifications = []
 
     for file_name in os.listdir(
         CERTIFICATIONS_PATH
@@ -36,13 +36,8 @@ def load_certification_config(
 
             config = json.load(file)
 
-            if (
-                config["certification"]
-                ==
-                certification
-            ):
-                return config
+            certifications.append(
+                config
+            )
 
-    raise ValueError(
-        f"Certificación no encontrada: {certification}"
-    )
+    return certifications

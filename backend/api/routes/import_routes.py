@@ -5,7 +5,9 @@ from sqlalchemy.orm import Session
 
 from database import get_db
 
-from services.import_service import import_questions
+from services.import_all_questions import (
+    import_all_questions
+)
 
 router = APIRouter(
     prefix="/import",
@@ -13,17 +15,18 @@ router = APIRouter(
 )
 
 
-@router.post("/foundation")
-def import_foundation_questions(
+@router.post("/all")
+def import_all(
     db: Session = Depends(get_db)
 ):
     """
-    Importar preguntas Foundation.
+    Importa todas las preguntas
+    encontradas en data/.
     """
 
-    result = import_questions(
+    result = import_all_questions(
         db=db,
-        json_path="data/foundation/foundation_questions.json"
+        data_directory="data"
     )
 
     return result

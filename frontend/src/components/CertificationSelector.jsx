@@ -5,13 +5,11 @@ import {
 
 import {
   getCertifications
-}
-from "../services/certificationService";
+} from "../services/certificationService";
 
 import {
   useCertification
-}
-from "../context/CertificationContext";
+} from "../context/CertificationContext";
 
 function CertificationSelector() {
 
@@ -38,9 +36,7 @@ function CertificationSelector() {
       const data =
         await getCertifications();
 
-      setCertifications(
-        data
-      );
+      setCertifications(data);
 
       if (
         data.length > 0 &&
@@ -54,48 +50,58 @@ function CertificationSelector() {
 
     } catch (error) {
 
-      console.error(error);
-
+      console.error(
+        "Error loading certifications",
+        error
+      );
     }
   }
 
   return (
 
-    <select
+    <div className="certification-selector">
 
-      value={
-        certification || ""
-      }
+      <label>
+        Certificación {""}
+      </label>
 
-      onChange={(event) =>
-        setCertification(
-          event.target.value
-        )
-      }
-    >
+      <select
 
-      {certifications.map(
-        (item) => (
+        value={
+          certification || ""
+        }
 
-          <option
-            key={
-              item.certification
-            }
+        onChange={(event) =>
+          setCertification(
+            event.target.value
+          )
+        }
+      >
 
-            value={
-              item.certification
-            }
-          >
+        {certifications.map(
+          (item) => (
 
-            {
-              item.certification
-            }
+            <option
+              key={
+                item.certification
+              }
 
-          </option>
-        )
-      )}
+              value={
+                item.certification
+              }
+            >
 
-    </select>
+              {
+                item.certification
+              }
+
+            </option>
+          )
+        )}
+
+      </select>
+
+    </div>
   );
 }
 

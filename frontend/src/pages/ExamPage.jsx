@@ -214,10 +214,13 @@ function ExamPage() {
     const formattedAnswers =
       questions.map((question, index) => ({
 
-        question_id: question.id,
+        question_id:
+          question.id,
 
-        selected_option_id:
-          answers[index] || -1
+        selected_option_ids:
+          answers[index]
+            ? [answers[index]]
+            : []
       }));
 
     const result =

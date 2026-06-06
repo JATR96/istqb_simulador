@@ -5,6 +5,7 @@ import ExamsPage from "../pages/ExamsPage";
 import ResultsPage from "../pages/ResultPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import StatisticsPage from "../pages/StatisticsPage";
+import ExamPage from "../pages/ExamPage";
 
 import ThemeToggle from "../components/ThemeToggle";
 import Header from "../components/layout/Header";
@@ -23,6 +24,11 @@ function AppRouter() {
         <Route
           path="/exams"
           element={<ExamsPage />}
+        />
+
+        <Route
+          path="/exam"
+          element={<ExamPage />}
         />
 
         <Route

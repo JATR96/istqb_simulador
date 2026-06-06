@@ -20,6 +20,8 @@ import { submitExam } from "../services/examService";
 
 import Loader from "../components/Loader";
 
+import { useCertification } from "../context/CertificationContext";
+
 /*
 |--------------------------------------------------------------------------
 | EXAM PAGE
@@ -45,6 +47,10 @@ function ExamPage() {
 
   const navigate = useNavigate();
 
+  const {
+    certification
+  } = useCertification();
+
   /*
   |--------------------------------------------------------------------------
   | CARGAR EXAMEN
@@ -53,9 +59,13 @@ function ExamPage() {
 
   useEffect(() => {
 
-    loadExam();
+    if (certification) {
 
-  }, []);
+      loadExam();
+
+    }
+
+  }, [certification]);
 
   /*
   |--------------------------------------------------------------------------
@@ -65,13 +75,14 @@ function ExamPage() {
 
   const loadExam = async () => {
 
+    setLoading(true);
+
     try {
 
       const data =
         await generateExam({
 
-          certification:
-            "Foundation",
+          certification,
 
           language: "es",
 
@@ -81,6 +92,12 @@ function ExamPage() {
         });
 
       setQuestions(data.questions);
+
+      setCurrentQuestion(0);
+
+      setAnswers({});
+
+      setMarkedQuestions([]);
 
     } catch (error) {
 
@@ -206,8 +223,7 @@ function ExamPage() {
     const result =
       await submitExam({
 
-        certification:
-          "Foundation",
+        certification,
 
         language: "es",
 

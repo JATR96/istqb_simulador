@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 
+import CertificationSelector from "../components/CertificationSelector";
+
 function ExamsPage() {
   const { t } = useTranslation();
 
@@ -12,6 +14,9 @@ function ExamsPage() {
       <p>
         {t("exams.description")}
       </p>
+
+      <CertificationSelector />
+
     </div>
   );
 }

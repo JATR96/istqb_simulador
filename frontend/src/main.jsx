@@ -30,6 +30,10 @@ import {
   ToastProvider
 } from "./context/ToastContext";
 
+import {
+  CertificationProvider
+} from "./context/CertificationContext";
+
 ReactDOM.createRoot(
   document.getElementById("root")
 ).render(
@@ -40,7 +44,11 @@ ReactDOM.createRoot(
 
       <ToastProvider>
 
-        <AppRouter />
+        <CertificationProvider>
+
+          <AppRouter />
+
+        </CertificationProvider>
 
       </ToastProvider>
 

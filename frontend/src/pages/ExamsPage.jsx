@@ -1,11 +1,22 @@
 import { useTranslation } from "react-i18next";
 
-import CertificationSelector
-from "../components/CertificationSelector";
+import CertificationSelector from "../components/CertificationSelector";
+
+import { useNavigate } from "react-router-dom";
+
+import "../styles/examsPage.css";
 
 function ExamsPage() {
 
   const { t } = useTranslation();
+
+  const navigate = useNavigate();
+
+  const handleGenerateExam = () => {
+
+  navigate("/exam");
+
+  };
 
   return (
 
@@ -20,6 +31,17 @@ function ExamsPage() {
       </p>
 
       <CertificationSelector />
+
+      <div className="generate-exam-container">
+
+        <button
+          className="generate-exam-button"
+          onClick={handleGenerateExam}
+        >
+          Generar examen
+        </button>
+
+      </div>
 
     </div>
 

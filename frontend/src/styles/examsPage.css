@@ -1,0 +1,20 @@
+.generate-exam-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.generate-exam-button {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  background: #1976d2;
+  color: white;
+  transition: 0.3s;
+}
+
+.generate-exam-button:hover {
+  opacity: 0.9;
+}

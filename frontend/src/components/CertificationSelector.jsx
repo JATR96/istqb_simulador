@@ -11,6 +11,8 @@ import {
   useCertification
 } from "../context/CertificationContext";
 
+import "../styles/certificationSelector.css";
+
 function CertificationSelector() {
 
   const [
@@ -61,45 +63,64 @@ function CertificationSelector() {
 
     <div className="certification-selector">
 
-      <label>
-        Certificación {""}
-      </label>
+      <h3>
+        Seleccione una certificación
+      </h3>
 
-      <select
-
-        value={
-          certification || ""
-        }
-
-        onChange={(event) =>
-          setCertification(
-            event.target.value
-          )
-        }
-      >
+      <div className="certification-grid">
 
         {certifications.map(
           (item) => (
 
-            <option
+            <div
+
               key={
                 item.certification
               }
 
-              value={
+              className={`certification-card ${
+                certification ===
                 item.certification
+                  ? "selected"
+                  : ""
+              }`}
+
+              onClick={() =>
+                setCertification(
+                  item.certification
+                )
               }
             >
 
+              <h4>
+                {
+                  item.certification
+                }
+              </h4>
+
               {
-                item.certification
+                item.version && (
+                  <p>
+                    {item.version}
+                  </p>
+                )
               }
 
-            </option>
+              {
+                item.total_questions && (
+                  <p>
+                    {
+                      item.total_questions
+                    } preguntas
+                  </p>
+                )
+              }
+
+            </div>
           )
         )}
 
-      </select>
+      </div>
 
     </div>
   );

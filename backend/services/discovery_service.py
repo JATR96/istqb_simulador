@@ -1,6 +1,6 @@
 import json
 import os
-
+from models.question_model import Question
 
 CERTIFICATIONS_PATH = (
     "certifications"
@@ -41,3 +41,39 @@ def get_available_certifications():
             )
 
     return certifications
+
+def get_certification_metadata(
+    db,
+    certification
+):
+    """
+    Obtiene capítulos y learning objectives
+    disponibles para una certificación.
+    """
+
+    chapters = db.query(
+        Question.chapter
+    ).filter(
+        Question.certification ==
+        certification
+    ).distinct().all()
+
+    learning_objectives = db.query(
+        Question.learning_objective
+    ).filter(
+        Question.certification ==
+        certification
+    ).distinct().all()
+
+    return {
+
+        "chapters": sorted([
+            chapter[0]
+            for chapter in chapters
+        ]),
+
+        "learning_objectives": sorted([
+            objective[0]
+            for objective in learning_objectives
+        ])
+    }

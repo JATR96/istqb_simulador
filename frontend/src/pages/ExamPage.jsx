@@ -79,7 +79,9 @@ function ExamPage() {
       certification,
       examConfig.language,
       examConfig.exam_mode,
-      examConfig.question_count
+      examConfig.question_count,
+      examConfig.chapters,
+      examConfig.learning_objectives
   ]);
 
   /*
@@ -106,7 +108,13 @@ function ExamPage() {
             examConfig.exam_mode,
 
           question_count:
-            examConfig.question_count
+            examConfig.question_count,
+          
+          chapters:
+            examConfig.chapters,
+
+          learning_objectives:
+            examConfig.learning_objectives
         });
 
       setQuestions(data.questions);
@@ -122,7 +130,6 @@ function ExamPage() {
       console.error(error);
 
     } finally {
-
       setLoading(false);
     }
   };

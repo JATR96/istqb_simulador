@@ -14,3 +14,15 @@ export const getCertifications = async () => {
 
   return response.data;
 };
+
+export const getCertificationMetadata =
+  async (certification) => {
+
+    const response =
+      await api.get(
+
+        `/certifications/${certification}/metadata`
+      );
+
+    return response.data;
+};

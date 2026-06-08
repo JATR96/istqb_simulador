@@ -1,6 +1,24 @@
 import {
+  useEffect,
+  useState
+} from "react";
+
+import {
   useExamConfig
 } from "../context/ExamConfigContext";
+
+import {
+  useCertification
+} from "../context/CertificationContext";
+
+import {
+  getCertificationMetadata
+} from "../services/certificationService";
+
+import ChapterSelector from "./ChapterSelector";
+
+import LearningObjectiveSelector
+  from "./LearningObjectiveSelector";
 
 import "../styles/examConfigForm.css";
 
@@ -10,6 +28,20 @@ function ExamConfigForm() {
     examConfig,
     setExamConfig
   } = useExamConfig();
+
+  const {
+    certification
+  } = useCertification();
+
+  const [
+    chapters,
+    setChapters
+  ] = useState([]);
+
+  const [
+    learningObjectives,
+    setLearningObjectives
+  ] = useState([]);
 
   const updateField = (
     field,
@@ -23,6 +55,47 @@ function ExamConfigForm() {
       [field]: value
     });
   };
+
+  /*
+  |--------------------------------------------------
+  | CARGAR METADATA
+  |--------------------------------------------------
+  */
+
+  useEffect(() => {
+
+    if (!certification) {
+
+      return;
+    }
+
+    loadMetadata();
+
+  }, [certification]);
+
+  const loadMetadata =
+    async () => {
+
+      try {
+
+        const metadata =
+          await getCertificationMetadata(
+            certification
+          );
+
+        setChapters(
+          metadata.chapters || []
+        );
+
+        setLearningObjectives(
+          metadata.learning_objectives || []
+        );
+
+      } catch (error) {
+
+        console.error(error);
+      }
+    };
 
   return (
 
@@ -89,7 +162,7 @@ function ExamConfigForm() {
           </option>
 
           <option value="chapter">
-            Capítulo Especifico
+            Capítulo Específico
           </option>
 
           <option value="learning_objective">
@@ -100,7 +173,7 @@ function ExamConfigForm() {
 
       </div>
 
-      {/* Cantidad */}
+      {/* Preguntas */}
 
       <div className="config-group">
 
@@ -124,6 +197,7 @@ function ExamConfigForm() {
             )
           }
         />
+
       </div>
 
       {/* Tiempo */}
@@ -149,7 +223,58 @@ function ExamConfigForm() {
             )
           }
         />
+
       </div>
+
+      {/* CHAPTER */}
+
+      {
+        examConfig.exam_mode ===
+          "chapter" && (
+
+          <ChapterSelector
+
+            chapters={chapters}
+
+            selectedChapters={
+              examConfig.chapters
+            }
+
+            onChange={(value) =>
+              updateField(
+                "chapters",
+                value
+              )
+            }
+          />
+        )
+      }
+
+      {/* LEARNING OBJECTIVE */}
+
+      {
+        examConfig.exam_mode ===
+          "learning_objective" && (
+
+          <LearningObjectiveSelector
+
+            objectives={
+              learningObjectives
+            }
+
+            selectedObjectives={
+              examConfig.learning_objectives
+            }
+
+            onChange={(value) =>
+              updateField(
+                "learning_objectives",
+                value
+              )
+            }
+          />
+        )
+      }
 
     </div>
   );

@@ -46,8 +46,8 @@ class ExamQuestionResponse(BaseModel):
 # ==========================================
 
 class GenerateExamResponse(BaseModel):
-    certification: str
-    blueprint: dict
+    certification: Optional[str] = None
+    blueprint: Optional[dict] = None
     total_questions: int
     requested_questions: int
     adjusted: bool

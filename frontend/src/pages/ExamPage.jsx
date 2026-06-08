@@ -79,8 +79,7 @@ function ExamPage() {
       certification,
       examConfig.language,
       examConfig.exam_mode,
-      examConfig.question_count,
-      examConfig.duration_seconds
+      examConfig.question_count
   ]);
 
   /*

@@ -87,6 +87,7 @@ frontend/
         components/
             CertificationSelector.jsx
             ErrorMessage.jsx
+            ExamConfigForm.jsx
             ExamHeader.jsx
             Loader.jsx
             PerformanceChart.jsx
@@ -103,6 +104,7 @@ frontend/
                 Navbar.jsx
         context/
             CertificationContext.jsx
+            ExamConfigContext.jsx
             ThemeContext.jsx
             ToastContext.jsx
         i18n/
@@ -129,8 +131,11 @@ frontend/
             certificationService.js
             examService.js
         styles/
+            certificationSelector.css
             error.css
             exam.css
+            examConfigForm.css
+            examsPage.css
             global.css
             layout.css
             loader.css
@@ -141,6 +146,7 @@ frontend/
     vite.config.js
 prompts/
     arbol.py
+    estructura_proyecto.txt
     prompt.txt
     prompt_examen.txt
     texto.txt

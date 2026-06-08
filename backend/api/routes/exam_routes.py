@@ -39,6 +39,13 @@ def generate_exam(
     Generador principal de exámenes.
     """
 
+    print("================================")
+    print("CERTIFICATION:", request.certification)
+    print("LANGUAGE:", request.language)
+    print("EXAM MODE:", request.exam_mode)
+    print("QUESTION COUNT:", request.question_count)
+    print("================================")
+
     # ======================================
     # QUICK EXAM
     # ======================================

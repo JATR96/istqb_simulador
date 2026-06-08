@@ -84,12 +84,16 @@ function ExamConfigForm() {
             Quick
           </option>
 
-          <option value="real">
+          <option value="official">
             Real Exam
           </option>
 
-          <option value="study">
-            Study
+          <option value="chapter">
+            Capítulo Especifico
+          </option>
+
+          <option value="learning_objective">
+            Objetivo de Aprendizaje
           </option>
 
         </select>

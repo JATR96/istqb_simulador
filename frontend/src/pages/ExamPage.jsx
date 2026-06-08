@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
-import {
-  generateExam
-} from "../services/examService";
+import { generateExam } from "../services/examService";
 
 import Timer from "../components/Timer";
 
@@ -12,8 +10,6 @@ import QuestionCard from "../components/QuestionCard";
 
 import QuestionNavigator from "../components/QuestionNavigator";
 
-import "../styles/exam.css";
-
 import { useNavigate } from "react-router-dom";
 
 import { submitExam } from "../services/examService";
@@ -21,6 +17,16 @@ import { submitExam } from "../services/examService";
 import Loader from "../components/Loader";
 
 import { useCertification } from "../context/CertificationContext";
+
+import { useExamConfig } from "../context/ExamConfigContext";
+
+/*
+|--------------------------------------------------------------------------
+| styles
+|--------------------------------------------------------------------------
+*/
+
+import "../styles/exam.css";
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +57,10 @@ function ExamPage() {
     certification
   } = useCertification();
 
+  const {
+    examConfig
+  } = useExamConfig();
+
   /*
   |--------------------------------------------------------------------------
   | CARGAR EXAMEN
@@ -65,7 +75,13 @@ function ExamPage() {
 
     }
 
-  }, [certification]);
+  }, [
+      certification,
+      examConfig.language,
+      examConfig.exam_mode,
+      examConfig.question_count,
+      examConfig.duration_seconds
+  ]);
 
   /*
   |--------------------------------------------------------------------------
@@ -84,11 +100,14 @@ function ExamPage() {
 
           certification,
 
-          language: "es",
+          language:
+            examConfig.language,
 
-          exam_mode: "quick",
+          exam_mode:
+            examConfig.exam_mode,
 
-          question_count: 10
+          question_count:
+            examConfig.question_count
         });
 
       setQuestions(data.questions);
@@ -228,13 +247,17 @@ function ExamPage() {
 
         certification,
 
-        language: "es",
+        language:
+          examConfig.language,
 
-        exam_mode: "quick",
+        exam_mode:
+          examConfig.exam_mode,
 
-        duration_seconds: 3600,
+        duration_seconds:
+          examConfig.duration_seconds,
 
-        answers: formattedAnswers
+        answers:
+          formattedAnswers
       });
 
     navigate(
@@ -300,7 +323,7 @@ function ExamPage() {
       {/* ================================== */}
 
       <Timer
-        initialSeconds={3600}
+        initialSeconds={examConfig.duration_seconds}
         onTimeEnd={handleTimeEnd}
       />
 

@@ -4,6 +4,8 @@ import CertificationSelector from "../components/CertificationSelector";
 
 import { useNavigate } from "react-router-dom";
 
+import ExamConfigForm from "../components/ExamConfigForm";
+
 import "../styles/examsPage.css";
 
 function ExamsPage() {
@@ -31,6 +33,8 @@ function ExamsPage() {
       </p>
 
       <CertificationSelector />
+
+      <ExamConfigForm />
 
       <div className="generate-exam-container">
 

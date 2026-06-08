@@ -22,7 +22,11 @@ export function ExamConfigProvider({
 
     question_count: 10,
 
-    duration_seconds: 3600
+    duration_seconds: 3600,
+
+    chapters: [],
+
+    learning_objectives: []
   });
 
   return (

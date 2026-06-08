@@ -1,0 +1,24 @@
+.exam-config-form {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+}
+
+.config-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.config-group label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.config-group select,
+.config-group input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}

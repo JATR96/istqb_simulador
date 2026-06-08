@@ -22,6 +22,12 @@ import "./styles/global.css";
 
 import "./styles/responsive.css";
 
+/*
+|--------------------------------------------------------------------------
+| CONTEXT PROVIDERS
+|--------------------------------------------------------------------------
+*/
+
 import {
   ThemeProvider
 } from "./context/ThemeContext";
@@ -33,6 +39,10 @@ import {
 import {
   CertificationProvider
 } from "./context/CertificationContext";
+
+import {
+  ExamConfigProvider
+} from "./context/ExamConfigContext";
 
 ReactDOM.createRoot(
   document.getElementById("root")
@@ -46,7 +56,11 @@ ReactDOM.createRoot(
 
         <CertificationProvider>
 
+          <ExamConfigProvider>
+
           <AppRouter />
+
+          </ExamConfigProvider>
 
         </CertificationProvider>
 

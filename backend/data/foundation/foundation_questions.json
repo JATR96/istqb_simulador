@@ -3994,5 +3994,2414 @@
                 "explicacion": "a) Is not correct. Impediments to testing can be high level and businessrelated, so this is an important piece of information for business stakeholders \nb) Is correct. Branch testing is a technical metric used by developers and technical testers. This information is of no interest to business representatives\nc) Is not correct. Test progress is project related, so it may be useful for business representatives\nd) Is not correct. Risks impact product quality, so it may be useful for business representatives"
             }
         }
+    },
+        {
+        "certification": "Foundation Tester",
+        "chapter": "1",
+        "section": "1.2.1",
+        "learning_objective": "FL-1.2.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones es un ejemplo de por qué son necesarias las pruebas?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Las pruebas dinámicas aumentan la calidad al provocar fallos en los objetos de prueba que los usuarios jamás podrían lograr."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Los desarrolladores utilizan las pruebas estáticas para identificar fallos en el código de sus programas antes de lo que se puede lograr con las pruebas dinámicas."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "El análisis estático proporciona a los clientes evidencia de que los elementos del sistema que no generan resultados son aptos para su lanzamiento."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Las revisiones aumentan la calidad de las especificaciones de requisitos y reducen la necesidad de realizar cambios en los productos derivados."
+                    }
+                ],
+                "explicacion": "a) No es correcto. A menudo es posible usar pruebas dinámicas para provocar fallos en un objeto de prueba de formas que los usuarios jamás podrían lograr, como mediante la inyección de fallos. Sin embargo, si el fallo nunca puede ocurrir con usuarios reales, identificarlo no es especialmente valioso, ya que el objetivo final de las pruebas es mejorar el producto para los usuarios. Dedicar tiempo a probar fallos que no pueden ocurrir con usuarios reales no es un uso eficiente del tiempo de un tester.\nb) No es correcto. Los desarrolladores utilizan pruebas estáticas, en forma de análisis estático, para identificar defectos en el código de su programa antes de lo que se puede lograr con las pruebas dinámicas. Cabe señalar, sin embargo, que las pruebas estáticas (y el análisis estático) se utilizan para detectar defectos, no fallos, que son los que se detectan con las pruebas dinámicas. Por lo tanto, es el uso del término «fallos» lo que hace que esta opción sea incorrecta.\nc) No es correcto. El análisis estático detecta directamente anomalías en el código, que pueden ser defectos, y esto normalmente está dirigido al desarrollador, no al cliente. La presentación de pruebas para la liberación mediante el uso de análisis estático de elementos que no producen ningún resultado es un sinsentido.\nd) Es correcto. Las revisiones son una forma de prueba estática que se puede aplicar desde el inicio del ciclo de vida del desarrollo de software y se utilizan para encontrar defectos que se pueden eliminar antes de que las actividades de desarrollo posteriores desperdicien esfuerzos en requisitos erróneos. Si los defectos no se detectan y eliminan a tiempo, cuando se encuentren, los productos derivados, como el diseño y el código, deberán modificarse, ya que se basaron en requisitos erróneos."
+            },
+            "en": {
+                "pregunta": "Which of the following is an example of why testing is necessary?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Dynamic testing increases quality by causing test objects to fail in ways that could never be achieved by the users"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Static testing is used by developers to identify failures in their program code earlier than can be achieved through dynamic testing"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Static analysis provides evidence to customers that the elements of the system that provide no outputs are fit for release"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Reviews increase the quality of requirements specifications and lead to fewer changes being needed in derived work products"
+                    }
+                ],
+                "explicacion": "a) Is not correct. It is often possible to use dynamic testing to cause a test object to fail in ways that could never be achieved by the users, such as by using fault injection. However, if the failure can never occur with real end users, then identifying it is not especially valuable as testing is ultimately aimed at improving the work product for the end users. Spending time testing for failures that cannot occur with real users is not an efficient use of a tester’s time\nb) Is not correct. Static testing in the form of static analysis is used by developers to identify defects in their program code earlier than can be achieved through dynamic testing. Note, however, that static testing (and static analysis) is used to detect defects, not failures, which are found by dynamic testing. Thus it is the use of the term ‘failures’ that makes this an incorrect option\nc) Is not correct. Static analysis directly detects anomalies in code, which may be defects, and this is normally for the developer, not the customer. The provision of evidence for release by the use of static analysis of elements that provide no output is nonsense\nd) Is correct. Reviews are a form of static testing that can be applied from the very start of the software development lifecycle and are used to find defects that can be removed before subsequent development activities waste effort on faulty requirements. If the defects are not detected and removed early on, then when the defect is found derived work products, such as the design and code, will need to be changed as they were based on faulty requirements"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "1",
+        "section": "1.2.2",
+        "learning_objective": "FL-1.2.2",
+        "k_level": "K1",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes afirmaciones sobre el aseguramiento de la calidad (AC) y/o el control de calidad (CC) es correcta?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "El AC se realiza como parte de las pruebas."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Las pruebas se realizan como parte del CC."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Las pruebas son sinónimo de CC."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Las pruebas se realizan como parte del AC."
+                    }
+                ],
+                "explicacion": "a) No es correcto. El control de calidad (CC) se centra en la mejora e implementación de procesos, utilizando un enfoque preventivo para evitar errores y defectos, mientras que las pruebas son una forma de control de calidad (CC) que se utiliza para detectar defectos.\nb) Es correcto. El control de calidad (CC) busca alcanzar niveles de calidad adecuados centrándose en la identificación y corrección de defectos del producto. Las pruebas son una parte importante del CC y ayudan a descubrir estos defectos.\nc) No es correcto. Si bien las pruebas son una parte importante del CC y ayudan a descubrir defectos, otras técnicas (distintas de las pruebas) utilizadas en el CC incluyen métodos formales como la verificación de modelos y la prueba de corrección, así como la simulación y la creación de prototipos.\nd) No es correcto. El control de calidad (CC) se centra en la mejora e implementación de procesos, utilizando un enfoque preventivo para evitar errores y defectos, mientras que las pruebas son una forma de control de calidad (CC) que se utiliza para detectar defectos."
+            },
+            "en": {
+                "pregunta": "Which of the following statements about quality assurance (QA) and/or quality control (QC) is correct?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "QA is performed as part of testing"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Testing is performed as part of QC"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Testing is another term for QC"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Testing is performed as part of QA"
+                    }
+                ],
+                "explicacion": "a) Is not correct. QA concentrates on process improvement and implementation, using a preventive approach to avoid errors and defects, while testing is a form of QC that is used to detect defects\nb) Is correct. QC aims to achieve appropriate levels of quality by focusing on identifying and correcting product defects. Testing is a significant part of QC and helps to uncover these defects\nc) Is not correct. Although testing is a significant part of QC and helps to uncover defects, other (non-testing) techniques utilized in QC include formal methods like model checking and proof of correctness, as well as simulation and prototyping\nd) Is not correct. QA concentrates on process improvement and implementation, using a preventive approach to avoid errors and defects, while testing is a form of QC that is used to detect defects"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "1",
+        "section": "1.3.1",
+        "learning_objective": "FL-1.3.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Uno de los principios de las pruebas establece que las pruebas exhaustivas son imposibles. ¿Cuál de las siguientes opciones es un ejemplo de cómo se aplica este principio en la práctica?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Crear casos de prueba que cubran todas las posibles salidas especificadas."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Documentar todas las posibles variaciones de entrada de prueba y priorizarlas según su importancia."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Iniciar las pruebas lo antes posible mediante revisiones y otros enfoques de pruebas estáticas."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Utilizar la partición de equivalencia y el análisis de valores límite para generar casos de prueba."
+                    }
+                ],
+                "explicacion": "El principio de que «las pruebas exhaustivas son imposibles» se refiere a la imposibilidad de probar todas las variaciones posibles de las entradas de prueba en todas las circunstancias, salvo en casos triviales. En cambio, las pruebas utilizan técnicas de prueba, priorización de casos de prueba y pruebas basadas en riesgos para seleccionar entre el conjunto de posibilidades y enfocar los esfuerzos de prueba.\n\na) No es correcto. El principio establece que no es factible probar todo, salvo en casos triviales. Probar todo requeriría probar todas las variaciones posibles de las entradas de prueba en todas las circunstancias, lo cual generalmente es inviable, ya que habría un número prácticamente infinito. Probar todas las salidas especificadas posibles no resuelve este problema, ya que la relación entre las entradas y las salidas especificadas puede ser diferente para cada objeto de prueba. A veces puede haber un número prácticamente infinito de posibles salidas especificadas (por ejemplo, cuando hay varias variables que representan números reales), mientras que en otras ocasiones puede haber solo dos salidas especificadas, como con una sola variable que puede ser verdadera o falsa.\nb) No es correcto. El principio establece que no es factible probar todas las variaciones posibles de las entradas de prueba en todas las circunstancias. Esto se debe a que, para sistemas no triviales, existe un número prácticamente infinito de casos de prueba. Por lo tanto, en la práctica, documentar todas las posibles variaciones de entrada de prueba sería impracticable, ya que tomaría un tiempo infinito.\nc) No es correcto. Comenzar las pruebas lo antes posible con revisiones y otros enfoques de pruebas estáticas no resolverá el problema de que haya demasiados casos de prueba posibles. El principio de que \"las pruebas tempranas ahorran tiempo y dinero\" se refiere a corregir los defectos en una etapa temprana para prevenir la aparición de defectos posteriores en los productos de trabajo derivados, reduciendo así los costos y la probabilidad de fallas.\nd) Es correcto. El uso de la partición de equivalencia y el análisis de valores límite para generar casos de prueba es una forma de abordar el principio, ya que estas técnicas de prueba proporcionan una manera sistemática de derivar un subconjunto finito de todos los casos de prueba posibles."
+            },
+            "en": {
+                "pregunta": "One of the ‘principles of testing’ states that exhaustive testing is impossible. Which of the following is an example of addressing this principle in practice?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Creating test cases that cover every possible specified output"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Documenting all possible test input variations and prioritizing these based on importance"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Starting testing as early as possible with reviews and other static testing approaches"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Using equivalence partitioning and boundary value analysis to generate test cases"
+                    }
+                ],
+                "explicacion": "The ‘exhaustive testing is impossible’ principle is concerned with the fact that it is not feasible to test every possible variation of test inputs in all different circumstances, except in trivial cases. Instead, testing utilizes test techniques, test case prioritization, and risk-based testing to sample from the set of possibilities and focus testing efforts.\n\na) Is not correct. The principle states that it is not feasible to test everything except in trivial cases. Testing everything would require testing every possible variation of test inputs in all different circumstances, which is generally infeasible as there will be a practically infinite number. Testing every possible specified output will not address this problem as the relationship between inputs and specified outputs can be different for each test object. Sometimes there may be a practically infinite number of possible specified outputs (e.g., when there are several variables representing real numbers), whereas at other times there may be just two specified outputs, such as with a single variable that can be either true or false\nb) Is not correct. The principle states that it is not feasible to test every possible variation of test inputs in all different circumstances. This is because for non-trivial systems there is a practically infinite number. Therefore, in practice, documenting all possible test input variations would be impractical as it would take an infinite length of time\nc) Is not correct. Starting testing as early as possible with reviews and other static testing approaches will not address the problem of there being too many possible test cases. The ‘early testing saves time and money’ principle is concerned with fixing defects early on to prevent the occurrence of subsequent defects in derived work products, thereby reducing costs and the likelihood of failures\nd) Is correct. The use of equivalence partitioning and boundary value analysis to generate test cases is one way to address the principle as these test techniques provide a systematic way to derive a finite subset of all possible test cases"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "1",
+        "section": "1.4.1",
+        "learning_objective": "FL-1.4.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            1
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Qué actividad de prueba implica trabajar con requisitos de datos de prueba, condiciones de prueba, requisitos del entorno de prueba y casos de prueba?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Diseño de pruebas"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Ejecución de pruebas"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Análisis de pruebas"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Implementación de pruebas"
+                    }
+                ],
+                "explicacion": "a) Correcto. El diseño de pruebas implica el uso de condiciones de prueba para crear casos de prueba y demás material de prueba necesario, como los requisitos de datos de prueba y los planes de prueba para las pruebas exploratorias. También se especifican los requisitos del entorno de prueba, incluyendo la infraestructura y las herramientas necesarias.\nb) Incorrecto. La ejecución de pruebas implica la ejecución de casos de prueba (como parte de los procedimientos de prueba), pero no abarca directamente el resto del material de prueba mencionado en la pregunta, como los requisitos de datos de prueba, los requisitos del entorno de prueba y las condiciones de prueba.\nc) Incorrecto. El análisis de pruebas se utiliza para identificar las funcionalidades que requieren prueba. La base de pruebas se analiza y define como condiciones de prueba, las cuales se priorizan junto con los riesgos asociados. Si bien esta actividad implica trabajar con condiciones de prueba, no abarca el resto del material de prueba mencionado en la pregunta, como los requisitos de datos de prueba, los requisitos del entorno de prueba y los casos de prueba.\nd) Incorrecto. La implementación de pruebas incluye la generación de procedimientos de prueba, como scripts de prueba manuales y automatizados, que se crean a partir de casos de prueba y pueden ensamblarse en conjuntos de pruebas. Los procedimientos de prueba se priorizan y se organizan en un cronograma de ejecución de pruebas. Se crean los datos de prueba, se construye el entorno de prueba y se verifica su configuración. Si bien esta actividad implica trabajar explícitamente con casos de prueba y puede utilizar requisitos de datos de prueba y requisitos de entorno de prueba para crear datos de prueba y el entorno de prueba, no cubre las condiciones de prueba."
+            },
+            "en": {
+                "pregunta": "Which test activity involves working with test data requirements, test conditions, test environment requirements and test cases?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Test design"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Test execution"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Test analysis"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Test implementation"
+                    }
+                ],
+                "explicacion": "a) Is correct. Test design involves using test conditions to create test cases and other necessary testware, such as test data requirements and test charters for exploratory testing. Test environment requirements are also specified, including the necessary infrastructure and tools\nb) Is not correct. Test execution involves executing test cases (as part of test procedures), however it does not directly cover the other testware mentioned in the question, such as test data requirements, test environment requirements and test conditions\nc) Is not correct. Test analysis is used to identify the features that require testing. The test basis is analyzed and defined as test conditions, which are then prioritized along with related risks. While this activity involves working with test conditions, it does not cover the other testware mentioned in the question, such as test data requirements, test environment requirements and test cases\nd) Is not correct. Test implementation includes the generation of test procedures, such as manual and automated test scripts, which are created from test cases and may be assembled into test suites. Test procedures are prioritized and arranged in a test execution schedule. Test data is created, and the test environment built, and its set up verified. While this activity involves explicitly working with test cases, and may use test data requirements and test environment requirements to create test data and the test environment, it does not cover test conditions"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "1",
+        "section": "1.4.2",
+        "learning_objective": "FL-1.4.2",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            3
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de los siguientes factores tiene MÁS probabilidades de influir en cómo se realizan las pruebas para un objeto de prueba determinado?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "El nivel promedio de experiencia del equipo de marketing de la organización"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "El conocimiento de los usuarios sobre el desarrollo de un nuevo sistema"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Los años de experiencia de los miembros del equipo de pruebas"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "La estructura organizativa del usuario final en una aplicación comercial de transmisión de música"
+                    }
+                ],
+                "explicacion": "a) No es correcto. Es improbable que el equipo de marketing de la organización realice muchas pruebas (aunque en algunas organizaciones pueden participar en las pruebas de aceptación), por lo que su nivel promedio de experiencia (principalmente en marketing) probablemente no influya en cómo se realizan las pruebas para un objeto de prueba determinado.\nb) No es correcto. Es improbable que el nivel de conocimiento de los usuarios sobre el nuevo sistema que se está desarrollando para ellos afecte la forma en que se realizan las pruebas. Cualquier participación del usuario que pudiera afectar la forma en que se realizan las pruebas probablemente sea resultado de decisiones tomadas por los evaluadores, el cliente y el gerente de proyecto.\nc) Es correcto. La cantidad de años de experiencia de los miembros del equipo de pruebas de rendimiento ayudará a determinar las capacidades y el conocimiento (por ejemplo, de diferentes herramientas y tipos de defectos) que aplicarán durante las pruebas.\nd) No es correcto. La estructura organizativa de los diferentes usuarios finales (que pueden ser variados) cambiará entre usuarios. Por lo tanto, es posible que ni siquiera se sepa cuándo se está probando la aplicación, y la estructura organizativa del usuario final puede tener poco efecto en cómo se realizan las pruebas."
+            },
+            "en": {
+                "pregunta": "Which of the following is MOST likely to impact how testing is performed for a given test object?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "The average level of experience of the organization’s marketing team"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "The knowledge of users that a new system is being developed for them"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "The number of years’ experience of the members of the test team"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "The end user’s organizational structure for a commercial music streaming application"
+                    }
+                ],
+                "explicacion": "a) Is not correct. The organization’s marketing team is unlikely to perform much testing (although in some organizations they may be involved with acceptance testing), so their average level of experience (most of which would be in marketing) is not likely to impact how testing is performed for a given test object\nb) Is not correct. The level of knowledge of users that a new system is being built for them is unlikely to affect how testing is performed. Any user involvement that could affect how testing is performed is more likely to be as a result of decisions made by the testers, customer and project manager\nc) Is correct. The number of years’ experience of the members of the performance testing team will help to determine the capabilities and knowledge (e.g., of different tools and defect types) that the team members will apply when they are testing\nd) Is not correct. The organizational structure of the different end users (who may be varied) will change between users. So, it may not even be known when the application is being tested, and the end user’s organizational structure can thus have little effect on how the testing is performed"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "1",
+        "section": "1.4.4",
+        "learning_objective": "FL-1.4.4",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes afirmaciones es un ejemplo CORRECTO del valor de la trazabilidad?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "La trazabilidad entre los riesgos mitigados y los casos de prueba exitosos permite determinar el nivel de riesgo residual."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "La trazabilidad entre los requisitos del usuario y los resultados de la ejecución de las pruebas permite medir el progreso del proyecto en relación con los objetivos de negocio."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "La trazabilidad entre los evaluadores y los casos de prueba fallidos permite determinar el nivel de habilidad de los evaluadores."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "La trazabilidad entre los riesgos identificados y las condiciones de prueba documentadas permite determinar qué riesgos merecen ser evaluados."
+                    }
+                ],
+                "explicacion": "a) No es correcto. La trazabilidad entre los riesgos mitigados y los casos de prueba exitosos proporciona poca información, ya que para ser mitigados (mediante pruebas), los riesgos necesitarían un caso de prueba exitoso correspondiente. Para poder evaluar el riesgo residual, es necesario que exista trazabilidad entre todos los riesgos y los resultados de las pruebas, de modo que los riesgos que no tengan una prueba exitosa correspondiente puedan identificarse como riesgos residuales.\nb) Es correcto. La trazabilidad entre los requisitos del usuario y los resultados de la ejecución de las pruebas indica qué requisitos del usuario se han probado y, por lo tanto, proporciona un medio para medir el progreso del proyecto (en el contexto de las pruebas) en relación con los objetivos comerciales.\nc) No es correcto. No está claro que los casos de prueba fallidos indiquen las habilidades del evaluador más que los casos de prueba exitosos. Dependería en parte del objetivo de la prueba (por ejemplo, generar confianza o provocar fallos). Además, esta evaluación de los evaluadores basada en casos de prueba exitosos y fallidos puede ser contraproducente, ya que podría llevar a los evaluadores a optimizar sus pruebas en función de esa métrica en lugar del objetivo de la prueba.\nd) No es correcto. La trazabilidad entre los riesgos identificados y las condiciones de prueba escritas proporciona un medio para determinar qué condiciones de prueba adicionales deben redactarse. Determinar qué riesgos merecen ser probados forma parte de la gestión de riesgos, y de la mitigación de riesgos en particular."
+            },
+            "en": {
+                "pregunta": "Which of the following statements is a CORRECT example of the value of traceability?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Traceability between the mitigated risks and passing test cases provides a means of determining the level of residual risk"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Traceability between user requirements and test execution results provides a means of measuring project progress against business goals"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Traceability between testers and failing test cases provides a means of determining the skill level of the testers"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Traceability between the identified risks and written test conditions provides a means of determining which risks are worth testing"
+                    }
+                ],
+                "explicacion": "a) Is not correct. Traceability between the mitigated risks and passing test cases provides little information, because to be mitigated (by testing) the risks would need to have a corresponding passing test case. To be able to assess residual risk, traceability between all risks and test results needs to be available, so that the risks that do not have a corresponding passing test can be identified as the residual risks\nb) Is correct. Traceability between user requirements and test execution results provides an indication of which user requirements have been tested and so provides a means of measuring project progress (in the context of testing) against business goals\nc) Is not correct. It is not clear that failing test cases provide an indication of tester skills any more than passing test cases. It would partly depend on the test objective (e.g., building confidence or causing failures). Also, such measurement of testers based on passing and failing test cases can be counter-productive as it could cause the testers to optimize their testing based on that metric rather than the test objective\nd) Is not correct. Traceability between the identified risks and written test conditions provides a means of determining which further test conditions need to be written. Determining which risks are worth testing is part of risk management, and risk mitigation in particular"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "1",
+        "section": "1.5.1",
+        "learning_objective": "FL-1.5.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones es MÁS probable que sea un ejemplo de un tester utilizando una habilidad genérica durante las pruebas?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "El profundo conocimiento del tester sobre diversos videojuegos hizo que se llevara bien con uno de los desarrolladores, quien también era aficionado a los videojuegos."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "El tester era expiloto y comprendía mejor los criterios de aceptación del sistema de control del helicóptero."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "El tester había trabajado previamente como programador y utilizó sus habilidades en este campo para comunicarse mejor con los analistas de negocio."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "El tester tuvo mucho cuidado de no cometer errores al generar metódicamente los casos de prueba antes de comenzar su sesión de pruebas exploratorias."
+                    }
+                ],
+                "explicacion": "a) No es correcto. Una sólida capacidad de comunicación, la escucha activa y el trabajo en equipo permiten a un tester interactuar eficazmente con todas las partes interesadas; sin embargo, un profundo conocimiento de diversos videojuegos que le permitió llevarse bien con un desarrollador no es un ejemplo de una habilidad genérica útil para los testers.\nb) Es correcto. El conocimiento del dominio que se puede utilizar para comprender y comunicarse con los usuarios finales y los representantes comerciales es una de las habilidades genéricas requeridas para los testers. Un tester con experiencia como piloto estaría mejor capacitado para comprender los criterios de aceptación del sistema de control del helicóptero.\nc) No es correcto. Si bien las habilidades de programación podrían considerarse conocimiento técnico que puede aumentar la eficiencia al utilizar algunas herramientas de prueba, es improbable que estas habilidades mejoren su comunicación con los analistas comerciales.\nd) No es correcto. Si bien la minuciosidad, la atención al detalle, la curiosidad y un enfoque metódico para identificar defectos difíciles de encontrar son habilidades genéricas útiles para los testers, es dudoso que generen casos de prueba antes de comenzar las pruebas exploratorias. Esto se debe a que uno de los principios fundamentales de las pruebas exploratorias es que los casos de prueba se generan durante las pruebas, no se programan con antelación."
+            },
+            "en": {
+                "pregunta": "Which of the following is MOST likely to be an example of a tester using a generic skill when testing?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "The tester’s deep knowledge of a variety of computer games meant that they got on well with one of the developers who was also into gaming"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "The tester was a former pilot and was better able to understand the acceptance criteria for the helicopter control system"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "The tester previously worked as a programmer and used their skills in this area to better communicate with the business analysts"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "The tester was very careful not to make mistakes when they methodically generated test cases prior to starting their exploratory testing session"
+                    }
+                ],
+                "explicacion": "a) Is not correct. Strong communication skills, active listening, and teamwork abilities enable a tester to interact effectively with all stakeholders, however a deep knowledge of a variety of computer games that allowed them to get on well with one developer is not an example of a generic skill useful to testers\nb) Is correct. Domain knowledge that can be used to understand and communicate with end-users and business representatives is one of the generic skills required by testers. A tester with experience as a pilot would make them better able to appreciate the acceptance criteria for the helicopter control system\nc) Is not correct. Although programming skills could be considered as technical knowledge which can increase efficiency when utilizing some test tools, it is unlikely that these skills would improve their communication with business analysts\nd) Is not correct. Although thoroughness, attention to detail, curiosity, and a methodical approach to identifying hard-to-find defects are all useful generic skills for testers, it is doubtful they would be generating test cases prior to starting exploratory testing. This is because one of the main tenets of exploratory testing is that the test cases are generated during the testing, not scripted in advance"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "1",
+        "section": "1.5.2",
+        "learning_objective": "FL-1.5.2",
+        "k_level": "K1",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones es una ventaja del enfoque de equipo completo?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Permite que los miembros del equipo asuman cualquier rol en cualquier momento."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Solo se necesita un equipo para dar soporte a todo el proyecto de desarrollo."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Integra a representantes de negocio junto con los desarrolladores en el mismo equipo."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Genera una sinergia de equipo que beneficia a todo el proyecto."
+                    }
+                ],
+                "explicacion": "a) No es correcto. El enfoque de equipo completo permite que cualquier miembro del equipo con las habilidades y conocimientos necesarios realice cualquier tarea; sin embargo, esto no significa que los miembros del equipo puedan asumir cualquier rol en cualquier momento. Por lo general, solo asumen roles para los que son competentes, y no se sugiere que cada miembro del equipo pueda desempeñar todos los roles.\nb) No es correcto. El enfoque de equipo completo se aplica al funcionamiento de un solo equipo (normalmente en el desarrollo de software ágil); no abarca cómo se supone que varios equipos deben trabajar en proyectos más grandes, ni sugiere que solo se necesite un equipo completo para un proyecto completo.\nc) No es correcto. El enfoque de equipo completo no espera que cada miembro del equipo participe en cada decisión importante. Por ejemplo, no es necesario que el representante del negocio (es decir, el propietario del producto) participe en cada decisión técnica que no afecte al resultado del negocio, e implementar tal enfoque ralentizaría innecesariamente el progreso del equipo.\nd) Es correcto. Al aprovechar al máximo las diversas habilidades de cada miembro del equipo, el enfoque de equipo integral fomenta una dinámica de equipo superior, promueve una comunicación y colaboración sólidas y genera una sinergia de equipo que beneficia a todo el proyecto."
+            },
+            "en": {
+                "pregunta": "Which of the following is an advantage of the whole-team approach?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "It allows team members to take on any role at any time"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "It only needs a single team to support the complete development project"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "It embeds business representatives alongside developers in the same team"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "It generates a team synergy that benefits the entire project"
+                    }
+                ],
+                "explicacion": "a) Is not correct. The whole-team approach allows any team member with the requisite skills and knowledge to undertake any task, however that does not mean that team members can take on any role at any time. Typically, they only take on roles in which they are competent, and there is no suggestion that every team member can do every role\nb) Is not correct. The whole-team approach applies to how a single team (typically in Agile software development) works; it does not cover how multiple teams are supposed to work on larger projects, and it does not suggest that only one ‘whole’ team is needed for a complete project\nc) Is not correct. The whole-team approach does not expect every team member to be involved in every important decision. For instance, there is no need for the business representative (i.e. the Product Owner) to be involved in every technical decision that does not affect the business outcome and implementing such an approach would unnecessarily slow down the team’s progress\nd) Is correct. By leveraging the diverse skill sets of each team member most effectively, the whole-team approach fosters superior team dynamics, promotes robust communication and collaboration, and generates a team synergy that benefits the entire project"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "2",
+        "section": "2.1.1",
+        "learning_objective": "FL-2.1.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes afirmaciones sobre el ciclo de vida de desarrollo de software elegido es CORRECTA?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Si se utiliza el desarrollo ágil de software, la automatización de pruebas del sistema reemplaza la necesidad de pruebas de regresión."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Si se utiliza un modelo de desarrollo secuencial, las pruebas dinámicas generalmente se limitan a etapas posteriores del ciclo de vida."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Si se utiliza un modelo de desarrollo iterativo, las pruebas de componentes generalmente las realizan manualmente los desarrolladores."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Si se utiliza un modelo de desarrollo incremental, las pruebas estáticas se realizan en los primeros incrementos y las pruebas dinámicas en los incrementos posteriores."
+                    }
+                ],
+                "explicacion": "a) No es correcto. En el desarrollo ágil de software, los entregables se producen en cada iteración, y la entrega frecuente de incrementos requiere extensas pruebas de regresión. Si bien algunas (o todas) de estas pruebas de regresión pueden automatizarse, no pueden reemplazarse por la automatización de pruebas del sistema.\nb) Es correcto. Si se utiliza un modelo de desarrollo secuencial, al principio del ciclo de vida no hay código disponible para su ejecución, por lo que durante este tiempo se realizan pruebas estáticas (por ejemplo, revisiones). Más adelante en el ciclo de vida, cuando el código está disponible para su ejecución, es posible realizar pruebas dinámicas. Sin embargo, cabe señalar que la preparación para las pruebas dinámicas suele ocurrir al principio de cualquier ciclo de vida de desarrollo de software.\nc) No es correcto. Si se utiliza un modelo de desarrollo iterativo, como el desarrollo ágil de software, las pruebas de componentes pueden utilizarse para realizar pruebas de regresión en cada iteración. En ese caso, existe un argumento sólido para automatizar estas pruebas de componentes, que deberán ejecutarse con frecuencia, y es improbable que exista un argumento sólido para que los desarrolladores realicen estas pruebas de componentes manualmente.\nd) No es correcto. En la mayoría de los modelos de desarrollo incremental, los entregables se producen en cada incremento, lo que requiere pruebas tanto estáticas como dinámicas en todos los niveles de prueba para cada incremento entregado."
+            },
+            "en": {
+                "pregunta": "Which of the following statements about the chosen software development lifecycle is CORRECT?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "If agile software development is used, system test automation replaces the need for regression testing"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "If a sequential development model is used, then the dynamic testing is typically restricted to later in the lifecycle"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "If an iterative development model is used, then component testing is typically performed manually by developers"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "If an incremental development model is used, then static testing is done in early increments and dynamic testing in later increments"
+                    }
+                ],
+                "explicacion": "a) Is not correct. In agile software development, deliverables are produced in each iteration, and the frequent delivery of increments necessitates extensive regression testing. Although some (or all) of this regression testing may be automated, the regression testing (automated or not) cannot be replaced by system test automation\nb) Is correct. If a sequential development model is used, then early in the lifecycle no code is available for execution, and so during this time static testing (e.g., reviews) is performed. Later in the lifecycle, when code is available for execution, dynamic testing is possible. Note, however, that preparation for dynamic testing will often occur early in any software development lifecycle\nc) Is not correct. If an iterative development model, like agile software development, is used, then component tests may well be used for regression testing for each iteration. In which case, there is a strong argument for automating these component tests, which will have to be run frequently, and there is unlikely to be a strong argument for developers performing these component tests manually\nd) Is not correct. In most incremental development models, deliverables are produced in each increment, requiring both static and dynamic testing at all test levels for each increment delivered"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "2",
+        "section": "2.1.2",
+        "learning_objective": "FL-2.1.2",
+        "k_level": "K1",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes es una buena práctica de pruebas que se aplica a todos los ciclos de vida del desarrollo de software?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Los evaluadores deben revisar los productos de trabajo como parte de la siguiente fase de desarrollo."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Los evaluadores deben revisar los productos de trabajo tan pronto como estén disponibles los borradores."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Los evaluadores deben revisar los productos de trabajo antes de que comience el análisis y el diseño de las pruebas."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Los evaluadores deben revisar los productos de trabajo inmediatamente después de su publicación."
+                    }
+                ],
+                "explicacion": "a) No es correcto. Los evaluadores deben revisar los productos de trabajo tan pronto como estén disponibles los borradores para permitir las pruebas tempranas como parte de un enfoque de desarrollo a la izquierda. Si esperaran hasta la siguiente fase de desarrollo, se podría iniciar trabajo de desarrollo (y pruebas) innecesario en productos de trabajo defectuosos y sin revisar.\nb) Es correcto. Los evaluadores deben revisar los productos de trabajo tan pronto como estén disponibles los borradores para permitir las pruebas tempranas como parte de un enfoque de desarrollo a la izquierda.\nc) No es correcto. Los evaluadores suelen revisar los productos de trabajo que constituyen la base de las pruebas como parte del análisis de pruebas, no antes del análisis y el diseño de las pruebas.\nd) No es correcto. Los evaluadores deben revisar los productos de trabajo tan pronto como estén disponibles los borradores para permitir las pruebas tempranas como parte de un enfoque de desarrollo a la izquierda. Esperar hasta que se publiquen significa que cualquier defecto que pudiera detectarse mediante la revisión de los evaluadores estará presente en el documento publicado."
+            },
+            "en": {
+                "pregunta": "Which of the following is a good testing practice that applies to all software development lifecycles?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Testers should review work products as part of the next development phase"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Testers should review work products as soon as drafts are available"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Testers should review work products before test analysis and design begins"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Testers should review work products immediately after they are published"
+                    }
+                ],
+                "explicacion": "a) Is not correct. Testers should review work products as soon as drafts are available to enable early testing as part of a shift-left approach. If they waited until the next development phase, then unnecessary development (and test) work could be started on unreviewed, flawed work products\nb) Is correct. Testers should review work products as soon as drafts are available to enable early testing as part of a shift-left approach\nc) Is not correct. Testers typically review work products that form the test basis as part of test analysis, not before test analysis and design\nd) Is not correct. Testers should review work products as soon as drafts are available to enable early testing as part of a shift-left approach. Waiting until they are published means that any defects that could be found by tester review will be in the published document"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "2",
+        "section": "2.1.3",
+        "learning_objective": "FL-2.1.3",
+        "k_level": "K1",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            1
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones es un ejemplo de un enfoque de desarrollo basado en pruebas?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Desarrollo guiado por pruebas (TDD)"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Desarrollo guiado por cobertura (DDD)"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Desarrollo guiado por calidad (DDD)"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Desarrollo guiado por funcionalidades (DDD)"
+                    }
+                ],
+                "explicacion": "a) Correcto. El Desarrollo Dirigido por Pruebas (TDD) es un ejemplo conocido de un enfoque de desarrollo basado en pruebas.\nb) Incorrecto. El Desarrollo Dirigido por Cobertura no es un ejemplo correcto de un enfoque de desarrollo basado en pruebas.\nc) Incorrecto. El Desarrollo Dirigido por Calidad no es un ejemplo correcto de un enfoque de desarrollo basado en pruebas.\nd) Incorrecto. El Desarrollo Dirigido por Funcionalidades no es un ejemplo de un enfoque de desarrollo basado en pruebas, sino que es una metodología ágil de desarrollo de software centrada en la entrega de funcionalidades (a diferencia de las historias de usuario en Scrum)."
+            },
+            "en": {
+                "pregunta": "Which of the following is an example of a test-first approach to development?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Test-Driven Development"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Coverage-Driven Development"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Quality-Driven Development"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Feature-Driven Development"
+                    }
+                ],
+                "explicacion": "a) Is correct. Test-Driven Development (TDD) is a well-known example of a test-first approach to development\nb) Is not correct. Coverage-Driven Development is not a correct example of a test-first approach to development\nc) Is not correct. Quality-Driven Development is not a correct example of a test-first approach to development\nd) Is not correct. Feature-Driven Development is not an example of a testfirst approach to development, but is, instead, an agile software development methodology based around delivering features (as opposed to user stories in Scrum)"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "2",
+        "section": "2.1.4",
+        "learning_objective": "FL-2.1.4",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes afirmaciones sobre DevOps es CORRECTA?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Para acelerar los lanzamientos, se utiliza la integración continua para incentivar a los desarrolladores a entregar código rápidamente sin necesidad de realizar pruebas de componentes."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Para poder actualizar y lanzar sistemas con mayor frecuencia, se requieren numerosas pruebas de regresión automatizadas para reducir el riesgo de regresión."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Para tratar por igual a desarrolladores y operaciones, los testers dedicarán más esfuerzo a las pruebas de lanzamiento, utilizando un enfoque de desplazamiento a la derecha."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Para crear una mayor sinergia entre testers, desarrolladores y operaciones, las pruebas deben automatizarse por completo, eliminando las pruebas manuales."
+                    }
+                ],
+                "explicacion": "a) No es correcto. DevOps mejora las pruebas de varias maneras, como al proporcionar retroalimentación rápida sobre la calidad del código, pruebas de regresión automatizadas que minimizan el riesgo de regresión y al promover un enfoque de \"desplazamiento a la izquierda\" con la entrega de código de alta calidad y pruebas de componentes. Esto se proporciona principalmente a través de la integración continua, donde los desarrolladores envían pruebas de componentes (unitarias) con su nuevo código, las cuales deben pasar para que el código se admita en la compilación. Por lo tanto, los desarrolladores sí necesitan completar las pruebas de componentes.\nb) Es correcto. DevOps mejora las pruebas de varias maneras, como al proporcionar retroalimentación rápida sobre la calidad del código, pruebas de regresión automatizadas que minimizan el riesgo de regresión y al promover un enfoque de \"desplazamiento a la izquierda\" con la entrega de código de alta calidad y pruebas de componentes.\nc) No es correcto. DevOps mejora las pruebas de varias maneras, como al proporcionar retroalimentación rápida sobre la calidad del código, pruebas de regresión automatizadas que minimizan el riesgo de regresión y al promover un enfoque de \"desplazamiento a la izquierda\" con la entrega de código de alta calidad y pruebas de componentes. Los evaluadores no pretenden tratar a desarrolladores y operaciones por igual dedicando más tiempo a las pruebas de lanzamiento, aunque sí se puede utilizar un enfoque de pruebas en producción.\nd) No es correcto. Los procesos automatizados como la integración continua/entrega continua (CI/CD) en DevOps facilitan entornos de prueba estables y reducen la necesidad de pruebas manuales; sin embargo, existe el riesgo de pasar por alto la importancia de las pruebas manuales, especialmente desde la perspectiva del usuario."
+            },
+            "en": {
+                "pregunta": "Which of the following statements about DevOps is CORRECT?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "To speed up releases, continuous integration is used to encourage developers to submit code quickly without the need to complete component testing"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "To be able to update and release systems on a more frequent basis, many automated regression tests are required to reduce the danger of regression"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "To treat both developers and operations equally, the testers will allocate more effort to release testing by operations using a shift-right approach"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "To create increased synergy between testers, developers and operations, the testing must become fully automated with no manual testing"
+                    }
+                ],
+                "explicacion": "a) Is not correct. DevOps enhances testing in several ways, such as by providing fast feedback on code quality, automated regression testing that minimizes regression risk, and promoting a shift-left approach with high-quality code submission and component tests. This is largely provided through continuous integration, where the developers submit component (unit) tests with their new code, which must pass for the code to be admitted to the build. Therefore, developers do need to complete component testin\nb) Is correct. DevOps enhances testing in several ways, such as by providing fast feedback on code quality, automated regression testing that minimizes regression risk, and promoting a shift-left approach with high-quality code submission and component tests\nc) Is not correct. DevOps enhances testing in several ways, such as by providing fast feedback on code quality, automated regression testing that minimizes regression risk, and promoting a shift-left approach with high-quality code submission and component tests. Testers do not attempt to treat developers and operations equally by spending more time on release testing, although a shift-right approach to testing (testing in production) may well be used\nd) Is not correct. Automated processes like continuous integration/continuous delivery (CI/CD) in DevOps facilitate stable test environments and reduce the need for manual testing, however, there is a risk of overlooking the importance of manual testing, especially from a user's perspective"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "2",
+        "section": "2.2.1",
+        "learning_objective": "FL-2.2.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            1
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones es MÁS probable que se realice como parte de las pruebas del sistema?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Pruebas de seguridad de un sistema de gestión de crédito por un equipo de pruebas independiente."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Pruebas de la interfaz de un sistema de cambio de divisas con un sistema bancario externo."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Pruebas beta de un sistema de aprendizaje remoto por parte de desarrolladores de material didáctico."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Pruebas de interacción entre la interfaz de usuario y la base de datos de un sistema de recursos humanos."
+                    }
+                ],
+                "explicacion": "a) Correcto. Las pruebas de sistema examinan el comportamiento y las capacidades del sistema completo y abarcan las pruebas no funcionales de las características de calidad, incluidas las pruebas de seguridad. Este tipo de pruebas suele ser realizado por un equipo de pruebas independiente basado en las especificaciones del sistema.\nb) Incorrecto. Las pruebas de integración de sistemas examinan las interfaces con otros sistemas y servicios externos.\nc) Incorrecto. Las pruebas beta son un tipo de prueba de aceptación que se realiza en un sitio externo por roles ajenos a la organización de desarrollo.\nd) Incorrecto. Las pruebas de integración de componentes implican probar las (interfaces y) interacciones entre los componentes de un sistema, como la interfaz de usuario y la base de datos."
+            },
+            "en": {
+                "pregunta": "Which of the following is MOST likely to be performed as part of system testing?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Security testing of a credit management system by an independent test team"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Testing the interface of a currency exchange system with an external banking system"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Beta testing of a remote learning system by courseware developers"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Testing interactions between the user interface and database of a human resources system"
+                    }
+                ],
+                "explicacion": "a) Is correct. System testing examines the behavior and capabilities of the complete system and covers non-functional testing of quality characteristics, which includes security testing. This type of testing is often performed by an independent test team based on system specifications\nb) Is not correct. System integration testing examines the interfaces with other systems and external services\nc) Is not correct. Beta testing is a type of acceptance testing performed at an external site by roles outside the development organization\nd) Is not correct. Component integration testing involves testing the (interfaces and) interactions between components of a system, such as the user interface and database"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "2",
+        "section": "2.2.3",
+        "learning_objective": "FL-2.2.3",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes afirmaciones es CORRECTA?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "El número de pruebas de regresión aumenta a medida que avanza el proyecto, mientras que el número de pruebas de confirmación disminuye."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Las pruebas de regresión se crean y ejecutan cuando el objeto de prueba se corrige, mientras que las pruebas de confirmación se ejecutan cada vez que se modifica el objeto de prueba."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Las pruebas de regresión se centran en verificar que el entorno operativo permanezca sin cambios, mientras que las pruebas de confirmación se centran en probar los cambios realizados en el objeto de prueba."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Las pruebas de regresión se centran en los efectos adversos en el código sin modificar, mientras que las pruebas de confirmación se centran en probar el código modificado."
+                    }
+                ],
+                "explicacion": "a) No es correcto. El número de pruebas de regresión aumenta a medida que avanza el proyecto, ya que normalmente se requieren nuevas pruebas de regresión al realizar cambios en el sistema. De manera similar, el número de pruebas de confirmación también suele aumentar a medida que avanza el proyecto, ya que se necesitan nuevas pruebas de confirmación para cada corrección realizada en el sistema.\nb) No es correcto. Es al revés. Las pruebas de confirmación se crean y ejecutan cuando se corrige el objeto de prueba, y las pruebas de regresión se ejecutan (idealmente) cada vez que se mejora (modifica) el objeto de prueba.\nc) No es correcto. Las pruebas de confirmación verifican que un defecto se haya corregido correctamente y, por lo tanto, se centran en probar los cambios en el objeto de prueba. Sin embargo, las pruebas de regresión garantizan que los cambios (incluidos los cambios en el entorno operativo) no tengan efectos negativos en el software que no ha sufrido cambios y, por lo tanto, no comprueban que el entorno operativo permanezca sin cambios.\nd) Es correcto. Las pruebas de regresión garantizan que los cambios no tengan efectos negativos en el software que no ha sufrido cambios. Las pruebas de confirmación verifican que un defecto se haya corregido y, por lo tanto, se centran en el código modificado."
+            },
+            "en": {
+                "pregunta": "Which of the following statements is CORRECT?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Regression tests increase in number as the project progresses, whereas the number of confirmation tests decreases as the project progresses"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Regression tests are created and run when the test object is fixed, whereas confirmation tests are run whenever the test object is enhanced"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Regression testing is concerned with checking that the operational environment remains unchanged, whereas confirmation testing is concerned with testing changes to the test object"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Regression testing is concerned with adverse effects in unchanged code, whereas confirmation testing is concerned with testing changed code"
+                    }
+                ],
+                "explicacion": "a) Is not correct. Regression tests increase in number as the project progresses, as new regression tests are typically required as changes are made to the system. Similarly, the number of confirmation tests also typically increases as the project progresses as new confirmation tests are needed for each fix made to a system\nb) Is not correct. It is the other way round. Confirmation tests are created and run when the test object is fixed, and regression tests are (ideally) run whenever the test object is enhanced (changed)\nc) Is not correct. Confirmation testing verifies that a defect has been fixed correctly and so is concerned with testing changes to the test object. However, regression testing ensures that changes (including changes to the operational environment) do not have negative effects on unchanged software and so does not check that the operational environment remains unchanged\nd) Is correct. Regression testing ensures that changes do not have negative effects on unchanged software. Confirmation testing verifies that a defect has been fixed – and so is concerned with changed code"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "3",
+        "section": "3.1.3",
+        "learning_objective": "FL-3.1.3",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones es un ejemplo de un defecto que se puede detectar mediante pruebas estáticas, pero NO mediante pruebas dinámicas?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Falta de usabilidad en la interfaz de usuario"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Código sin una ruta de acceso"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Tiempos de respuesta deficientes para la mayoría de los usuarios esperados"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Funcionalidades requeridas que no están implementadas en el código"
+                    }
+                ],
+                "explicacion": "a) No es correcto. La falta de usabilidad de la interfaz de usuario puede detectarse mediante una revisión con una lista de verificación adecuada, pero también puede identificarse pidiendo a varios usuarios típicos que prueben dinámicamente la interfaz y proporcionen comentarios sobre su usabilidad.\nb) Es correcto. Una revisión de código puede detectar código inaccesible por ninguna ruta; sin embargo, las pruebas dinámicas solo pueden probar el código accesible y no pueden determinar si un código es inaccesible sin ejecutar todas las combinaciones posibles de entradas y estados de entrada, lo cual es poco práctico para código real.\nc) No es correcto. Los tiempos de respuesta deficientes para la mayoría de los usuarios esperados son difíciles de determinar sin ejecutar el código (es decir, mediante pruebas estáticas), por lo que en esta situación las pruebas dinámicas podrían encontrar un defecto, pero es poco probable que las pruebas estáticas lo encuentren.\nd) No es correcto. Una revisión del código por parte de alguien que conozca las funcionalidades requeridas podría detectar que estas no se han implementado, y las pruebas dinámicas también podrían utilizarse para determinarlo."
+            },
+            "en": {
+                "pregunta": "Which of the following is an example of a defect that can be found by static testing but NOT by dynamic testing?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Lack of usability provided through the user interface"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Code with no path that reaches it"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Poor response times for most of the expected users"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Required features that are not implemented in the code"
+                    }
+                ],
+                "explicacion": "a) Is not correct. A lack of usability provided through the user interface can be detected through a review using a suitable checklist, but the lack of usability can also be identified by getting several typical users to dynamically test the user interface and provide feedback on its usability\nb) Is correct. A code review can detect code that cannot be reached by any path, however dynamic tests can only exercise reachable code and cannot determine that code cannot be reached without running every possible combination of inputs and input states, which is impractical for real code\nc) Is not correct. Poor response times for most of the expected users are difficult to determine without executing the code (i.e., by static testing), so in this situation dynamic testing could find a defect, but static testing is unlikely to find it\nd) Is not correct. A review of the code by someone who is aware of the required features could detect that the required features had not been implemented in the code, and dynamic testing could also be used to determine that these required features had not been implemented"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "3",
+        "section": "3.2.1",
+        "learning_objective": "FL-3.2.1",
+        "k_level": "K1",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            3
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones es un beneficio de la retroalimentación temprana y frecuente de las partes interesadas?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Los gerentes saben qué desarrolladores son menos productivos."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Permite a los gerentes de proyecto priorizar sus interacciones con las partes interesadas."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Facilita la comunicación temprana de posibles problemas de calidad."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Los usuarios finales comprenden mejor por qué se retrasa la entrega del producto."
+                    }
+                ],
+                "explicacion": "a) No es correcto. La retroalimentación proviene de las partes interesadas (por ejemplo, representantes comerciales, usuarios finales), no de los desarrolladores, por lo que es poco probable que informe a los gerentes sobre qué desarrolladores son más o menos productivos.\nb) No es correcto. Los gerentes de proyecto no utilizan la retroalimentación temprana y frecuente de las partes interesadas para priorizar su interacción con ellas.\nc) Es correcto. Obtener retroalimentación de las partes interesadas de forma temprana y frecuente en el proceso de desarrollo de software puede ser muy beneficioso, ya que facilita la comunicación temprana de posibles problemas de calidad, previene malentendidos sobre los requisitos y garantiza que cualquier cambio en dichos requisitos se comprenda e implemente con mayor rapidez.\nd) No es correcto. La retroalimentación temprana y frecuente puede prevenir el desarrollo de un producto que no satisfaga las necesidades de las partes interesadas, lo que resulta en costosos retrabajos e incumplimiento de plazos; por lo tanto, idealmente, no debería haber demoras. Además, la retroalimentación proviene de las partes interesadas (no se dirige a ellas), lo que incluye a los usuarios finales, por lo que la retroalimentación de estos últimos no contribuirá a la comprensión de los usuarios finales."
+            },
+            "en": {
+                "pregunta": "Which of the following is a benefit of early and frequent stakeholder feedback?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Managers are aware of which developers are less productive"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "It allows project managers to prioritize their stakeholder interactions"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "It facilitates early communication of potential quality issues"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "End users better understand why the delivery of the work product is delayed"
+                    }
+                ],
+                "explicacion": "a) Is not correct. The feedback is from stakeholders (e.g., business representative, end user), not from developers, so this feedback is not likely to inform managers which developers are more or less productive\nb) Is not correct. Early and frequent feedback from stakeholders is not used by project managers to prioritize how they interact with the different stakeholders\nc) Is correct. Obtaining feedback from stakeholders early and often in the software development process can be highly beneficial as it facilitates early communication of potential quality issues, can prevent misunderstandings about requirements, and ensures that any changes in stakeholder requirements are understood and implemented sooner\nd) Is not correct. Early and frequent feedback can prevent the development of a product that does not meet stakeholder needs, and results in costly rework and missed deadlines, so, ideally there should be no delay. Also, the feedback is from stakeholders (not to them), which includes the end users, so the end users providing feedback will not aid the end users’ understanding"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "3",
+        "section": "3.2.2",
+        "learning_objective": "FL-3.2.2",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Dadas las siguientes descripciones de tareas:\n\n1. Se seleccionan las características de calidad a evaluar y los criterios de salida.\n2. Todos tienen acceso al producto de trabajo.\n3. Se identifican anomalías en el producto de trabajo.\n4. Se discuten las anomalías.\n\nY las siguientes actividades de revisión:\n\nA. Revisión individual\nB. Inicio de la revisión\nC. Planificación\nD. Comunicación y análisis\n\n¿Cuál de las siguientes opciones se ajusta MEJOR a las descripciones de tareas y actividades?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "1B, 2C, 3D, 4A"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "1B, 2D, 3C, 4A"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1C, 2A, 3B, 4D"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "1C, 2B, 3A, 4D"
+                    }
+                ],
+                "explicacion": "Considerando cada una de las descripciones de tareas enumeradas:\n\n1. Se seleccionan las características de calidad a evaluar y los criterios de salida (Planificación (C): Definición del alcance, propósito, producto de trabajo a revisar, características de calidad a evaluar, áreas de enfoque, criterios de salida e información de apoyo como estándares, esfuerzo y plazos).\n2. Todos tienen acceso al producto de trabajo (Inicio de la revisión (B): Asegurar que todos los participantes tengan acceso al producto de trabajo y a los recursos necesarios, y aclarar sus roles y responsabilidades).\n3. Se identifican anomalías en el producto de trabajo (Revisión individual (A): Evaluación de la calidad del producto de trabajo, identificación y registro de anomalías, recomendaciones y preguntas mediante técnicas de revisión como listas de verificación y análisis de escenarios).\n4. Se analizan y discuten las anomalías (Comunicación y análisis (D): Análisis y discusión de cada anomalía, determinación de su estado, responsabilidad y acciones requeridas, y toma de decisiones de revisión, normalmente en una reunión. Esto podría incluir determinar la necesidad de un seguimiento). (Revisión)\n\nPor lo tanto:\n\na) No es correcto\nb) No es correcto\nc) No es correcto\nd) Es correcto. La correspondencia correcta es: 1C, 2B, 3A, 4D"
+            },
+            "en": {
+                "pregunta": "Given the following task descriptions:\n\n1. The quality characteristics to be evaluated and the exit criteria are selected\n2. Everyone has access to the work product\n3. Anomalies are identified in the work product\n4. Anomalies are discussed\n\nAnd the following review activities\n\nA. Individual review\nB. Review initiation\nC. Planning\nD. Communication and analysis\n\nWhich of the following BEST matches the task descriptions and activities?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "1B, 2C, 3D, 4A"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "1B, 2D, 3C, 4A"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1C, 2A, 3B, 4D"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "1C, 2B, 3A, 4D"
+                    }
+                ],
+                "explicacion": "Considering each of the listed task descriptions:\n\n1. The quality characteristics to be evaluated and the exit criteria are selected - (Planning (C): Defining the review scope, purpose, work product to be reviewed, quality characteristics to be evaluated, areas of focus, exit criteria, supporting information such as standards, effort, and timeframes.)\n2. Everyone has access to the work product - (Review initiation (B): Ensuring all participants have access to the work product and necessary resources, and clarifying their roles and responsibilities.)\n3. Anomalies are identified in the work product - (Individual review (A): Evaluating the work product's quality, identifying and logging anomalies, recommendations, and questions using review techniques like checklist-based and scenario-based reviewing.)\n4. Anomalies are analyzed and discussed - (Communication and analysis (D): Analyzing and discussing each anomaly, determining its status, ownership, and required actions, and making review decisions, normally in a meeting. This could include determining the need for a follow-up review.)\n\nThus:\n\na) Is not correct\nb) Is not correct\nc) Is not correct\nd) Is correct. The correct match is: 1C, 2B, 3A, 4D"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "3",
+        "section": "3.2.3",
+        "learning_objective": "FL-3.2.3",
+        "k_level": "K1",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            3
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Dadas las siguientes funciones en las revisiones:\n\n1. Secretario/a\n2. Líder de la revisión\n3. Facilitador/a\n4. Gerente\n\nY las siguientes responsabilidades en las revisiones:\n\nA. Garantizar el buen funcionamiento de las reuniones de revisión y la creación de un entorno seguro para las mismas.\nB. Registrar la información de la revisión, como las decisiones y las nuevas anomalías detectadas durante la reunión.\nC. Decidir qué se revisará y proporcionar los recursos necesarios, como personal y tiempo para la revisión.\nD. Asumir la responsabilidad general de la revisión, incluyendo la organización de cuándo y dónde se llevará a cabo.\n\n¿Cuál de las siguientes opciones describe MEJOR las funciones y responsabilidades?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "1A, 2B, 3D, 4C"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "1A, 2C, 3B, 4D"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1B, 2D, 3A, 4C"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "1B, 2D, 3C, 4A"
+                    }
+                ],
+                "explicacion": "Considerando cada uno de los roles enumerados:\n\n1. Secretario/a (o Registrador/a): responsable de recopilar comentarios de los revisores y documentar la información de la revisión, como las decisiones tomadas y cualquier anomalía nueva identificada durante la reunión de revisión. (Registra la información de la revisión, como las decisiones y las anomalías nuevas encontradas durante la reunión de revisión - B)\n2. Líder de la Revisión: responsable de supervisar el proceso de revisión, como seleccionar a los miembros del equipo de revisión, programar las reuniones de revisión y garantizar que la revisión se complete con éxito. (Asume la responsabilidad general de la revisión, como organizar cuándo y dónde se llevará a cabo - D)\n3. Facilitador/a (o Moderador/a): responsable de garantizar que las reuniones de revisión se desarrollen eficazmente, incluyendo la gestión del tiempo, la mediación de las discusiones y la creación de un entorno seguro donde todos puedan expresar sus opiniones libremente. (Garantiza el desarrollo eficaz de las reuniones de revisión y la creación de un entorno de revisión seguro - A)\n4. Gerente: responsable de decidir qué se debe revisar y asignar recursos, como personal y tiempo, para la revisión. (Decide qué se revisará y proporciona los recursos, como personal y tiempo para la revisión - C)\n\nPor lo tanto:\n\na) No es correcto\nb) No es correcto\nc) Es correcto. La correspondencia correcta es: 1B, 2D, 3A, 4C\nd) No es correcto"
+            },
+            "en": {
+                "pregunta": "Given the following roles in reviews:\n\n1. Scribe\n2. Review leader\n3. Facilitator\n4. Manager\n\nAnd the following responsibilities in reviews:\n\nA. Ensures the effective running of review meetings and the setting up a safe review environment\nB. Records review information, such as decisions and new anomalies found during the review meeting\nC. Decides what is to be reviewed and provides resources, such as staff and time for the review\nD. Takes overall responsibility for the review such as organizing when and where the review will take place\n\nWhich of the following BEST matches the roles and responsibilities?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "1A, 2B, 3D, 4C"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "1A, 2C, 3B, 4D"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1B, 2D, 3A, 4C"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "1B, 2D, 3C, 4A"
+                    }
+                ],
+                "explicacion": "Considering each of the listed roles:\n\n1. Scribe (or Recorder) - responsible for gathering feedback from reviewers and documenting review information, such as decisions made, and any new anomalies identified during the review meeting. (Records review information, such as decisions and new anomalies found during the review meeting - B)\n2. Review Leader - responsible for overseeing the review process, such as selecting the review team members, scheduling review meetings, and ensuring that the review is completed successfully. (Takes overall responsibility for the review such as organizing when and where the review will take place - D)\n3. Facilitator (or Moderator) - responsible for ensuring that the review meetings run effectively, including managing time, mediating discussions, and creating a safe environment where everyone can voice their opinions freely. (Ensures the effective running of review meetings and the setting up of a safe review environment - A)\n4. Manager - responsible for deciding what needs to be reviewed and allocating resources, such as staff and time, for the review. (Decides what is to be reviewed and provides resources, such as staff and time for the review - C)\n\nThus:\n\na) Is not correct\nb) Is not correct\nc) Is correct. The correct match is: 1B, 2D, 3A, 4C\nd) Is not correct"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "4",
+        "section": "4.1.1",
+        "learning_objective": "FL-4.1.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes afirmaciones describe MEJOR la ​​diferencia entre las pruebas de tabla de decisiones y las pruebas de ramificación?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "En las pruebas de tabla de decisiones, los casos de prueba se derivan de las sentencias de decisión en el código. En las pruebas de ramificación, los casos de prueba se derivan del conocimiento del flujo de control del objeto de prueba."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "En las pruebas de tabla de decisiones, los casos de prueba se derivan de la especificación que describe la lógica de negocio. En las pruebas de ramificación, los casos de prueba se basan en la anticipación de posibles defectos en el código fuente."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "En las pruebas de tabla de decisiones, los casos de prueba se derivan del conocimiento del flujo de control del objeto de prueba. En las pruebas de ramificación, los casos de prueba se derivan de la especificación que describe la lógica de negocio."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "En las pruebas de tabla de decisiones, los casos de prueba son independientes de cómo se implementa el software. En las pruebas de ramificación, los casos de prueba solo se pueden crear después del diseño o la implementación del código."
+                    }
+                ],
+                "explicacion": "a) No es correcto. Las pruebas con tablas de decisión son una técnica de prueba de caja negra, por lo que se basan en la especificación, no en la estructura; los casos de prueba no se basan en las decisiones del código fuente. En las pruebas de ramificación, los casos de prueba se derivan del conocimiento del flujo de control del objeto de prueba.\nb) No es correcto. La anticipación de posibles defectos se utiliza en la adivinación de errores (una técnica de prueba basada en la experiencia), no en las pruebas de ramificación (una técnica basada en la estructura). En las pruebas con tablas de decisión, los casos de prueba se derivan de la especificación que describe la lógica de negocio.\nc) No es correcto. Si un caso de prueba se basa en el conocimiento del flujo de control del objeto de prueba, es una técnica de prueba de caja blanca. Las pruebas con tablas de decisión se basan normalmente en un análisis de la lógica de negocio, por lo que son una técnica de prueba de caja negra. En las pruebas de ramificación, los casos de prueba no se derivan de la especificación; esto la convertiría en una técnica de prueba de caja negra. Las pruebas de ramificación son una técnica de prueba de caja blanca, donde los casos de prueba se derivan de la estructura del código fuente.\nd) Es correcto. Las pruebas de tabla de decisiones son una técnica de prueba de caja negra, por lo que se basan en un análisis del comportamiento especificado del objeto de prueba sin referencia a su estructura interna. Por lo tanto, los casos de prueba son independientes de cómo se implementa el software. Las pruebas de ramificación son una técnica de prueba de caja blanca, por lo que los casos de prueba se basan en un análisis de la estructura interna y el procesamiento del objeto de prueba. Como los casos de prueba dependen de cómo se diseña y codifica el software, solo se pueden crear después del diseño o la implementación del objeto de prueba."
+            },
+            "en": {
+                "pregunta": "Which of the following statements BEST describes the difference between decision table testing and branch testing?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "In decision table testing, the test cases are derived from the decision statements in the code. In branch testing, the test cases are derived from knowledge of the control flow of the test object."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "In decision table testing, the test cases are derived from the specification that describes the business logic. In branch testing the test cases are based on anticipation of potential defects in the source code."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "In decision table testing, the test cases are derived from knowledge of the control flow of the test object. In branch testing, test cases are derived from the specification that describes the business logic."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "In decision table testing, the test cases are independent of how the software is implemented. In branch testing, test cases can be created only after the design or implementation of the code."
+                    }
+                ],
+                "explicacion": "a) Is not correct. Decision table testing is a black-box test technique, so it is specification-based, not structure-based – the test cases are not based on the decisions in the source code. In branch testing, the test cases are derived from knowledge of the control flow of the test object\nb) Is not correct. Anticipation of potential defects is used in error guessing (an experience-based test technique), not in branch testing (a structurebased technique). In decision table testing, the test cases are derived from the specification that describes the business logic\nc) Is not correct. If a test case is based on the knowledge of the control flow of the test object, it is a white-box test technique. Decision table testing is typically based on an analysis of business logic, so it is a black-box test technique. In branch testing, test cases are not derived from the specification – this would make it a black-box test technique. Branch testing is a white-box test technique, where test cases are derived based on the source code structure\nd) Is correct. Decision table testing is a black-box test technique, so it is based on an analysis of the specified behavior of the test object without reference to its internal structure. Therefore, the test cases are independent of how the software is implemented. Branch testing is a white-box test technique, so test cases are based on an analysis of the test object’s internal structure and processing. As the test cases are dependent on how the software is designed and coded, they can only be created after the design or implementation of the test object"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "4",
+        "section": "4.2.1",
+        "learning_objective": "FL-4.2.1",
+        "k_level": "K3",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            1
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Los clientes de la cadena de lavaderos de autos TestWash tienen tarjetas que registran la cantidad de lavados que han realizado hasta el momento. El valor inicial es 0. Al ingresar al lavadero, el sistema incrementa el número de la tarjeta en uno. Este valor representa el número del lavado actual. Con base en este número, el sistema determina el descuento al que tiene derecho el cliente.\n\nPor cada décimo lavado, el sistema ofrece un 10 % de descuento, y por cada vigésimo lavado, un 40 % adicional (es decir, un 50 % de descuento total).\n\n¿Cuál de los siguientes conjuntos de datos de entrada (entendidos como los números de los lavados actuales) logra la mayor cobertura de partición de equivalencia?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "19, 20, 30"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "11, 12, 20"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1, 10, 50"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "10, 29, 30, 31"
+                    }
+                ],
+                "explicacion": "a) Correcto. 19 cubre la partición \"sin descuento\", 20 la partición \"50% de descuento\" y 30 la partición \"10% de descuento\". Estos tres valores cubren las tres particiones de equivalencia válidas.\nb) Incorrecto. 11 y 12 cubren la partición \"sin descuento\", mientras que 20 cubre la partición \"50% de descuento\", cubriendo así dos de las tres particiones de equivalencia válidas.\nc) Incorrecto. 1 cubre la partición \"sin descuento\", mientras que 10 y 50 cubren la partición \"10% de descuento\". La partición \"50% de descuento\" no está cubierta, por lo que en total se cubren dos de las tres particiones de equivalencia válidas.\nd) Incorrecto. 29 y 31 cubren la partición \"sin descuento\", mientras que 10 y 30 cubren la partición \"10% de descuento\". La partición \"50% de descuento\" no está cubierta, por lo que en total se cubren dos de las tres particiones de equivalencia válidas."
+            },
+            "en": {
+                "pregunta": "Customers of the TestWash car wash chain have cards with a record of the number of washes they have bought so far. The initial value is 0. After entering the car wash, the system increases the number on the card by one. This value represents the number of the current wash. Based on this number the system decides what discount the customer is entitled to.\n\nFor every tenth wash the system gives a 10% discount, and for every twentieth wash, the system gives a further 40% discount (i.e., a 50% discount in total).\n\nWhich of the following sets of input data (understood as the numbers of the current wash) achieves the highest equivalence partition coverage?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "19, 20, 30"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "11, 12, 20"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1, 10, 50"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "10, 29, 30, 31"
+                    }
+                ],
+                "explicacion": "a) Is correct. 19 covers the “no discount” partition, 20 covers the “50% discount” partition, and 30 covers the “10% discount” partition. These three values cover all three of the valid equivalence partitions\nb) Is not correct. 11 and 12 cover the “no discount” partition, while 20 covers the “50% discount” partition, so covering two of the three valid equivalence partitions\nc) Is not correct. 1 covers the “no discount” partition, while 10 and 50 cover the “10% discount” partition. The “50% discount” partition is not covered, so overall two of the three valid equivalence partitions are covered\nd) Is not correct. 29 and 31 cover the “no discount” partition, while 10 and 30 cover the “10% discount” partition. The “50% discount” partition is not covered, so overall two of the three valid equivalence partitions are covered"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "4",
+        "section": "4.2.2",
+        "learning_objective": "FL-4.2.2",
+        "k_level": "K3",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Estás probando un formulario que verifica la longitud correcta de la contraseña ingresada. El formulario acepta contraseñas con la longitud correcta y rechaza las que son demasiado cortas o demasiado largas. La longitud de la contraseña es correcta si tiene entre 6 y 12 caracteres (inclusive). De lo contrario, se considera incorrecta.\n\nInicialmente, el formulario está vacío (longitud de la contraseña = 0). Aplicas un análisis de valores límite a la variable \"longitud de la contraseña\".\n\nTu conjunto de casos de prueba logra una cobertura del 100 % de valores límite de 2. El equipo decidió que, debido al alto riesgo de este componente, se deben agregar casos de prueba para garantizar una cobertura del 100 % de valores límite de 3.\n\n¿Qué longitudes de contraseña adicionales se deben probar para lograr esto?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "4, 5, 13, 14"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "7, 11"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1, 5, 13"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "1, 4, 7, 11, 14"
+                    }
+                ],
+                "explicacion": "El dominio para la longitud de la contraseña tiene tres particiones de equivalencia:\n\n• Contraseñas demasiado cortas: {0, 1, …, 4, 5}\n• Contraseñas correctas: {6, 7, …, 11, 12}\n• Contraseñas demasiado largas: {13, 14, …}\n\nPara lograr una cobertura completa de BVA de 3 valores, necesitamos probar los siguientes valores:\n\n0, 1, 4, 5, 6, 7, 11, 12, 13, 14.\n\nDado que BVA de 2 valores ya está cubierto, esto significa que ya hemos probado las contraseñas de longitud:\n\n0, 5, 6, 12 y 13.\n\nEsto significa que las longitudes adicionales que se deben cubrir para pasar de BVA de 2 a 3 valores son:\n\n1, 4, 7, 11 y 14.\n\nPor lo tanto:\n\na) No es correcto\nb) No es correcto\nc) No es correcto \nd) Es correcto"
+            },
+            "en": {
+                "pregunta": "You are testing a form that verifies the correctness of the length of the password given as input. The form accepts a password with the correct length and rejects a password that is too short or too long. The password length is correct if it has between 6 and 12 characters inclusive. Otherwise, it is considered incorrect.\n\nAt first, the form is empty (password length = 0). You apply boundary value analysis to the “password length” variable.\n\nYour set of test cases achieves 100% 2-value boundary value coverage. The team decided that due to the high risk of this component, test cases should be added to ensure 100% 3-value boundary value coverage.\n\nWhich additional password lengths should be tested to achieve this?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "4, 5, 13, 14"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "7, 11"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1, 5, 13"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "1, 4, 7, 11, 14"
+                    }
+                ],
+                "explicacion": "The domain for the password length has three equivalence partitions:\n\n• passwords too short {0, 1, …, 4, 5}\n• passwords OK {6, 7, …, 11, 12}\n• passwords too long {13, 14, …}\n\nTo achieve full coverage for 3-value BVA we need to test the following\nvalues:\n\n0, 1, 4, 5, 6, 7, 11, 12, 13, 14.\n\nSince 2-value BVA is already covered, this means that we have already\ntested the passwords of length:\n\n0, 5, 6, 12 and 13.\n\nThis means that the additional lengths that need to be covered to move\nfrom 2-value to 3-value are:\n\n1, 4, 7, 11 and 14.\n\nThus:\n\na) Is not correct\nb) Is not correct\nc) Is not correct\nd) Is correct"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "4",
+        "section": "4.2.3",
+        "learning_objective": "FL-4.2.3",
+        "k_level": "K3",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "La siguiente tabla de decisiones contiene las reglas para determinar el riesgo de aterosclerosis.\n\nDiseñaste los casos de prueba con los siguientes datos de entrada:\n\nTC1: Colesterol = 125 mg/dl, Presión arterial = 141 mm Hg\nTC2: Colesterol = 200 mg/dl, Presión arterial = 201 mm Hg\nTC3: Colesterol = 124 mg/dl, Presión arterial = 201 mm Hg\nTC4: Colesterol = 109 mg/dl, Presión arterial = 200 mm Hg\nTC5: Colesterol = 201 mg/dl, Presión arterial = 140 mm Hg\n\n¿Cuál es la cobertura de la tabla de decisiones lograda por estos casos de prueba?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "40%"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "60%"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "80%"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "100%"
+                    }
+                ],
+                "explicacion": "La tabla de decisiones tiene cinco columnas. Cada caso de prueba cubre una de ellas.\n\nTC1 y TC2 cubren la Regla 4.\nTC3 y TC4 cubren la Regla 2.\nTC5 cubre la Regla 5.\n\nPor lo tanto, estos cinco casos de prueba cubren tres de las cinco columnas, alcanzando una cobertura del (3/5)*100% = 60%. En consecuencia, la opción b) es la CORRECTA.\n\nPor lo tanto:\n\na) Incorrecta\nb) Correcta\nc) Incorrecta\nd) Incorrecta"
+            },
+            "en": {
+                "pregunta": "The following decision table contains the rules for determining the risk of aterosclerosis\n\nYou designed the test cases with the following test input data:\n\nTC1: Cholesterol = 125 mg/dl Blood pressure = 141 mm Hg\nTC2: Cholesterol = 200 mg/dl Blood pressure = 201 mm Hg\nTC3: Cholesterol = 124 mg/dl Blood pressure = 201 mm Hg\nTC4: Cholesterol = 109 mg/dl Blood pressure = 200 mm Hg\nTC5: Cholesterol = 201 mg/dl Blood pressure = 140 mm Hg\n\nWhat is the decision table coverage achieved by these test cases?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "40%"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "60%"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "80%"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "100%"
+                    }
+                ],
+                "explicacion": "There are five columns in the decision table. Each test case covers one of them.\n\nTC1 and TC2 both cover Rule 4\nTC3 and TC4 both cover Rule 2\nTC5 covers Rule 5\n\nSo, these five test cases cover three out of five columns, achieving a coverage of (3/5)*100% = 60%. Therefore, option b) is the CORRECT option.\n\nThus:\n\na) Is not correct\nb) Is correct\nc) Is not correct\nd) Is not correct"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "4",
+        "section": "4.2.4",
+        "learning_objective": "FL-4.2.4",
+        "k_level": "K3",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            3
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Un sistema de almacenamiento puede guardar hasta tres elementos y se modela mediante el siguiente diagrama de transición de estados. La variable N representa el número de elementos almacenados actualmente.\n\n¿Cuál de los siguientes casos de prueba, representados como secuencias de eventos, logra el mayor nivel de cobertura de transiciones válidas?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Agregar, Eliminar, Agregar, Agregar, Agregar"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Agregar, Agregar, Agregar, Agregar, Eliminar, Eliminar"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Agregar, Agregar, Agregar, Eliminar, Eliminar"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Agregar, Agregar, Agregar, Eliminar, Agregar"
+                    }
+                ],
+                "explicacion": "Consideremos las transiciones E1, …, E5 como se muestra en la imagen. La variable N representa el número de elementos almacenados. Cada evento de \"Agregar\" lo incrementa en 1, y cada evento de \"Eliminar\" lo disminuye en 1. Nótese que, cuando el evento de \"Agregar\" ocurre estando en el estado NO LLENADO, el estado cambia a LLENADO solo si N=2. Si N<2, el sistema permanece en el estado NO LLENADO. Si N=0, no es posible realizar ninguna acción de \"Eliminar\". De manera similar, si N=3, no es posible realizar ninguna acción de \"Agregar\".\n\nLa prueba a) se puede escribir como E1, E3, E3, E2, E4 (cubriendo así 4 de las 5 transiciones válidas, logrando una cobertura del 80%).\n\nLa prueba b) es inviable, ya que después de las tres primeras acciones de \"Agregar\", el sistema se encuentra en el estado LLENADO y no existe ninguna transición válida desde LLENADO activada por el evento de \"Agregar\". Tras las tres primeras transiciones, solo se alcanza el 60 % de cobertura de transiciones válidas.\n\nLa prueba c) se puede escribir como E1, E2, E4, E5, E3 (cubriendo así 5 de las 5 transiciones válidas, logrando una cobertura del 100 %).\n\nLa prueba d) se puede escribir como E1, E2, E4, E5, E4 (cubriendo así 4 de las 5 transiciones válidas, logrando una cobertura del 80 %).\n\nPor lo tanto:\n\na) Incorrecta\nb) Incorrecta\nc) Correcta\nd) Incorrecta"
+            },
+            "en": {
+                "pregunta": "A storage system can store up to three elements and is modeled by the following state transition diagram. The variable N represents the number of currently stored elements.\n\nWhich of the following test cases, represented as sequences of events, achieves the highest level of valid transitions coverage?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Add, Remove, Add, Add, Add"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Add, Add, Add, Add, Remove, Remove"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Add, Add, Add, Remove, Remove"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Add, Add, Add, Remove, Add"
+                    }
+                ],
+                "explicacion": "Let us refer to the transitions with E1, …, E5 as in the picture. The variable N denotes the number of elements currently stored. Each “Add” event increases it by 1, and each “Remove” event decreases it by 1. Notice, that when the “Add” event occurs while being in the NOT FULL state, the state changes to FULL only if N=2. If N<2, the system stays in the NOT FULL state. If N=0, no “Remove” action is possible. Similarly, if N=3, no “Add” action is possible.\n\nTest a) can be written as E1, E3, E3, E2, E4 (so covers 4 out of 5 valid transitions, achieving 80% valid transitions coverage).\nTest b) is infeasible, because after the first three “Add” actions the system is in the FULL state and there is no valid transition going from FULL triggered by the “Add” event. After the first three transitions only 60% of valid transitions coverage is achieved.\nTest c) can be written as E1, E2, E4, E5, E3 (so covers 5 out of 5 valid transitions, achieving 100% valid transitions coverage).\nTest d) can be written as E1, E2, E4, E5, E4 (so covers 4 out of 5 valid transitions, achieving 80% valid transitions coverage).\n\nThus:\n\na) Is not correct\nb) Is not correct\nc) Is correct\nd) Is not correct"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "4",
+        "section": "4.3.1",
+        "learning_objective": "FL-4.3.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Se ejecutan dos casos de prueba, T1 y T2, en el mismo código. La prueba T1 alcanzó una cobertura de sentencias del 40% y la prueba T2, del 65%.\n\n¿Cuál de las siguientes afirmaciones es necesariamente verdadera?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "El conjunto de pruebas compuesto por T1 y T2 alcanza una cobertura de sentencias del 105%."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Existe al menos una sentencia que debe haber sido ejecutada tanto por T1 como por T2."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Al menos el 5% de las sentencias del código bajo prueba no son ejecutables."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "El conjunto de pruebas compuesto por T1 y T2 alcanza una cobertura de ramas completa."
+                    }
+                ],
+                "explicacion": "a) No es correcto. La cobertura siempre se define como el porcentaje de elementos cubiertos. Por lo tanto, no puede superar el 100 %.\nb) Es correcto. Si las instrucciones ejecutadas por T1 y T2 fueran disjuntas, la cobertura del conjunto de pruebas {T1, T2} sería del 105 %, lo cual es imposible (véase la respuesta a). Por lo tanto, al menos el 5 % de las instrucciones ejecutables deben haber sido ejecutadas tanto por T1 como por T2.\nc) No es correcto. La cobertura de instrucciones no nos indica la cantidad de instrucciones no ejecutables en el código.\nd) No es correcto. Incluso si un conjunto de pruebas logra una cobertura completa de instrucciones, esto no implica lograr una cobertura completa de ramas."
+            },
+            "en": {
+                "pregunta": "You run two test cases, T1 and T2, on the same code. Test T1 achieved 40% statement coverage and test T2 achieved 65% statement coverage.\n\nWhich of the following sentences must be necessarily true?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "The test suite composed with tests T1 and T2 achieves 105% statement coverage"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "There exists at least one statement that must have been executed by both T1 and T2"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "At least 5% of the statements in the code under test are non-executable"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "The test suite composed of tests T1 and T2 achieves full branch coverage"
+                    }
+                ],
+                "explicacion": "a) Is not correct. Coverage is always defined as the percentage of the covered elements. Therefore, it cannot exceed 100%\nb) Is correct. If the statements executed by T1 and T2 were disjoint, the coverage of the test suite {T1, T2} would be 105%, which is impossible (see answer a). Therefore, at least 5% of executable statements must have been executed by both T1 and T2\nc) Is not correct. Statement coverage does not tell us anything about the number of non-executable statements in the code\nd) Is not correct. Even if a test suite achieves full statement coverage, this does not imply achieving full branch coverage"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "4",
+        "section": "4.3.2",
+        "learning_objective": "FL-4.3.2",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            3
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Definamos la métrica de cobertura de ramas como BCov = (X / Y) * 100%.\n\n¿Qué representan X e Y en esta fórmula?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "X = número de resultados de decisión evaluados por los casos de prueba Y = número total de resultados de decisión en el código"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "​​X = número de ramas condicionales evaluadas por los casos de prueba Y = número total de ramas en el código"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "X = número de ramas evaluadas por los casos de prueba Y = número total de ramas en el código"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "X = número de ramas condicionales evaluadas por los casos de prueba Y = número total de resultados de decisión en el código"
+                    }
+                ],
+                "explicacion": "Las pruebas de ramificación son una técnica de prueba de caja blanca en la que los elementos de cobertura son las ramificaciones. Una ramificación es una transferencia de control entre dos nodos en el grafo de flujo de control, que muestra las posibles secuencias en las que se ejecutan las instrucciones del código fuente en el objeto de prueba. Cada transferencia de control puede ser incondicional (es decir, código de ejecución directa) o condicional (es decir, un resultado de decisión). La cobertura se mide como el número de ramificaciones ejecutadas por los casos de prueba dividido por el número total de ramificaciones, y se expresa como un porcentaje.\n\nPor lo tanto:\n\na) Incorrecto. Un resultado de decisión es una ramificación condicional. Para las pruebas de ramificación, X cuenta no solo las ramificaciones condicionales, sino también las incondicionales.\nb) Incorrecto. La cobertura de ramificación cuenta no solo las ramificaciones condicionales, sino también las incondicionales.\nc) Correcto. La cobertura de ramificación se mide como el número de ramificaciones ejecutadas por los casos de prueba dividido por el número total de ramificaciones, y se expresa como un porcentaje.\nd) Incorrecto. Tanto X como Y cuentan solo las ramificaciones condicionales y no tienen en cuenta las incondicionales."
+            },
+            "en": {
+                "pregunta": "Let the branch coverage metric be defined as BCov = (X / Y) * 100%.\n\nWhat do X and Y represent in this formula?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "X = number of decision outcomes exercised by the test cases Y = total number of decision outcomes in the code"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "X = number of conditional branches exercised by the test cases Y = total number of branches in the code"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "X = number of branches exercised by the test cases Y = total number of branches in the code"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "X = number of conditional branches exercised by the test cases Y = total number of decision outcomes in the code"
+                    }
+                ],
+                "explicacion": "Branch testing is a white-box test technique in which the coverage items are branches. A branch is a transfer of control between two nodes in the control flow graph, which shows the possible sequences in which source code statements are executed in the test object. Each transfer of control can be either unconditional (i.e., straight-line code) or conditional (i.e., a decision outcome). Coverage is measured as the number of branches exercised by the test cases divided by the total number of branches, and is expressed as a percentage.\n\nThus:\n\na) Is not correct. A decision outcome is a conditional branch. For branch testing, X counts not only conditional, but also unconditional branches\nb) Is not correct. Branch coverage counts not only conditional, but also unconditional branches\nc) Is correct. Branch coverage is measured as the number of branches exercised by the test cases divided by the total number of branches, and is expressed as a percentage\nd) Is not correct. Both X and Y count only conditional branches and do not take into account the unconditional branches"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "4",
+        "section": "4.4.2",
+        "learning_objective": "FL-4.4.2",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_multiple",
+        "respuestas_correctas": [
+            1,
+            5
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuáles de las siguientes dos afirmaciones ofrecen la MEJOR justificación para usar pruebas exploratorias?\n\nSeleccione DOS opciones.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "No se ha asignado suficiente tiempo a los evaluadores para el diseño y la ejecución de las pruebas."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "La estrategia de pruebas actual requiere que los evaluadores utilicen técnicas formales de prueba de caja negra."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "La especificación está escrita en un lenguaje formal que puede ser procesado por una herramienta."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Los evaluadores son miembros de un equipo ágil y tienen buenas habilidades de programación."
+                    },
+                    {
+                        "id": 5,
+                        "texto": "Los evaluadores tienen experiencia en el dominio del negocio y buenas habilidades analíticas."
+                    }
+                ],
+                "explicacion": "Las pruebas exploratorias son útiles cuando las especificaciones son escasas o insuficientes, o cuando existe una gran presión de tiempo durante las pruebas. También son útiles para complementar otras técnicas de prueba más formales. Las pruebas exploratorias serán más efectivas si el evaluador tiene experiencia, conocimiento del dominio y un alto grado de habilidades esenciales, como capacidad analítica, curiosidad y creatividad.\n\nPor lo tanto:\n\na) Correcto. Las pruebas exploratorias son útiles cuando las especificaciones son escasas o insuficientes, o cuando existe una gran presión de tiempo durante las pruebas.\nb) Incorrecto. Las pruebas exploratorias no son una técnica de prueba de caja negra.\nc) Incorrecto. Las pruebas exploratorias son útiles cuando las especificaciones están mal redactadas.\nd) Incorrecto. En principio, las habilidades de programación no tienen relación con las pruebas exploratorias.\ne) Correcto. Las pruebas exploratorias serán más efectivas si el evaluador tiene experiencia, conocimiento del dominio y un alto grado de habilidades esenciales, como capacidad analítica, curiosidad y creatividad."
+            },
+            "en": {
+                "pregunta": "Which TWO of the following statements provide the BEST rationale for using exploratory testing?\n\nSelect TWO options.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Testers have not been allocated enough time for test design and test execution"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "The existing test strategy requires that testers use formal, black-box test techniques"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "The specification is written in a formal language that can be processed by a tool"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Testers are the members of an agile team and have good programming skills"
+                    },
+                    {
+                        "id": 5,
+                        "texto": "Testers are experienced in the business domain and have good analytical skills"
+                    }
+                ],
+                "explicacion": "Exploratory testing is useful when there are few or inadequate specifications or there is significant time pressure on the testing. Exploratory testing is also useful to complement other more formal test techniques. Exploratory testing will be more effective if the tester is experienced, has domain knowledge and has a high degree of essential skills, like analytical skills, curiosity and creativeness.\n\nThus:\n\na) Is correct. Exploratory testing is useful when there are few or inadequate specifications or there is significant time pressure on the testing\nb) Is not correct. Exploratory testing is not a black-box test technique\nc) Is not correct. Exploratory testing is useful when the specifications are poorly written\nd) Is not correct. Programming skills have nothing to do with exploratory testing in principle\ne) Is correct. Exploratory testing will be more effective if the tester is experienced, has domain knowledge and has a high degree of essential skills, like analytical skills, curiosity and creativeness"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "4",
+        "section": "4.4.3",
+        "learning_objective": "FL-4.4.3",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones se ajusta MEJOR a un elemento de la lista de verificación utilizada en las pruebas basadas en listas de verificación?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "“El desarrollador cometió un error al implementar el código”"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "“La cobertura de sentencias alcanzada supera el 85%”"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "“El programa funciona correctamente en cuanto a los requisitos funcionales y no funcionales”"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "“Los mensajes de error están escritos en un lenguaje comprensible para el usuario”"
+                    }
+                ],
+                "explicacion": "a) No es correcto. Las listas de verificación deben contener condiciones de prueba que se deban verificar. Este es un ejemplo de error, no de una condición de prueba; incluso si el evaluador pudiera deducir algunas posibles condiciones de prueba a partir de los ejemplos de errores, esta descripción de error es demasiado general.\nb) No es correcto. Las listas de verificación no deben contener elementos que sean más apropiados como criterios de salida. Este es un ejemplo de criterio de salida.\nc) No es correcto. Las listas de verificación no deben contener elementos demasiado generales. Este es un elemento muy general que prácticamente describe el objetivo de la prueba.\nd) Es correcto. Este es un ejemplo de una condición de prueba que puede ser verificada por una persona."
+            },
+            "en": {
+                "pregunta": "Which of the following BEST fits as an element of the checklist used in checklist-based testing?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "“The developer made an error when implementing the code”"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "“The achieved statement coverage exceeds 85%”"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "“The program works correctly regarding functional and non-functional requirements”"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "“The error messages are written in language that the user can understand”"
+                    }
+                ],
+                "explicacion": "a) Is not correct. Checklists should contain test conditions to be verified. This is an example of an error, not a test condition; even if the tester was able to deduce some potential test conditions from the examples of errors, this error description is too general\nb) Is not correct. Checklists should not contain items that are better suited as exit criteria. This is an example of an exit criterion\nc) Is not correct. Checklists should not contain items that are too general. This is a very general item, which practically describes the goal of testing\nd) Is correct. This is an example of a test condition that can be checked by a human"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "4",
+        "section": "4.5.2",
+        "learning_objective": "FL-4.5.2",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Consideremos los siguientes criterios de aceptación para una historia de usuario escrita desde la perspectiva del propietario de una tienda en línea.\n\nDado que el usuario ha iniciado sesión y se encuentra en la página principal,\ncuando el usuario hace clic en el botón \"Agregar artículo\",\ndebe aparecer el formulario \"Crear artículo\",\ny el usuario debe poder ingresar un nombre y un precio para el nuevo artículo.\n\n¿En qué formato están escritos estos criterios de aceptación?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Orientado a reglas"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Orientado a escenarios"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Orientado al producto"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Orientado al proceso"
+                    }
+                ],
+                "explicacion": "a) No es correcto. El formato orientado a reglas incluye formatos como listas de verificación con viñetas o tablas de correspondencias entrada-salida, que muestran explícitamente las reglas a seguir. El formato Dado/Cuando/Entonces está orientado a escenarios, ya que describe un escenario que debe verificarse.\nb) Es correcto. Este es un formato Dado/Cuando/Entonces, que está orientado a escenarios.\nc) No es correcto. No existe un formato de criterios de aceptación \"orientado al producto\".\nd) No es correcto. No existe un formato de criterios de aceptación \"orientado al proceso\"."
+            },
+            "en": {
+                "pregunta": "Consider the following acceptance criteria for a user story written from the perspective of an online store owner.\n\nGiven that the user is logged in and on the homepage,\nWhen the user clicks on the \"Add Item\" button,\nThen the \"Create Item\" form should appear,\nAnd the user should be able to input a name and price for the new item.\n\nIn what format is this acceptance criteria written?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Rule-oriented"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Scenario-oriented"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Product-oriented"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Process-oriented"
+                    }
+                ],
+                "explicacion": "a) Is not correct. The rule-oriented format includes formats like bullet point verification lists or tabulated forms of input-output mappings, explicitly showing the rules to be followed. Given/When/Then is a scenariooriented format because it describes a scenario to be verified\nb) Is correct. This is a Given/When/Then format, which is scenario-oriented\nc) Is not correct. There is no \"product-oriented\" format of acceptance criteria\nd) Is not correct. There is no \"process-oriented\" format of acceptance criteria"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "4",
+        "section": "4.5.3",
+        "learning_objective": "FL-4.5.3",
+        "k_level": "K3",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Como cliente registrado, quiero poder ver mis pedidos anteriores en el sitio web de la empresa para llevar un registro de mis compras.\n\n¿Cuál de los siguientes casos de prueba NO será relevante para esta historia de usuario?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Entrada: El cliente inicia sesión en su cuenta en el sitio web y hace clic en el botón \"Ver historial de pedidos\". Resultado esperado: El sistema muestra una lista de todos los pedidos anteriores del cliente, incluyendo la fecha, el número de pedido y el costo total."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Entrada: El cliente hace clic en un pedido de la lista. Resultado esperado: El sistema muestra los artículos comprados, junto con sus precios y cantidades."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Entrada: El cliente hace clic en el botón \"Ordenar ascendente\" en la pantalla del historial de pedidos. Resultado esperado: El sistema muestra el historial de pedidos ordenado por número de pedido en orden ascendente."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Entrada: Un cliente no registrado se registra como nuevo cliente con una dirección de correo electrónico válida que no existe en la base de datos de clientes. Resultado esperado: El sistema acepta el registro y crea la cuenta."
+                    }
+                ],
+                "explicacion": "a) No es correcto. El caso de prueba se refiere a la visualización de pedidos anteriores en el historial de pedidos.\nb) No es correcto. El caso de prueba se refiere a la visualización de pedidos anteriores.\nc) No es correcto. El caso de prueba se refiere a la visualización de pedidos anteriores en el historial de pedidos.\nd) Es correcto. El caso de prueba se refiere al proceso de registro, que no se trata en la historia de usuario. La historia de usuario trata sobre la visualización de pedidos anteriores."
+            },
+            "en": {
+                "pregunta": "Your team analyzes the following user story in order to define the acceptance criteria:\n\nAs a registered customer, I want to be able to view my previous orders on the company's website, so that I can keep track of my purchases.\n\nWhich of the following test cases will NOT be relevant for this user story?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Input: the customer logs into their account on the website and clicks the “see order history” button Expected output: the system shows a list of all the customer’s previous orders, including the date, order number, and total cost"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Input: the customer clicks on an order from the order list Expected output: the system displays the individual items purchased, along with their prices and quantities"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Input: the customer clicks “Sort ascending” button on the order history screen Expected output: the system shows the order history sorted by order number in ascending order"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Input: an unregistered customer registers as a new customer with a valid e-mail address that does not already exist in the customer database Expected output: the system accepts the registration and creates the account"
+                    }
+                ],
+                "explicacion": "a) Is not correct. The test case is related to viewing previous orders in the order history\nb) Is not correct. The test case is related to viewing previous orders\nc) Is not correct. The test case is related to viewing previous orders in the order history\nd) Is correct. The test case is related to the registration process, which is not discussed in the user story. The user story is about viewing previous orders"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "5",
+        "section": "5.1.3",
+        "learning_objective": "FL-5.1.3",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            1
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Tu equipo sigue el proceso que utiliza la metodología DevOps. Los tres primeros pasos de este proceso son:\n\n(1) Desarrollo del código\n(2) Envío del código a un sistema de control de versiones y su integración en la rama \"test\"\n(3) Realización de pruebas de componentes para el código enviado\n\n¿Cuál de las siguientes opciones se ajusta MEJOR al criterio de entrada para el paso (2) de esta metodología?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "El análisis estático no devuelve advertencias de alta gravedad para el código enviado"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "El control de versiones del sistema no reporta conflictos al integrar el código en la rama \"test\""
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Las pruebas de componentes están compiladas y listas para ejecutarse"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "La cobertura de sentencias es de al menos el 80%"
+                    }
+                ],
+                "explicacion": "a) Es correcto. Esto se puede (y se debe) comprobar antes de enviar el código al control de versiones.\nb) No es correcto. Esto se puede comprobar después de realizar el paso (2), ya que la notificación de conflictos de fusión se puede realizar después de que el código se haya enviado y fusionado.\nc) No es correcto. Esto se ajusta mejor como criterio de entrada para el paso (3).\nd) No es correcto. Esto se ajusta mejor como criterio de salida para el paso (3)."
+            },
+            "en": {
+                "pregunta": "Your team follows the process that uses the DevOps delivery pipeline. The first three steps of this process are:\n\n(1) Code development\n(2) Submit code into a version control system and merge it into the “test” branch\n(3) Perform component testing for the submitted code\n\nWhich of the following is BEST suited to be the entry criterion for step (2) of this pipeline?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Static analysis returns no high severity warnings for the submitted code"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "System version control reports no conflicts when merging code into the “test” branch"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Component tests are compiled and ready to be executed"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Statement coverage is at least 80%"
+                    }
+                ],
+                "explicacion": "a) Is correct. This is something that can (and should) be checked before the code is submitted to version control\nb) Is not correct. This is something that can be checked after step (2) is performed, because merge conflict reporting can be done after the code is submitted and merged\nc) Is not correct. This fits better as the entry criterion for step (3)\nd) Is not correct. This fits better as the exit criterion for step (3)"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "5",
+        "section": "5.1.4",
+        "learning_objective": "FL-5.1.4",
+        "k_level": "K3",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Desea estimar el esfuerzo de prueba para el nuevo proyecto utilizando una estimación basada en ratios. Calcula la relación entre el esfuerzo de prueba y el de desarrollo utilizando datos promedio de ambos, obtenidos de cuatro proyectos históricos similares al nuevo. La tabla muestra estos datos históricos.\n\nEl esfuerzo de desarrollo estimado para el nuevo proyecto es de $800,000. ¿Cuál es su estimación del esfuerzo de prueba en este proyecto?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "$40,000"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "$80,000"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "$81,250"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "$82,500"
+                    }
+                ],
+                "explicacion": "El esfuerzo promedio de desarrollo es de $900,000 y el esfuerzo promedio de pruebas es de $90,000 (calculado a partir de los cuatro proyectos).\n\nLa relación promedio entre el esfuerzo de pruebas y el de desarrollo es de 1:10 ($90,000 : $900,000), lo que significa que, históricamente, en promedio, el esfuerzo de pruebas representa el 10% del esfuerzo de desarrollo.\n\nPor lo tanto, si el esfuerzo de desarrollo se estima en $800,000, el esfuerzo estimado para las pruebas es:\n\n10% * $800,000 = 0.1 * $800,000 = $80,000.\n\nPor consiguiente:\n\na) Incorrecto\nb) Correcto\nc) Incorrecto\nd) Incorrecto"
+            },
+            "en": {
+                "pregunta": "You want to estimate the test effort for the new project using estimation based on ratios. You calculate the test-to-development effort ratio using averaged data for both development effort and test effort from four historical projects similar to the new one. The table shows this historical data.\n\nThe estimated development effort for the new project is $800,000. What is your estimate of the test effort in this project?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "$40,000"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "$80,000"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "$81,250"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "$82,500"
+                    }
+                ],
+                "explicacion": "The average development effort is $900,000 and the average test effort is $90,000 (calculated from the four projects).\n\nThe average test-to-development effort ratio is 1:10 ($90,000 : $900,000), which means that historically, on average, the test effort is 10% of the development effort.\n\nSo if the development effort is estimated to be $800,000, the estimated test effort is estimated as:\n\n10% * $800,000 = 0.1 * $800,000 = $80,000.\n\nThus:\n\na) Is not correct\nb) Is correct\nc) Is not correct\nd) Is not correct"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "5",
+        "section": "5.1.5",
+        "learning_objective": "FL-5.1.5",
+        "k_level": "K3",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Estás probando una aplicación web que permite a los usuarios buscar productos, ver sus detalles, añadirlos al carrito y realizar un pedido.\n\nHas preparado los siguientes siete casos de prueba, los cuales deseas ejecutar. Las pruebas deben ejecutarse en el orden óptimo, según su prioridad.\n\nTambién identificaste las siguientes dependencias lógicas entre los casos de prueba:\n\n• La funcionalidad de BÚSQUEDA debe probarse antes de la funcionalidad de VISUALIZACIÓN.\n• La funcionalidad de VISUALIZACIÓN debe probarse antes de la funcionalidad de AÑADIR.\n• La funcionalidad de AÑADIR debe probarse antes de la funcionalidad de ORDENAR.\n\n¿Qué caso de prueba debería ejecutarse como el cuarto?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "TC3"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "TC1"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "TC7"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "TC2"
+                    }
+                ],
+                "explicacion": "Las dependencias lógicas implican que, para cada producto, se debe ejecutar BUSCAR → VER → AÑADIR antes de ejecutar PEDIDO. Se pueden añadir más productos (siguiendo el mismo flujo) antes de ejecutar PEDIDO. Por lo tanto, TC1 o TC2 deben ejecutarse primero; de lo contrario, no se podrá avanzar.\n\nSe debe dar prioridad a VER y AÑADIR el producto B, ya que sus casos de prueba (TC6, TC4) tienen mayor prioridad. Así pues, las tres primeras pruebas a ejecutar son TC2 -> TC4 -> TC6.\n\nAhora debemos considerar si ejecutar TC7 y luego todo el flujo para el producto A, o ejecutar primero los casos de prueba para el producto A. Si TC7 tiene menor prioridad que las demás pruebas, estas deben ejecutarse primero. Por lo tanto, el flujo completo debería ser:\n\nTC2 -> TC4 -> TC6 -> TC1 -> TC3 -> TC5 -> TC7\n\na) Incorrecto. TC1 debe ejecutarse antes que TC3.\nb) Correcto.\nc) Incorrecto. Como se muestra arriba, TC7 es el último en ejecutarse.\nd) No es correcto. El producto B debe ejecutarse antes que el producto A."
+            },
+            "en": {
+                "pregunta": "You are testing a web application that allows users to SEARCH for products, VIEW product details, ADD products to a shopping cart, and place an ORDER.\n\nYou have prepared the following seven test cases, all of which you want to execute. The tests should be executed in the best order, based on test priority.\n\nYou also identified the following logical dependencies between test cases:\n\n• SEARCH functionality must be tested before VIEW functionality can be tested.\n• VIEW functionality must be tested before ADD functionality.\n• ADD functionality must be tested before ORDER functionality.\n\nWhich test case should be executed as the fourth one?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "TC3"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "TC1"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "TC7"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "TC2"
+                    }
+                ],
+                "explicacion": "The logical dependencies mean that for each product you have to run SEARCH → VIEW → ADD before running ORDER. You can add more products (using the same flow), before you run ORDER. Based on this, TC1 or TC2 must be executed first, otherwise no progress can be made.\n\nThe first priority should be given to VIEW and ADD product B, as its test cases (TC6, TC4) are assigned with higher priority. So, the first 3 test to execute are TC2 -> TC4 -> TC6\n\nNow we need consider whether to run TC7 and then the entire flow for product A or run the TCs for product A first. Is TC7 has lower priority than the other tests, they should be tested first. Therefore, the entire flow should be:\n\nTC2 -> TC4 -> TC6 -> TC1 -> TC3 -> TC5 -> TC7\n\na) Is not correct. TC1 must be executed before TC3\nb) Is correct\nc) Is not correct. As shown above, TC7 is the last to be executed.\nd) Is not correct. Product B must be executed before product A"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "5",
+        "section": "5.1.7",
+        "learning_objective": "FL-5.1.7",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            4
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Según el modelo de cuadrantes de pruebas, ¿cuál de las siguientes opciones corresponde al cuadrante Q1 («orientado a la tecnología» y «apoyo al equipo»)?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Pruebas de usabilidad"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Pruebas funcionales"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Pruebas de aceptación del usuario"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Pruebas de integración de componentes"
+                    }
+                ],
+                "explicacion": "a) Incorrecto. Las pruebas de usabilidad son pruebas orientadas al negocio que evalúan el producto (Q3).\nb) Incorrecto. Las pruebas funcionales son pruebas orientadas al negocio (Q2).\nc) Incorrecto. Las pruebas de aceptación del usuario son pruebas orientadas al negocio que evalúan el producto (Q3).\nd) Correcto. Las pruebas de integración de componentes son pruebas orientadas a la tecnología que apoyan al equipo (guían el desarrollo) (Q1)."
+            },
+            "en": {
+                "pregunta": "According to the testing quadrants model, which of the following falls into quadrant Q1 (“technology facing” and “support the team”)?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Usability testing"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Functional testing"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "User acceptance testing"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Component integration testing"
+                    }
+                ],
+                "explicacion": "a) Is not correct. Usability testing is business facing testing that critiques the product (Q3)\nb) Is not correct. Functional testing is business facing testing (Q2)\nc) Is not correct. User acceptance testing is business facing testing that critiques the product (Q3)\nd) Is correct. Component integration testing is technology facing testing that supports the team (guides the development) (Q1)"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "5",
+        "section": "5.2.4",
+        "learning_objective": "FL-5.2.4",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            3
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Dados los siguientes riesgos:\n\n1. Una implementación ineficaz del bucle provoca tiempos de respuesta prolongados del sistema.\n2. Los consumidores cambian sus preferencias.\n3. Sobrecarga de la sala de servidores.\n4. Los pacientes mayores de cierta edad reciben informes inexactos.\n\nY las siguientes actividades de mitigación:\n\nA. Aceptación del riesgo.\nB. Pruebas de rendimiento.\nC. Uso del análisis de valores límite como técnica de prueba.\nD. Transferencia del riesgo.\n\n¿Cuál de las siguientes opciones relaciona MEJOR los riesgos con las actividades de mitigación?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "1C, 2D, 3A, 4B"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "1B, 2D, 3A, 4C"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1B, 2A, 3D, 4C"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "1C, 2A, 3D, 4B"
+                    }
+                ],
+                "explicacion": "Considerando cada uno de los riesgos enumerados y sus medidas de mitigación:\n\n1. Las respuestas lentas del sistema (1) pueden evaluarse mediante pruebas de rendimiento (B).\n2. Los cambios en las preferencias de los consumidores (2) suelen estar fuera de nuestro control, por lo que generalmente aceptamos este riesgo (A).\n3. La inundación de la sala de servidores (3) puede causar pérdidas significativas, por lo que deberíamos transferir el riesgo, por ejemplo, mediante la contratación de un seguro (D).\n4. Que los pacientes mayores de cierta edad reciban informes inexactos (4) sugiere un posible problema de límites, que puede detectarse eficazmente con técnicas como el análisis de varianza (BVA).\n\nPor lo tanto:\n\na) Incorrecto\nb) Incorrecto\nc) Correcto. Las combinaciones correctas de riesgo y mitigación son: 1B, 2A, 3D y 4C.\nd) Incorrecto"
+            },
+            "en": {
+                "pregunta": "Given the following risks:\n\n1. Ineffective loop implementation causes long system responses\n2. Consumers change their preferences\n3. Flooding of the server room\n4. Patients above a certain age receive inaccurate reports\n\nAnd the following mitigation activities:\n\nA. Risk acceptance\nB. Performance testing\nC. Using boundary value analysis as the test technique\nD. Risk transfer\n\nWhich of the following BEST matches the risks with the mitigation activities?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "1C, 2D, 3A, 4B"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "1B, 2D, 3A, 4C"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1B, 2A, 3D, 4C"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "1C, 2A, 3D, 4B"
+                    }
+                ],
+                "explicacion": "Considering each of the listed risks and their mitigations:\n\n1. Long system responses (1) can be tested in performance testing (B)\n2. Changes of consumers’ preferences (2) are usually out of our control, so usually we accept this risk (A)\n3. Flooding of the server room (3) can cause significant loss, so we should transfer the risk, e.g., by buying an insurance policy (D)\n4. That patients above a certain age receive inaccurate reports (4) suggests a potential boundary problem, which can be effectively detected with techniques like BVA (C)\n\nThus:\n\na) Is not correct\nb) Is not correct\nc) Is correct. The correct combinations of risk and mitigation are: 1B, 2A,\n3D and 4C\nd) Is not correct"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "5",
+        "section": "5.3.1",
+        "learning_objective": "FL-5.3.1",
+        "k_level": "K1",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            1
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones es una métrica de calidad del producto?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Tiempo medio hasta el fallo"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Número de defectos encontrados"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Cobertura de requisitos"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Porcentaje de detección de defectos"
+                    }
+                ],
+                "explicacion": "a) Correcto. Las métricas de calidad del producto miden las características de calidad. El tiempo medio hasta el fallo mide la madurez, por lo que es una métrica de calidad del producto.\nb) Incorrecto. Este es un ejemplo de métrica de defectos, no de calidad del producto.\nc) Incorrecto. Este es un ejemplo de métrica de cobertura, no de calidad del producto.\nd) Incorrecto. Este es un ejemplo de métrica de defectos, no de calidad del producto."
+            },
+            "en": {
+                "pregunta": "Which of the following is a product quality metric?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Mean time to failure"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Number of defects found"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Requirements coverage"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Defect detection percentage"
+                    }
+                ],
+                "explicacion": "a) Is correct. Product quality metrics measure quality characteristics. Mean time to failure measures maturity, so it is a product quality metric\nb) Is not correct. This is an example of a defect metric, not a product quality metric\nc) Is not correct. This is an example of a coverage metric, not a product quality metric\nd) Is not correct. This is an example of a defect metric, not a product quality metric"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "5",
+        "section": "5.3.3",
+        "learning_objective": "FL-5.3.3",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            1
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Eres miembro de un equipo de pruebas ubicado en Norteamérica, desarrollando un producto para un cliente en Europa. El equipo trabaja con metodología ágil, sigue el enfoque DevOps y utiliza un pipeline de integración y entrega continuas.\n\n¿Cuál de las siguientes opciones es la forma MENOS efectiva de comunicar el progreso de las pruebas al cliente?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Reuniones presenciales"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Paneles de control"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Correo electrónico"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Videoconferencia"
+                    }
+                ],
+                "explicacion": "a) Es correcto. El cliente se encuentra en una ubicación y zona horaria diferentes, por lo que la comunicación cara a cara puede resultar difícil.\nb) No es correcto. Los paneles de control suelen estar disponibles para cualquier usuario en cualquier momento, por lo que la diferencia horaria no supone un obstáculo tan grande para la comunicación como la comunicación verbal cara a cara.\nc) No es correcto. Si bien la diferencia horaria entre Europa y América es de varias horas, lo que puede causar algunos inconvenientes, sin duda no es tan grande como la comunicación cara a cara.\nd) No es correcto. Las herramientas de videoconferencia son un medio de comunicación práctico. Aunque la comunicación entre Europa y América durante el horario laboral suele requerir que una de las partes se conecte muy temprano o muy tarde, esto no supone un inconveniente tan grande como la comunicación verbal cara a cara."
+            },
+            "en": {
+                "pregunta": "You are a member of a test team located in North America, developing a product for a client located in Europe. The team is agile and follows the DevOps approach and uses a continuous integration/continuous delivery pipeline.\n\nWhich of the following is the LEAST effective way to communicate test progress to the customer?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Face-to-face"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Dashboards"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Email"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Video conferencing"
+                    }
+                ],
+                "explicacion": "a) Is correct. The client is in a different location and time zone, so it may be difficult to communicate face-to-face\nb) Is not correct. Dashboards are usually available to any user at any time, so the difference in time zones will not be as much of a hindrance to communication as verbal, face-to-face communication\nc) Is not correct. Although the time difference between Europe and America is several hours, and this may cause some inconvenience, it's certainly not as great as with communicating face-to-face\nd) Is not correct. Video conferencing tools are a convenient means of communication. Although communication between Europe and America during working hours usually requires one party to connect in the very early or very late hours, this is not as much of an inconvenience as verbal, face-to-face communication"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "5",
+        "section": "5.4.1",
+        "learning_objective": "FL-5.4.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            1
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones describe MEJOR un ejemplo de cómo la gestión de configuración (CM) facilita las pruebas?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Conociendo el número de versión del entorno, la herramienta de CM puede recuperar los números de versión de las bibliotecas, los stubs y los controladores utilizados en dicho entorno."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Contando con un registro de los valores de las entradas de prueba, la herramienta de CM puede ejecutar los casos de prueba para estas configuraciones y calcular la cobertura de las pruebas."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Conociendo la fecha de compra de una licencia de software, la herramienta de CM genera automáticamente información sobre la fecha de vencimiento de la licencia del producto."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Conociendo el número de versión del caso de prueba, la herramienta de CM puede generar automáticamente datos de prueba para dicho caso."
+                    }
+                ],
+                "explicacion": "a) Correcto. Para un elemento de configuración complejo (por ejemplo, un entorno de prueba), CM registra los elementos que lo componen, sus relaciones y versiones.\nb) Incorrecto. Las herramientas de CM no ejecutan casos de prueba ni calculan la cobertura.\nc) Incorrecto. Una herramienta de CM no es una herramienta de gestión de licencias.\nd) Incorrecto. Las herramientas de CM no generan datos de prueba."
+            },
+            "en": {
+                "pregunta": "Which of the following BEST describes an example of how configuration management (CM) supports testing?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Having the version number of the environment, the CM tool can retrieve the version numbers of libraries, stubs and drivers used in that environment"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Having a record of the values of the test inputs, the CM tool can execute the test cases for these configurations and calculate test coverage"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Having data about the date of purchase of a software license, the CM tool automatically generates information about the fact that the product license is coming to an end"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Having the version number of the test case, the CM tool can automatically generate test data for this test case"
+                    }
+                ],
+                "explicacion": "a) Is correct. For a complex configuration item (e.g., a test environment), CM records the items it consists of, their relationships, and versions\nb) Is not correct. CM tools do not execute test cases and do not calculate coverage\nc) Is not correct. A CM tool is not a license management tool\nd) Is not correct. CM tools do not generate test data"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "5",
+        "section": "5.5.1",
+        "learning_objective": "FL-5.5.1",
+        "k_level": "K3",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            2
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Estás probando una función de ordenación que recibe un conjunto de números como entrada y devuelve el mismo conjunto de números ordenados en orden ascendente. El registro de la ejecución de la prueba se ve así.\n\n¿Cuál de las siguientes opciones describe MEJOR el fallo que se puede utilizar en un informe de defectos?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "El sistema no ordena correctamente varios conjuntos de números. Referencia: TC3, TC4, TC5."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "El sistema parece ignorar los duplicados durante la ordenación. Referencia: TC3, TC4, TC5."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "El sistema no ordena correctamente los números negativos. Referencia: TC4, TC5."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "TC3, TC4 y TC5 presentan defectos (datos de entrada duplicados) y deben corregirse"
+                    }
+                ],
+                "explicacion": "a) No es correcto. Si bien la afirmación es cierta, no aporta mucho valor al desarrollador.\nb) Es correcto. Según los resultados de las pruebas, parece que el sistema ignora los duplicados y ordena la lista sin tener en cuenta las repeticiones. Probablemente, esta sea la causa de los fallos en TC3, TC4 y TC5. Esta información puede ayudar al desarrollador a encontrar el defecto y corregirlo de forma más eficiente.\nc) No es correcto. El sistema no falla al ordenar números negativos. El problema reside en ignorar los duplicados.\nd) No es correcto. Los casos de prueba TC3, TC4 y TC5 fallan, pero desconocemos que presenten algún defecto."
+            },
+            "en": {
+                "pregunta": "You are testing a sort function that gets a set of numbers as input and returns the same set of numbers sorted in ascending order. The log from the test execution looks as follows.\n\nWhich of the following provides the BEST description of the failure that can be used in a defect report?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "The system fails to sort several sets of numbers. Reference: TC3, TC4, TC5."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "The system seems to disregard duplicates while sorting. Reference: TC3, TC4, TC5."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "The system fails to sort negative numbers. Reference: TC4, TC5."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "TC3, TC4 and TC5 have defects (duplicate input data) and should be corrected."
+                    }
+                ],
+                "explicacion": "a) Is not correct. While the sentence is true, it does not provide much value for the developer\nb) Is correct. From the test results it seems that the system ignores duplicates and sorts the list disregarding the repetitions. This is probably the cause of failures in TC3, TC4, TC5. Such information may help the developer to find the defect and fix it more efficiently\nc) Is not correct. The system does not fail in sorting negative numbers. The problem is rather in disregarding duplicates\nd) Is not correct. The test cases TC3, TC4 and TC5 fail, but we aren’t aware that the test cases have any defects"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "6",
+        "section": "6.1.1",
+        "learning_objective": "FL-6.1.1",
+        "k_level": "K2",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            3
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "Dadas las siguientes descripciones:\n\n1. Seguimiento del flujo de trabajo\n2. Facilitar la comunicación\n3. Máquinas virtuales\n4. Soporte para revisiones\n\nY las siguientes categorías de herramientas de prueba:\n\nA. Herramientas de prueba estática\nB. Herramientas que admiten la escalabilidad y la estandarización de la implementación\nC. Herramientas DevOps\nD. Herramientas de colaboración\n\n¿Cuál de las siguientes opciones se ajusta MEJOR a las descripciones y categorías?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "1A, 2B, 3C, 4D"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "1B, 2D, 3C, 4A"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1C, 2D, 3B, 4A"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "1D, 2C, 3A, 4B"
+                    }
+                ],
+                "explicacion": "Considerando cada una de las categorías de herramientas enumeradas y sus descripciones:\n\nA. Herramientas de pruebas estáticas: ayudan al evaluador a realizar revisiones y análisis estáticos (4)\nB. Herramientas que facilitan la escalabilidad y la estandarización de la implementación: por ejemplo, máquinas virtuales, herramientas de contenedores (3)\nC. Herramientas DevOps: facilitan el flujo de trabajo de entrega DevOps, el seguimiento del flujo de trabajo, los procesos de compilación automatizados y la integración y entrega continuas (CI/CD) (1)\nD. Herramientas de colaboración: facilitan la comunicación (2)\n\nPor lo tanto:\n\na) Incorrecto\nb) Incorrecto\nc) Correcto. La correspondencia correcta es: 1C, 2D, 3B, 4A\nd) Incorrecto"
+            },
+            "en": {
+                "pregunta": "Given the following descriptions:\n\n1. Support workflow tracking\n2. Facilitate communication\n3. Virtual machines\n4. Support reviews\n\nAnd the following test tool categories:\n\nA. Static testing tools\nB. Tools supporting scalability and deployment standardization\nC. DevOps tools\nD. Collaboration tools\n\nWhich of the following BEST matches the descriptions and categories?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "1A, 2B, 3C, 4D"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "1B, 2D, 3C, 4A"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "1C, 2D, 3B, 4A"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "1D, 2C, 3A, 4B"
+                    }
+                ],
+                "explicacion": "Considering each of the listed tool categories and their descriptions:\n\nA. Static testing tools – support the tester in performing reviews and static analysis (4)\nB. Tools supporting scalability and deployment standardization – For example, virtual machines, containerization tools (3)\nC. DevOps tools – support the DevOps delivery pipeline, workflow tracking, automated build process(es), continuous integration/continuous delivery (CI/CD) (1)\nD. Collaboration tools – facilitate communication (2)\n\nThus:\n\na) Is not correct\nb) Is not correct\nc) Is correct. The correct match is: 1C, 2D, 3B, 4A\nd) Is not correct"
+            }
+        }
+    },
+    {
+        "certification": "Foundation Tester",
+        "chapter": "6",
+        "section": "6.2.1",
+        "learning_objective": "FL-6.2.1",
+        "k_level": "K1",
+        "points": 1,
+        "image_url": null,
+        "image_description": null,
+        "tipo_pregunta": "eleccion_simple",
+        "respuestas_correctas": [
+            1
+        ],
+        "translations": {
+            "es": {
+                "pregunta": "¿Cuál de las siguientes opciones es la más probable que sea una ventaja de la automatización de pruebas?\n\nSeleccione UNA opción.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "Proporciona métricas de cobertura demasiado complejas para que las deriven los humanos."
+                    },
+                    {
+                        "id": 2,
+                        "texto": "Comparte la responsabilidad de las pruebas con el proveedor de la herramienta."
+                    },
+                    {
+                        "id": 3,
+                        "texto": "Elimina la necesidad de pensamiento crítico al analizar los resultados de las pruebas."
+                    },
+                    {
+                        "id": 4,
+                        "texto": "Genera casos de prueba a partir del análisis del código del programa."
+                    }
+                ],
+                "explicacion": "a) Correcto. La automatización de pruebas puede proporcionar métricas demasiado complejas para que las deriven los humanos, como las métricas de cobertura de pruebas de caja blanca para todo el código, excepto el más trivial.\nb) Incorrecto. Al usar herramientas de prueba, la responsabilidad de las pruebas NO se comparte con el proveedor de la herramienta, ya que este no participa en las pruebas, y recae en el evaluador. La única responsabilidad que podría atribuirse al proveedor de la herramienta es si esta no funciona como se espera y proporciona resultados de prueba incorrectos.\nc) Incorrecto. Los evaluadores aún necesitan aplicar el pensamiento crítico al analizar anomalías en los resultados de las pruebas para determinar su causa probable.\nd) Incorrecto. Ni los evaluadores ni las herramientas pueden generar casos de prueba simplemente a partir de un análisis del código del programa, ya que el código es la implementación y no proporciona información sobre los resultados esperados, que deberán provenir de otra parte de la base de pruebas, como la especificación de diseño."
+            },
+            "en": {
+                "pregunta": "Which of the following is MOST likely to be a benefit of test automation?\n\nSelect ONE option.",
+                "opciones": [
+                    {
+                        "id": 1,
+                        "texto": "It provides coverage measures that are too complicated for humans to derive"
+                    },
+                    {
+                        "id": 2,
+                        "texto": "It shares responsibility for the testing with the tool vendor"
+                    },
+                    {
+                        "id": 3,
+                        "texto": "It removes the need for critical thinking when analyzing test results"
+                    },
+                    {
+                        "id": 4,
+                        "texto": "It generates test cases from an analysis of the program code"
+                    }
+                ],
+                "explicacion": "a) Is correct. Test automation can provide measures that are too complicated for humans to derive, such as white-box test coverage measures for all but the most trivial code\nb) Is not correct. By using test tools the responsibility for the testing is NOT shared with the tool vendor as the vendor is not involved in the testing, and it is the tester’s responsibility. The only possible responsibility that could be assigned to the tool vendor is if the tool fails to work as expected and provides incorrect test results\nc) Is not correct. Testers still need to perform critical thinking when analyzing anomalies in the test results to determine their likely cause\nd) Is not correct. Neither testers nor tools can generate test cases simply from an analysis of the program code as the code is the implementation and provides no information on the expected results, which will need to come from another part of the test basis, such as the design specification"
+            }
+        }
     }
 ]

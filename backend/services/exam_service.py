@@ -49,12 +49,22 @@ def serialize_question(
         options
     )
 
+    images = translation.get(
+        "imagenes",
+        []
+    )
+
     return {
         "id": 
             question.id,
 
         "type":
             question.tipo_pregunta,
+
+        "correct_answers_count":
+            len(
+                question.respuestas_correctas
+            ),
 
         "k_level":
             question.k_level,
@@ -70,11 +80,8 @@ def serialize_question(
         "options": 
             shuffled_options,
 
-        "image_url": 
-            question.image_url,
-
-        "image_description":
-            question.image_description,
+        "images":
+            images,
 
         "chapter": 
             question.chapter,

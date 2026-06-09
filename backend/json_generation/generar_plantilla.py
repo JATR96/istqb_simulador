@@ -162,16 +162,6 @@ def generar_word():
                 f"{fila['respuestas_correctas']}"
             )
 
-            agregar_linea_verde(
-                doc,
-                "IMAGE_URL:"
-            )
-
-            agregar_linea_verde(
-                doc,
-                "IMAGE_DESCRIPTION:"
-            )
-
             agregar_linea_normal(
                 doc,
                 "[es]"
@@ -195,9 +185,18 @@ def generar_word():
 
             agregar_linea_roja(
                 doc,
+                "IMAGES:"
+            )
+
+            agregar_linea_normal(doc)
+            agregar_linea_normal(doc)
+
+            agregar_linea_roja(
+                doc,
                 "OPCIONES:"
             )
 
+            agregar_linea_normal(doc)
             agregar_linea_normal(doc)
             agregar_linea_normal(doc)
 
@@ -206,6 +205,7 @@ def generar_word():
                 "EXPLICACION:"
             )
 
+            agregar_linea_normal(doc)
             agregar_linea_normal(doc)
             agregar_linea_normal(doc)
 
@@ -239,9 +239,18 @@ def generar_word():
 
             agregar_linea_roja(
                 doc,
+                "IMAGES:"
+            )
+
+            agregar_linea_normal(doc)
+            agregar_linea_normal(doc)
+
+            agregar_linea_roja(
+                doc,
                 "OPTIONS:"
             )
 
+            agregar_linea_normal(doc)
             agregar_linea_normal(doc)
             agregar_linea_normal(doc)
 
@@ -250,6 +259,7 @@ def generar_word():
                 "EXPLANATION:"
             )
 
+            agregar_linea_normal(doc)
             agregar_linea_normal(doc)
             agregar_linea_normal(doc)
 

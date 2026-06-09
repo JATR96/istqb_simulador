@@ -6,8 +6,6 @@
         "learning_objective": "TAE-1.1.1",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             4
@@ -33,6 +31,7 @@
                         "texto": "La automatización de pruebas solo puede verificar resultados que se puedan comprobar mediante código."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecta. La automatización de pruebas puede realizarse antes y después de las pruebas del sistema.\nb) Incorrecta. Se refiere a una limitación inexistente.\nc) Incorrecta. La automatización de pruebas no se limita a comprobar solo los resultados que se pueden comprobar visualmente.\nd) Correcta. Como se indica en el programa: \"La automatización de pruebas solo puede comprobar los resultados de las pruebas que se pueden comprobar mediante un oráculo de pruebas automatizado\". Esta es una limitación y significa que los resultados de los scripts automatizados son verificados por la máquina programada para ello (código)."
             },
             "en": {
@@ -55,6 +54,7 @@
                         "texto": "Test automation can only check results that can be verified by code"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Test automation can be performed before and after system testing.\nb) Is not correct. It refers to non-existing limitation.\nc) Is not correct. Test automation is not limited to check only the results that can be verified visually.\nd) Is correct. As in syllabus: \"Test automation can only check test results that can be verified by an automated test oracle\". This is a limitation and means that results of the automated scripts are verified by the machine which is programmed to do so (code)."
             }
         }
@@ -66,8 +66,6 @@
         "learning_objective": "TAE-1.2.1",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             2
@@ -93,6 +91,7 @@
                         "texto": "En el modelo V, la implementación de la automatización de pruebas se realiza a lo largo de todo el ciclo de desarrollo de software."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) No es correcta. En el desarrollo ágil de software, el volumen de pruebas automatizadas de componentes es mayor que el de las pruebas automatizadas de aceptación.\nb) Es correcta. En el desarrollo ágil de software, el volumen de pruebas automatizadas de componentes es mayor que el de las pruebas automatizadas de aceptación.\nc) No es correcta. No existe tal regla en el modelo V.\nd) No es correcta. La planificación de pruebas del modelo V, incluida la planificación de la automatización de pruebas, se realiza en la fase inicial del ciclo de vida del desarrollo de software."
             },
             "en": {
@@ -115,6 +114,7 @@
                         "texto": "In the V-model implementation of test automation is performed throughout the whole software development cycle"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. In Agile software development, automated component tests are higher in volume compared to automated acceptance tests.\nb) Is correct. In Agile software development, automated component tests are higher in volume compared to automated acceptance tests.\nc) Is not correct. There is no such rule in the V-model.\nd) Is not correct. V-model test planning, including planning of test automation, is performed in the early phase of the software development lifecycle."
             }
         }
@@ -126,8 +126,6 @@
         "learning_objective": "TAE-1.2.2",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             4
@@ -153,6 +151,7 @@
                         "texto": "Calidad de los requisitos del SUT"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecta. Se debe considerar la arquitectura del SUT.\nb) Incorrecta. Es necesario evaluar la composición y experiencia del equipo de pruebas.\nc) Incorrecta. Es necesario conocer la licencia y el soporte de la herramienta.\nd) Correcta. La calidad de los requisitos del SUT no está directamente relacionada con la selección de la herramienta."
             },
             "en": {
@@ -175,6 +174,7 @@
                         "texto": "Quality of the SUT requirements"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. The SUT architecture should be considered.\nb) Is not correct. The actual composition and experience of the test team needs to be evaluated.\nc) Is not correct. It is necessary to have knowledge about the licensing and support of the tool.\nd) Is correct. The quality of the SUT requirements is not directly related to selecting the tool itself."
             }
         }
@@ -186,8 +186,6 @@
         "learning_objective": "TAE-2.1.1",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             2
@@ -213,6 +211,7 @@
                         "texto": "Interoperabilidad"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecta. Observabilidad significa obtener información sobre el sistema.\nb) Correcta. Consulte el Capítulo 2.1.1 del programa de estudios.\nc) Incorrecta. Mantenibilidad es una característica de calidad.\nd) Incorrecta. Interoperabilidad también es una característica de calidad."
             },
             "en": {
@@ -235,6 +234,7 @@
                         "texto": "Interoperability"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Observability means to give insight into the system.\nb) Is correct. See Chapter 2.1.1 of the syllabus.\nc) Is not correct. Maintainability is a quality characteristic.\nd) Is not correct. Interoperability is also a quality characteristic."
             }
         }
@@ -246,8 +246,6 @@
         "learning_objective": "TAE-2.1.2",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             2
@@ -273,6 +271,7 @@
                         "texto": "Pruebas de integración de componentes"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecta. Las pruebas de componentes se realizan en un entorno de compilación y desarrollo.\nb) Correcta. Es necesario realizar pruebas de eficiencia de rendimiento y pruebas de aceptación del usuario en un entorno de preproducción para probar escenarios reales.\nc) No es correcto. El análisis estático generalmente se realiza en el entorno de desarrollo.\nd) No es correcto. Las pruebas de integración de componentes se realizan en el entorno de desarrollo"
             },
             "en": {
@@ -295,6 +294,7 @@
                         "texto": "Component Integration testing"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Component testing is performed in a build and development environment.\nb) Is correct. It is necessary to perform performance efficiency testing and user acceptance testing in a preproduction environment to test real world scenarios.\nc) Is not correct. Static analysis is usually done at the development environment.\nd) Is not correct. Component integration testing is done at the development environment."
             }
         }
@@ -306,8 +306,6 @@
         "learning_objective": "TAE-2.1.2",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             4
@@ -333,6 +331,7 @@
                         "texto": "Entorno de integración/pruebas"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecta. Las pruebas en entornos de preproducción o ensayo se centran menos en los aspectos funcionales.\nb) Incorrecta. Un entorno de compilación no está preparado para una ejecución de pruebas más robusta.\nc) Incorrecta. Los conjuntos de pruebas funcionales completos no se suelen ejecutar en productos en producción.\nd) Correcta. Los conjuntos de pruebas robustos de interfaz de usuario (UI) e interfaz de programación de aplicaciones (API) se suelen ejecutar en sistemas totalmente integrados."
             },
             "en": {
@@ -355,6 +354,7 @@
                         "texto": "Integration/test environment"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Preproduction or staging environment testing has less focus on functional aspects.\nb) Is not correct. A build environment is not ready for more robust test execution.\nc) Is not correct. Full functional test suites are not typically executed against products in production.\nd) Is correct. Robust user interface (UI), and application programming interface (API) test suites are typically executed against fully integrated systems."
             }
         }
@@ -366,8 +366,6 @@
         "learning_objective": "TAE-2.2.1",
         "k_level": "K4",
         "points": 3,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_multiple",
         "respuestas_correctas": [
             1,
@@ -398,6 +396,7 @@
                         "texto": "¿Es importante que el enfoque de automatización de pruebas admita la aprobación de la aplicación en la tienda de aplicaciones móviles?"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Correcto. Las pruebas de componentes las realiza la empresa de TI desarrolladora.\nb) Incorrecto. No se realizan pruebas beta.\nc) Incorrecto. Las pruebas en la mayor cantidad posible de tipos de automóviles las realiza la empresa de TI integradora.\nd) Correcto. Las pruebas automatizadas de componentes son diseñadas y ejecutadas por los desarrolladores.\ne) No es correcto. No se implementó el enfoque de automatización de pruebas para respaldar la aprobación de la tienda de aplicaciones móviles."
             },
             "en": {
@@ -424,6 +423,7 @@
                         "texto": "Is it important for the test automation approach to support the mobile application store approval?"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is correct. Component testing is performed by the developing IT company.\nb) Is not correct. Beta testing is not performed.\nc) Is not correct. The testing of as many different types of cars as possible is performed by the integrator IT company.\nd) Is correct. Automated component tests are designed and executed by the developers.\ne) Is not correct. The test automation approach to support the mobile application store approval is not performed."
             }
         }
@@ -435,8 +435,6 @@
         "learning_objective": "TAE-2.2.2",
         "k_level": "K4",
         "points": 3,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             3
@@ -462,6 +460,7 @@
                         "texto": "Planificar la migración del SUT a otro entorno de hardware/software donde sea posible eliminar la sobrecarga de la herramienta."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecto. El entorno de prueba es válido según las notas de la versión.\nb) Incorrecto. El registro de pruebas es esencial para la resolución de problemas.\nc) Correcto. La herramienta no cumple con los requisitos de selección.\nd) Incorrecto. Es completamente erróneo migrar el SUT."
             },
             "en": {
@@ -484,6 +483,7 @@
                         "texto": "Plan to migrate the SUT to another hardware/software environment where there is a possibility for the elimination of the tool overhead"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. The test environment is valid according to the release notes.\nb) Is not correct. The test logging component is essential for troubleshooting.\nc) Is correct. The tool does not meet selection requirements.\nd) Is not correct. It is completely wrong to migrate the SUT"
             }
         }
@@ -495,8 +495,6 @@
         "learning_objective": "TAE-3.1.1",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             4
@@ -522,6 +520,7 @@
                         "texto": "1C, 2A, 3D, 4B"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "1-C. Generación de pruebas. Mapeo de casos de prueba abstractos a casos de prueba concretos aptos para su ejecución. Aquí es donde las herramientas de prueba basadas en modelos permiten el diseño automatizado de casos de prueba a partir de un modelo de prueba.\n2-A. Definición de pruebas. Implementación de casos de prueba y/o conjuntos de pruebas. Esta capa permite la definición e implementación de casos de prueba y/o conjuntos de pruebas.\n3-D. Ejecución de pruebas. Registro de pruebas con información detallada sobre los pasos y acciones de las pruebas. Esta capa proporciona una herramienta de ejecución de pruebas para ejecutar automáticamente las pruebas seleccionadas, así como un componente de registro e informes de pruebas.\n4-B. Adaptación de pruebas. Mecanismo para conectarse al sistema bajo prueba (SUT) mediante protocolos y servicios. Esta capa proporciona funcionalidades para adaptar las pruebas automatizadas a los distintos componentes o interfaces del SUT. Proporciona diferentes adaptadores para el mecanismo de integración.\n\na) 1D, 2A, 3C, 4B INCORRECTAS\nb) 1C, 2A, 3B, 4D INCORRECTAS\nc) 1A, 2B, 3D, 4C INCORRECTAS\nd) 1C, 2A, 3D, 4B CORRECTAS"
             },
             "en": {
@@ -544,6 +543,7 @@
                         "texto": "1C, 2A, 3D, 4B"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "1-C. Test Generation. mapping the abstract test cases to concrete test cases suitable for execution. This is where model based testing tools support the automated design of test cases based on a test model.\n\n2-A. Test Definition. Implementation of test cases and/or test suites. This layer supports the definition and implementation of test cases and/or test suites.\n\n3-D. Test Execution. Test logging with detailed information about the test steps and actions. This layer provides a test execution tool to run the selected tests automatically, and a test logging and test reporting component.\n\n4-B. Test Adaptation. Mechanism for connecting to the SUT via protocols, and services. This layer provides functionality to adapt the automated tests for the various components or interfaces of the SUT. It provides different adaptors for integration mechanism.\n\na) 1D, 2A, 3C, 4B INCORRECT\nb) 1C, 2A, 3B, 4D INCORRECT\nc) 1A, 2B, 3D, 4C INCORRECT\nd) 1C, 2A, 3D, 4B CORRECT"
             }
         }
@@ -555,8 +555,6 @@
         "learning_objective": "TAE-3.1.2",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             3
@@ -582,6 +580,7 @@
                         "texto": "El sistema bajo prueba (SUT) y la herramienta de gestión de pruebas NO eran compatibles."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecto. El problema se detectó en la implementación inicial y aún no se han introducido actualizaciones.\nb) Incorrecto. El método de integración utilizado no importa, ya sea mediante API u otro mecanismo.\nc) Correcto. Los adaptadores son necesarios para la traducción de los resultados de las pruebas.\nd) Incorrecto. La pregunta no menciona la incompatibilidad con la herramienta de gestión de pruebas."
             },
             "en": {
@@ -604,6 +603,7 @@
                         "texto": "The SUT and the test management tool were NOT compatible."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. The problem was found in the initial implementation and no updates were introduced yet.\nb) Is not correct. The integration method used does not matter whether it is via APIs or other mechanism.\nc) Is correct. The adaptors are necessary for the translation of the test results.\nd) Is not correct. The question does not mention test management tool incompatibility."
             }
         }
@@ -615,8 +615,6 @@
         "learning_objective": "TAE-3.1.3",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             4
@@ -642,6 +640,7 @@
                         "texto": "Capa de lógica de negocio"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecta. Las bibliotecas principales deben ser independientes de la aplicación y genéricas.\nb) Incorrecta. Los scripts de prueba solo deben contener scripts de prueba y ninguna configuración.\nc) Incorrecta. Los archivos de características contienen escenarios escritos en el lenguaje Gherkin.\nd) Correcta. La capa de lógica de negocio se utiliza para configurar el TAF para que se ejecute en el SUT."
             },
             "en": {
@@ -664,6 +663,7 @@
                         "texto": "Business logic layer"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Core libraries should be application independent and generic.\nb) Is not correct. Test scripts should only contain test scripts and no configuration.\nc) Is not correct. Feature files contain scenarios written in the Gherkin language.\nd) Is correct. The business logic layer is used to set up the TAF to run against the SUT."
             }
         }
@@ -675,8 +675,6 @@
         "learning_objective": "TAE-3.1.4",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             3
@@ -702,6 +700,7 @@
                         "texto": "Utilizando la técnica de automatización de pruebas basada en datos"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) No es correcta. Las pruebas basadas en palabras clave son demasiado complejas para esta solución.\nb) No es correcta. El desarrollo basado en el comportamiento es demasiado complejo y no es necesario.\nc) Es correcta. La automatización de pruebas de captura/reproducción es fácil de configurar.\nd) No es correcta. La automatización de pruebas basada en datos es demasiado compleja y no es necesaria."
             },
             "en": {
@@ -724,6 +723,7 @@
                         "texto": "Using the data-driven test automation technique"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Keyword-driven testing is too complex for this solution.\nb) Is not correct. Behavior-driven development is too complex and is not necessary.\nc) Is correct. Capture/playback test automation is easy to set up.\nd) Is not correct. Data-driven test automation is too complex and is not necessary."
             }
         }
@@ -735,8 +735,6 @@
         "learning_objective": "TAE-3.1.4",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             1
@@ -762,6 +760,7 @@
                         "texto": "Desarrollo basado en pruebas de aceptación"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Correcta. Los datos de prueba ya están disponibles y se pueden reutilizar para aumentar el número de casos de prueba.\nb) Incorrecta. El desarrollo basado en el comportamiento requiere la participación de representantes del negocio, y en este caso, no se menciona específicamente si el negocio está involucrado.\nc) Incorrecta. La captura/reproducción sería una solución lenta y costosa, mientras que los datos de prueba ya están disponibles.\nd) No es correcto. El desarrollo guiado por pruebas de aceptación no es un enfoque de automatización."
             },
             "en": {
@@ -784,6 +783,7 @@
                         "texto": "Acceptance test-driven development"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is correct. The test data is already available and can be reused to increase the test case count.\nb) Is not correct. Behavior-driven development requires involvement from business representatives, and in this case, there is no specific mention whether the business is involved.\nc) Is not correct. Capture/playback would be a slow and costly solution, while the test data is already present.\nd) Is not correct. Acceptance test-driven development is not an automation approach."
             }
         }
@@ -795,8 +795,6 @@
         "learning_objective": "TAE-3.1.5",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             2
@@ -822,6 +820,7 @@
                         "texto": "Implementar el patrón de diseño Singleton y crear un único fragmento de código para gestionar la localización de los elementos."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecto. Almacenar las acciones del usuario en los archivos de clase del modelo de página dificulta la reutilización y el mantenimiento de flujos de usuario complejos.\nb) Correcto. El patrón de modelo de flujo combina el uso de modelos de página y modelos de flujo, almacenando la estructura y la lógica de la aplicación en archivos de clase con diferentes propósitos, y se suele utilizar cuando la estructura del sistema bajo prueba cambia con frecuencia.\nc) Incorrecto. Las fachadas proporcionan una interfaz simplificada para un bloque de código más extenso.\nd) Incorrecto. El patrón de diseño Singleton no resuelve el problema en este caso."
             },
             "en": {
@@ -844,6 +843,7 @@
                         "texto": "Implement the singleton design pattern and create a single piece of code to handle the locating of elements"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Storing the user actions in the page model class files will not allow easy reuse and maintainability of complex user flows.\nb) Is correct. The flow model pattern combines usage of page models and flow models, storing the structure and logic of the application in class files with different purposes, and is typically used when the SUT’s structure changes frequently.\nc) Is not correct. Facades provide a simplified interface to a larger body of code.\nd) Is not correct. The singleton design pattern does not solve the problem in this case."
             }
         }
@@ -855,8 +855,6 @@
         "learning_objective": "TAE-4.1.1",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             4
@@ -882,6 +880,7 @@
                         "texto": "iv y v son objetivos válidos del proyecto piloto."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) No es correcta. i, ii y iii no son objetivos válidos del proyecto piloto.\nb) Incorrecto. ii no es un objetivo válido del proyecto piloto.\nc) Incorrecto. i y ii no son objetivos válidos del proyecto piloto.\nd) Correcto. iv y v son objetivos válidos del proyecto piloto."
             },
             "en": {
@@ -904,6 +903,7 @@
                         "texto": "iv and v are valid objectives of the pilot Project"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. i, ii and iii are not valid objectives of the pilot project.\nb) Is not correct. ii is not a valid objective of the pilot project.\nc) Is not correct. i and ii are not valid objectives of the pilot project.\nd) Is correct. iv and v are valid objectives of the pilot project."
             }
         }
@@ -915,8 +915,6 @@
         "learning_objective": "TAE-4.2.1",
         "k_level": "K4",
         "points": 3,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             1
@@ -942,6 +940,7 @@
                         "texto": "1-D, 2-B, 3-C, 4-A"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) 1-B: La integración de la automatización de pruebas en el pipeline de CI/CD garantiza que la ejecución de las pruebas se active con la compilación. \nb) 2-D: Los entornos y dispositivos de prueba permiten una ejecución de pruebas más flexible, sin limitarse a la ejecución de suites completas.\nc) 3-C: Las herramientas de terceros pueden ayudar a generar datos de prueba cuando no están disponibles.\nd) 4-A: El registro detallado durante la ejecución de las pruebas facilita la resolución de problemas en caso de fallos.\n\nLa respuesta correcta es a)\n\na) La respuesta correcta es a)"
             },
             "en": {
@@ -964,6 +963,7 @@
                         "texto": "1-D, 2-B, 3-C, 4-A"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) 1-B: Integrating test automation into the CI/CD pipeline ensures test execution is triggered by the build.\nb) 2-D: Test harnesses and fixtures allow for more flexible test execution, not limited to full suite runs.\nc) 3-C: Third-party tools can help generate test data when it's not readily available.\nd) 4-A: Detailed logging during test execution aids in troubleshooting failed tests.\n\nCorrect answer is a)\n\na) Correct answer is a)"
             }
         }
@@ -975,8 +975,6 @@
         "learning_objective": "TAE-4.3.1",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             3
@@ -1002,6 +1000,7 @@
                         "texto": "Codificar valores directamente en el código para comprender fácilmente su significado."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) No es correcta. Esta respuesta no mejora la mantenibilidad del código.\nb) No es correcta. Nombrar de forma única las variables del código no mejora la mantenibilidad del código.\nc) Es correcta. El uso de analizadores estáticos mejora la mantenibilidad del código.\nd) No es correcto. Codificar valores directamente en el código no mejora la mantenibilidad del código."
             },
             "en": {
@@ -1024,6 +1023,7 @@
                         "texto": "Hardcode values to easily understand their meaning"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. This answer does not improve code maintainability.\nb) Is not correct. Uniquely naming code variables does not improve code maintainability.\nc) Is correct. Using static analyzers improves code maintainability.\nd) Is not correct. Hard coding values does not improve code maintainability."
             }
         }
@@ -1035,8 +1035,6 @@
         "learning_objective": "TAE-4.3.1",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             3
@@ -1062,6 +1060,7 @@
                         "texto": "Reescribir periódicamente los scripts de prueba desde cero en lugar de reutilizar componentes existentes."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) No es correcto. Almacenar el código fuera de un sistema de control de versiones dificulta que los ingenieros de automatización de pruebas (TAE) gestionen, realicen un seguimiento y colaboren eficazmente en el código.\nb) No es correcto. No se recomienda codificar datos directamente en los scripts de prueba, ya que los vuelve inflexibles y difíciles de mantener cuando se requieren cambios.\nc) Es correcto. Estructurar el código de automatización de pruebas mediante patrones de diseño mejora la reutilización y la escalabilidad, reduciendo el tiempo necesario para el mantenimiento.\nd) No es correcto. Reescribir regularmente los scripts de prueba desde cero es ineficiente y genera trabajo innecesario. Reutilizar componentes existentes es más eficaz para reducir el tiempo de mantenimiento."
             },
             "en": {
@@ -1084,6 +1083,7 @@
                         "texto": "Regularly rewrite test scripts from scratch instead of reusing existing components"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Storing the code outside of a version control system makes it more difficult for test automation engineers (TAEs) to manage, track, and collaborate on code effectively.\nb) Is not correct. Hardcoding data in test scripts is not recommended, as it makes the scripts inflexible and difficult to maintain when changes are required.\nc) Is correct. Structuring the test automation code using design patterns improves reusability and scalability, reducing the time needed for maintenance.\nd) Is not correct. Regularly rewriting test scripts from scratch is inefficient and leads to unnecessary work. Reusing existing components is more effective in reducing maintenance time."
             }
         }
@@ -1095,8 +1095,6 @@
         "learning_objective": "TAE-5.1.1",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_multiple",
         "respuestas_correctas": [
             1,
@@ -1127,6 +1125,7 @@
                         "texto": "Empaquetar y desplegar la aplicación como parte del proceso de despliegue."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Correcta. Las pruebas de regresión son necesarias y pueden incorporarse a la canalización de CI/CD.\nb) Incorrecta. Ejecutar una compilación no es una tarea de automatización de pruebas.\nc) Incorrecta. El análisis estático de código no es una tarea de automatización de pruebas.\nd) Correcto. Las pruebas de eficiencia de rendimiento se pueden automatizar.\ne) Incorrecto. El empaquetado y la implementación no son tareas de automatización de pruebas."
             },
             "en": {
@@ -1153,6 +1152,7 @@
                         "texto": "Package and deploy the application as part of the deployment pase"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is correct. Regression testing is necessary, and it can be incorporated into the CI/CD pipeline.\nb) Is not correct. Executing a build is not a test automation task.\nc) Is not correct. Static code analysis is not a test automation task.\nd) Is correct. Performance efficiency tests can be automated.\ne) Is not correct. Packaging and deployment are not test automation tasks."
             }
         }
@@ -1164,8 +1164,6 @@
         "learning_objective": "TAE-5.1.1",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             3
@@ -1191,6 +1189,7 @@
                         "texto": "No se recomiendan las canalizaciones para las pruebas de regresión debido al amplio alcance y tamaño de estas pruebas."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecto. Las pruebas se ejecutan durante la implementación.\nb) Incorrecto. Las pruebas se activan para ejecutarse después de una implementación exitosa.\nc) Correcto. Esta afirmación es incorrecta, ya que las pruebas no actúan como controles de calidad para la implementación.\nd) Incorrecto. Las canalizaciones son una excelente solución para pruebas periódicas, como las pruebas de regresión, y el tamaño de estas pruebas no afecta su efectividad."
             },
             "en": {
@@ -1213,6 +1212,7 @@
                         "texto": "Pipelines are not recommended for regression testing due to the extensive scope and size of these tests"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Tests are executed during deployment.\nb) Is not correct. Tests are triggered to execute after successful deployment.\nc) Is correct. It is not a correct statement since tests do not act as quality gates for deployment.\nd) Is not correct. Pipelines are an excellent solution for periodic testing, such as regression tests, and the size of these tests does not impact their effectiveness."
             }
         }
@@ -1224,8 +1224,6 @@
         "learning_objective": "TAE-5.1.2",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             1
@@ -1251,6 +1249,7 @@
                         "texto": "Los resultados de la automatización de pruebas se pueden analizar fácilmente."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Correcta. Los datos de prueba y las configuraciones del entorno de prueba se pueden gestionar mediante la configuración.\nb) Incorrecta. La configuración del SUT se puede gestionar mediante la configuración, pero no está relacionada con la automatización de pruebas.\nc) Incorrecta. La gestión de los derechos de usuario no está relacionada con la gestión de la configuración.\nd) Incorrecta. La gestión de la configuración no admite el análisis de los resultados de la automatización de pruebas."
             },
             "en": {
@@ -1273,6 +1272,7 @@
                         "texto": "Test automation results can easily be analyzed"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is correct. Test data and test environment configurations can be under configuration management.\nb) Is not correct. The SUT configuration can be under configuration management, but it is not related to test automation.\nc) Is not correct. User rights management is not related to configuration management.\nd) Is not correct. Configuration management does not support test automation results analysis."
             }
         }
@@ -1284,8 +1284,6 @@
         "learning_objective": "TAE-5.1.2",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             4
@@ -1311,6 +1309,7 @@
                         "texto": "Biblioteca principal común"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecto. Las URL forman parte de la configuración del entorno de prueba.\nb) Incorrecto. Las credenciales forman parte de la configuración del entorno de prueba.\nc) Incorrecto. Los datos de prueba forman parte de la configuración del entorno de prueba.\nd) Correcto. La configuración del entorno de prueba forma parte de la biblioteca principal común, no al revés."
             },
             "en": {
@@ -1333,6 +1332,7 @@
                         "texto": "Common core library"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. URLs are part of the test environment configuration.\nb) Is not correct. Credentials are part of the test environment configuration.\nc) Is not correct. Test data is part of the test environment configuration.\nd) Is correct. The test environment configuration is a part of the common core library, not vice versa."
             }
         }
@@ -1344,8 +1344,6 @@
         "learning_objective": "TAE-5.1.3",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             4
@@ -1371,6 +1369,7 @@
                         "texto": "Verifica si un sistema cumple con sus requisitos contractuales."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecto. Las pruebas de contrato garantizan que las API cumplan con los acuerdos de comunicación predefinidos, lo que ayuda a gestionar las dependencias entre API.\nb) Incorrecto. Las pruebas de contrato pueden utilizarse para probar la comunicación entre microservicios.\nc) Incorrecto. Las pruebas de contrato pueden validar la compatibilidad de dos sistemas independientes.\nd) Correcto. Las pruebas de contrato no tienen relación con los requisitos contractuales."
             },
             "en": {
@@ -1393,6 +1392,7 @@
                         "texto": "Verifies whether a system satisfies its contractual requirements"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Contract testing ensures APIs follow predefined communication agreements, helping manage API dependencies.\nb) Is not correct. Contract testing can be used to test communication between microservices.\nc) Is not correct. Contract testing can validate the compatibility of two separate systems.\nd) Is correct. Contract testing has no relation to the contractual requirements."
             }
         }
@@ -1404,8 +1404,6 @@
         "learning_objective": "TAE-5.1.3",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             2
@@ -1431,6 +1429,7 @@
                         "texto": "i"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecta. Las notas de la versión no ayudan a comprender las conexiones y los detalles de la API.\nb) Correcta: la especificación de la API proporciona detalles sobre los puntos finales, y el diagrama de arquitectura del sistema muestra las relaciones entre los diferentes componentes.\nc) Incorrecta: la estrategia de pruebas y las notas de la versión no proporcionan información específica sobre las dependencias de la API necesarias para crear una SAP.\nd) Incorrecta: la especificación de la API por sí sola no es suficiente; El diagrama de arquitectura del sistema también es necesario para comprender las relaciones entre los diferentes servicios."
             },
             "en": {
@@ -1453,6 +1452,7 @@
                         "texto": "i"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Release notes do not help to learn the API connections and details.\nb) Is correct - API specification provides details about endpoints, and the system architecture diagram shows the relationships between different components.\nc) Is not correct - The test strategy and release notes don't provide specific information about API dependencies needed for building a TAS.\nd) Is not correct - The API specification alone is not sufficient; the system architecture diagram is also needed to understand the relationships between different services."
             }
         }
@@ -1464,8 +1464,6 @@
         "learning_objective": "TAE-6.1.1",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_multiple",
         "respuestas_correctas": [
             1,
@@ -1496,6 +1494,7 @@
                         "texto": "Las capturas de pantalla se tomaron en baja resolución, lo que provoca que los detalles se vean borrosos, haciendo que la comparación no sea fiable."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Es correcta. Los ID de sesión cambian con cada sesión, lo que provoca diferencias en las capturas de pantalla incluso cuando el contenido parece el mismo.\nb) No es correcta. El orden no es relevante, ya que todas las capturas de pantalla fallan, lo que no ocurriría si solo el orden fuera el problema.\nc) No es correcta. Esto no explica por qué todas las comparaciones fallan cuando el contenido parece sin cambios.\nd) Es correcta. Los elementos dinámicos como las fechas en la interfaz gráfica pueden causar falsos negativos y deberían excluirse de las comparaciones.\ne) No es correcta. Es poco probable que los cambios de zoom del navegador provoquen todos los fallos si el contenido se ve idéntico al ojo humano."
             },
             "en": {
@@ -1522,6 +1521,7 @@
                         "texto": "Screenshots were captured in low resolution, causing details to be blurred, making the comparison unreliable."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is correct. Session IDs change with each session, causing screenshot differences even when content looks the same.\nb) Is not correct. Order isn’t relevant, as all screenshots fail, which wouldn’t happen if only order was the issue.\nc) Is not correct. This doesn’t explain why all comparisons fail when content appears unchanged.\nd) Is correct. Dynamic elements like dates in GUI can cause false negatives and should be excluded from comparisons.\ne) Is not correct. Browser zoom changes are unlikely to cause all failures if content appears identical to the human eye."
             }
         }
@@ -1533,8 +1533,6 @@
         "learning_objective": "TAE-6.1.1",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             2
@@ -1560,6 +1558,7 @@
                         "texto": "En caso de fallos de aserción, se debe registrar información relevante, como los resultados reales frente a los esperados, en lugar de rastreos de pila."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecto. Las marcas de tiempo pueden ayudar a identificar cuándo se producen problemas y si están relacionados con una interrupción del servicio heredado que afecta la funcionalidad del sistema bajo prueba (SUT).\nb) Correcto. El SUT es un servicio web sin interfaz de usuario, por lo que las capturas de pantalla son irrelevantes. Registrar los datos de solicitud y respuesta es más útil para analizar las interacciones del servicio web.\nc) Incorrecto. Los valores generados aleatoriamente no serán visibles para su posterior análisis.\nd) Incorrecto. Los mensajes de aserción específicos pueden facilitar la investigación de los fallos."
             },
             "en": {
@@ -1582,6 +1581,7 @@
                         "texto": "In case of assertion failures meaningful information like actual results versus expected results should be logged instead of stack traces"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. The timestamps can help see when there are problems and if they are connected to a legacy service outage that affects the functionality of the SUT.\nb) Is correct. The SUT is a web service without a UI, so screenshots are irrelevant. Logging request and response data is more useful for analyzing web service interactions.\nc) Is not correct. The randomly generated values will not be visible for later investigation.\nd) Is not correct. Focused assertion messages can aid the investigation of the failures."
             }
         }
@@ -1593,8 +1593,6 @@
         "learning_objective": "TAE-6.1.2",
         "k_level": "K4",
         "points": 3,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             3
@@ -1620,6 +1618,7 @@
                         "texto": "Se deben insertar herramientas de terceros en las diferentes capas de la arquitectura y estos agentes deben registrar los datos recopilados en una base de datos."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) No es correcta. La recopilación manual de datos consume demasiado tiempo y es propensa a errores; la automatización es esencial.\nb) Incorrecto. Esto no explica cómo se pueden correlacionar los datos entre diferentes componentes.\nc) Correcto. El ID de traza es la forma adecuada de asociar los datos de rendimiento entre los diferentes componentes arquitectónicos, lo que permite un análisis de rendimiento de todo el sistema.\nd) Incorrecto. Las herramientas de terceros pueden recopilar datos, pero no proporcionan la correlación necesaria para un análisis completo."
             },
             "en": {
@@ -1642,6 +1641,7 @@
                         "texto": "Third-party tools should be inserted into the different layers of the architecture and these agents should log the collected data into a database"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Manual data collection is too time-consuming and errorprone; automation is essential.\nb) Is not correct. This doesn’t explain how data can be correlated across different components.\nc) Is correct. Trace ID is the appropriate way to associate the performance data across the different architectural components, enabling systemwide performance analysis.\nd) Is not correct. Third-party tools can collect data but don’t provide necessary correlation for complete analysis."
             }
         }
@@ -1653,8 +1653,6 @@
         "learning_objective": "TAE-6.1.3",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             4
@@ -1680,6 +1678,7 @@
                         "texto": "Implementar una función de análisis que compare los resultados de pruebas anteriores y destaque las tendencias."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecto. La comparación de los resultados de la prueba con los resultados esperados solo nos proporciona la tasa de aprobación/rechazo para una única ejecución de la prueba.\nb) Incorrecto. Los semáforos solo muestran el resumen del progreso de la ejecución y finalización de los casos de prueba dentro de un único ciclo de ejecución.\nc) Incorrecto. Los informes detallados con porcentajes de finalización de las pruebas solo muestran el resultado de la ejecución y finalización de los casos de prueba dentro de un único ciclo de ejecución.\nd) Correcto. Esta es la implementación correcta, mediante la cual la función de análisis puede comparar la tasa de aprobación de ciclos de ejecución de pruebas anteriores con la más reciente y representarla en un análisis de tendencias."
             },
             "en": {
@@ -1702,6 +1701,7 @@
                         "texto": "Implement an analysis feature that compares previous test results and highlights trends"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. The comparison of the test results and the expected results only gives us the pass/fail rate for one test run only.\nb) Is not correct. The traffic lights are only for showing the summary of progress of test cases execution and completion within one test run cycle only.\nc) Is not correct. Detailed reports with Percentages of test completion are only for showing the outcome of test cases execution and completion within one test run cycle only.\nd) Is correct. This is the correct implementation whereby the analysis feature is able to compare pass rate of previous test run cycles and compare with latest and plot in a trend analysis display"
             }
         }
@@ -1713,8 +1713,6 @@
         "learning_objective": "TAE-7.1.1",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             1
@@ -1740,6 +1738,7 @@
                         "texto": "Utilizar la gestión de la configuración para verificar la coherencia de los datos y scripts de prueba en diferentes entornos."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Correcta: Esta opción se centra en verificar que todos los evaluadores puedan acceder y utilizar la misma versión de la herramienta de captura/reproducción, lo cual es crucial para garantizar la coherencia en el entorno de automatización de pruebas.\nb) Incorrecta: Si bien documentar los procedimientos de instalación es importante, no se trata específicamente de verificar el entorno de automatización de pruebas.\nc) Incorrecta: Este enfoque no aborda la necesidad de diferentes entornos, como se especifica en el escenario.\nd) Incorrecta: Si bien la gestión de la configuración es importante, esta opción no aborda específicamente la verificación del entorno de automatización de pruebas."
             },
             "en": {
@@ -1762,6 +1761,7 @@
                         "texto": "Use configuration management to verify the consistency of test data and scripts across different environments"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Correct - This option focuses on verifying that all testers can access and use the same version of the capture/playback tool, which is crucial for ensuring consistency in the test automation environment.\nb) Incorrect - While documenting installation procedures is important, it's not specifically about verifying the test automation environment.\nc) Incorrect - This approach doesn't address the need for different environments as specified in the scenario.\nd) Incorrect - While configuration management is important, this option doesn't specifically address verifying the test automation environment."
             }
         }
@@ -1773,8 +1773,6 @@
         "learning_objective": "TAE-7.1.1",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_multiple",
         "respuestas_correctas": [
             1,
@@ -1805,6 +1803,7 @@
                         "texto": "Debido a limitaciones de tiempo, omitir la implementación de pruebas de componentes para el TAS."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Correcto. Los scripts de instalación y configuración automatizados garantizan la coherencia y la repetibilidad durante la configuración del TAS.\nb) Incorrecto. El TAS debe diseñarse para ser portátil en múltiples entornos de prueba.\nc) Correcto. Los repositorios pueden utilizarse para verificar versiones consistentes del TAS en todos los entornos de prueba.\nd) Incorrecto. Las pruebas manuales no son una solución escalable.\ne) Incorrecto. Al omitir las pruebas de componentes, podrían pasar desapercibidos posibles problemas."
             },
             "en": {
@@ -1831,6 +1830,7 @@
                         "texto": "Due to time constraints skip the implementation of components tests for the TAS"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is correct. Automated installation and configuration scripts ensure consistency and repeatability during TAS setup.\nb) Is not correct. The TAS should be designed for portability in multiple test environments.\nc) Is correct. Repositories can be used to verify consistent TAS versions across all test environments.\nd) Is not correct. Manual testing is not a scalable solution.\ne) Is not correct. By omitting component tests, potential issues could go undetected"
             }
         }
@@ -1842,8 +1842,6 @@
         "learning_objective": "TAE-7.1.2",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             3
@@ -1869,6 +1867,7 @@
                         "texto": "Esto ocurre porque varios scripts de prueba utilizan los mismos datos de prueba; por lo tanto, la separación de los datos de prueba para cada script resolvería el problema."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecta. El problema debe analizarse detenidamente, ya que aún se desconoce la causa raíz.\nb) Incorrecta. Esta respuesta no sugiere ninguna solución.\nc) Correcta. Esta debería ser la primera tarea en este caso.\nd) No es correcto. El problema debe analizarse detenidamente, ya que aún se desconoce la causa raíz."
             },
             "en": {
@@ -1891,6 +1890,7 @@
                         "texto": "This happens because several test scripts are using the same test data, so the separation of test data for each test script would resolve the problema"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. The issue should be analyzed closely since the root cause is not yet known.\nb) Is not correct. This answer does not suggest any solution.\nc) Is correct. This should be the first task in this case.\nd) Is not correct. The issue should be analyzed closely since the root cause is not yet known."
             }
         }
@@ -1902,8 +1902,6 @@
         "learning_objective": "TAE-7.1.2",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             3
@@ -1929,6 +1927,7 @@
                         "texto": "Reemplazar los dos casos de prueba por otros que se ejecuten correctamente de forma repetida, de modo que el conjunto de pruebas siga teniendo 25 casos de prueba automatizados."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) No es correcta. El objetivo es tener pruebas repetibles que proporcionen resultados consistentes.\nb) No es correcta. Eliminar la cobertura no es una buena respuesta a la situación.\nc) Correcto. Esto permite que el conjunto de pruebas siga utilizándose para obtener resultados repetibles, a la vez que proporciona tiempo para priorizar los casos de prueba problemáticos. Se volverán a añadir al conjunto de pruebas una vez corregidos.\nd) Incorrecto. Esto no resuelve los errores aleatorios que experimenta la aplicación."
             },
             "en": {
@@ -1951,6 +1950,7 @@
                         "texto": "Replace the two test cases with ones that pass repeatedly so that the test suite still has 25 automated test cases"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. The goal is to have repeatable tests that give consistent test results.\nb) Is not correct. Eliminating coverage is not a good response to the situation.\nc) Is correct. This allows the test suite to continue to be used for repeatable test results while providing time to triage problem test cases. They will be re-added to the test suite once corrected.\nd) Is not correct. This does not address the random errors that the application is experiencing."
             }
         }
@@ -1962,8 +1962,6 @@
         "learning_objective": "TAE-7.1.3",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             1
@@ -1989,6 +1987,7 @@
                         "texto": "Esto es normal, ya que las pruebas automatizadas se comportan de manera diferente a las pruebas manuales."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Correcto. El análisis de los archivos de registro puede identificar la causa raíz del problema.\nb) Incorrecto. Este proceso no ayudará a resolver el problema original.\nc) Incorrecto. Estas pruebas no indican directamente un problema en el SUT; primero deben analizarse.\nd) Incorrecto. La afirmación es falsa."
             },
             "en": {
@@ -2011,6 +2010,7 @@
                         "texto": "This is normal because automated tests behave differently than manual tests"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is correct. Log file analysis can identify the root cause of the problem.\nb) Is not correct. This process will not help solve the original issue.\nc) Is not correct. These tests do not directly indicate a problem in the SUT; they should be analyzed first.\nd) Is not correct. The statement is false."
             }
         }
@@ -2022,8 +2022,6 @@
         "learning_objective": "TAE-7.1.4",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             4
@@ -2049,6 +2047,7 @@
                         "texto": "Utilizar una herramienta de análisis estático para identificar vulnerabilidades de seguridad."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecto. Los registros de prueba pueden no contener datos de credenciales presentes en el código de automatización.\nb) Incorrecto. No tiene sentido eliminar casos de prueba, ya que esto afectará la cobertura del código.\nc) Incorrecto. Una ejecución de pruebas más lenta no necesariamente revela vulnerabilidades de seguridad.\nd) Correcto. Las herramientas de análisis estático permiten identificar vulnerabilidades de seguridad."
             },
             "en": {
@@ -2071,6 +2070,7 @@
                         "texto": "Use a static analysis tool to identify security vulnerabilities"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Test logs may not contain credential data present in the automation code.\nb) Is not correct. It does not make sense to eliminate test cases as it will affect code coverage.\nc) Is not correct. Slower test execution does not necessarily reveal security vulnerabilities.\nd) Is correct. Static analysis tools support identification of security vulnerabilities."
             }
         }
@@ -2082,8 +2082,6 @@
         "learning_objective": "TAE-8.1.1",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             4
@@ -2109,6 +2107,7 @@
                         "texto": "Utilizar un algoritmo de inteligencia artificial (IA), basado en aprendizaje automático y reconocimiento de imágenes, para identificar los nuevos selectores y aplicar la autorreparación para corregir los casos de prueba."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Incorrecto. La validación de esquema se puede aplicar en las pruebas de API, no en las de GUI.\nb) Incorrecto. Este es un proceso manual y lento.\nc) Incorrecto. Un histograma de pruebas permite identificar casos de prueba vulnerables, pero no resuelve el problema subyacente.\nd) Correcto. El uso de un algoritmo basado en IA facilita la identificación de localizadores defectuosos y la autorreparación de los casos de prueba."
             },
             "en": {
@@ -2131,6 +2130,7 @@
                         "texto": "Use an artificial intelligence (AI) algorithm - which is based on machine learning and image recognition - to identify the new selectors and use self-healing to fix the test cases"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Schema validation can be applied in API testing, not GUI testing.\nb) Is not correct. This is a manual and slow process.\nc) Is not correct. A test histogram enables identification of fragile test cases, but it does not solve the underlying problem.\nd) Is correct. Using an AI based algorithm supports identification of broken locators and self-healing of the test cases."
             }
         }
@@ -2142,8 +2142,6 @@
         "learning_objective": "TAE-8.1.1",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             2
@@ -2169,6 +2167,7 @@
                         "texto": "Evitar automatizar ciertos casos de prueba tras analizar los registros de excepciones, las capturas de pantalla y los mensajes de error."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) No es correcto. Analizar histogramas de pruebas para 1000 casos de prueba consumirá mucho tiempo. Además, podemos anticipar el impacto en los casos de prueba sin generar datos de histograma.\nb) Es correcto. Se pueden utilizar algoritmos de IA para corregir automáticamente los casos de prueba ante cambios en los valores de los localizadores de la interfaz de usuario, y herramientas de validación de esquemas para evaluar rápidamente las actualizaciones del esquema de la API.\nc) No es correcto. Recrear el 75 % del entorno de pruebas no es factible cuando existen otras opciones.\nd) No es correcto. Si bien los registros, las capturas de pantalla y los mensajes de error son fuentes de datos válidas para la verificación, eliminar los casos de prueba no es una estrategia viable."
             },
             "en": {
@@ -2191,6 +2190,7 @@
                         "texto": "Avoid automating certain test cases after analyzing exception logs, screenshots, and error messages"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Analyzing test histograms for 1000 test cases will be time consuming. Plus, we can already anticipate the impact on test cases without generating histogram data.\nb) Is correct. AI algorithms can be used to self-heal the test cases against UI locator value changes, and schema validation tools can be used to quickly assess API schema updates.\nc) Is not correct. Recreating 75% of the test harness is not feasible when other options are available.\nd) Is not correct. Although logs, screenshots, and error messages are valid data sources to verify, eliminating test cases is not a viable strategy."
             }
         }
@@ -2202,8 +2202,6 @@
         "learning_objective": "TAE-8.1.2",
         "k_level": "K4",
         "points": 3,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_multiple",
         "respuestas_correctas": [
             1,
@@ -2234,6 +2232,7 @@
                         "texto": "Eliminar las pruebas duplicadas del conjunto de pruebas."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Es correcta. Dividir el conjunto de pruebas ayuda a garantizar que la ejecución de las pruebas finalice durante la noche.\nb) No es correcta. La verificación de los resultados de las pruebas no puede aislarse del proceso de ejecución de las mismas.\nc) No es correcto. No se afirma de forma general que la técnica basada en palabras clave se ejecute más rápido.\nd) No es correcto. Reduciría el alcance a una regresión de alto nivel, lo que, a largo plazo, podría provocar que los defectos se propaguen a producción.\ne) Es correcto. Eliminar duplicados puede reducir el tiempo de ejecución de las pruebas."
             },
             "en": {
@@ -2260,6 +2259,7 @@
                         "texto": "Remove any duplicate tests from the test suite"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is correct. Splitting up the test suite helps to ensure that the test execution is finished overnight.\nb) Is not correct. Test result verification cannot be isolated from the test execution process.\nc) Is not correct. It is not stated generally that the keyword-driven technique executes faster.\nd) Is not correct. It would reduce the scope to a high-level regression, which in the long term, could potentially result in defects propagating into production.\ne) Is correct. Removing duplications can reduce test execution time."
             }
         }
@@ -2271,8 +2271,6 @@
         "learning_objective": "TAE-8.1.2",
         "k_level": "K4",
         "points": 3,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             2
@@ -2298,6 +2296,7 @@
                         "texto": "Determinar el impacto; actualizar las dependencias; crear un plan de adopción; realizar una prueba piloto."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) No es correcto. El plan de adopción debe elaborarse una vez determinado el impacto.\nb) Correcto. Este es el orden correcto de las actividades.\nc) Incorrecto. La actualización de las dependencias debe realizarse después de la creación del plan de adopción.\nd) Incorrecto. La determinación del impacto debe realizarse después de llevar a cabo una prueba piloto."
             },
             "en": {
@@ -2320,6 +2319,7 @@
                         "texto": "Determine impact; update dependencies; create adoption plan; perform pilot"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. The adoption plan needs to occur after impact is determined.\nb) Is correct. This is the correct order of the activities.\nc) Is not correct. Updating of dependencies needs to occur after the creation of the adoption plan.\nd) Is not correct. Determining impact needs to occur after performing a pilot."
             }
         }
@@ -2331,8 +2331,6 @@
         "learning_objective": "TAE-8.1.3",
         "k_level": "K3",
         "points": 2,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             3
@@ -2358,6 +2356,7 @@
                         "texto": "Utilizar las nuevas funciones del sistema operativo en los scripts de prueba para gestionar los controles de la GUI."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) No es correcta. La separación de las pruebas de los controles debe implementarse dentro de las bibliotecas principales. \nb) No es correcto. No representa una mejora directa.\nc) Es correcto. Consolidar los scripts de prueba en este caso sí representa una mejora.\nd) No es correcto. No representa una mejora directa."
             },
             "en": {
@@ -2380,6 +2379,7 @@
                         "texto": "Use the new operating system functions in the test scripts to handle the GUI controls"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is not correct. Separating the testing of controls should be implemented within the core libraries. \nb) Is not correct. It is not a direct improvement.\nc) Is correct. It is an improvement to consolidate test scripts in this case.\nd) Is not correct. It is not a direct improvement."
             }
         }
@@ -2391,8 +2391,6 @@
         "learning_objective": "TAE-8.1.4",
         "k_level": "K2",
         "points": 1,
-        "image_url": null,
-        "image_description": null,
         "tipo_pregunta": "eleccion_simple",
         "respuestas_correctas": [
             1
@@ -2418,6 +2416,7 @@
                         "texto": "Implementar un script de automatización de pruebas para anonimizar los datos de los clientes antes de utilizarlos en la prueba de rendimiento."
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Correcto. Ofrece una solución automatizada y rápida al problema.\nb) Incorrecto. No se trata de una solución de automatización de pruebas (TAS).\nc) Incorrecto. Utilizar directamente una base de datos de producción como fuente de datos de prueba conlleva un alto riesgo.\nd) Incorrecto. La anonimización de los datos de prueba es importante, pero está fuera del alcance de esta solución."
             },
             "en": {
@@ -2440,6 +2439,7 @@
                         "texto": "Implement a test automation script to anonymize customer data before using it during the performance test"
                     }
                 ],
+                "imagenes": [],
                 "explicacion": "a) Is correct. It offers an automated and quick solution to the problem.\nb) Is not correct. This is not a TAS.\nc) Is not correct. Using a production database directly as the source of the test data holds high risk.\nd) Is not correct. Anonymization of test data is important, but it is out of the scope of this solution."
             }
         }

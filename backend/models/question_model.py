@@ -97,20 +97,6 @@ class Question(Base):
     )
 
     # ==========================================
-    # IMAGEN
-    # ==========================================
-
-    image_url = Column(
-        String(500),
-        nullable=True
-    )
-
-    image_description = Column(
-        Text,
-        nullable=True
-    )
-
-    # ==========================================
     # TRADUCCIONES JSON
     # ==========================================
 

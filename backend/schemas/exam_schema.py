@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from typing import List
 from typing import Optional
+from pydantic import Field
 
 # ==========================================
 # REQUEST EXAMEN
@@ -25,18 +26,26 @@ class OptionResponse(BaseModel):
     texto: str
 
 # ==========================================
+# RESPUESTA IMAGEN
+# ==========================================
+
+class ImageResponse(BaseModel):
+    url: str
+    description: Optional[str] = None
+
+# ==========================================
 # RESPUESTA QUESTION
 # ==========================================
 
 class ExamQuestionResponse(BaseModel):
     id: int
     type: str
+    correct_answers_count: int
     k_level: str
     points: int
     question: str
     options: List[OptionResponse]
-    image_url: Optional[str] = None
-    image_description: Optional[str] = None
+    images: List[ImageResponse] = Field(default_factory=list)
     chapter: str
     section: str
     learning_objective: str

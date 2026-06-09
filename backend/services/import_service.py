@@ -51,6 +51,27 @@ def validate_translations(translations):
             "explicacion"
         ]
 
+        images = translation.get(
+            "imagenes",
+            []
+        )
+
+        if not isinstance(
+            images,
+            list
+        ):
+            raise ValueError(
+                f"imagenes debe ser una lista en idioma {language}"
+            )
+
+        for image in images:
+
+            if "url" not in image:
+
+                raise ValueError(
+                    f"La imagen del idioma {language} debe contener url"
+                )
+
         for field in required_fields:
 
             if field not in translation:
@@ -260,14 +281,6 @@ def import_questions(
             respuestas_correctas=question_data[
                 "respuestas_correctas"
             ],
-
-            image_url=question_data.get(
-                "image_url"
-            ),
-
-            image_description=question_data.get(
-                "image_description"
-            ),
 
             translations=question_data[
                 "translations"

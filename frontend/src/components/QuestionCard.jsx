@@ -4,7 +4,11 @@ function QuestionCard({
   onSelectOption
 }) {
 
+  const multipleAnswers =
+    question.correct_answers_count > 1;
+
   return (
+
     <div className="question-card">
 
       {/* ================================== */}
@@ -77,28 +81,56 @@ function QuestionCard({
 
       <div className="options-container">
 
-        {question.options.map((option) => (
+        {question.options.map((option) => {
 
-          <button
-            key={option.id}
+          const selected =
+            (selectedOptions || []).includes(
+              option.id
+            );
 
-            className={
-              (selectedOptions || []).includes(
-                option.id
-              )
-                ? "option-button selected"
-                : "option-button"
-            }
+          return (
 
-            onClick={() =>
-              onSelectOption(option.id)
-            }
-          >
+            <button
+              key={option.id}
+              className={
+                selected
+                  ? "option-button selected"
+                  : "option-button"
+              }
+              onClick={() =>
+                onSelectOption(option.id)
+              }
+            >
 
-            {option.texto}
+              <span className="option-icon">
 
-          </button>
-        ))}
+                {
+                  multipleAnswers
+
+                    ? (
+                        selected
+                          ? "☑"
+                          : "☐"
+                      )
+
+                    : (
+                        selected
+                          ? "●"
+                          : "○"
+                      )
+                }
+
+              </span>
+
+              <span className="option-text">
+                {option.texto}
+              </span>
+
+            </button>
+
+          );
+
+        })}
 
       </div>
 

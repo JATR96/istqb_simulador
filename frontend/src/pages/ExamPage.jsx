@@ -164,6 +164,14 @@ function ExamPage() {
           optionId
         );
 
+      if (
+        !alreadySelected &&
+        currentSelections.length >=
+        question.correct_answers_count
+      ) {
+        return;
+      }
+
       const updatedSelections =
         alreadySelected
 

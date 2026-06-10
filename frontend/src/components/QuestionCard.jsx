@@ -16,9 +16,8 @@ function QuestionCard({
       </h3>
 
       {/* ================================== */}
-      {/* IMAGEN */}
+      {/* IMÁGENES */}
       {/* ================================== */}
-
 
       {question.images?.length > 0 && (
 
@@ -55,6 +54,22 @@ function QuestionCard({
 
         </div>
       )}
+
+      {/* ================================== */}
+      {/* INSTRUCCIÓN */}
+      {/* ================================== */}
+
+      <div className="question-instruction">
+
+        {
+          question.correct_answers_count === 1
+
+            ? "Seleccione UNA opción"
+
+            : `Seleccione ${question.correct_answers_count} opciones`
+        }
+
+      </div>
 
       {/* ================================== */}
       {/* OPCIONES */}

@@ -127,3 +127,10 @@
     background 0.3s,
     color 0.3s;
 }
+
+.question-instruction {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 19px;
+    font-weight: 600
+}

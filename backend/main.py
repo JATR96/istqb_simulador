@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 # ==========================================
 # IMPORTAR MODELOS
@@ -19,6 +20,7 @@ from api.routes.import_routes import router as import_router
 from api.routes.exam_routes import router as exam_router
 from api.routes.result_routes import router as result_router
 from api.routes.statistics_routes import router as statistics_router
+from api.routes.certification_routes import router as certification_router
 
 # ==========================================
 # FASTAPI
@@ -47,6 +49,16 @@ app.add_middleware(
 )
 
 # ==========================================
+# STATIC FILES
+# ==========================================
+
+app.mount(
+    "/static",
+    StaticFiles(directory="static"),
+    name="static"
+)
+
+# ==========================================
 # ROUTERS
 # ==========================================
 
@@ -61,6 +73,8 @@ app.include_router(exam_router)
 app.include_router(result_router)
 
 app.include_router(statistics_router)
+
+app.include_router(certification_router)
 
 # ==========================================
 # ROOT

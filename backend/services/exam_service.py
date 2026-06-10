@@ -1,4 +1,5 @@
 import random
+import os
 import json
 
 from sqlalchemy.orm import Session
@@ -48,23 +49,48 @@ def serialize_question(
         options
     )
 
+    images = translation.get(
+        "imagenes",
+        []
+    )
+
     return {
-        "id": question.id,
+        "id": 
+            question.id,
 
-        "question": translation[
-            "pregunta"
-        ],
+        "type":
+            question.tipo_pregunta,
 
-        "options": shuffled_options,
+        "correct_answers_count":
+            len(
+                question.respuestas_correctas
+            ),
 
-        "image_url": question.image_url,
+        "required_answers_count":
+            question.cantidad_respuestas,
 
-        "image_description":
-            question.image_description,
+        "k_level":
+            question.k_level,
 
-        "chapter": question.chapter,
+        "points":
+            question.points,
 
-        "section": question.section,
+        "question": 
+            translation[
+                "pregunta"
+            ],
+
+        "options": 
+            shuffled_options,
+
+        "images":
+            images,
+
+        "chapter": 
+            question.chapter,
+
+        "section": 
+            question.section,
 
         "learning_objective":
             question.learning_objective
@@ -272,21 +298,45 @@ def load_blueprint(
     certification
 ):
     """
-    Carga distribución syllabus.
+    Busca blueprint automáticamente.
     """
 
-    if certification == "Foundation":
+    for file_name in os.listdir(
+        "exam_blueprints"
+    ):
+
+        if not file_name.endswith(
+            ".json"
+        ):
+            continue
+
+        file_path = os.path.join(
+            "exam_blueprints",
+            file_name
+        )
 
         with open(
-            "exam_blueprints/foundation_distribution.json",
+            file_path,
             "r",
             encoding="utf-8"
         ) as file:
 
-            return json.load(file)
+            blueprint = json.load(
+                file
+            )
 
-    return {}
+            if (
+                blueprint[
+                    "certification"
+                ]
+                ==
+                certification
+            ):
+                return blueprint
 
+    raise ValueError(
+        f"No existe blueprint para {certification}"
+    )
 
 # ==========================================
 # EXAMEN OFICIAL
@@ -305,6 +355,38 @@ def generate_official_exam(
         certification
     )
 
+    if not blueprint:
+
+        raise ValueError(
+            f"No existe blueprint para {certification}"
+        )
+    
+    questions_per_chapter = (
+        blueprint[
+            "questions_per_chapter"
+            ]
+        )
+
+    points_per_chapter = (
+        blueprint[
+            "points_per_chapter"
+        ]
+    )
+
+    if set(
+        questions_per_chapter.keys()
+    ) != set(
+        points_per_chapter.keys()
+    ):
+
+        raise ValueError(
+            f"Blueprint inválido para {certification}"
+        )
+
+    expected_questions = sum(
+        questions_per_chapter.values()
+    )
+
     selected_questions = []
 
     used_question_ids = set()
@@ -313,7 +395,11 @@ def generate_official_exam(
     # DISTRIBUCIÓN POR CHAPTER
     # ======================================
 
-    for chapter, quantity in blueprint.items():
+    adjusted = False
+
+    for chapter, quantity in (
+        questions_per_chapter.items()
+    ):
 
         chapter_questions = db.query(
             Question
@@ -346,6 +432,11 @@ def generate_official_exam(
 
         if quantity > available:
             quantity = available
+            adjusted = True
+
+        # No existen preguntas para este capítulo
+        if quantity == 0:
+            continue
 
         # ==================================
         # RANDOM SAMPLE
@@ -386,10 +477,17 @@ def generate_official_exam(
         "total_questions":
             len(serialized_questions),
 
-        "requested_questions": 40,
+        "requested_questions": 
+            expected_questions,
 
-        "adjusted": False,
+        "adjusted": adjusted,
 
         "questions":
-            serialized_questions
+            serialized_questions,
+
+        "certification":
+            blueprint["certification"],
+
+        "blueprint":
+            questions_per_chapter,
     }

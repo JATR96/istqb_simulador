@@ -4,6 +4,7 @@ from sqlalchemy import ForeignKey
 from sqlalchemy import Boolean
 from sqlalchemy import DateTime
 from sqlalchemy import func
+from sqlalchemy import JSON
 
 from database import Base
 
@@ -51,8 +52,8 @@ class UserAnswer(Base):
     # RESPUESTA USUARIO
     # ==========================================
 
-    selected_option_id = Column(
-        Integer,
+    selected_option_ids = Column(
+        JSON,
         nullable=False
     )
 

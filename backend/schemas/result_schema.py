@@ -13,7 +13,7 @@ class UserAnswerRequest(BaseModel):
 
     question_id: int
 
-    selected_option_id: int
+    selected_option_ids: List[int]
 
 
 # ==========================================
@@ -43,14 +43,21 @@ class ReviewQuestionResponse(BaseModel):
 
     question: str
 
-    selected_option_id: int
+    options: list
 
-    correct_option_id: int
+    selected_option_ids: List[int]
+
+    correct_option_ids: List[int]
 
     is_correct: bool
 
-    explanation: str
+    type: str
 
+    k_level: str
+
+    points: int
+
+    explanation: str
 
 # ==========================================
 # RESPONSE RESULTADO
@@ -59,6 +66,12 @@ class ReviewQuestionResponse(BaseModel):
 class SubmitExamResponse(BaseModel):
 
     score: float
+
+    earned_points: int
+
+    total_points: int
+
+    passing_points: int
 
     passed: bool
 

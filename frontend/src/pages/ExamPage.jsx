@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 
-import {
-  generateExam
-} from "../services/examService";
+import { generateExam } from "../services/examService";
 
 import Timer from "../components/Timer";
 
@@ -12,13 +10,23 @@ import QuestionCard from "../components/QuestionCard";
 
 import QuestionNavigator from "../components/QuestionNavigator";
 
-import "../styles/exam.css";
-
 import { useNavigate } from "react-router-dom";
 
 import { submitExam } from "../services/examService";
 
 import Loader from "../components/Loader";
+
+import { useCertification } from "../context/CertificationContext";
+
+import { useExamConfig } from "../context/ExamConfigContext";
+
+/*
+|--------------------------------------------------------------------------
+| styles
+|--------------------------------------------------------------------------
+*/
+
+import "../styles/exam.css";
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +53,14 @@ function ExamPage() {
 
   const navigate = useNavigate();
 
+  const {
+    certification
+  } = useCertification();
+
+  const {
+    examConfig
+  } = useExamConfig();
+
   /*
   |--------------------------------------------------------------------------
   | CARGAR EXAMEN
@@ -53,9 +69,20 @@ function ExamPage() {
 
   useEffect(() => {
 
-    loadExam();
+    if (certification) {
 
-  }, []);
+      loadExam();
+
+    }
+
+  }, [
+      certification,
+      examConfig.language,
+      examConfig.exam_mode,
+      examConfig.question_count,
+      examConfig.chapters,
+      examConfig.learning_objectives
+  ]);
 
   /*
   |--------------------------------------------------------------------------
@@ -65,29 +92,44 @@ function ExamPage() {
 
   const loadExam = async () => {
 
+    setLoading(true);
+
     try {
 
       const data =
         await generateExam({
 
-          certification:
-            "Foundation",
+          certification,
 
-          language: "es",
+          language:
+            examConfig.language,
 
-          exam_mode: "quick",
+          exam_mode:
+            examConfig.exam_mode,
 
-          question_count: 10
+          question_count:
+            examConfig.question_count,
+          
+          chapters:
+            examConfig.chapters,
+
+          learning_objectives:
+            examConfig.learning_objectives
         });
 
       setQuestions(data.questions);
+
+      setCurrentQuestion(0);
+
+      setAnswers({});
+
+      setMarkedQuestions([]);
 
     } catch (error) {
 
       console.error(error);
 
     } finally {
-
       setLoading(false);
     }
   };
@@ -102,12 +144,67 @@ function ExamPage() {
     optionId
   ) => {
 
+    const question =
+      questions[currentQuestion];
+
+    const multipleAnswers =
+      question.correct_answers_count > 1;
+
+    // ==================================
+    // CHECKBOX
+    // ==================================
+
+    if (multipleAnswers) {
+
+      const currentSelections =
+        answers[currentQuestion] || [];
+
+      const alreadySelected =
+        currentSelections.includes(
+          optionId
+        );
+
+      if (
+        !alreadySelected &&
+        currentSelections.length >=
+        question.correct_answers_count
+      ) {
+        return;
+      }
+
+      const updatedSelections =
+        alreadySelected
+
+          ? currentSelections.filter(
+              (id) => id !== optionId
+            )
+
+          : [
+              ...currentSelections,
+              optionId
+            ];
+
+      setAnswers({
+
+        ...answers,
+
+        [currentQuestion]:
+          updatedSelections
+      });
+
+      return;
+    }
+
+    // ==================================
+    // RADIO
+    // ==================================
+
     setAnswers({
 
       ...answers,
 
       [currentQuestion]:
-        optionId
+        [optionId]
     });
   };
 
@@ -197,25 +294,29 @@ function ExamPage() {
     const formattedAnswers =
       questions.map((question, index) => ({
 
-        question_id: question.id,
+        question_id:
+          question.id,
 
-        selected_option_id:
-          answers[index] || -1
+        selected_option_ids:
+          answers[index] || []
       }));
 
     const result =
       await submitExam({
 
-        certification:
-          "Foundation",
+        certification,
 
-        language: "es",
+        language:
+          examConfig.language,
 
-        exam_mode: "quick",
+        exam_mode:
+          examConfig.exam_mode,
 
-        duration_seconds: 3600,
+        duration_seconds:
+          examConfig.duration_seconds,
 
-        answers: formattedAnswers
+        answers:
+          formattedAnswers
       });
 
     navigate(
@@ -281,7 +382,7 @@ function ExamPage() {
       {/* ================================== */}
 
       <Timer
-        initialSeconds={3600}
+        initialSeconds={examConfig.duration_seconds}
         onTimeEnd={handleTimeEnd}
       />
 
@@ -291,8 +392,8 @@ function ExamPage() {
 
       <QuestionCard
         question={question}
-        selectedOption={
-          answers[currentQuestion]
+        selectedOptions={
+          answers[currentQuestion] || []
         }
         onSelectOption={
           handleSelectOption

@@ -1,10 +1,16 @@
 function QuestionCard({
   question,
-  selectedOption,
+  selectedOptions,
   onSelectOption
 }) {
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
+  const multipleAnswers =
+    question.correct_answers_count > 1;
+
   return (
+
     <div className="question-card">
 
       {/* ================================== */}
@@ -16,23 +22,60 @@ function QuestionCard({
       </h3>
 
       {/* ================================== */}
-      {/* IMAGEN */}
+      {/* IMÁGENES */}
       {/* ================================== */}
 
-      {question.image_url && (
+      {question.images?.length > 0 && (
 
-        <div className="question-image-container">
+        <div className="question-images-container">
 
-          <img
-            src={question.image_url}
-            alt={
-              question.image_description
-            }
-            className="question-image"
-          />
+          {question.images.map(
+            (image, index) => (
+
+              <div
+                key={index}
+                className="question-image-container"
+              >
+
+                <img
+                  src={`${API_URL}${image.url}`}
+                  alt={
+                    image.description ||
+                    `image-${index}`
+                  }
+                  className="question-image"
+                />
+
+                {image.description && (
+
+                  <p className="image-description">
+                    {image.description}
+                  </p>
+
+                )}
+
+              </div>
+            )
+          )}
 
         </div>
       )}
+
+      {/* ================================== */}
+      {/* INSTRUCCIÓN */}
+      {/* ================================== */}
+
+      <div className="question-instruction">
+
+        {
+          question.correct_answers_count === 1
+
+            ? "Seleccione UNA opción"
+
+            : `Seleccione ${question.correct_answers_count} opciones`
+        }
+
+      </div>
 
       {/* ================================== */}
       {/* OPCIONES */}
@@ -40,26 +83,56 @@ function QuestionCard({
 
       <div className="options-container">
 
-        {question.options.map((option) => (
+        {question.options.map((option) => {
 
-          <button
-            key={option.id}
+          const selected =
+            (selectedOptions || []).includes(
+              option.id
+            );
 
-            className={
-              selectedOption === option.id
-                ? "option-button selected"
-                : "option-button"
-            }
+          return (
 
-            onClick={() =>
-              onSelectOption(option.id)
-            }
-          >
+            <button
+              key={option.id}
+              className={
+                selected
+                  ? "option-button selected"
+                  : "option-button"
+              }
+              onClick={() =>
+                onSelectOption(option.id)
+              }
+            >
 
-            {option.texto}
+              <span className="option-icon">
 
-          </button>
-        ))}
+                {
+                  multipleAnswers
+
+                    ? (
+                        selected
+                          ? "☑"
+                          : "☐"
+                      )
+
+                    : (
+                        selected
+                          ? "●"
+                          : "○"
+                      )
+                }
+
+              </span>
+
+              <span className="option-text">
+                {option.texto}
+              </span>
+
+            </button>
+
+          );
+
+        })}
 
       </div>
 

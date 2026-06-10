@@ -142,6 +142,37 @@ def parsear_opciones(texto):
 
     return opciones
 
+# =====================================================
+# PARSEAR IMÁGENES
+# =====================================================
+
+def parsear_imagenes(texto):
+
+    imagenes = []
+
+    if not texto:
+        return imagenes
+
+    for linea in texto.splitlines():
+
+        linea = linea.strip()
+
+        if not linea:
+            continue
+
+        partes = linea.split("|", 1)
+
+        imagenes.append({
+
+            "url": partes[0].strip(),
+
+            "description":
+                partes[1].strip()
+                if len(partes) > 1
+                else ""
+        })
+
+    return imagenes
 
 # =====================================================
 # BLOQUES DE PREGUNTAS
@@ -218,7 +249,13 @@ def parsear_bloque_generico(
 ):
 
     pregunta = re.search(
-        rf'{pregunta_tag}:\s*(.*?)\s*{opciones_tag}:',
+        rf'{pregunta_tag}:\s*(.*?)\s*IMAGES:',
+        texto,
+        re.DOTALL | re.IGNORECASE
+    )
+
+    imagenes = re.search(
+        rf'IMAGES:\s*(.*?)\s*{opciones_tag}:',
         texto,
         re.DOTALL | re.IGNORECASE
     )
@@ -235,6 +272,14 @@ def parsear_bloque_generico(
         re.DOTALL | re.IGNORECASE
     )
 
+    imagenes_parseadas = (
+        parsear_imagenes(
+            imagenes.group(1)
+        )
+        if imagenes
+        else []
+    )
+
     return {
 
         "pregunta":
@@ -245,6 +290,9 @@ def parsear_bloque_generico(
             parsear_opciones(
                 opciones.group(1)
             ) if opciones else [],
+
+        "imagenes":
+            imagenes_parseadas,
 
         "explicacion":
             explicacion.group(1).strip()
@@ -278,24 +326,32 @@ def parsear_pregunta(texto):
         texto
     )
 
+    cantidad_respuestas = obtener_campo(
+        "CANTIDAD_RESPUESTAS",
+        texto
+    )
+
     respuestas_correctas = obtener_campo(
         "RESPUESTAS_CORRECTAS",
-        texto
-    )
-
-    image_url = obtener_campo(
-        "IMAGE_URL",
-        texto
-    )
-
-    image_description = obtener_campo(
-        "IMAGE_DESCRIPTION",
         texto
     )
 
     respuestas = parsear_respuestas(
         respuestas_correctas
     )
+
+    if cantidad_respuestas:
+
+        cantidad_respuestas_int = int(
+            cantidad_respuestas
+        )
+
+        if cantidad_respuestas_int != len(respuestas):
+
+            raise Exception(
+                f"CANTIDAD_RESPUESTAS ({cantidad_respuestas_int}) "
+                f"no coincide con RESPUESTAS_CORRECTAS ({len(respuestas)})"
+            )
 
     resultado = {
 
@@ -322,18 +378,14 @@ def parsear_pregunta(texto):
             int(points)
             if points else 1,
 
-        "image_url":
-            image_url
-            if image_url else None,
-
-        "image_description":
-            image_description
-            if image_description else None,
-
         "tipo_pregunta":
             detectar_tipo(
                 respuestas
             ),
+
+        "cantidad_respuestas":
+            int(cantidad_respuestas)
+            if cantidad_respuestas else len(respuestas),
 
         "respuestas_correctas":
             respuestas,

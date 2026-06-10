@@ -10,6 +10,10 @@ from models.user_answer_model import (
     UserAnswer
 )
 
+from services.certification_service import (
+    load_certification_config
+)
+
 """
 Servicio profesional de resultados.
 """
@@ -30,6 +34,10 @@ def process_exam_result(
     correct_answers = 0
 
     review = []
+
+    total_points = 0
+
+    earned_points = 0
 
     # ======================================
     # CREAR EXAM ATTEMPT
@@ -71,28 +79,86 @@ def process_exam_result(
 
     for answer in request.answers:
 
-        question = db.query(
-            Question
-        ).filter(
-            Question.id ==
-            answer.question_id
-        ).first()
-
-        translation = question.translations[
-            request.language
-        ]
-
-        correct_option_id = translation[
-            "respuesta_correcta_id"
-        ]
-
-        is_correct = (
-            answer.selected_option_id ==
-            correct_option_id
+        question = (
+            db.query(Question)
+            .filter(
+                Question.id ==
+                answer.question_id
+            )
+            .first()
         )
 
+        if not question:
+            continue
+
+        translation = (
+            question.translations[
+                request.language
+            ]
+        )
+
+        # ==================================
+        # DATOS DE PREGUNTA
+        # ==================================
+
+        correct_option_ids = (
+            question.respuestas_correctas
+        )
+
+        question_type = (
+            question.tipo_pregunta
+        )
+
+        question_points = (
+            question.points
+        )
+
+        total_points += question_points
+
+        # ==================================
+        # VALIDAR RESPUESTA
+        # ==================================
+
+        is_correct = False
+
+        if question_type == "eleccion_simple":
+
+            is_correct = (
+
+                len(answer.selected_option_ids) > 0
+
+                and
+
+                answer.selected_option_ids[0]
+                ==
+                correct_option_ids[0]
+
+            )
+
+        elif question_type == "eleccion_multiple":
+
+            selected_answers = set(
+                answer.selected_option_ids
+            )
+
+            expected_answers = set(
+                correct_option_ids
+            )
+
+            is_correct = (
+                selected_answers ==
+                expected_answers
+            )
+
+        # ==================================
+        # CONTABILIZAR SCORE
+        # ==================================
+
         if is_correct:
+
             correct_answers += 1
+
+            earned_points += question_points
 
         # ==================================
         # GUARDAR USER ANSWER
@@ -106,10 +172,11 @@ def process_exam_result(
             question_id=
                 question.id,
 
-            selected_option_id=
-                answer.selected_option_id,
+            selected_option_ids=
+                answer.selected_option_ids,
 
-            is_correct=is_correct
+            is_correct=
+                is_correct
         )
 
         db.add(user_answer)
@@ -128,14 +195,31 @@ def process_exam_result(
                     "pregunta"
                 ],
 
-            "selected_option_id":
-                answer.selected_option_id,
+            "options":
+                translation[
+                    "opciones"
+                ],
 
-            "correct_option_id":
-                correct_option_id,
+            "selected_option_ids":
+                answer.selected_option_ids,
+
+            "correct_option_ids":
+                correct_option_ids,
 
             "is_correct":
                 is_correct,
+
+            "type":
+                question.tipo_pregunta,
+
+            "k_level":
+                question.k_level,
+
+            "points":
+                question.points,
+
+            "certification":
+                question.certification,
 
             "explanation":
                 translation[
@@ -156,19 +240,38 @@ def process_exam_result(
         correct_answers
     )
 
-    score = round(
-        (
-            correct_answers /
-            total_questions
-        ) * 100,
-        2
+    if total_points > 0:
+
+        score = round(
+
+            (
+                earned_points /
+                total_points
+            ) * 100,
+
+            2
+        )
+
+    else:
+
+        score = 0
+
+    # ======================================
+    # CERTIFICACIÓN
+    # ======================================
+
+    config = load_certification_config(
+        request.certification
     )
 
-    # ======================================
-    # ISTQB PASS SCORE
-    # ======================================
+    passing_points = config[
+        "passing_points"
+    ]
 
-    passed = score >= 65
+    passed = (
+        earned_points >=
+        passing_points
+    )
 
     # ======================================
     # UPDATE ATTEMPT
@@ -188,11 +291,26 @@ def process_exam_result(
 
     db.commit()
 
+    # ======================================
+    # RESPONSE
+    # ======================================
+
     return {
 
-        "score": score,
+        "score":
+            score,
 
-        "passed": passed,
+        "earned_points":
+            earned_points,
+
+        "total_points":
+            total_points,
+
+        "passing_points":
+            passing_points,
+
+        "passed":
+            passed,
 
         "total_questions":
             total_questions,
@@ -203,5 +321,6 @@ def process_exam_result(
         "incorrect_answers":
             incorrect_answers,
 
-        "review": review
+        "review":
+            review
     }

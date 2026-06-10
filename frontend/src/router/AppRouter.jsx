@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage from "../pages/HomePage";
-import ExamsPage from "../pages/ExamPage";
+import ExamsPage from "../pages/ExamsPage";
 import ResultsPage from "../pages/ResultPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import StatisticsPage from "../pages/StatisticsPage";
+import ExamPage from "../pages/ExamPage";
 
 import ThemeToggle from "../components/ThemeToggle";
 import Header from "../components/layout/Header";
@@ -21,8 +22,13 @@ function AppRouter() {
         />
 
         <Route
-          path="/exam"
+          path="/exams"
           element={<ExamsPage />}
+        />
+
+        <Route
+          path="/exam"
+          element={<ExamPage />}
         />
 
         <Route

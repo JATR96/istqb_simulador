@@ -836,7 +836,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_A1.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_A1.jpg",
                         "description": ""
                     }
                 ],
@@ -864,7 +864,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_A1.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_A1.jpg",
                         "description": ""
                     }
                 ],
@@ -1273,7 +1273,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_A2.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_A2.jpg",
                         "description": ""
                     }
                 ],
@@ -1301,7 +1301,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_A2.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_A2.jpg",
                         "description": ""
                     }
                 ],
@@ -1344,7 +1344,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_A3.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_A3.jpg",
                         "description": ""
                     }
                 ],
@@ -1372,7 +1372,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_A3.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_A3.jpg",
                         "description": ""
                     }
                 ],
@@ -1415,7 +1415,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_A4.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_A4.jpg",
                         "description": ""
                     }
                 ],
@@ -1443,7 +1443,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_A4.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_A4.jpg",
                         "description": ""
                     }
                 ],
@@ -2044,7 +2044,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_A5.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_A5.jpg",
                         "description": ""
                     }
                 ],
@@ -2072,7 +2072,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_A5.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_A5.jpg",
                         "description": ""
                     }
                 ],
@@ -2725,7 +2725,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_A6.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_A6.jpg",
                         "description": ""
                     }
                 ],
@@ -2753,7 +2753,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_A6.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_A6.jpg",
                         "description": ""
                     }
                 ],
@@ -3720,7 +3720,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_A7.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_A7.jpg",
                         "description": ""
                     }
                 ],
@@ -3748,7 +3748,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_A7.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_A7.jpg",
                         "description": ""
                     }
                 ],
@@ -5447,7 +5447,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_B1.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_B1.jpg",
                         "description": ""
                     }
                 ],
@@ -5475,7 +5475,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_B1.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_B1.jpg",
                         "description": ""
                     }
                 ],
@@ -5518,7 +5518,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_B2.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_B2.jpg",
                         "description": ""
                     }
                 ],
@@ -5546,7 +5546,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_B2.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_B2.jpg",
                         "description": ""
                     }
                 ],
@@ -6004,7 +6004,7 @@
         ],
         "translations": {
             "es": {
-                "pregunta": "Desea estimar el esfuerzo de prueba para el nuevo proyecto utilizando una estimación basada en ratios. Calcula la relación entre el esfuerzo de prueba y el de desarrollo utilizando datos promedio de ambos, obtenidos de cuatro proyectos históricos similares al nuevo. La tabla muestra estos datos históricos.\n\nEl esfuerzo de desarrollo estimado para el nuevo proyecto es de $800,000. ¿Cuál es su estimación del esfuerzo de prueba en este proyecto?",
+                "pregunta": "Desea estimar el esfuerzo de prueba para el nuevo proyecto utilizando una estimación basada en ratios. Calcula la relación entre el esfuerzo de prueba y el de desarrollo utilizando datos promedio de ambos, obtenidos de cuatro proyectos históricos similares al nuevo. La tabla muestra estos datos históricos.\n\nEl esfuerzo de desarrollo estimado para el nuevo proyecto es de $800,000.\n\n¿Cuál es su estimación del esfuerzo de prueba en este proyecto?",
                 "opciones": [
                     {
                         "id": 1,
@@ -6025,14 +6025,14 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_B3.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_B3.jpg",
                         "description": ""
                     }
                 ],
                 "explicacion": "El esfuerzo promedio de desarrollo es de $900,000 y el esfuerzo promedio de pruebas es de $90,000 (calculado a partir de los cuatro proyectos).\n\nLa relación promedio entre el esfuerzo de pruebas y el de desarrollo es de 1:10 ($90,000 : $900,000), lo que significa que, históricamente, en promedio, el esfuerzo de pruebas representa el 10% del esfuerzo de desarrollo.\n\nPor lo tanto, si el esfuerzo de desarrollo se estima en $800,000, el esfuerzo estimado para las pruebas es:\n\n10% * $800,000 = 0.1 * $800,000 = $80,000.\n\nPor consiguiente:\n\na) Incorrecto\nb) Correcto\nc) Incorrecto\nd) Incorrecto"
             },
             "en": {
-                "pregunta": "You want to estimate the test effort for the new project using estimation based on ratios. You calculate the test-to-development effort ratio using averaged data for both development effort and test effort from four historical projects similar to the new one. The table shows this historical data.\n\nThe estimated development effort for the new project is $800,000. What is your estimate of the test effort in this project?",
+                "pregunta": "You want to estimate the test effort for the new project using estimation based on ratios. You calculate the test-to-development effort ratio using averaged data for both development effort and test effort from four historical projects similar to the new one. The table shows this historical data.\n\nThe estimated development effort for the new project is $800,000.\n\nWhat is your estimate of the test effort in this project?",
                 "opciones": [
                     {
                         "id": 1,
@@ -6053,7 +6053,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_B3.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_B3.jpg",
                         "description": ""
                     }
                 ],
@@ -6096,7 +6096,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_B4.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_B4.jpg",
                         "description": ""
                     }
                 ],
@@ -6124,7 +6124,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_B4.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_B4.jpg",
                         "description": ""
                     }
                 ],
@@ -6472,7 +6472,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_B5.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_B5.jpg",
                         "description": ""
                     }
                 ],
@@ -6500,7 +6500,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_B5.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_B5.jpg",
                         "description": ""
                     }
                 ],
@@ -7894,7 +7894,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_C1.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_C1.jpg",
                         "description": ""
                     }
                 ],
@@ -7922,7 +7922,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_C1.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_C1.jpg",
                         "description": ""
                     }
                 ],
@@ -7965,7 +7965,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_C2.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_C2.jpg",
                         "description": ""
                     }
                 ],
@@ -7993,7 +7993,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_C2.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_C2.jpg",
                         "description": ""
                     }
                 ],
@@ -8036,7 +8036,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_C3.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_C3.jpg",
                         "description": ""
                     }
                 ],
@@ -8064,7 +8064,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_C3.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_C3.jpg",
                         "description": ""
                     }
                 ],
@@ -8107,7 +8107,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_C4.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_C4.jpg",
                         "description": ""
                     }
                 ],
@@ -8135,7 +8135,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_C4.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_C4.jpg",
                         "description": ""
                     }
                 ],
@@ -8544,7 +8544,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_C5.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_C5.jpg",
                         "description": ""
                     }
                 ],
@@ -8572,7 +8572,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_C5.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_C5.jpg",
                         "description": ""
                     }
                 ],
@@ -8615,7 +8615,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_C6.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_C6.jpg",
                         "description": ""
                     }
                 ],
@@ -8643,7 +8643,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_C6.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_C6.jpg",
                         "description": ""
                     }
                 ],
@@ -10464,7 +10464,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_D1.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_D1.jpg",
                         "description": ""
                     }
                 ],
@@ -10492,7 +10492,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_D1.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_D1.jpg",
                         "description": ""
                     }
                 ],
@@ -10535,7 +10535,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_D2.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_D2.jpg",
                         "description": ""
                     }
                 ],
@@ -10563,7 +10563,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_D2.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_D2.jpg",
                         "description": ""
                     }
                 ],
@@ -11103,7 +11103,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\esp\\imagen_esp_D3.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\esp\\imagen_esp_D3.jpg",
                         "description": ""
                     }
                 ],
@@ -11131,7 +11131,7 @@
                 ],
                 "imagenes": [
                     {
-                        "url": "static\\certifications\\foundation\\images\\eng\\imagen_eng_D3.jpg",
+                        "url": "\\static\\certifications\\foundation\\images\\eng\\imagen_eng_D3.jpg",
                         "description": ""
                     }
                 ],

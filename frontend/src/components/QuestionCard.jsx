@@ -4,6 +4,8 @@ function QuestionCard({
   onSelectOption
 }) {
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const multipleAnswers =
     question.correct_answers_count > 1;
 
@@ -36,7 +38,7 @@ function QuestionCard({
               >
 
                 <img
-                  src={image.url}
+                  src={`${API_URL}${image.url}`}
                   alt={
                     image.description ||
                     `image-${index}`

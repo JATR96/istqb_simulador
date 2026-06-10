@@ -8,8 +8,7 @@ backend/
         env.py
         script.py.mako
         versions/
-            4dace878ca55_update_question_structure.py
-            b907c7d70379_initial_tables.py
+            14dfe78d5fd5_initial.py
     alembic.ini
     api/
         __init__.py
@@ -39,8 +38,6 @@ backend/
         generar_json.py
         generar_plantilla.py
         metadata.csv
-        preguntas.docx
-        preguntas_generadas.json
         preguntas_old.docx
         validar_banco_preguntas.py
     main.py
@@ -65,6 +62,20 @@ backend/
         import_service.py
         result_service.py
         statistics_service.py
+    static/
+        certifications/
+            automation/
+                images/
+                    eng/
+                        imagen_eng_A1.jpg
+                    esp/
+                        imagen_esp_A1.jpg
+            foundation/
+                images/
+                    eng/
+                        imagen_eng_A1.jpg
+                    esp/
+                        imagen_esp_A1.jpg
     uploads/
         diagramas/
 frontend/
@@ -86,9 +97,11 @@ frontend/
             vite.svg
         components/
             CertificationSelector.jsx
+            ChapterSelector.jsx
             ErrorMessage.jsx
             ExamConfigForm.jsx
             ExamHeader.jsx
+            LearningObjectiveSelector.jsx
             Loader.jsx
             PerformanceChart.jsx
             QuestionCard.jsx

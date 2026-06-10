@@ -18,10 +18,10 @@ function ResultPage() {
   }
 
   /*
-|--------------------------------------------------------------------------
-| OPTION LETTER
-|--------------------------------------------------------------------------
-*/
+  |--------------------------------------------------------------------------
+  | OPTION LETTER
+  |--------------------------------------------------------------------------
+  */
 
   const getOptionLetter = (optionId) => {
 
@@ -29,13 +29,42 @@ function ResultPage() {
       1: "A",
       2: "B",
       3: "C",
-      4: "D"
+      4: "D",
+      5: "E",
+      6: "F"
     };
 
     return letters[optionId] || "";
   };
 
+  /*
+  |--------------------------------------------------------------------------
+  | OPTION LETTERS
+  |--------------------------------------------------------------------------
+  */
+
+  const getOptionLetters = (
+    optionIds
+  ) => {
+
+    if (
+      !optionIds ||
+      optionIds.length === 0
+    ) {
+
+      return "Sin responder";
+    }
+
+    return optionIds
+      .map(
+        (id) =>
+          getOptionLetter(id)
+      )
+      .join(", ");
+  };
+
   return (
+
     <div className="result-page">
 
       {/* ================================== */}
@@ -60,9 +89,11 @@ function ResultPage() {
           }
         >
 
-          {result.passed
-            ? "APROBADO"
-            : "REPROBADO"}
+          {
+            result.passed
+              ? "APROBADO"
+              : "REPROBADO"
+          }
 
         </div>
 
@@ -98,25 +129,31 @@ function ResultPage() {
             </h3>
 
             <p>
+
               Tu respuesta:
+
               {" "}
+
               {
-                item.selected_option_id === -1
-                  ? "Sin responder"
-                  : getOptionLetter(
-                      item.selected_option_id
-                    )
+                getOptionLetters(
+                  item.selected_option_ids
+                )
               }
+
             </p>
 
             <p>
+
               Correcta:
+
               {" "}
+
               {
-                getOptionLetter(
-                  item.correct_option_id
+                getOptionLetters(
+                  item.correct_option_ids
                 )
               }
+
             </p>
 
             <p
@@ -127,9 +164,11 @@ function ResultPage() {
               }
             >
 
-              {item.is_correct
-                ? "Correcta"
-                : "Incorrecta"}
+              {
+                item.is_correct
+                  ? "Correcta"
+                  : "Incorrecta"
+              }
 
             </p>
 
@@ -140,6 +179,7 @@ function ResultPage() {
             </div>
 
           </div>
+
         ))}
 
       </div>

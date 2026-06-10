@@ -76,9 +76,30 @@ backend/
                         imagen_eng_A1.jpg
                     esp/
                         imagen_esp_A1.jpg
+                        imagen_esp_A2.jpg
+                        imagen_esp_A3.jpg
+                        imagen_esp_A4.jpg
+                        imagen_esp_A5.jpg
+                        imagen_esp_A6.jpg
+                        imagen_esp_A7.jpg
+                        imagen_esp_B1.jpg
+                        imagen_esp_B2.jpg
+                        imagen_esp_B3.jpg
+                        imagen_esp_B4.jpg
+                        imagen_esp_B5.jpg
+                        imagen_esp_C1.jpg
+                        imagen_esp_C2.jpg
+                        imagen_esp_C3.jpg
+                        imagen_esp_C4.jpg
+                        imagen_esp_C5.jpg
+                        imagen_esp_C6.jpg
+                        imagen_esp_D1.jpg
+                        imagen_esp_D2.jpg
+                        imagen_esp_D3.jpg
     uploads/
         diagramas/
 frontend/
+    .env
     .gitignore
     README.md
     eslint.config.js

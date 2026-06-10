@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage from "../pages/HomePage";
 import ExamsPage from "../pages/ExamsPage";
-import ResultsPage from "../pages/ResultPage";
+import ResultPage from "../pages/ResultPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import StatisticsPage from "../pages/StatisticsPage";
 import ExamPage from "../pages/ExamPage";
@@ -33,7 +33,7 @@ function AppRouter() {
 
         <Route
           path="/results"
-          element={<ResultsPage />}
+          element={<ResultPage />}
         />
 
         <Route

@@ -1,6 +1,6 @@
 function QuestionCard({
   question,
-  selectedOption,
+  selectedOptions,
   onSelectOption
 }) {
 
@@ -19,17 +19,39 @@ function QuestionCard({
       {/* IMAGEN */}
       {/* ================================== */}
 
-      {question.image_url && (
 
-        <div className="question-image-container">
+      {question.images?.length > 0 && (
 
-          <img
-            src={question.image_url}
-            alt={
-              question.image_description
-            }
-            className="question-image"
-          />
+        <div className="question-images-container">
+
+          {question.images.map(
+            (image, index) => (
+
+              <div
+                key={index}
+                className="question-image-container"
+              >
+
+                <img
+                  src={image.url}
+                  alt={
+                    image.description ||
+                    `image-${index}`
+                  }
+                  className="question-image"
+                />
+
+                {image.description && (
+
+                  <p className="image-description">
+                    {image.description}
+                  </p>
+
+                )}
+
+              </div>
+            )
+          )}
 
         </div>
       )}
@@ -46,7 +68,9 @@ function QuestionCard({
             key={option.id}
 
             className={
-              selectedOption === option.id
+              (selectedOptions || []).includes(
+                option.id
+              )
                 ? "option-button selected"
                 : "option-button"
             }

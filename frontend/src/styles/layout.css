@@ -76,12 +76,6 @@
 |--------------------------------------------------------------------------
 */
 
-/*
-|--------------------------------------------------------------------------
-| LANGUAGE SWITCHER
-|--------------------------------------------------------------------------
-*/
-
 .language-switcher {
   display: flex;
   align-items: center;
@@ -139,6 +133,16 @@ body.dark .language-switcher select {
   border-color: #64b5f6;
 }
 
+body.dark .certification-card {
+  background: #1e1e1e;
+  color: white;
+  border-color: #64b5f6;
+}
+
 body.dark .language-switcher select:hover {
   background: #2b2b2b;
+}
+
+body.dark .theme-toggle {
+  border: none;
 }

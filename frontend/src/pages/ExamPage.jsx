@@ -144,12 +144,59 @@ function ExamPage() {
     optionId
   ) => {
 
+    const question =
+      questions[currentQuestion];
+
+    const multipleAnswers =
+      question.correct_answers_count > 1;
+
+    // ==================================
+    // CHECKBOX
+    // ==================================
+
+    if (multipleAnswers) {
+
+      const currentSelections =
+        answers[currentQuestion] || [];
+
+      const alreadySelected =
+        currentSelections.includes(
+          optionId
+        );
+
+      const updatedSelections =
+        alreadySelected
+
+          ? currentSelections.filter(
+              (id) => id !== optionId
+            )
+
+          : [
+              ...currentSelections,
+              optionId
+            ];
+
+      setAnswers({
+
+        ...answers,
+
+        [currentQuestion]:
+          updatedSelections
+      });
+
+      return;
+    }
+
+    // ==================================
+    // RADIO
+    // ==================================
+
     setAnswers({
 
       ...answers,
 
       [currentQuestion]:
-        optionId
+        [optionId]
     });
   };
 
@@ -243,9 +290,7 @@ function ExamPage() {
           question.id,
 
         selected_option_ids:
-          answers[index]
-            ? [answers[index]]
-            : []
+          answers[index] || []
       }));
 
     const result =
@@ -339,8 +384,8 @@ function ExamPage() {
 
       <QuestionCard
         question={question}
-        selectedOption={
-          answers[currentQuestion]
+        selectedOptions={
+          answers[currentQuestion] || []
         }
         onSelectOption={
           handleSelectOption

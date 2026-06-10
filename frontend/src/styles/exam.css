@@ -80,6 +80,19 @@
 .mark-button.active {
   background: orange;
   color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button-navigation-question {
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .question-image-container {

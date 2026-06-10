@@ -139,6 +139,12 @@ body.dark .certification-card {
   border-color: #64b5f6;
 }
 
+body.dark .certification-card.selected {
+  background: #1976d2;
+  color: white;
+  border-color: white;
+}
+
 body.dark .language-switcher select:hover {
   background: #2b2b2b;
 }

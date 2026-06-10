@@ -18,6 +18,7 @@ function QuestionNavigator({
       <button
         onClick={goPrevious}
         disabled={currentQuestion === 0}
+        className="button-navigation-question"
       >
         ← Anterior
       </button>
@@ -26,7 +27,7 @@ function QuestionNavigator({
         className={
           isMarked
             ? "mark-button active"
-            : "mark-button"
+            : "mark-button button-navigation-question"
         }
         onClick={toggleMarkQuestion}
       >
@@ -39,6 +40,7 @@ function QuestionNavigator({
           currentQuestion ===
           totalQuestions - 1
         }
+        className="button-navigation-question"
       >
         Siguiente →
       </button>

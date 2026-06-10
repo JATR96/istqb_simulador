@@ -326,6 +326,11 @@ def parsear_pregunta(texto):
         texto
     )
 
+    cantidad_respuestas = obtener_campo(
+        "CANTIDAD_RESPUESTAS",
+        texto
+    )
+
     respuestas_correctas = obtener_campo(
         "RESPUESTAS_CORRECTAS",
         texto
@@ -334,6 +339,19 @@ def parsear_pregunta(texto):
     respuestas = parsear_respuestas(
         respuestas_correctas
     )
+
+    if cantidad_respuestas:
+
+        cantidad_respuestas_int = int(
+            cantidad_respuestas
+        )
+
+        if cantidad_respuestas_int != len(respuestas):
+
+            raise Exception(
+                f"CANTIDAD_RESPUESTAS ({cantidad_respuestas_int}) "
+                f"no coincide con RESPUESTAS_CORRECTAS ({len(respuestas)})"
+            )
 
     resultado = {
 
@@ -364,6 +382,10 @@ def parsear_pregunta(texto):
             detectar_tipo(
                 respuestas
             ),
+
+        "cantidad_respuestas":
+            int(cantidad_respuestas)
+            if cantidad_respuestas else len(respuestas),
 
         "respuestas_correctas":
             respuestas,

@@ -65,45 +65,27 @@ def agregar_linea_normal(
     doc.add_paragraph(texto)
 
 # ==========================================
-# TEXTO DINAMICO SEGUN RESPUESTAS
+# OBTENER CANTIDAD RESPUESTAS
 # ==========================================
 
-def obtener_texto_seleccion(respuestas):
+def obtener_cantidad_respuestas(respuestas_correctas):
+    """
+    Ejemplos:
+    a -> 1
+    a,e -> 2
+    a,c,e -> 3
+    """
 
-    cantidad = len(
-        [
-            r.strip()
-            for r in respuestas.split(",")
-            if r.strip()
-        ]
-    )
+    respuestas_correctas = respuestas_correctas.strip()
 
-    mapping_es = {
-        1: "Seleccione UNA opción.",
-        2: "Seleccione DOS opciones.",
-        3: "Seleccione TRES opciones.",
-        4: "Seleccione CUATRO opciones.",
-        5: "Seleccione CINCO opciones."
-    }
+    if not respuestas_correctas:
+        return 0
 
-    mapping_en = {
-        1: "Select ONE option.",
-        2: "Select TWO options.",
-        3: "Select THREE options.",
-        4: "Select FOUR options.",
-        5: "Select FIVE options."
-    }
-
-    return (
-        mapping_es.get(
-            cantidad,
-            f"Seleccione {cantidad} opciones."
-        ),
-        mapping_en.get(
-            cantidad,
-            f"Select {cantidad} options."
-        )
-    )
+    return len([
+        x.strip()
+        for x in respuestas_correctas.split(",")
+        if x.strip()
+    ])
 
 # ==========================================
 # GENERADOR
@@ -124,9 +106,9 @@ def generar_word():
 
         for fila in reader:
 
-            texto_es, texto_en = obtener_texto_seleccion(
+            cantidad_respuestas = obtener_cantidad_respuestas(
                 fila["respuestas_correctas"]
-)
+            )
 
             agregar_linea_normal(
                 doc,
@@ -158,6 +140,12 @@ def generar_word():
 
             agregar_linea_verde(
                 doc,
+                f"CANTIDAD_RESPUESTAS: "
+                f"{cantidad_respuestas}"
+            )
+
+            agregar_linea_verde(
+                doc,
                 f"RESPUESTAS_CORRECTAS: "
                 f"{fila['respuestas_correctas']}"
             )
@@ -174,13 +162,6 @@ def generar_word():
 
             agregar_linea_normal(doc)
             agregar_linea_normal(doc)
-            agregar_linea_normal(doc)
-
-            agregar_linea_normal(
-                doc,
-                texto_es
-            )
-
             agregar_linea_normal(doc)
 
             agregar_linea_roja(
@@ -228,13 +209,6 @@ def generar_word():
 
             agregar_linea_normal(doc)
             agregar_linea_normal(doc)
-            agregar_linea_normal(doc)
-
-            agregar_linea_normal(
-                doc,
-                texto_en
-            )
-
             agregar_linea_normal(doc)
 
             agregar_linea_roja(

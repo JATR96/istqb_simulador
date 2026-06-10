@@ -41,6 +41,7 @@ class ExamQuestionResponse(BaseModel):
     id: int
     type: str
     correct_answers_count: int
+    required_answers_count: int
     k_level: str
     points: int
     question: str

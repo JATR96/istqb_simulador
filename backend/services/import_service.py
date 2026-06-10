@@ -147,6 +147,8 @@ def import_questions(
 
             "tipo_pregunta",
 
+            "cantidad_respuestas",
+
             "respuestas_correctas",
 
             "translations"
@@ -198,6 +200,22 @@ def import_questions(
         correct_answers = question_data[
             "respuestas_correctas"
         ]
+
+        required_answers = question_data[
+            "cantidad_respuestas"
+        ]
+
+        if required_answers <= 0:
+
+            raise ValueError(
+                "cantidad_respuestas debe ser mayor a cero"
+            )
+
+        if len(correct_answers) != required_answers:
+
+            raise ValueError(
+                "cantidad_respuestas debe coincidir con respuestas_correctas"
+            )
 
         spanish_options = (
             question_data[
@@ -276,6 +294,10 @@ def import_questions(
 
             tipo_pregunta=question_data[
                 "tipo_pregunta"
+            ],
+
+            cantidad_respuestas=question_data[
+                "cantidad_respuestas"
             ],
 
             respuestas_correctas=question_data[

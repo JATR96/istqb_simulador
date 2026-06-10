@@ -66,6 +66,9 @@ def serialize_question(
                 question.respuestas_correctas
             ),
 
+        "required_answers_count":
+            question.cantidad_respuestas,
+
         "k_level":
             question.k_level,
 

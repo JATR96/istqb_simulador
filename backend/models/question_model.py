@@ -91,6 +91,12 @@ class Question(Base):
         nullable=False
     )
 
+    cantidad_respuestas = Column(
+        Integer,
+        nullable=False,
+        default=1
+    )
+
     respuestas_correctas = Column(
         JSON,
         nullable=False

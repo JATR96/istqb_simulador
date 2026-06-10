@@ -1,8 +1,8 @@
-"""update question structure
+"""initial
 
-Revision ID: 4dace878ca55
-Revises: b907c7d70379
-Create Date: 2026-06-05 07:39:30.223563
+Revision ID: 14dfe78d5fd5
+Revises: 
+Create Date: 2026-06-10 09:51:40.458773
 
 """
 from typing import Sequence, Union
@@ -12,8 +12,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '4dace878ca55'
-down_revision: Union[str, Sequence[str], None] = 'b907c7d70379'
+revision: str = '14dfe78d5fd5'
+down_revision: Union[str, Sequence[str], None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
@@ -30,9 +30,8 @@ def upgrade() -> None:
     sa.Column('k_level', sa.String(length=10), nullable=False),
     sa.Column('points', sa.Integer(), nullable=True),
     sa.Column('tipo_pregunta', sa.String(length=50), nullable=False),
+    sa.Column('cantidad_respuestas', sa.Integer(), nullable=False),
     sa.Column('respuestas_correctas', sa.JSON(), nullable=False),
-    sa.Column('image_url', sa.String(length=500), nullable=True),
-    sa.Column('image_description', sa.Text(), nullable=True),
     sa.Column('translations', sa.JSON(), nullable=False),
     sa.Column('created_at', sa.DateTime(timezone=True), server_default=sa.text('now()'), nullable=True),
     sa.PrimaryKeyConstraint('id')

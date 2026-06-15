@@ -2,6 +2,8 @@ import json
 
 from sqlalchemy.orm import Session
 
+import hashlib
+
 from models.question_model import Question
 
 """
@@ -18,6 +20,48 @@ VALID_K_LEVELS = [
     "K3",
     "K4"
 ]
+
+# ==========================================
+# GENERAR FINGERPRINT
+# ==========================================
+
+def generate_fingerprint(
+    question_data
+):
+    """
+    Genera una huella única
+    para detectar duplicados.
+    """
+
+    certification = (
+        question_data["certification"]
+        .strip()
+        .lower()
+    )
+
+    learning_objective = (
+        question_data["learning_objective"]
+        .strip()
+        .lower()
+    )
+
+    question_text = normalize_text(
+
+        question_data[
+            "translations"
+        ]["es"]["pregunta"]
+
+    )
+
+    raw = (
+        f"{certification}|"
+        f"{learning_objective}|"
+        f"{question_text}"
+    )
+
+    return hashlib.sha256(
+        raw.encode("utf-8")
+    ).hexdigest()
 
 # ==========================================
 # NORMALIZE TEXT
@@ -145,29 +189,17 @@ def import_questions(
     # CACHE DE PREGUNTAS EXISTENTES
     # ======================================
 
-    existing_questions = db.query(
-        Question
+    existing_fingerprints = set()
+
+    rows = db.query(
+        Question.fingerprint
     ).all()
 
-    existing_normalized_questions = set()
+    for row in rows:
 
-    for question in existing_questions:
-
-        try:
-
-            spanish_question = (
-                question.translations["es"]["pregunta"]
-            )
-
-            existing_normalized_questions.add(
-                normalize_text(
-                    spanish_question
-                )
-            )
-
-        except Exception:
-
-            pass
+        existing_fingerprints.add(
+            row.fingerprint
+        )
 
     # ======================================
     # IMPORTACIÓN
@@ -292,24 +324,18 @@ def import_questions(
         # EVITAR DUPLICADOS REALES
         # ======================================
 
-        normalized_question = normalize_text(
-
-            question_data[
-                "translations"
-            ]["es"]["pregunta"]
-
+        fingerprint = generate_fingerprint(
+            question_data
         )
 
-        if normalized_question in (
-            existing_normalized_questions
-        ):
+        if fingerprint in existing_fingerprints:
 
             skipped += 1
 
             continue
 
-        existing_normalized_questions.add(
-            normalized_question
+        existing_fingerprints.add(
+            fingerprint
         )
 
         # ======================================
@@ -353,6 +379,8 @@ def import_questions(
             respuestas_correctas=question_data[
                 "respuestas_correctas"
             ],
+
+            fingerprint=fingerprint,
 
             translations=question_data[
                 "translations"

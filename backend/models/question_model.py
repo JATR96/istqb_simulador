@@ -5,6 +5,7 @@ from sqlalchemy import JSON
 from sqlalchemy import Text
 from sqlalchemy import DateTime
 from sqlalchemy import func
+from sqlalchemy import UniqueConstraint
 
 from database import Base
 
@@ -100,6 +101,17 @@ class Question(Base):
     respuestas_correctas = Column(
         JSON,
         nullable=False
+    )
+
+    # ==========================================
+    # FINGERPRINT
+    # ==========================================
+
+    fingerprint = Column(
+        String(64),
+        nullable=False,
+        unique=True,
+        index=True
     )
 
     # ==========================================

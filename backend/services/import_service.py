@@ -20,6 +20,22 @@ VALID_K_LEVELS = [
 ]
 
 # ==========================================
+# NORMALIZE TEXT
+# ==========================================
+
+def normalize_text(
+    question_text: str
+):
+    """
+    Normaliza texto para
+    comparación de duplicados.
+    """
+
+    return " ".join(
+        question_text.lower().split()
+    )
+
+# ==========================================
 # VALIDAR TRADUCCIONES
 # ==========================================
 
@@ -124,6 +140,38 @@ def import_questions(
     imported = 0
 
     skipped = 0
+
+    # ======================================
+    # CACHE DE PREGUNTAS EXISTENTES
+    # ======================================
+
+    existing_questions = db.query(
+        Question
+    ).all()
+
+    existing_normalized_questions = set()
+
+    for question in existing_questions:
+
+        try:
+
+            spanish_question = (
+                question.translations["es"]["pregunta"]
+            )
+
+            existing_normalized_questions.add(
+                normalize_text(
+                    spanish_question
+                )
+            )
+
+        except Exception:
+
+            pass
+
+    # ======================================
+    # IMPORTACIÓN
+    # ======================================
 
     for question_data in questions_data:
 
@@ -241,26 +289,28 @@ def import_questions(
                 )
 
         # ======================================
-        # EVITAR DUPLICADOS
+        # EVITAR DUPLICADOS REALES
         # ======================================
 
-        existing_question = (
-            db.query(Question)
-            .filter(
-                Question.learning_objective
-                ==
-                question_data[
-                    "learning_objective"
-                ]
-            )
-            .first()
+        normalized_question = normalize_text(
+
+            question_data[
+                "translations"
+            ]["es"]["pregunta"]
+
         )
 
-        if existing_question:
+        if normalized_question in (
+            existing_normalized_questions
+        ):
 
             skipped += 1
 
             continue
+
+        existing_normalized_questions.add(
+            normalized_question
+        )
 
         # ======================================
         # CREAR QUESTION

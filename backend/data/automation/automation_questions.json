@@ -960,7 +960,7 @@
                 "explicacion": "a) 1-B: La integración de la automatización de pruebas en el pipeline de CI/CD garantiza que la ejecución de las pruebas se active con la compilación. \nb) 2-D: Los entornos y dispositivos de prueba permiten una ejecución de pruebas más flexible, sin limitarse a la ejecución de suites completas.\nc) 3-C: Las herramientas de terceros pueden ayudar a generar datos de prueba cuando no están disponibles.\nd) 4-A: El registro detallado durante la ejecución de las pruebas facilita la resolución de problemas en caso de fallos.\n\nLa respuesta correcta es a)\n\na) La respuesta correcta es a)"
             },
             "en": {
-                "pregunta": "",
+                "pregunta": "You are tasked with implementing a Test Automation Solution (TAS) for functional suitability tests that must be executed automatically after each daily build. The TAS needs to integrate seamlessly with the existing CI/CD pipeline and provide quick feedback on the software's quality. However, you've identified several potential risks that could impact the successful deployment and operation of the TAS.\n\nAs the test automation engineer, you need to analyze the deployment risks associated with implementing the TAS and determine the BEST mitigation strategies for each risk. Your goal is to ensure a smooth integration of the TAS into the existing development process while maintaining the quality and reliability of the testing process.\n\nWhich of the following BEST matches the deployment risks with their appropriate mitigation strategies?\n\n1. Test execution not triggered by the build\n2. Only the full test suite can be executed\n3. Test data unavailable when starting the test\n4. Difficulty in troubleshooting failed tests\n\nA. Log detailed information during test execution\nB. Integrate test automation into the CI/CD pipeline\nC. Use third-party tools to generate test data\nD. Utilize test harnesses and test fixtures",
                 "opciones": [
                     {
                         "id": 1,
@@ -2620,7 +2620,7 @@
         ],
         "translations": {
             "es": {
-                "pregunta": "",
+                "pregunta": "¿Qué limitación fundamental de la automatización de pruebas puede provocar una falsa sensación de cobertura?",
                 "opciones": [
                     {
                         "id": 1,
@@ -2643,7 +2643,7 @@
                 "explicacion": "a) Correcta. La automatización únicamente verifica los comportamientos incluidos explícitamente en sus scripts y oráculos.\nb) Incorrecta. La repetibilidad es una ventaja.\nc) Incorrecta. La generación de informes es una función habitual.\nd) Incorrecta. Los datos de prueba son ampliamente utilizados."
             },
             "en": {
-                "pregunta": "",
+                "pregunta": "Which fundamental limitation of test automation may create a false sense of coverage?",
                 "opciones": [
                     {
                         "id": 1,
@@ -2681,7 +2681,7 @@
         ],
         "translations": {
             "es": {
-                "pregunta": "",
+                "pregunta": "¿Cuál de las siguientes características de calidad es potencialmente más difícil de verificar exclusivamente mediante automatización?",
                 "opciones": [
                     {
                         "id": 1,
@@ -2704,7 +2704,7 @@
                 "explicacion": "a) Incorrecta. Es fácilmente automatizable.\nb) Incorrecta. Los resultados son verificables por máquina.\nc) Correcta. Algunas características de calidad requieren interpretación humana.\nd) Incorrecta. Puede automatizarse mediante comparación programada."
             },
             "en": {
-                "pregunta": "",
+                "pregunta": "Which quality characteristic is potentially more difficult to verify exclusively through automation?",
                 "opciones": [
                     {
                         "id": 1,
@@ -2742,7 +2742,7 @@
         ],
         "translations": {
             "es": {
-                "pregunta": "",
+                "pregunta": "¿Cuál es la mejor explicación de por qué la automatización suele proporcionar retroalimentación más rápida?",
                 "opciones": [
                     {
                         "id": 1,
@@ -2765,7 +2765,7 @@
                 "explicacion": "a) Incorrecta. La automatización detecta defectos, no los corrige.\nb) Correcta. La velocidad de ejecución y repetibilidad permiten feedback temprano.\nc) Incorrecta. Los resultados siguen requiriendo análisis.\nd) Incorrecta. No necesariamente reduce la cantidad de pruebas."
             },
             "en": {
-                "pregunta": "",
+                "pregunta": "Why does automation typically provide faster feedback?",
                 "opciones": [
                     {
                         "id": 1,

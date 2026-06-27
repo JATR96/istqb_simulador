@@ -2620,7 +2620,7 @@
         ],
         "translations": {
             "es": {
-                "pregunta": "¿Qué limitación fundamental de la automatización de pruebas puede provocar una falsa sensación de cobertura?",
+                "pregunta": "¿Qué limitación fundamental de la automatización de pruebas puede provocar una falsa sensación de cobertura?.",
                 "opciones": [
                     {
                         "id": 1,
